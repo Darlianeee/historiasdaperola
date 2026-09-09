@@ -1,0 +1,788 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #eef2e6;
+}
+
+
+/* CONTEÚDO */
+
+.container {
+    width: 100%;
+    padding: 110px 49px 50px;
+
+    min-height: calc(100vh - 50px);
+}
+
+
+/* =========================================
+   TÍTULO DA PÁGINA
+========================================= */
+
+.titulo-pagina h1 {
+    font-size: 30px;
+    color: #1b2b16;
+
+    border-left: 5px solid #486b2d;
+
+    padding-left: 12px;
+
+    margin-bottom: 5px;
+}
+
+.titulo-pagina p {
+    color: #000000;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+    width: 680px;
+    max-width: 100%;
+
+    margin: auto;
+
+    background: white;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+
+    padding: 30px;
+}
+
+
+/* =========================================
+   TÍTULO DO CARD
+========================================= */
+
+.card h2 {
+    text-align: center;
+
+    color: #333;
+
+    font-size: 23px;
+
+    margin-bottom: 8px;
+}
+
+.card > span {
+    display: block;
+
+    text-align: center;
+
+    color: #777;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   IDIOMAS
+========================================= */
+
+.idiomas {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   BOTÕES DOS IDIOMAS
+========================================= */
+
+.idiomas button {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 6px 12px;
+
+    border: 1px solid #ccc;
+
+    background: #FFFFFF;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,.12);
+
+    border-radius: 8px;
+
+    white-space: nowrap;
+
+    height: 34px;
+}
+
+
+/* =========================================
+   IMAGENS DOS IDIOMAS
+========================================= */
+
+.idiomas button img {
+    display: block;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   BANDEIRA DO BRASIL
+========================================= */
+
+.idiomas button:nth-child(1) img {
+    width: 25px;
+
+    height: 18px;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   BANDEIRA DA ESPANHA
+========================================= */
+
+.idiomas button:nth-child(2) img {
+    width: 30px;
+
+    height: 20px;
+
+    object-fit: cover;
+
+    transform: scale(1.20);
+}
+
+
+/* =========================================
+   WARI' ORO NAO
+========================================= */
+
+.idiomas .idioma-wari {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+
+/* =========================================
+   LOGO WARI
+========================================= */
+
+.idiomas .idioma-wari img {
+    width: 24px;
+
+    height: 24px;
+
+    object-fit: contain;
+
+    display: block;
+
+    flex-shrink: 0;
+
+    transform: scale(2.20);
+}
+
+
+/* =========================================
+   TEXTO DOS IDIOMAS
+========================================= */
+
+.idiomas button span {
+    display: inline-block;
+
+    white-space: nowrap;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   BOTÃO ATIVO
+========================================= */
+
+.idiomas button.ativo {
+    background: #d4aa2a;
+
+    color: white;
+
+    border-color: #c79b21;
+}
+
+
+/* =========================================
+   LINHA DOS CAMPOS
+========================================= */
+
+.linha {
+    display: flex;
+
+    gap: 15px;
+
+    align-items: flex-end;
+}
+
+
+/* =========================================
+   TAMANHOS DOS CAMPOS
+========================================= */
+
+#categoria {
+    width: 180px;
+}
+
+#titulo,
+#legenda {
+    width: 260px;
+}
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+label {
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    color: #444;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+input {
+    height: 30px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+    padding: 5px 8px;
+
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+select {
+    height: 30px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+    padding: 5px 8px;
+
+    outline: none;
+
+    background: white;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+textarea {
+    width: 100%;
+
+    height: 170px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+    padding: 8px;
+
+    outline: none;
+
+    resize: none;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #b58c16;
+}
+
+
+/* =========================================
+   BOTÃO ADICIONAR IMAGEM
+========================================= */
+
+.btnImagem {
+    background: white;
+
+    border: 1px solid #ccc;
+
+    color: #BE9628;
+
+    padding: 6px 10px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    width: 150px;
+
+    height: 30px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   HOVER IMAGEM
+========================================= */
+
+.btnImagem:hover {
+    background: #BE9628;
+
+    border-color: #BE9628;
+
+    color: white;
+}
+
+
+/* =========================================
+   AÇÕES
+========================================= */
+
+.acoes {
+    display: flex;
+
+    gap: 330px;
+
+    margin-left: 20px;
+}
+
+
+/* =========================================
+   BOTÃO CANCELAR
+========================================= */
+
+.cancelar {
+    background: white;
+
+    color: #c79b21;
+
+    border: none;
+
+    padding: 12px 35px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+
+    transition: .3s;
+}
+
+.cancelar a {
+    color: #c79b21;
+
+    text-decoration: none;
+}
+
+.cancelar:hover {
+    background: #c79b21;
+
+    color: white;
+}
+
+.cancelar:hover a {
+    color: white;
+}
+
+
+/* =========================================
+   BOTÃO SALVAR
+========================================= */
+
+.salvar {
+    background: #c79b21;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 35px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: .3s;
+}
+
+.salvar:hover {
+    background: #a98218;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 85px 25px 40px;
+    }
+
+
+    /* TÍTULO DA PÁGINA */
+
+    .titulo-pagina h1 {
+        font-size: 28px;
+    }
+
+    .titulo-pagina p {
+        font-size: 14px;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* CARD */
+
+    .card {
+        width: 100%;
+
+        padding: 25px;
+    }
+
+
+    /*
+       IMPORTANTE:
+       NO TABLET AS LINHAS CONTINUAM
+       LADO A LADO
+    */
+
+    .linha {
+        flex-direction: row;
+
+        gap: 15px;
+    }
+
+
+    .campo {
+        width: auto;
+    }
+
+
+    .imagem {
+        align-items: flex-start;
+    }
+
+
+    .btnImagem {
+        width: 150px;
+    }
+
+
+    /* IDIOMAS */
+
+    .idiomas {
+        gap: 10px;
+
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 80px 15px 35px;
+    }
+
+
+    /* =====================================
+       TÍTULO DA PÁGINA
+    ===================================== */
+
+    .titulo-pagina {
+        display: block;
+    }
+
+    .titulo-pagina h1 {
+        font-size: 24px;
+
+        padding-left: 10px;
+
+        margin-bottom: 5px;
+    }
+
+    .titulo-pagina p {
+        font-size: 13px;
+
+        margin-bottom: 22px;
+    }
+
+
+    /* =====================================
+       CARD
+    ===================================== */
+
+    .card {
+        width: 100%;
+
+        padding: 20px 15px;
+
+        border-radius: 7px;
+    }
+
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .card > span {
+        font-size: 13px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =====================================
+       IDIOMAS
+    ===================================== */
+
+    .idiomas {
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 10px;
+    }
+
+    .idiomas button {
+        width: 100%;
+
+        height: 34px;
+
+        padding: 6px 12px;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: center;
+    }
+
+
+    /* BRASIL */
+
+    .idiomas button:nth-child(1) img {
+        width: 30px;
+
+        height: 20px;
+    }
+
+
+    /* ESPANHA */
+
+    .idiomas button:nth-child(2) img {
+        width: 30px;
+
+        height: 20px;
+
+        transform: scale(1.15);
+    }
+
+
+    /* WARI */
+
+    .idiomas .idioma-wari {
+        flex-direction: row;
+    }
+
+    .idiomas .idioma-wari img {
+        width: 24px;
+
+        height: 24px;
+
+        transform: scale(1.25);
+    }
+
+
+    .idiomas button span {
+        display: inline-block;
+
+        white-space: nowrap;
+
+        line-height: 1;
+    }
+
+
+    /* =====================================
+       CAMPOS NO CELULAR
+    ===================================== */
+
+    .linha {
+        flex-direction: column;
+
+        gap: 0;
+
+        width: 100%;
+    }
+
+    .campo {
+        width: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 14px;
+    }
+
+    #categoria,
+    #titulo,
+    #legenda {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+
+        height: 150px;
+    }
+
+
+    /* =====================================
+       BOTÃO ADICIONAR IMAGEM
+    ===================================== */
+
+    .btnImagem {
+        width: 100%;
+
+        height: 30px;
+    }
+
+
+    /* =====================================
+       BOTÕES CANCELAR + SALVAR
+    ===================================== */
+
+    .acoes {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 15px;
+
+        margin-left: 0;
+    }
+
+
+    .cancelar,
+    .salvar {
+        width: 50%;
+
+        padding: 11px 10px;
+
+        font-size: 14px;
+    }
+
+}

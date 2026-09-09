@@ -1,0 +1,250 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #edf5e9;
+            color: #111;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* CONTEÚDO PRINCIPAL */
+        .conteudo {
+            flex: 1;
+            padding: 90px 49px 80px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 27px;
+            border-left: 5px solid #465625;
+            padding-left: 10px;
+            margin-bottom: 6px;
+            color: #111;
+        }
+
+        .subtitulo {
+            font-size: 15px;
+            color: #333;
+            margin-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        /* CARD / MODAL DA HISTÓRIA */
+        .modal-historia {
+            max-width: 780px;
+            width: 100%;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+            padding: 35px 45px;
+            position: relative;
+        }
+
+        .btn-fechar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-fechar img, .icon-close {
+            width: 24px;
+            height: 24px;
+            background-color: #ff4d4d;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        .titulo-lenda {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: #111;
+            margin-bottom: 20px;
+        }
+
+        .box-imagem {
+            width: 100%;
+            height: 230px;
+            background-color: #dcdcdc;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: #111;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .box-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .legenda {
+            font-size: 12px;
+            color: #333;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .texto-lenda {
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: #222;
+            word-wrap: break-word;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .secao-idiomas {
+            margin-top: 20px;
+        }
+
+        .titulo-idiomas {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14.5px;
+            font-weight: bold;
+            color: #111;
+            margin-bottom: 8px;
+        }
+
+        .titulo-idiomas img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .subtitulo-idiomas {
+            font-size: 13px;
+            color: #444;
+            margin-bottom: 18px;
+        }
+
+        /* =========================================
+        BOTÕES DE IDIOMAS
+        ========================================= */
+
+        .botoes-idiomas {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-idioma {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+
+            min-height: 40px;
+            padding: 8px 18px;
+
+            border-radius: 6px;
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            /* BOTÃO NORMAL */
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            color: #111 !important;
+
+            transition: none;
+        }
+
+
+        /* =========================================
+        TEXTO DO BOTÃO NORMAL
+        ========================================= */
+
+        .btn-idioma:not(.ativo),
+        .btn-idioma:not(.ativo) span {
+            color: #111 !important;
+        }
+
+
+        /* =========================================
+        BOTÃO SELECIONADO
+        ========================================= */
+
+        .btn-idioma.ativo {
+            background-color: #c99829;
+            border: 1px solid #c99829;
+
+            color: #ffffff !important;
+        }
+
+
+        /* TEXTO DO BOTÃO SELECIONADO */
+
+        .btn-idioma.ativo span {
+            color: #ffffff !important;
+            font-weight: bold;
+        }
+
+        /* Imagem da Espanha - tamanho normal */
+        .img-espanha {
+            width: 28px;
+            height: 28px;
+            object-fit: cover;
+            border-radius: 3px;
+            transform: scale(1.4);
+        }
+
+
+        /* Logo Wari Oro Nao - maior */
+        .img-wari {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+            border-radius: 3px;
+
+            transform: scale(2.4);
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 900px) {
+            .modal-historia {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .botoes-idiomas {
+                justify-content: center;
+            }
+
+            .botoes-idiomas .btn-idioma {
+                width: 150px;
+                height: 45px;
+            }
+
+        }
+

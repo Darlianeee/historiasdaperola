@@ -1,0 +1,968 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EAF3E6;
+    color: #000000;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
+
+.conteudo {
+    width: 100%;
+
+    flex: 1;
+
+    min-height: calc(100vh - 100px);
+
+    padding: 110px 49px 80px;
+}
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.cabecalho-pagina {
+    margin-bottom: 42px;
+}
+
+
+/* TÍTULO */
+
+.cabecalho-pagina h1 {
+    position: relative;
+
+    font-size: 29px;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+    padding-left: 15px;
+}
+
+
+/* RISQUINHO */
+
+.cabecalho-pagina h1::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 2px;
+
+    width: 5px;
+    height: 35px;
+
+    background-color: #465722;
+
+    border-radius: 2px;
+}
+
+
+/* SUBTÍTULO */
+
+.cabecalho-pagina p {
+    font-size: 17px;
+    font-weight: 400;
+
+    color: #000000;
+}
+
+
+/* =========================================
+   FILTROS
+========================================= */
+
+.filtros {
+    width: 80%;
+
+    margin: 0 auto 27px auto;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 65px;
+}
+
+
+/* CAMPOS */
+
+.filtros input {
+    width: 165px;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #FFFFFF;
+
+    padding: 0 16px;
+
+    font-size: 15px;
+
+    color: #000000;
+
+    box-shadow: 0 2px 5px rgba(70, 87, 34, 0.40);
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+/* FOCO */
+
+.filtros input:focus {
+    box-shadow: 0 2px 6px rgba(70, 87, 34, 0.55);
+}
+
+
+/* =========================================
+   TABELA / CARD PRINCIPAL
+========================================= */
+.tabela-container {
+    width: 80%;
+    margin: 0 auto;
+
+    background-color: #FFFFFF;
+
+    border-radius: 20px;
+
+    overflow: visible;
+
+    box-shadow: 0 3px 7px rgba(70, 87, 34, 0.40);
+}
+
+
+/* TABELA */
+
+.tabela-comentarios {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+
+    background-color: #FFFFFF;
+
+    border-radius: 12px;
+}
+
+
+/* =========================================
+   CABEÇALHO DA TABELA
+========================================= */
+
+.tabela-comentarios thead {
+    background-color: #FFFFFF;
+}
+
+
+.tabela-comentarios th {
+    height: 52px;
+
+    padding: 8px 25px;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    color: #000000;
+
+    text-align: left;
+
+    border-bottom: 1px solid #899473;
+}
+
+/* LARGURAS */
+
+.tabela-comentarios th:nth-child(1) {
+    width: 25%;
+}
+
+.tabela-comentarios th:nth-child(2) {
+    width: 31%;
+}
+
+.tabela-comentarios th:nth-child(3) {
+    width: 22%;
+}
+
+.tabela-comentarios th:nth-child(4) {
+    width: 22%;
+}
+
+
+/* DATA E AÇÕES */
+
+.tabela-comentarios th:nth-child(3),
+.tabela-comentarios th:nth-child(4) {
+    text-align: center;
+}
+
+
+/* =========================================
+   LINHAS
+========================================= */
+
+.tabela-comentarios tbody tr {
+    height: 59px;
+
+    border-bottom: 1px solid #899473;
+}
+
+
+.tabela-comentarios tbody tr:last-child {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   CÉLULAS
+========================================= */
+
+.tabela-comentarios td {
+    padding: 7px 25px;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    color: #000000;
+
+    vertical-align: middle;
+}
+
+
+/* USUÁRIO */
+
+.tabela-comentarios td:first-child {
+    font-weight: 600;
+}
+
+
+/* =========================================
+   COMENTÁRIO
+========================================= */
+
+.tabela-comentarios td:nth-child(2) span {
+    display: block;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================
+   DATA E HORA
+========================================= */
+
+.data-hora {
+    text-align: center;
+}
+
+
+.data-hora span {
+    display: block;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   AÇÕES
+========================================= */
+
+.tabela-comentarios td:nth-child(4) {
+    text-align: center;
+}
+
+
+.acoes-container {
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+}
+
+.acoes-container.ativo {
+    z-index: 1000;
+}
+
+.menu-acoes {
+    position: absolute;
+
+    top: calc(100% + 5px);
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 180px;
+    min-width: 180px;
+
+    background-color: #FFFFFF;
+
+    border-radius: 6px;
+
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.20);
+
+    z-index: 9999;
+
+    display: none;
+}
+
+.acoes-container.ativo .menu-acoes {
+    display: block;
+}
+
+
+/* =========================================
+   TRÊS PONTINHOS
+========================================= */
+
+/* =========================================
+   TRÊS PONTINHOS
+========================================= */
+
+.botao-acoes {
+    border: none;
+    background: transparent;
+    color: #000000;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    padding: 3px 6px;
+
+    line-height: 1;
+}
+
+/* SEM HOVER NOS TRÊS PONTINHOS */
+.botao-acoes:hover {
+    color: #000000;
+    background: transparent;
+    transform: none;
+}
+
+
+/* =========================================
+   CAIXINHA DAS AÇÕES
+========================================= */
+
+.menu-acoes {
+    top: calc(100% + 5px);
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 165px;
+    min-width: 165px;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.20);
+    z-index: 9999;
+}
+
+.acoes-container.ativo .menu-acoes {
+    display: block;
+}
+
+
+/* =========================================
+   OPÇÕES DA CAIXINHA
+========================================= */
+
+/* OPÇÕES DO MENU */
+
+.menu-acoes a {
+    display: block;
+
+    width: 100%;
+
+    padding: 10px 8px;
+
+    background-color: #FFFFFF;
+
+    color: #000000;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+}
+
+
+/* RESPONDER */
+
+.menu-acoes a:first-child {
+    color: #000000;
+}
+
+
+/* APAGAR */
+
+.menu-acoes a:last-child {
+    color: #D00000;
+}
+
+
+/* HOVER */
+
+.menu-acoes a:first-child:hover {
+    background-color: #f0eeee;
+    color: #000000;
+}
+
+.menu-acoes a:last-child:hover {
+    background-color: #FCE8E8;
+    color: #D00000;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+
+/* =========================================
+   TABLET
+========================================= */
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .conteudo {
+        width: 100%;
+        padding: 105px 25px 50px;
+    }
+
+    .cabecalho-pagina {
+        margin-bottom: 30px;
+    }
+
+    .cabecalho-pagina h1 {
+        font-size: 27px;
+    }
+
+    .cabecalho-pagina p {
+        font-size: 16px;
+    }
+
+    .filtros {
+        width: 100%;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-bottom: 22px;
+    }
+
+    .filtros input {
+        width: 150px;
+        height: 44px;
+    }
+
+    .tabela-container {
+        width: 100%;
+        margin: 0;
+        overflow: visible;
+        border-radius: 16px;
+    }
+
+    .tabela-comentarios {
+        width: 100%;
+        min-width: 0;
+        table-layout: fixed;
+    }
+
+    .tabela-comentarios th {
+        height: 50px;
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    .tabela-comentarios td {
+        padding: 7px 12px;
+        font-size: 14px;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .tabela-comentarios th:nth-child(1) {
+        width: 23%;
+    }
+
+    .tabela-comentarios th:nth-child(2) {
+        width: 34%;
+    }
+
+    .tabela-comentarios th:nth-child(3) {
+        width: 21%;
+    }
+
+    .tabela-comentarios th:nth-child(4) {
+        width: 22%;
+    }
+
+    .data-hora span {
+        font-size: 13px;
+    }
+
+    .botao-acoes {
+        font-size: 16px;
+    }
+
+    .menu-acoes {
+        width: 165px;
+        min-width: 165px;
+    }
+}
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .conteudo {
+        width: 100%;
+
+        min-height: calc(100vh - 100px);
+
+        padding: 100px 15px 50px;
+    }
+
+
+    /* =====================================
+       CABEÇALHO
+    ===================================== */
+
+    .cabecalho-pagina {
+        margin-bottom: 28px;
+    }
+
+    .cabecalho-pagina h1 {
+        font-size: 25px;
+
+        line-height: 32px;
+
+        padding-left: 12px;
+
+        margin-bottom: 6px;
+    }
+
+    .cabecalho-pagina h1::before {
+        top: 1px;
+
+        width: 5px;
+
+        height: 32px;
+    }
+
+    .cabecalho-pagina p {
+        font-size: 15px;
+
+        line-height: 22px;
+    }
+
+
+    /* =====================================
+       FILTROS
+    ===================================== */
+
+    .filtros {
+        width: 100%;
+
+        margin: 0 0 22px 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+    }
+
+    .filtros input {
+        width: 100%;
+
+        height: 44px;
+
+        font-size: 15px;
+    }
+
+
+    /* =====================================
+       CARD DOS COMENTÁRIOS
+    ===================================== */
+
+    .tabela-container {
+        width: 100%;
+
+        margin: 0;
+
+        background-color: transparent;
+
+        border-radius: 0;
+
+        box-shadow: none;
+
+        overflow: visible;
+    }
+
+
+    /* Esconde cabeçalho da tabela */
+
+    .tabela-comentarios thead {
+        display: none;
+    }
+
+
+    /* Tira o comportamento de tabela */
+
+    .tabela-comentarios,
+    .tabela-comentarios tbody,
+    .tabela-comentarios tr,
+    .tabela-comentarios td {
+        display: block;
+
+        width: 100%;
+    }
+
+
+    .tabela-comentarios {
+        min-width: 0;
+
+        background-color: transparent;
+
+        border-collapse: separate;
+    }
+
+
+    /* =====================================
+       CADA COMENTÁRIO VIRA UM CARD
+    ===================================== */
+
+    .tabela-comentarios tbody tr {
+        height: auto;
+
+        margin-bottom: 16px;
+
+        padding: 18px;
+
+        background-color: #FFFFFF;
+
+        border: none;
+
+        border-radius: 14px;
+
+        box-shadow: 0 3px 8px rgba(70, 87, 34, 0.25);
+    }
+
+
+    .tabela-comentarios tbody tr:last-child {
+        margin-bottom: 0;
+    }
+
+
+    /* =====================================
+       CÉLULAS
+    ===================================== */
+
+    .tabela-comentarios td {
+        padding: 0;
+
+        margin-bottom: 13px;
+
+        font-size: 15px;
+
+        line-height: 1.4;
+
+        text-align: left;
+
+        border: none;
+    }
+
+
+    .tabela-comentarios td:last-child {
+        margin-bottom: 0;
+    }
+
+
+    /* =====================================
+       USUÁRIO
+    ===================================== */
+
+    .tabela-comentarios td:first-child {
+        padding-bottom: 10px;
+
+        margin-bottom: 12px;
+
+        font-size: 17px;
+
+        font-weight: 700;
+
+        border-bottom: 1px solid #dfe5d9;
+    }
+
+
+    .tabela-comentarios td:first-child::before {
+        content: "Usuário";
+
+        display: block;
+
+        margin-bottom: 3px;
+
+        font-size: 12px;
+
+        font-weight: 400;
+
+        color: #68745c;
+    }
+
+
+    /* =====================================
+       COMENTÁRIO
+    ===================================== */
+
+    .tabela-comentarios td:nth-child(2) {
+        padding-bottom: 10px;
+
+        border-bottom: 1px solid #dfe5d9;
+    }
+
+
+    .tabela-comentarios td:nth-child(2)::before {
+        content: "Comentário";
+
+        display: block;
+
+        margin-bottom: 5px;
+
+        font-size: 12px;
+
+        font-weight: 600;
+
+        color: #68745c;
+    }
+
+
+    .tabela-comentarios td:nth-child(2) span {
+        display: inline;
+
+        line-height: 1.4;
+    }
+
+    .tabela-comentarios td:nth-child(2) span + span::before {
+        content: " ";
+    }
+
+
+    /* =====================================
+       DATA
+    ===================================== */
+
+    .tabela-comentarios td:nth-child(3) {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        padding-bottom: 10px;
+
+        border-bottom: 1px solid #dfe5d9;
+    }
+
+
+    .tabela-comentarios td:nth-child(3)::before {
+        content: "Data";
+
+        font-size: 12px;
+
+        font-weight: 600;
+
+        color: #68745c;
+    }
+
+
+    .data-hora {
+        text-align: right;
+    }
+
+
+    .data-hora span {
+        display: inline;
+
+        white-space: nowrap;
+
+        font-size: 14px;
+    }
+
+    .data-hora span + span::before {
+        content: " • ";
+    }
+
+
+    /* =====================================
+       AÇÕES
+    ===================================== */
+
+    .tabela-comentarios td:nth-child(4) {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        text-align: left;
+    }
+
+
+    .tabela-comentarios td:nth-child(4)::before {
+        content: "Ações";
+
+        font-size: 12px;
+
+        font-weight: 600;
+
+        color: #68745c;
+    }
+
+
+    .acoes-container {
+        display: inline-block;
+
+        position: relative;
+    }
+
+
+    .botao-acoes {
+        padding: 7px 12px;
+
+        font-size: 18px;
+
+        border-radius: 6px;
+
+        background-color: #f1f5ee;
+    }
+
+
+    /* =====================================
+       MENU DE AÇÕES NO CELULAR
+    ===================================== */
+
+    .menu-acoes {
+        top: calc(100% + 5px);
+
+        right: 0;
+
+        left: auto;
+
+        transform: none;
+
+        width: 175px;
+
+        min-width: 175px;
+
+        border-radius: 8px;
+
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+
+        z-index: 9999;
+    }
+
+
+    .menu-acoes a {
+        padding: 11px 8px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================
+   CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 380px) {
+
+    .conteudo {
+        padding: 95px 12px 40px;
+    }
+
+
+    /* CABEÇALHO */
+
+    .cabecalho-pagina h1 {
+        font-size: 23px;
+
+        line-height: 30px;
+    }
+
+    .cabecalho-pagina h1::before {
+        height: 30px;
+    }
+
+    .cabecalho-pagina p {
+        font-size: 14px;
+    }
+
+
+    /* FILTROS */
+
+    .filtros input {
+        height: 42px;
+
+        font-size: 14px;
+    }
+
+
+    /* CARDS */
+
+    .tabela-comentarios tbody tr {
+        padding: 15px;
+
+        border-radius: 12px;
+    }
+
+
+    .tabela-comentarios td {
+        font-size: 14px;
+    }
+
+
+    .tabela-comentarios td:first-child {
+        font-size: 16px;
+    }
+
+
+    .data-hora span {
+        font-size: 13px;
+    }
+}

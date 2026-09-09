@@ -1,0 +1,186 @@
+/* Reset básico para zerar margens do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #eef6eb; /* Fundo esverdeado claro do site */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+/* ==========================================================================
+   ESTILO PADRÃO: CELULAR (TUDO EMPILHADO)
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: 450px; /* Limita a largura para celulares e tablets pequenos */
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column; /* Força um bloco a ficar embaixo do outro */
+}
+
+/* Painel Verde da Marca - No topo no celular */
+.lado-direito {
+    width:42%; 
+    background:#4c6123; 
+    display:flex; 
+    flex-direction:column; 
+    justify-content:center; 
+    align-items:center; 
+    color:white; 
+    text-align:center;
+}
+
+.lado-direito img {
+    width: 300px !important;
+    height: auto;
+    margin-bottom: -10px;
+    flex-shrink: 0;
+}
+
+.lado-direito h2 {
+    color:#dba437; 
+    font-size:24px; 
+    font-style:italic; 
+    letter-spacing:1px; 
+    margin-bottom:5px;
+    position:relative;
+    top:-60px;
+}
+
+.lado-direito p {
+    font-size:14px; 
+    color:#f1f1f1;
+    position:relative;
+    top:-60px;
+}
+
+/* Painel do Formulário - Na parte de baixo no celular */
+.formulario {
+    width: 100%;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formulario h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.formulario p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 12px;
+    font-size: 16px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    background: #f8f8f8;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    width: 160px;
+    height: 42px;
+    margin: 25px auto 10px;
+    display: block;
+    background: #c99a22; /* Botão Mostarda */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #a57d17;
+}
+
+.login {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.login a {
+    color: #c99a22;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.esqueceu a {
+    color: #c99a22;
+    text-decoration: none;
+    font-weight: bold;
+}
+.esqueceu a:hover{
+    color: #000;
+}
+/* ==========================================================================
+   MUDANÇA PARA COMPUTADORES (TELAS MAIORES QUE 768PX)
+   ========================================================================== */
+@media screen and (min-width: 769px) {
+    .container {
+        width: 900px;
+        height: 599px; /* Mantém as dimensões originais do seu projeto */
+        flex-direction: row; /* Coloca os blocos lado a lado no PC */
+        max-width: none;
+    }
+
+    /* Ajusta a proporção do formulário na esquerda */
+    .formulario {
+        width: 58%;
+        padding: 40px 70px;
+        order: 1; /* Garante que o formulário fique no lado ESQUERDO */
+    }
+
+    .formulario h1 {
+        font-size: 40px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    /* Ajusta a proporção do bloco verde na direita */
+    .lado-direito {
+        width: 42%;
+        padding: 40px;
+        order: 2; /* Garante que o painel verde fique no lado DIREITO */
+    }
+
+    .lado-direito img {
+        width: 230px; /* Retorna o tamanho original da imagem no PC */
+    }
+}

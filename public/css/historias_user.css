@@ -1,0 +1,791 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #edf5e9;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
+
+.conteudo {
+    flex: 1;
+    padding: 110px 49px 80px;
+    position: relative;
+}
+
+h1 {
+    font-size: 26px;
+    border-left: 5px solid #465625;
+    padding-left: 10px;
+    margin-bottom: 6px;
+    color: #111;
+}
+
+.subtitulo {
+    font-size: 15px;
+    color: #333;
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   CARD / MODAL DA HISTÓRIA
+========================================= */
+
+.modal-historia {
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 35px 45px;
+    position: relative;
+}
+
+
+/* =========================================
+   BOTÃO FECHAR
+========================================= */
+
+.btn-fechar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.icon-close {
+    width: 24px;
+    height: 24px;
+    background-color: #ff4d4d;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1;
+}
+
+
+/* =========================================
+   TÍTULO DA LENDA
+========================================= */
+
+.titulo-lenda {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   IMAGEM DA HISTÓRIA
+========================================= */
+
+.box-imagem {
+    width: 100%;
+    height: 230px;
+
+    background-color: #dcdcdc;
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: bold;
+    color: #111;
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.box-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   LEGENDA
+========================================= */
+
+.legenda {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   TEXTO DA LENDA
+========================================= */
+
+.texto-lenda {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #222;
+
+    word-wrap: break-word;
+
+    margin-bottom: 30px;
+
+    text-align: justify;
+}
+
+
+/* =========================================
+   IDIOMAS
+========================================= */
+
+.secao-idiomas {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.titulo-idiomas {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 14.5px;
+    font-weight: bold;
+
+    color: #111;
+
+    margin-bottom: 8px;
+}
+
+.titulo-idiomas img {
+    width: 22px;
+    height: 22px;
+}
+
+.subtitulo-idiomas {
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   BOTÕES DE IDIOMAS
+========================================= */
+
+.botoes-idiomas {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-idioma {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 40px;
+    padding: 8px 18px;
+
+    border-radius: 6px;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    /* BOTÃO NORMAL */
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    color: #111 !important;
+
+    transition: none;
+}
+
+
+/* =========================================
+   TEXTO DO BOTÃO NORMAL
+========================================= */
+
+.btn-idioma:not(.ativo),
+.btn-idioma:not(.ativo) span {
+    color: #111 !important;
+}
+
+
+/* =========================================
+   BOTÃO SELECIONADO
+========================================= */
+
+.btn-idioma.ativo {
+    background-color: #c99829;
+    border: 1px solid #c99829;
+
+    color: #ffffff !important;
+}
+
+
+/* TEXTO DO BOTÃO SELECIONADO */
+
+.btn-idioma.ativo span {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+/* Imagem da Espanha - tamanho normal */
+.img-espanha {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 3px;
+    transform: scale(1.4);
+}
+
+
+/* Logo Wari Oro Nao - maior */
+.img-wari {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    border-radius: 3px;
+
+    transform: scale(2.4);
+}
+
+/* =========================================
+   HOVER
+========================================= */
+
+/* Selecionado continua amarelo */
+
+.btn-idioma.ativo:hover {
+    background-color: #c99829;
+    border-color: #c99829;
+    color: #ffffff !important;
+}
+
+
+/* Não selecionado continua branco */
+
+.btn-idioma:not(.ativo):hover {
+    background-color: #ffffff;
+    border-color: #ccc;
+    color: #111 !important;
+}
+
+.btn-idioma:not(.ativo):hover span {
+    color: #111 !important;
+}
+
+
+/* =========================================
+   SEÇÃO DE AVALIAÇÃO E COMENTÁRIOS
+========================================= */
+
+.secao-comentario {
+    margin-top: 25px;
+
+    border-top: 1px solid #eee;
+
+    padding-top: 20px;
+}
+
+
+/* =========================================
+   TÍTULO DO COMENTÁRIO
+========================================= */
+
+.titulo-comentario {
+    font-size: 15px;
+    font-weight: bold;
+    color: #111;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   ESTRELAS
+========================================= */
+
+.rating-stars {
+    display: flex;
+
+    flex-direction: row-reverse;
+
+    justify-content: flex-end;
+
+    gap: 4px;
+
+    margin-bottom: 15px;
+}
+
+.rating-stars input {
+    display: none;
+}
+
+.rating-stars label {
+    font-size: 24px;
+
+    color: #ccc;
+
+    cursor: pointer;
+
+    transition: color 0.2s;
+}
+
+.rating-stars input:checked ~ label,
+.rating-stars label:hover,
+.rating-stars label:hover ~ label {
+    color: #c99829;
+}
+
+
+/* =========================================
+   ÁREA DE COMENTÁRIO
+========================================= */
+
+.area-texto-comentario {
+    width: 100%;
+    height: 90px;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    resize: none;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    color: #333;
+
+    outline: none;
+
+    margin-bottom: 15px;
+}
+
+.area-texto-comentario::placeholder {
+    color: #888;
+}
+
+
+/* =========================================
+   BOTÃO ENVIAR
+========================================= */
+
+.btn-enviar {
+    background-color: #c99829;
+
+    color: #ffffff;
+
+    border: none;
+
+    padding: 8px 30px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #b58721;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+
+/* =========================================
+   TABLET / NOTEBOOK
+========================================= */
+
+@media (max-width: 900px) {
+
+    .conteudo {
+        padding: 100px 30px 60px;
+    }
+
+    .modal-historia {
+        max-width: 100%;
+
+        padding: 30px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET PEQUENO
+========================================= */
+
+@media (max-width: 700px) {
+
+    .conteudo {
+        padding: 90px 20px 50px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .subtitulo {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .modal-historia {
+        padding: 25px 20px;
+
+        border-radius: 8px;
+    }
+
+    .titulo-lenda {
+        font-size: 20px;
+    }
+
+    .box-imagem {
+        height: 210px;
+    }
+
+    .texto-lenda {
+        font-size: 13px;
+    }
+
+    .botoes-idiomas {
+        gap: 12px;
+    }
+
+    .btn-idioma {
+        padding: 8px 15px;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 500px) {
+
+    .conteudo {
+        padding: 80px 12px 40px;
+    }
+
+    h1 {
+        font-size: 22px;
+
+        border-left-width: 4px;
+
+        padding-left: 8px;
+    }
+
+    .subtitulo {
+        font-size: 13px;
+
+        margin-left: 12px;
+    }
+
+    .modal-historia {
+        padding: 25px 15px;
+
+        border-radius: 7px;
+    }
+
+    .btn-fechar {
+        top: 15px;
+        right: 15px;
+    }
+
+    .icon-close {
+        width: 22px;
+        height: 22px;
+
+        font-size: 12px;
+    }
+
+    .titulo-lenda {
+        font-size: 18px;
+
+        padding-right: 25px;
+
+        margin-bottom: 18px;
+    }
+
+    .box-imagem {
+        height: 180px;
+    }
+
+    .legenda {
+        font-size: 11px;
+
+        margin-bottom: 20px;
+    }
+
+    .texto-lenda {
+        font-size: 13px;
+
+        line-height: 1.55;
+    }
+
+
+    /* =====================================
+       IDIOMAS NO CELULAR
+    ===================================== */
+
+    .titulo-idiomas {
+        font-size: 14px;
+
+        gap: 8px;
+    }
+
+    .titulo-idiomas img {
+        width: 21px;
+        height: 21px;
+    }
+
+    .subtitulo-idiomas {
+        font-size: 12px;
+
+        line-height: 1.4;
+    }
+
+    .botoes-idiomas {
+        gap: 10px;
+    }
+
+    .btn-idioma {
+        min-height: 42px;
+
+        padding: 7px 14px;
+
+        font-size: 13px;
+
+        gap: 8px;
+    }
+
+    .btn-idioma img {
+        width: 27px;
+        height: 27px;
+    }
+
+
+    /* =====================================
+       COMENTÁRIOS NO CELULAR
+    ===================================== */
+
+    .titulo-comentario {
+        font-size: 14px;
+    }
+
+    .rating-stars {
+        gap: 2px;
+    }
+
+    .rating-stars label {
+        font-size: 22px;
+    }
+
+    .area-texto-comentario {
+        height: 90px;
+
+        font-size: 12px;
+    }
+
+    .btn-enviar {
+        padding: 8px 26px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR PEQUENO
+========================================= */
+
+@media (max-width: 380px) {
+
+    .conteudo {
+        padding: 75px 10px 35px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .subtitulo {
+        font-size: 12px;
+    }
+
+    .modal-historia {
+        padding: 22px 12px;
+    }
+
+    .titulo-lenda {
+        font-size: 17px;
+    }
+
+    .box-imagem {
+        height: 160px;
+    }
+
+    .texto-lenda {
+        font-size: 12px;
+    }
+
+
+    /* Botões */
+
+    .botoes-idiomas {
+        gap: 8px;
+    }
+
+    .btn-idioma {
+        padding: 7px 11px;
+
+        font-size: 12px;
+
+        gap: 7px;
+    }
+
+    .btn-idioma img {
+        width: 25px;
+        height: 25px;
+    }
+
+
+    /* Comentário */
+
+    .titulo-comentario {
+        font-size: 13px;
+    }
+
+    .rating-stars label {
+        font-size: 21px;
+    }
+
+    .area-texto-comentario {
+        height: 85px;
+    }
+
+    .btn-enviar {
+        padding: 8px 23px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR MUITO PEQUENO
+========================================= */
+
+@media (max-width: 330px) {
+
+    .conteudo {
+        padding: 70px 8px 30px;
+    }
+
+    .modal-historia {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 19px;
+    }
+
+    .subtitulo {
+        font-size: 11px;
+    }
+
+    .titulo-lenda {
+        font-size: 16px;
+    }
+
+    .box-imagem {
+        height: 145px;
+    }
+
+    .texto-lenda {
+        font-size: 11.5px;
+    }
+
+
+    /* Botões */
+
+    .btn-idioma {
+        padding: 6px 9px;
+
+        font-size: 11px;
+
+        gap: 6px;
+    }
+
+    .btn-idioma img {
+        width: 23px;
+        height: 23px;
+    }
+
+
+    /* Comentário */
+
+    .area-texto-comentario {
+        font-size: 11px;
+    }
+
+    .btn-enviar {
+        padding: 7px 20px;
+
+        font-size: 11px;
+    }
+
+}

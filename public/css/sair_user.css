@@ -1,0 +1,345 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #eef7e9;
+    color: #111;
+}
+
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
+
+.conteudo {
+    position: relative;
+
+    flex: 1;
+
+    width: 100%;
+    padding: 110px 49px 80px;
+}
+
+
+/* =========================================
+   TÍTULO PRINCIPAL
+========================================= */
+
+
+.titulo {
+    position: absolute;
+    top: 110px;
+    left: 34px;
+}
+
+.titulo h1 {
+    padding-left: 9px;
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 34px;
+    border-left: 4px solid #30451d;
+    color: #111;
+}
+
+.descricao {
+    position: absolute;
+    top: 148px;
+    left: 34px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #222;
+}
+
+/* =========================================
+   ÁREA PRINCIPAL
+========================================= */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 180px;
+    background: transparent;
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CARD / MODAL
+========================================= */
+
+.modal {
+    width: 440px;
+    min-height: 300px;
+
+    padding: 18px 40px 25px;
+
+    background: #fff;
+
+    border: 1px solid #d2d2d2;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 3px 5px rgba(0, 0, 0, 0.35),
+        0 1px 2px rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================
+   ÍCONE DE SAÍDA — MAIOR
+========================================= */
+
+.icone-saida {
+    width: 85px;
+    height: 85px;
+
+    margin: 0 auto 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #dff5f3;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 2px 3px rgba(0, 0, 0, 0.18);
+}
+
+
+/* imagem dentro do círculo */
+
+.icon-saida {
+    width: 150px;
+    height: 150px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   TÍTULO DO CARD
+========================================= */
+
+.modal h2 {
+    margin: 0 0 18px;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    line-height: 24px;
+
+    color: #111;
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.modal p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #222;
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.botoes {
+    width: 100%;
+
+    margin-top: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   CANCELAR
+========================================= */
+
+.cancelar {
+    width: 72px;
+    height: 31px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 3px;
+
+    background: #fff;
+
+    color: #c79b21;
+
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.22);
+
+    transition: 0.2s ease;
+}
+
+.cancelar:hover {
+    background: #fafafa;
+}
+
+
+/* =========================================
+   SAIR
+========================================= */
+
+.Sair {
+    width: 72px;
+    height: 31px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #c79b21;
+
+    color: #fff;
+
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.25);
+
+    transition: 0.2s ease;
+}
+
+.Sair:hover {
+    background: #b38b1d;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .titulo {
+        left: 25px;
+    }
+
+    .descricao {
+        left: 25px;
+    }
+
+    .overlay {
+        padding-top: 105px;
+    }
+
+    .modal {
+        width: 430px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .titulo {
+        top: 25px;
+        left: 20px;
+    }
+
+    .titulo h1 {
+        font-size: 26px;
+    }
+
+    .descricao {
+        top: 62px;
+        left: 20px;
+        right: 20px;
+
+        font-size: 14px;
+    }
+
+    .overlay {
+        padding: 100px 15px 20px;
+    }
+
+    .modal {
+        width: 100%;
+        max-width: 430px;
+    }
+}
+
+
+@media (max-width: 390px) {
+
+    .titulo {
+        left: 16px;
+    }
+
+    .descricao {
+        left: 16px;
+    }
+
+    .modal {
+        max-width: 350px;
+
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
