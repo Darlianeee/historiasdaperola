@@ -481,7 +481,6 @@
 </main>
 
 <?php include '../App/Views/administrador/footer_adm.php'; ?>
-<script src="<?=URL?>/public/js/notificacoes.js"></script>
 
 </body>
 

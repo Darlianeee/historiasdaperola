@@ -14,7 +14,7 @@
     <div class="lado-direito">
         <img src="<?=URL?>/public/img/icone_logo_menu.png" alt="Logo">
         <h2>HISTÓRIAS NA PÉROLA</h2>
-        <p>Conectando culturas através de histórias</p>
+        <p>Conectando culturas através de línguas</p>
     </div>
 
     <!-- Bloco Branco do Formulário (Aparece DEPOIS no celular) -->

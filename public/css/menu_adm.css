@@ -381,6 +381,7 @@ nav.open {
     }
 
     nav {
+        top: 64px;
         width: 260px;
         max-width: 82vw;
 

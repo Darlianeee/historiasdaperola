@@ -33,7 +33,7 @@
 
         <h2>HISTÓRIAS NA PÉROLA</h2>
 
-        <p>Conectando culturas através de línguas</p>
+        <p>Conectando culturas através de línguas.</p>
 
     </div>
 

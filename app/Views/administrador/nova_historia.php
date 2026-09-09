@@ -265,7 +265,7 @@
 </div>
 
 <?php include '../App/Views/administrador/footer_adm.php'; ?>
-<script src="<?=URL?>/public/js/nova_historia.js"></script>
+<script src="<?=URL?>/public/js/novas_historias.js"></script>
 
 </body>
 
