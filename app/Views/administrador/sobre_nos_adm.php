@@ -17,10 +17,6 @@
 
 <main class="conteudo">
 
-    <!-- ==============================
-         CABEÇALHO
-    =============================== -->
-
     <section class="cabecalho-pagina">
 
         <h1>Sobre Nós</h1>
@@ -30,12 +26,6 @@
         </p>
 
     </section>
-
-
-
-    <!-- ==============================
-         MOTIVO DO DESENVOLVIMENTO
-    =============================== -->
 
     <section class="motivo">
 
@@ -59,12 +49,6 @@
 
     </section>
 
-
-
-    <!-- ==============================
-         NOSSA EQUIPE
-    =============================== -->
-
     <section class="secao-equipe">
 
         <div class="titulo-equipe">
@@ -79,11 +63,6 @@
 
 
         <div class="equipe">
-
-
-            <!-- ==============================
-                 DARLIANE
-            =============================== -->
 
             <div class="integrante">
 
@@ -111,12 +90,6 @@
 
             </div>
 
-
-
-            <!-- ==============================
-                 JOSE
-            =============================== -->
-
             <div class="integrante">
 
                 <div class="foto-integrante">
@@ -143,12 +116,6 @@
 
             </div>
 
-
-
-            <!-- ==============================
-                 KALONDRA
-            =============================== -->
-
             <div class="integrante">
 
                 <div class="foto-integrante">
@@ -173,12 +140,6 @@
                 </div>
 
             </div>
-
-
-
-            <!-- ==============================
-                 LAÍS
-            =============================== -->
 
             <div class="integrante">
 
@@ -206,12 +167,6 @@
 
             </div>
 
-
-
-            <!-- ==============================
-                 LEVI
-            =============================== -->
-
             <div class="integrante">
 
                 <div class="foto-integrante">
@@ -237,12 +192,6 @@
                 </div>
 
             </div>
-
-
-
-            <!-- ==============================
-                 RAQUELLY
-            =============================== -->
 
             <div class="integrante">
 
