@@ -297,7 +297,8 @@ footer {
 
     .modal {
         width: min(440px, 90%);
-    }
+        transform: translateY(150px);
+}
 }
 
 /* =========================================
