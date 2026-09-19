@@ -255,73 +255,126 @@ footer {
 
 
 /* =========================================
-   RESPONSIVIDADE
+   TABLET
+========================================= */
+@media (max-width: 1024px) {
+
+    .conteudo {
+        position: relative;
+        flex: 1;
+
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .titulo {
+        left: 25px;
+        right: 25px;
+    }
+
+    .descricao {
+        left: 25px;
+        right: 25px;
+    }
+
+    .overlay {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: auto;
+
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal {
+        width: min(440px, 90%);
+    }
+}
+
+/* =========================================
+ CELULAR
 ========================================= */
 
 @media (max-width: 768px) {
 
-    .titulo {
-        left: 25px;
-    }
-
-    .descricao {
-        left: 25px;
-    }
-
-    .overlay {
-        padding-top: 95px;
-    }
-
-    .modal {
-        width: 430px;
-    }
+.conteudo {
+    padding: 100px 20px 60px;
 }
 
+.titulo {
+    position: relative;
 
-@media (max-width: 480px) {
+    top: auto;
+    left: auto;
+    right: auto;
 
-    .titulo {
-        top: 25px;
-        left: 20px;
-    }
-
-    .titulo h1 {
-        font-size: 26px;
-    }
-
-    .descricao {
-        top: 62px;
-        left: 20px;
-        right: 20px;
-
-        font-size: 14px;
-    }
-
-    .overlay {
-        padding: 100px 15px 20px;
-    }
-
-    .modal {
-        width: 100%;
-        max-width: 430px;
-
-        padding-left: 25px;
-        padding-right: 25px;
-    }
+    margin-bottom: 8px;
 }
 
+.titulo h1 {
+    font-size: 26px;
+    line-height: 31px;
+}
 
-@media (max-width: 390px) {
+.descricao {
+    position: relative;
 
-    .titulo {
-        left: 16px;
-    }
+    top: auto;
+    left: auto;
+    right: auto;
 
-    .descricao {
-        left: 16px;
-    }
+    margin-bottom: 35px;
 
-    .modal {
-        max-width: 350px;
-    }
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.overlay {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 100%;
+    height: auto;
+
+    padding: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.modal {
+    width: 100%;
+    max-width: 440px;
+
+    padding: 35px 30px 28px;
+}
+
+.modal h2 {
+    font-size: 22px;
+    line-height: 27px;
+
+    margin-bottom: 20px;
+}
+
+.modal p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.botoes {
+    margin-top: 32px;
+}
 }
