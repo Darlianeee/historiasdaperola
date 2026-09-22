@@ -964,3 +964,30 @@
         font-size: 14px;
     }
 }
+
+/* =========================================
+   FOOTER NO FINAL DA PÁGINA
+========================================= */
+
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* O conteúdo ocupa todo o espaço disponível */
+main.content {
+    flex: 1 0 auto;
+}
+
+/* O footer fica sempre no final */
+footer {
+    margin-top: auto !important;
+    flex-shrink: 0;
+}

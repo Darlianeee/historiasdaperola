@@ -1,22 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Editar Perfil</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/editar_perfil_adm.css">
+
 </head>
 
+
 <body>
+
 
     <?php include '../App/Views/administrador/menu_adm.php'; ?>
 
 
     <main class="content">
+
 
         <!-- =========================================
              CABEÇALHO
@@ -34,6 +39,7 @@
 
                 </div>
 
+
                 <p class="subtitle">
                     Altere seus dados.
                 </p>
@@ -43,16 +49,21 @@
         </header>
 
 
+
         <!-- =========================================
              CARD
         ========================================== -->
 
         <section class="profile-card">
 
+
             <h2>Editar Meus Dados</h2>
 
 
-            <form>
+            <form
+                method="POST"
+                enctype="multipart/form-data"
+            >
 
 
                 <div class="profile-grid">
@@ -64,15 +75,63 @@
 
                     <div class="profile-aside">
 
+
+                        <!-- FOTO DE PERFIL -->
+
                         <div class="avatar-frame">
 
+
                             <img
+                                id="previewFoto"
                                 src="<?=URL?>/img/foto_perfil.png"
-                                alt="Avatar"
+                                alt="Foto de perfil"
                             >
+
+
+                            <!-- BOTÃO DA CÂMERA -->
+
+                            <label
+                                for="fotoPerfil"
+                                class="avatar-edit"
+                                title="Alterar foto"
+                            >
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path
+                                        d="M9 3L7.5 5H5C3.9 5 3 5.9 3 7V18C3 19.1 3.9 20 5 20H19C20.1 20 21 19.1 21 18V7C21 5.9 20.1 5 19 5H16.5L15 3H9Z"
+                                    />
+
+                                    <circle
+                                        cx="12"
+                                        cy="12.5"
+                                        r="3.5"
+                                    />
+
+                                </svg>
+
+                            </label>
+
+
+                            <!-- INPUT ESCONDIDO -->
+
+                            <input
+                                type="file"
+                                id="fotoPerfil"
+                                name="fotoPerfil"
+                                accept="image/*"
+                                hidden
+                            >
+
 
                         </div>
 
+
+
+                        <!-- BOTÕES -->
 
                         <div class="profile-actions">
 
@@ -95,7 +154,9 @@
 
                         </div>
 
+
                     </div>
+
 
 
                     <!-- =========================================
@@ -109,6 +170,7 @@
 
                         <div class="info-item">
 
+
                             <span class="info-icon">
 
                                 <img
@@ -121,9 +183,11 @@
 
                             <div class="info-content">
 
+
                                 <p class="info-label">
                                     Nome Completo
                                 </p>
+
 
                                 <input
                                     class="info-input"
@@ -132,14 +196,18 @@
                                     value="Nome Completo"
                                 >
 
+
                             </div>
 
+
                         </div>
+
 
 
                         <!-- E-MAIL -->
 
                         <div class="info-item">
+
 
                             <span class="info-icon">
 
@@ -153,9 +221,11 @@
 
                             <div class="info-content">
 
+
                                 <p class="info-label">
                                     E-mail
                                 </p>
+
 
                                 <input
                                     class="info-input"
@@ -164,14 +234,18 @@
                                     value="nome@ifro.edu.br"
                                 >
 
+
                             </div>
+
 
                         </div>
 
 
-                        <!-- SIAPE -->
+
+                        <!-- MATRICULA -->
 
                         <div class="info-item">
+
 
                             <span class="info-icon">
 
@@ -185,9 +259,11 @@
 
                             <div class="info-content">
 
+
                                 <p class="info-label">
-                                    SIAPE
+                                    Matrícula
                                 </p>
+
 
                                 <input
                                     class="info-input"
@@ -197,14 +273,18 @@
                                     readonly
                                 >
 
+
                             </div>
 
+
                         </div>
+
 
 
                         <!-- SETOR -->
 
                         <div class="info-item">
+
 
                             <span class="info-icon">
 
@@ -218,9 +298,11 @@
 
                             <div class="info-content">
 
+
                                 <p class="info-label">
                                     Setor
                                 </p>
+
 
                                 <input
                                     class="info-input"
@@ -229,23 +311,31 @@
                                     value="Algum lugar"
                                 >
 
+
                             </div>
+
 
                         </div>
 
 
                     </div>
 
+
                 </div>
+
 
             </form>
 
+
         </section>
+
 
     </main>
 
 
+
     <?php include '../App/Views/administrador/footer_adm.php'; ?>
+    <script src="<?=URL?>/public/js/foto_perfil.js"></script>
 
 </body>
 

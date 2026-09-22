@@ -82,19 +82,8 @@
                         </span> 
 
                         <div class="info-content"> 
-                            <p class="info-label">SUAP</p> 
+                            <p class="info-label">Matrícula</p> 
                             <p class="info-value">0000000000</p> 
-                        </div> 
-                    </div> 
-
-                    <div class="info-item"> 
-                        <span class="info-icon"> 
-                            <img src="<?=URL?>/img/icone_ano.png" alt="Ícone de Ano"> 
-                        </span> 
-
-                        <div class="info-content"> 
-                            <p class="info-label">Série</p> 
-                            <p class="info-value">X Ano</p> 
                         </div> 
                     </div> 
 

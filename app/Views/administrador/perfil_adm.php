@@ -82,7 +82,7 @@
                         </span> 
 
                         <div class="info-content"> 
-                            <p class="info-label">SIAPE</p> 
+                            <p class="info-label">Matrícula</p> 
                             <p class="info-value">0000000</p> 
                         </div> 
                     </div> 

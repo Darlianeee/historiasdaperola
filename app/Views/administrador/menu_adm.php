@@ -74,6 +74,15 @@
                 </a>
             </li>
 
+            <li>
+                <a href="<?=URL?>/administrador/sair_adm" class="menu-link">
+                    <img src="<?=URL?>/public/img/configuracao_icone.png"
+                         alt="Sair"
+                         class="menu-icon configuracao-icon">
+                    <span>Configurações</span>
+                </a>
+            </li>
+
             <!-- SAIR -->
             <li>
                 <a href="<?=URL?>/administrador/sair_adm" class="menu-link">
