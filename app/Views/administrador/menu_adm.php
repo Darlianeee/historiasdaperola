@@ -44,16 +44,6 @@
                 </a>
             </li>
 
-            <!-- COMENTÁRIOS -->
-            <li>
-                <a href="<?=URL?>/administrador/comentarios_adm" class="menu-link">
-                    <img src="<?=URL?>/public/img/icone_comentarios.png"
-                         alt="Comentários"
-                         class="menu-icon comentarios-icon">
-                    <span>Comentários</span>
-                </a>
-            </li>
-
             <!-- NOTIFICAÇÕES -->
             <li>
                 <a href="<?=URL?>/administrador/notificacoes_adm" class="menu-link">

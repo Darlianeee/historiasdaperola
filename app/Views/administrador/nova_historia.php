@@ -199,7 +199,7 @@
                 <input
                     type="text"
                     id="legenda"
-                    placeholder="Digite a legenda da imagem..."
+                    placeholder="Digite a legenda da imagem em português..."
                 >
 
             </div>

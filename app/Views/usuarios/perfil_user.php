@@ -35,7 +35,7 @@
                 <div class="profile-aside"> 
 
                     <div class="avatar-frame"> 
-                        <img src="<?=URL?>/img/foto_perfil.png" alt="Avatar"> 
+                        <img src="<?=URL?>/img/foto_perfil.png" alt="Imagem ilustrativa de uma pessoa, usada como foto de perfil do usuário">
                     </div> 
 
                     <div class="profile-actions"> 
@@ -56,7 +56,7 @@
 
                     <div class="info-item"> 
                         <span class="info-icon"> 
-                            <img src="<?=URL?>/img/icone_nome.png" alt="Ícone de Nome"> 
+                            <img src="<?=URL?>/img/icone_nome.png" alt="Ícone verde representando a silhueta de uma pessoa, indicando o nome completo do usuário">
                         </span> 
 
                         <div class="info-content"> 
@@ -67,7 +67,7 @@
 
                     <div class="info-item"> 
                         <span class="info-icon"> 
-                            <img src="<?=URL?>/img/icone_email.png" alt="Ícone de Email"> 
+                            <img src="<?=URL?>/img/icone_email.png" alt="Ícone verde de um envelope, representando o endereço de e-mail do usuário">
                         </span> 
 
                         <div class="info-content"> 
@@ -78,7 +78,7 @@
 
                     <div class="info-item"> 
                         <span class="info-icon"> 
-                            <img src="<?=URL?>/img/icone_matricula.png" alt="Ícone de Matrícula"> 
+                            <img src="<?=URL?>/img/icone_matricula.png" alt="Ícone verde de um documento de identificação com linhas, representando o número de matrícula do usuário">
                         </span> 
 
                         <div class="info-content"> 

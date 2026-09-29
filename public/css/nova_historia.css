@@ -282,9 +282,12 @@ body {
     width: 180px;
 }
 
-#titulo,
-#legenda {
+#titulo{
     width: 260px;
+}
+
+#legenda {
+    width: 310px;
 }
 
 

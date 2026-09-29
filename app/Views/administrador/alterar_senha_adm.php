@@ -32,7 +32,7 @@
                     <div class="password-input-wrapper">
                         <input id="current-password" class="password-input" type="password">
                         <button type="button" class="password-toggle" data-target="current-password" title="Mostrar/Ocultar senha">
-                            <img src="<?=URL?>/public/img/icone_olhoo.png" alt="Mostrar senha" class="eye-icon">
+                            <img src="<?=URL?>/public/img/icone_olhoo.png" alt="Ícone de um olho aberto, usado para mostrar a senha" class="eye-icon">
                         </button>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                     <div class="password-input-wrapper">
                         <input id="new-password" class="password-input" type="password">
                         <button type="button" class="password-toggle" data-target="new-password" title="Mostrar/Ocultar senha">
-                            <img src="<?=URL?>/public/img/icone_olhoo.png" alt="Mostrar senha" class="eye-icon">
+                            <img src="<?=URL?>/public/img/icone_olhoo.png" alt="Ícone de um olho aberto, usado para mostrar a senha" class="eye-icon">
                         </button>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                         <input id="confirm-password" class="password-input" type="password">
 
                         <button type="button" class="password-toggle" data-target="confirm-password" title="Mostrar/Ocultar senha">
-                            <img src="<?=URL?>/public/img/icone_olhoo.png" alt="Mostrar senha" class="eye-icon">
+                            <img src="<?=URL?>/public/img/icone_olhoo.png" alt="Ícone de um olho aberto, usado para mostrar a senha" class="eye-icon">
                         </button>
                     </div>
                 </div>

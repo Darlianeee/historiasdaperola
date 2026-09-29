@@ -7,6 +7,7 @@
         <ul>
             <li><a href="<?=URL?>/usuarios/inicio_user">Início</a></li>
             <li><a href="<?=URL?>/usuarios/sobre_nos_user">Sobre Nós</a></li>
+            <li><a href="<?=URL?>/usuarios/inicio_user">Configurações</a></li>
         </ul>
     </div>
 

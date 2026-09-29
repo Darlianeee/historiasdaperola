@@ -33,7 +33,7 @@
 
                         <div class="avatar-frame">
 
-                            <img id="previewFoto" src="<?=URL?>/img/foto_perfil.png" alt="Foto de perfil">
+                            <img id="previewFoto" src="<?=URL?>/img/foto_perfil.png" alt="Imagem ilustrativa de uma pessoa, usada como foto de perfil do administrador">
                             <label for="fotoPerfil" class="avatar-edit" title="Alterar foto">
                                 <svg viewBox="0 0 24 24" aria-hidden="true">
                                     <path d="M9 3L7.5 5H5C3.9 5 3 5.9 3 7V18C3 19.1 3.9 20 5 20H19C20.1 20 21 19.1 21 18V7C21 5.9 20.1 5 19 5H16.5L15 3H9Z"/>
@@ -58,7 +58,7 @@
                         <div class="info-item">
 
                             <span class="info-icon">
-                                <img src="<?=URL?>/img/icone_nome.png" alt="Ícone de Nome">
+                                <img src="<?=URL?>/img/icone_nome.png" alt="Ícone verde representando a silhueta de uma pessoa, indicando o nome completo do usuário">
                             </span>
 
                             <div class="info-content">
@@ -69,76 +69,37 @@
                             </div>
                         </div>
 
-
-
-                        <!-- E-MAIL -->
-
                         <div class="info-item">
-
 
                             <span class="info-icon">
 
-                                <img
-                                    src="<?=URL?>/img/icone_email.png"
-                                    alt="Ícone de E-mail"
-                                >
-
+                                <img src="<?=URL?>/img/icone_email.png" alt="Ícone verde de um envelope, representando o endereço de e-mail do usuário">
                             </span>
 
-
                             <div class="info-content">
-
 
                                 <p class="info-label">
                                     E-mail
                                 </p>
 
-
-                                <input
-                                    class="info-input"
-                                    type="email"
-                                    name="email"
-                                    value="nome@ifro.edu.br"
-                                >
-
+                                <input class="info-input" type="email" name="email" value="nome@ifro.edu.br">
 
                             </div>
 
-
                         </div>
 
-
-
-                        <!--MATRICULA -->
-
                         <div class="info-item">
-
-
                             <span class="info-icon">
-
-                                <img
-                                    src="<?=URL?>/img/icone_matricula.png"
-                                    alt="Ícone de Matrícula"
-                                >
-
+                                <img src="<?=URL?>/img/icone_matricula.png" alt="Ícone verde de um documento de identificação com linhas, representando o número de matrícula do usuário">
                             </span>
 
-
                             <div class="info-content">
-
 
                                 <p class="info-label">
                                     Matrícula
                                 </p>
 
-
-                                <input
-                                    class="info-input"
-                                    type="text"
-                                    name="suap"
-                                    value="0000000000000"
-                                    readonly
-                                >
+                                <input class="info-input" type="text" name="suap" value="00000000000000"readonly>
 
 
                             </div>
@@ -155,139 +116,9 @@
 
             </form>
 
-
         </section>
 
-
     </main>
-
-
-
-    <!-- =====================================================
-         MODAL DE EDIÇÃO DA FOTO
-    ====================================================== -->
-
-    <div
-        class="photo-modal"
-        id="photoModal"
-    >
-
-
-        <div class="photo-modal-content">
-
-
-            <!-- CABEÇALHO -->
-
-            <div class="photo-modal-header">
-
-                <h2>Ajustar foto</h2>
-
-
-                <button
-                    type="button"
-                    class="close-photo-modal"
-                    id="fecharModal"
-                >
-                    &times;
-                </button>
-
-            </div>
-
-
-
-            <!-- ÁREA DA FOTO -->
-
-            <div
-                class="crop-area"
-                id="cropArea"
-            >
-
-                <img
-                    id="cropImage"
-                    src=""
-                    alt="Imagem para ajuste"
-                    draggable="false"
-                >
-
-
-                <div class="crop-circle"></div>
-
-            </div>
-
-
-
-            <!-- ZOOM -->
-
-            <div class="photo-controls">
-
-
-                <button
-                    type="button"
-                    id="zoomMenos"
-                    class="zoom-button"
-                >
-                    −
-                </button>
-
-
-                <input
-                    type="range"
-                    id="zoomSlider"
-                    min="1"
-                    max="3"
-                    step="0.01"
-                    value="1"
-                >
-
-
-                <button
-                    type="button"
-                    id="zoomMais"
-                    class="zoom-button"
-                >
-                    +
-                </button>
-
-
-            </div>
-
-
-            <p class="crop-help">
-                Arraste a foto para ajustar a posição.
-            </p>
-
-
-
-            <!-- BOTÕES -->
-
-            <div class="photo-modal-actions">
-
-
-                <button
-                    type="button"
-                    class="modal-button modal-cancel"
-                    id="cancelarFoto"
-                >
-                    Cancelar
-                </button>
-
-
-                <button
-                    type="button"
-                    class="modal-button modal-confirm"
-                    id="usarFoto"
-                >
-                    Usar foto
-                </button>
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
 
     <?php include '../App/Views/usuarios/footer_user.php'; ?>
     <script src="<?=URL?>/public/js/foto_perfil.js"></script>
