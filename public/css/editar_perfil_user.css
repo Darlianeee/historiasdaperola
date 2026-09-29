@@ -1,7 +1,3 @@
-/* =========================================
-   RESET
-========================================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -30,29 +26,15 @@ body {
     color-scheme: light;
 }
 
-
-/* =========================================
-   LINKS
-========================================= */
-
 a {
     text-decoration: none;
     color: inherit;
 }
 
-
-/* =========================================
-   CONTEÚDO
-========================================= */
 .content {
     flex: 1;
     padding: 30px 49px 110px;
 }
-
-
-/* =========================================
-   CABEÇALHO
-========================================= */
 
 .page-header {
     display: flex;
@@ -108,11 +90,6 @@ h1 {
     color: #394940;
 }
 
-
-/* =========================================
-   CARD
-========================================= */
-
 .profile-card {
     width: 100%;
     max-width: 1000px;
@@ -132,101 +109,55 @@ h1 {
 
 .profile-card h2 {
     margin: 0 0 30px;
-
     padding-bottom: 18px;
-
     border-bottom: 1px solid #dddddd;
-
     font-size: 22px;
-
     font-weight: 700;
-
     color: #333333;
 }
 
-
-/* =========================================
-   ESTRUTURA PRINCIPAL
-========================================= */
-
 .profile-grid {
     display: grid;
-
     grid-template-columns: 230px 1fr;
-
     gap: 55px;
-
     align-items: center;
 }
-
-
-/* =========================================
-   FOTO / LADO ESQUERDO
-========================================= */
 
 .profile-aside {
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     gap: 28px;
 }
 
-
-/* =========================================
-   FOTO
-========================================= */
-
 .avatar-frame {
     position: relative;
-
     width: 150px;
     height: 150px;
 }
-
 
 .avatar-frame img {
     display: block;
-
     width: 150px;
     height: 150px;
-
     border-radius: 50%;
-
     object-fit: cover;
-
     background: #dce0e8;
 }
 
-
-
-/* =========================================
-   BOTÃO DA CÂMERA
-========================================= */
-
 .avatar-edit {
     position: absolute;
-
     right: 1px;
     bottom: 1px;
-
     width: 40px;
     height: 40px;
-
     border-radius: 50%;
-
     background: #c99b1d;
-
     border: 3px solid #ffffff;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     cursor: pointer;
-
     transition: 0.2s ease;
 }
 
@@ -251,39 +182,23 @@ h1 {
     stroke-linejoin: round;
 }
 
-
-/* =========================================
-   BOTÕES DO PERFIL
-========================================= */
-
 .profile-actions {
     width: 100%;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     gap: 12px;
 }
 
 
 .profile-btn {
     width: 200px;
-
     padding: 11px 20px;
-
     border-radius: 10px;
-
     text-align: center;
-
     font-family: inherit;
-
     font-size: 15px;
-
     cursor: pointer;
-
     transition: 0.25s ease;
 }
 
@@ -317,40 +232,19 @@ h1 {
     background: #f7f7f7;
 }
 
-
-/* =========================================
-   CAMPOS
-========================================= */
-
 .info-grid {
     display: grid;
-
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
     gap: 30px 35px;
-
     align-content: center;
 }
 
-
-/* =========================================
-   ITEM
-========================================= */
-
 .info-item {
     display: flex;
-
     align-items: flex-end;
-
     gap: 12px;
-
     min-width: 0;
 }
-
-
-/* =========================================
-   ÍCONE
-========================================= */
 
 .info-icon {
     width: 40px;
@@ -372,30 +266,17 @@ h1 {
     object-fit: contain;
 }
 
-
-/* =========================================
-   CONTEÚDO DO CAMPO
-========================================= */
-
 .info-content {
     flex: 1;
-
     min-width: 0;
 }
 
 
 .info-label {
     margin: 0 0 7px;
-
     font-size: 14px;
-
     color: #52635a;
 }
-
-
-/* =========================================
-   INPUT
-========================================= */
 
 .info-input {
     display: block;
@@ -445,34 +326,19 @@ h1 {
     cursor: default;
 }
 
-
-/* =========================================
-   EDITOR DE FOTO
-========================================= */
-
 .photo-modal {
     position: fixed;
-
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     padding: 20px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     background: rgba(0, 0, 0, 0.65);
-
     opacity: 0;
-
     visibility: hidden;
-
     transition: 0.25s ease;
-
     z-index: 9999;
 }
 
@@ -486,30 +352,17 @@ h1 {
 
 .photo-modal-content {
     width: 100%;
-
     max-width: 520px;
-
     padding: 25px;
-
     background: #ffffff;
-
     border-radius: 18px;
-
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 }
-
-
-/* =========================================
-   CABEÇALHO DO MODAL
-========================================= */
 
 .photo-modal-header {
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     margin-bottom: 20px;
 }
 
@@ -547,211 +400,6 @@ h1 {
     background: #f1f1f1;
 }
 
-
-/* =========================================
-   ÁREA DE RECORTE
-========================================= */
-
-.crop-area {
-    position: relative;
-
-    width: 100%;
-    max-width: 420px;
-
-    height: 420px;
-
-    margin: 0 auto;
-
-    overflow: hidden;
-
-    background: #222222;
-
-    cursor: grab;
-
-    user-select: none;
-
-    touch-action: none;
-}
-
-
-.crop-area.dragging {
-    cursor: grabbing;
-}
-
-
-.crop-area img {
-    position: absolute;
-
-    max-width: none;
-
-    display: block;
-
-    user-select: none;
-
-    pointer-events: none;
-}
-
-
-/* =========================================
-   CÍRCULO
-========================================= */
-
-.crop-circle {
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    width: 300px;
-    height: 300px;
-
-    transform: translate(-50%, -50%);
-
-    border: 3px solid #ffffff;
-
-    border-radius: 50%;
-
-    box-shadow:
-        0 0 0 9999px rgba(0, 0, 0, 0.45);
-
-    pointer-events: none;
-}
-
-
-/* =========================================
-   ZOOM
-========================================= */
-
-.photo-controls {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 12px;
-
-    margin-top: 22px;
-}
-
-
-.zoom-button {
-    width: 35px;
-    height: 35px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background: #c99b1d;
-
-    color: #ffffff;
-
-    font-size: 22px;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-
-.zoom-button:hover {
-    background: #b88b11;
-}
-
-
-#zoomSlider {
-    width: 220px;
-
-    accent-color: #c99b1d;
-
-    cursor: pointer;
-}
-
-
-/* =========================================
-   TEXTO DO EDITOR
-========================================= */
-
-.crop-help {
-    margin: 15px 0 0;
-
-    text-align: center;
-
-    font-size: 14px;
-
-    color: #68756e;
-}
-
-
-/* =========================================
-   BOTÕES DO MODAL
-========================================= */
-
-.photo-modal-actions {
-    display: flex;
-
-    justify-content: flex-end;
-
-    gap: 12px;
-
-    margin-top: 22px;
-}
-
-
-.modal-button {
-    padding: 10px 22px;
-
-    border-radius: 9px;
-
-    font-family: inherit;
-
-    font-size: 15px;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-
-.modal-cancel {
-    background: #ffffff;
-
-    color: #777777;
-
-    border: 1px solid #d5d5d5;
-}
-
-
-.modal-cancel:hover {
-    background: #f4f4f4;
-}
-
-
-.modal-confirm {
-    background: #c99b1d;
-
-    color: #ffffff;
-
-    border: 1px solid #c99b1d;
-}
-
-
-.modal-confirm:hover {
-    background: #b88b11;
-
-    border-color: #b88b11;
-}
-
-
-/* =========================================
-   TABLET / NOTEBOOK
-========================================= */
-
 @media (max-width: 1100px) {
 
     .content {
@@ -776,11 +424,6 @@ h1 {
     }
 
 }
-
-
-/* =========================================
-   TABLET
-========================================= */
 
 @media (max-width: 850px) {
 
@@ -819,11 +462,6 @@ h1 {
     }
 
 }
-
-
-/* =========================================
-   TABLET PEQUENO
-========================================= */
 
 @media (max-width: 700px) {
 
@@ -881,11 +519,6 @@ h1 {
     }
 
 }
-
-
-/* =========================================
-   CELULAR
-========================================= */
 
 @media (max-width: 500px) {
 
@@ -1049,11 +682,6 @@ h1 {
 
 }
 
-
-/* =========================================
-   CELULAR PEQUENO
-========================================= */
-
 @media (max-width: 380px) {
 
     .content {
@@ -1125,11 +753,6 @@ h1 {
 
 }
 
-
-/* =========================================
-   CELULAR MUITO PEQUENO
-========================================= */
-
 @media (max-width: 330px) {
 
     .profile-card {
@@ -1159,31 +782,4 @@ h1 {
         font-size: 12px;
     }
 
-}
-
-/* =========================================
-   FOOTER NO FINAL DA PÁGINA
-========================================= */
-
-html,
-body {
-    min-height: 100%;
-    height: 100%;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* O conteúdo ocupa todo o espaço disponível */
-main.content {
-    flex: 1 0 auto;
-}
-
-/* O footer fica sempre no final */
-footer {
-    margin-top: auto !important;
-    flex-shrink: 0;
 }
