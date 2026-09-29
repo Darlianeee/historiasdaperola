@@ -23,7 +23,6 @@ body {
 }
 
 body {
-    min-height: 100vh;
     margin: 0;
 
     display: flex;
@@ -34,10 +33,7 @@ body {
     color: var(--text);
 }
 
-.content {
-    flex: 1;
-
-    padding: 9px 49px 80px;
+.content {    padding: 9px 49px 80px;
     background: #f7fbf9;
     transition: transform .35s ease;
 }
@@ -271,9 +267,7 @@ h1{
 
 @media (max-width: 1024px) {
 
-    .content {
-        flex: 1;
-        padding: 28px;
+    .content {        padding: 28px;
     }
 
     .page-header {
@@ -775,7 +769,7 @@ h1{
 }
 
 .page-header {
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 .page-header h1 {

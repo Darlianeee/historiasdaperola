@@ -380,16 +380,17 @@ nav.open {
     .logo p { 
         font-size: 12px; 
     } 
- 
+
     nav {
-        top: 65px;
+        top: calc(var(--header-height) - 3px);
 
         width: 260px;
         max-width: 82vw;
-        height: calc(100dvh - 65px);
+
+        height: calc(100dvh - var(--header-height) + 3px);
 
         padding: 12px 8px;
-    } 
+    }
  
     .menu a { 
         width: 235px; 
@@ -445,12 +446,14 @@ nav.open {
         font-size: 11px; 
     } 
  
-    nav { 
-        width: 250px; 
-        max-width: 82vw; 
- 
-        height: calc(100dvh - var(--header-height) + 1px); 
-    } 
+    nav {
+        top: calc(var(--header-height) - 1px);
+
+        width: 250px;
+        max-width: 82vw;
+
+        height: calc(100dvh - var(--header-height) + 1px);
+    }
  
     .menu a { 
         width: 220px; 

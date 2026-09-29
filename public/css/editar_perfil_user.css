@@ -14,7 +14,6 @@ body {
 
 body {
     margin: 0;
-    min-height: 100vh;
     background: #eef6f2;
 
     display: flex;
@@ -31,9 +30,7 @@ a {
     color: inherit;
 }
 
-.content {
-    flex: 1;
-    padding: 30px 49px 110px;
+.content {    padding: 30px 49px 110px;
 }
 
 .page-header {
@@ -94,8 +91,6 @@ h1 {
     width: 100%;
     max-width: 1000px;
 
-    margin: 40px auto;
-
     padding: 30px;
 
     background: #ffffff;
@@ -108,7 +103,6 @@ h1 {
 
 
 .profile-card h2 {
-    margin: 0 0 30px;
     padding-bottom: 18px;
     border-bottom: 1px solid #dddddd;
     font-size: 22px;
@@ -690,7 +684,7 @@ h1 {
 
 
     .title-row h1 {
-        font-size: 22px;
+        font-size: 29px;
     }
 
 

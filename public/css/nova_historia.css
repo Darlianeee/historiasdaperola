@@ -30,8 +30,6 @@ body {
 .container {
     width: 100%;
     padding: 110px 49px 50px;
-
-    min-height: calc(100vh - 50px);
 }
 
 
@@ -701,7 +699,7 @@ textarea:focus {
 
         height: 24px;
 
-        transform: scale(1.25);
+        transform: scale(2.25);
     }
 
 

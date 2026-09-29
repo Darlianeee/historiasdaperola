@@ -23,13 +23,8 @@ body {
 }
 
 body {
-    min-height: 100vh;
-
     background: #EAF3E6;
     color: #111111;
-
-    display: flex;
-    flex-direction: column;
 }
 
 
@@ -44,8 +39,6 @@ body {
     margin: 0 auto;
 
     padding: 110px 0 80px;
-
-    flex: 1;
 }
 
 
@@ -533,7 +526,6 @@ body {
         width: 88%;
 
         padding-top: 90px;
-        padding-bottom: 350px;
     }
 
 
@@ -649,7 +641,6 @@ body {
         width: 88%;
 
         padding-top: 70px;
-        padding-bottom: 185px;
     }
 
 

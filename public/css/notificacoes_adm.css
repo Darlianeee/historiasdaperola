@@ -21,13 +21,8 @@ body {
 }
 
 body {
-    min-height: 100vh;
-
     background: #EAF3E6;
     color: #111111;
-
-    display: flex;
-    flex-direction: column;
 }
 
 
@@ -43,8 +38,6 @@ body {
 
     padding-top: 45px;
     padding-bottom: 0;
-
-    flex: 1;
 }
 
 
@@ -674,7 +667,6 @@ body {
     .container {
         width: 88%;
         padding-top: 90px;
-        padding-bottom: 350px;
     }
     .buscar input {
     width: 100%;
@@ -809,7 +801,6 @@ body {
         width: 88%;
 
         padding-top: 70px;
-        padding-bottom: 185px;
     }
 
 

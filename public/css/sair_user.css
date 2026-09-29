@@ -14,13 +14,7 @@ body {
     height: 100%;
 }
 
-body {
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-
-    font-family: Arial, Helvetica, sans-serif;
+body {    font-family: Arial, Helvetica, sans-serif;
 
     background: #eef7e9;
     color: #111;
@@ -33,9 +27,6 @@ body {
 
 .conteudo {
     position: relative;
-
-    flex: 1;
-
     width: 100%;
     padding: 110px 49px 80px;
 }
@@ -273,73 +264,296 @@ footer {
 
 
 /* =========================================
-   RESPONSIVIDADE
+   TABLET
 ========================================= */
 
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 1100px) {
+
+    .conteudo {
+        position: relative;
+
+        padding: 90px 40px 60px;
+    }
+
+
+    /* =========================
+       TÍTULO
+    ========================= */
 
     .titulo {
-        left: 25px;
-    }
+        position: relative;
 
-    .descricao {
-        left: 25px;
-    }
+        top: auto;
+        left: auto;
 
-    .overlay {
-        padding-top: 105px;
-    }
-
-    .modal {
-        width: 430px;
-    }
-}
-
-
-@media (max-width: 480px) {
-
-    .titulo {
-        top: 25px;
-        left: 20px;
+        margin-bottom: 8px;
     }
 
     .titulo h1 {
-        font-size: 26px;
+        font-size: 31px;
+        line-height: 38px;
     }
+
+
+    /* =========================
+       SUBTÍTULO
+    ========================= */
 
     .descricao {
-        top: 62px;
-        left: 20px;
-        right: 20px;
+        position: relative;
 
-        font-size: 14px;
+        top: auto;
+        left: auto;
+
+        margin: 0;
+
+        font-size: 17px;
+        line-height: 23px;
     }
+
+
+    /* =========================
+       ÁREA DO CARD
+    ========================= */
 
     .overlay {
-        padding: 100px 15px 20px;
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        width: 100%;
+        height: auto;
+
+        padding: 90px 0 40px;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
     }
 
+
+    /* =========================
+       CARD MAIOR
+    ========================= */
+
     .modal {
-        width: 100%;
-        max-width: 430px;
+        width: 620px;
+        max-width: 100%;
+
+        min-height: 440px;
+
+        padding: 40px 55px 38px;
+
+        border-radius: 10px;
+    }
+
+
+    /* =========================
+       ÍCONE
+    ========================= */
+
+    .icone-saida {
+        width: 125px;
+        height: 125px;
+
+        margin: 0 auto 22px;
+    }
+
+    .icon-saida {
+        width: 185px;
+        height: 185px;
+    }
+
+
+    /* =========================
+       TÍTULO DO CARD
+    ========================= */
+
+    .modal h2 {
+        margin-bottom: 22px;
+
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+
+    /* =========================
+       TEXTO DO CARD
+    ========================= */
+
+    .modal p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+
+    /* =========================
+       BOTÕES
+    ========================= */
+
+    .botoes {
+        margin-top: 45px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cancelar,
+    .Sair {
+        width: 100px;
+        height: 40px;
+
+        font-size: 14px;
     }
 }
 
 
-@media (max-width: 390px) {
+/* =========================================
+   CELULAR
+========================================= */
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 480px) {
+
+    .conteudo {
+        position: relative;
+        padding: 80px 16px 45px;
+    }
+
+
+    /* =========================
+       TÍTULO
+    ========================= */
 
     .titulo {
-        left: 16px;
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        margin-bottom: 6px;
     }
+
+    .titulo h1 {
+        font-size: 23px;
+        line-height: 28px;
+    }
+
+
+    /* =========================
+       SUBTÍTULO
+    ========================= */
 
     .descricao {
-        left: 16px;
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        margin: 0;
+
+        font-size: 13px;
+        line-height: 18px;
     }
 
+
+    /* =========================
+       ÁREA DO CARD
+    ========================= */
+
+    .overlay {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        width: 100%;
+        height: auto;
+
+        padding: 30px 0 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+
+    /* =========================
+       CARD MENOR
+    ========================= */
+
     .modal {
+        width: 100%;
         max-width: 350px;
 
-        padding-left: 25px;
-        padding-right: 25px;
+        min-height: 270px;
+
+        padding: 20px 18px 18px;
+
+        border-radius: 7px;
+    }
+
+
+    /* =========================
+       ÍCONE MENOR
+    ========================= */
+
+    .icone-saida {
+        width: 65px;
+        height: 65px;
+
+        margin: 0 auto 10px;
+    }
+
+    .icon-saida {
+        width: 90px;
+        height: 90px;
+    }
+
+
+    /* =========================
+       TÍTULO DO CARD
+    ========================= */
+
+    .modal h2 {
+        margin-bottom: 10px;
+
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+
+    /* =========================
+       TEXTO
+    ========================= */
+
+    .modal p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+
+    /* =========================
+       BOTÕES
+    ========================= */
+
+    .botoes {
+        margin-top: 20px;
+
+        gap: 10px;
+    }
+
+    .cancelar,
+    .Sair {
+        width: 70px;
+        height: 29px;
+
+        font-size: 11px;
     }
 }
