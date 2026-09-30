@@ -21,7 +21,7 @@
         <!-- PAINEL DE ACESSIBILIDADE -->
         <section class="painel-acessibilidade">
 
-            <!-- TEMA -->
+            <!-- TEMA  -->
             <div class="grupo-configuracao">
                 <h2>Tema</h2>
                 <p>Escolha entre o tema claro e o tema escuro.</p>
