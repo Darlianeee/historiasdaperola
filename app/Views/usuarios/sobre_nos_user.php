@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sobre Nós</title>
+<title>Sobre Nós</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/sobre_nos_user.css">
 </head>
@@ -17,9 +16,7 @@
 
 <main class="conteudo">
 
-    <!-- ==============================
-         CABEÇALHO
-    =============================== -->
+    
 
     <section class="cabecalho-pagina">
 
@@ -33,9 +30,7 @@
 
 
 
-    <!-- ==============================
-         MOTIVO DO DESENVOLVIMENTO
-    =============================== -->
+    
 
     <section class="motivo">
 
@@ -61,9 +56,7 @@
 
 
 
-    <!-- ==============================
-         NOSSA EQUIPE
-    =============================== -->
+    
 
     <section class="secao-equipe">
 
@@ -81,9 +74,7 @@
         <div class="equipe">
 
 
-            <!-- ==============================
-                 DARLIANE
-            =============================== -->
+            
 
             <div class="integrante">
 
@@ -113,9 +104,7 @@
 
 
 
-            <!-- ==============================
-                 JOSE
-            =============================== -->
+            
 
             <div class="integrante">
 
@@ -145,9 +134,7 @@
 
 
 
-            <!-- ==============================
-                 KALONDRA
-            =============================== -->
+            
 
             <div class="integrante">
 
@@ -176,9 +163,7 @@
 
 
 
-            <!-- ==============================
-                 LAÍS
-            =============================== -->
+            
 
             <div class="integrante">
 
@@ -208,9 +193,7 @@
 
 
 
-            <!-- ==============================
-                 LEVI
-            =============================== -->
+            
 
             <div class="integrante">
 
@@ -240,9 +223,7 @@
 
 
 
-            <!-- ==============================
-                 RAQUELLY
-            =============================== -->
+            
 
             <div class="integrante">
 

@@ -1,18 +1,17 @@
-/* =========================================
-   RESET
-========================================= */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 
-/* =========================================
-   BODY
-========================================= */
+
 html,
 body {
     width: 100%;
@@ -25,7 +24,7 @@ body {
 }
 
 
-/* CONTEÚDO */
+
 
 .container {
     width: 100%;
@@ -33,9 +32,7 @@ body {
 }
 
 
-/* =========================================
-   TÍTULO DA PÁGINA
-========================================= */
+
 
 .titulo-pagina h1 {
     font-size: 30px;
@@ -52,12 +49,13 @@ body {
     color: #000000;
 
     margin-bottom: 35px;
-}
+    margin-top: 8px;
+    margin-left: 14px;
+    font-size: 16px;
+    line-height: 1.4;}
 
 
-/* =========================================
-   CARD
-========================================= */
+
 
 .card {
     width: 680px;
@@ -75,9 +73,7 @@ body {
 }
 
 
-/* =========================================
-   TÍTULO DO CARD
-========================================= */
+
 
 .card h2 {
     text-align: center;
@@ -102,9 +98,7 @@ body {
 }
 
 
-/* =========================================
-   IDIOMAS
-========================================= */
+
 
 .idiomas {
     display: flex;
@@ -119,9 +113,7 @@ body {
 }
 
 
-/* =========================================
-   BOTÕES DOS IDIOMAS
-========================================= */
+
 
 .idiomas button {
     display: flex;
@@ -156,9 +148,7 @@ body {
 }
 
 
-/* =========================================
-   IMAGENS DOS IDIOMAS
-========================================= */
+
 
 .idiomas button img {
     display: block;
@@ -169,9 +159,7 @@ body {
 }
 
 
-/* =========================================
-   BANDEIRA DO BRASIL
-========================================= */
+
 
 .idiomas button:nth-child(1) img {
     width: 25px;
@@ -182,9 +170,7 @@ body {
 }
 
 
-/* =========================================
-   BANDEIRA DA ESPANHA
-========================================= */
+
 
 .idiomas button:nth-child(2) img {
     width: 30px;
@@ -197,9 +183,7 @@ body {
 }
 
 
-/* =========================================
-   WARI' ORO NAO
-========================================= */
+
 
 .idiomas .idioma-wari {
     display: flex;
@@ -214,9 +198,7 @@ body {
 }
 
 
-/* =========================================
-   LOGO WARI
-========================================= */
+
 
 .idiomas .idioma-wari img {
     width: 24px;
@@ -233,9 +215,7 @@ body {
 }
 
 
-/* =========================================
-   TEXTO DOS IDIOMAS
-========================================= */
+
 
 .idiomas button span {
     display: inline-block;
@@ -246,9 +226,7 @@ body {
 }
 
 
-/* =========================================
-   BOTÃO ATIVO
-========================================= */
+
 
 .idiomas button.ativo {
     background: #d4aa2a;
@@ -259,9 +237,7 @@ body {
 }
 
 
-/* =========================================
-   LINHA DOS CAMPOS
-========================================= */
+
 
 .linha {
     display: flex;
@@ -272,9 +248,7 @@ body {
 }
 
 
-/* =========================================
-   TAMANHOS DOS CAMPOS
-========================================= */
+
 
 #categoria {
     width: 180px;
@@ -289,9 +263,7 @@ body {
 }
 
 
-/* =========================================
-   CAMPOS
-========================================= */
+
 
 .campo {
     display: flex;
@@ -304,9 +276,7 @@ body {
 }
 
 
-/* =========================================
-   LABEL
-========================================= */
+
 
 label {
     margin-bottom: 7px;
@@ -317,9 +287,7 @@ label {
 }
 
 
-/* =========================================
-   INPUT
-========================================= */
+
 
 input {
     height: 30px;
@@ -332,13 +300,10 @@ input {
 
     outline: none;
 
-    font-family: 'Poppins', sans-serif;
 }
 
 
-/* =========================================
-   SELECT
-========================================= */
+
 
 select {
     height: 30px;
@@ -353,13 +318,10 @@ select {
 
     background: white;
 
-    font-family: 'Poppins', sans-serif;
 }
 
 
-/* =========================================
-   TEXTAREA
-========================================= */
+
 
 textarea {
     width: 100%;
@@ -376,13 +338,10 @@ textarea {
 
     resize: none;
 
-    font-family: 'Poppins', sans-serif;
 }
 
 
-/* =========================================
-   FOCUS
-========================================= */
+
 
 input:focus,
 select:focus,
@@ -391,9 +350,7 @@ textarea:focus {
 }
 
 
-/* =========================================
-   BOTÃO ADICIONAR IMAGEM
-========================================= */
+
 
 .btnImagem {
     background: white;
@@ -416,9 +373,7 @@ textarea:focus {
 }
 
 
-/* =========================================
-   HOVER IMAGEM
-========================================= */
+
 
 .btnImagem:hover {
     background: #BE9628;
@@ -429,9 +384,7 @@ textarea:focus {
 }
 
 
-/* =========================================
-   AÇÕES
-========================================= */
+
 
 .acoes {
     display: flex;
@@ -442,9 +395,7 @@ textarea:focus {
 }
 
 
-/* =========================================
-   BOTÃO CANCELAR
-========================================= */
+
 
 .cancelar {
     background: white;
@@ -483,9 +434,7 @@ textarea:focus {
 }
 
 
-/* =========================================
-   BOTÃO SALVAR
-========================================= */
+
 
 .salvar {
     background: #c79b21;
@@ -510,9 +459,7 @@ textarea:focus {
 }
 
 
-/* =========================================
-   TABLET
-========================================= */
+
 
 @media (max-width: 768px) {
 
@@ -521,20 +468,21 @@ textarea:focus {
     }
 
 
-    /* TÍTULO DA PÁGINA */
+    
 
     .titulo-pagina h1 {
         font-size: 28px;
     }
 
-    .titulo-pagina p {
-        font-size: 14px;
+    .titulo-pagina p {    font-size: 16px;
 
         margin-bottom: 25px;
-    }
+    margin-top: 8px;
+    margin-left: 14px;
+    line-height: 1.4;}
 
 
-    /* CARD */
+    
 
     .card {
         width: 100%;
@@ -543,11 +491,7 @@ textarea:focus {
     }
 
 
-    /*
-       IMPORTANTE:
-       NO TABLET AS LINHAS CONTINUAM
-       LADO A LADO
-    */
+    
 
     .linha {
         flex-direction: row;
@@ -571,7 +515,7 @@ textarea:focus {
     }
 
 
-    /* IDIOMAS */
+    
 
     .idiomas {
         gap: 10px;
@@ -581,9 +525,7 @@ textarea:focus {
 }
 
 
-/* =========================================
-   CELULAR
-========================================= */
+
 
 @media (max-width: 480px) {
 
@@ -592,32 +534,30 @@ textarea:focus {
     }
 
 
-    /* =====================================
-       TÍTULO DA PÁGINA
-    ===================================== */
+    
 
     .titulo-pagina {
         display: block;
     }
 
-    .titulo-pagina h1 {
-        font-size: 24px;
-
-        padding-left: 10px;
+    .titulo-pagina h1 {    font-size: 28px;
+    padding-left: 9px;
 
         margin-bottom: 5px;
-    }
+    line-height: 31px;
+    font-weight: 700;
+    border-left: 5px solid #465722;
+    margin: 0;}
 
-    .titulo-pagina p {
-        font-size: 13px;
+    .titulo-pagina p {    font-size: 16px;
 
         margin-bottom: 22px;
-    }
+    margin-top: 8px;
+    margin-left: 14px;
+    line-height: 1.4;}
 
 
-    /* =====================================
-       CARD
-    ===================================== */
+    
 
     .card {
         width: 100%;
@@ -639,9 +579,7 @@ textarea:focus {
     }
 
 
-    /* =====================================
-       IDIOMAS
-    ===================================== */
+    
 
     .idiomas {
         flex-direction: column;
@@ -668,7 +606,7 @@ textarea:focus {
     }
 
 
-    /* BRASIL */
+    
 
     .idiomas button:nth-child(1) img {
         width: 30px;
@@ -677,7 +615,7 @@ textarea:focus {
     }
 
 
-    /* ESPANHA */
+    
 
     .idiomas button:nth-child(2) img {
         width: 30px;
@@ -688,7 +626,7 @@ textarea:focus {
     }
 
 
-    /* WARI */
+    
 
     .idiomas .idioma-wari {
         flex-direction: row;
@@ -712,9 +650,7 @@ textarea:focus {
     }
 
 
-    /* =====================================
-       CAMPOS NO CELULAR
-    ===================================== */
+    
 
     .linha {
         flex-direction: column;
@@ -747,9 +683,7 @@ textarea:focus {
     }
 
 
-    /* =====================================
-       BOTÃO ADICIONAR IMAGEM
-    ===================================== */
+    
 
     .btnImagem {
         width: 100%;
@@ -758,9 +692,7 @@ textarea:focus {
     }
 
 
-    /* =====================================
-       BOTÕES CANCELAR + SALVAR
-    ===================================== */
+    
 
     .acoes {
         width: 100%;

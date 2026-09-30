@@ -14,8 +14,7 @@ $historias = array_fill(0, 12, [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Histórias - Histórias na Pérola</title>
+<title>Histórias - Histórias na Pérola</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/escolher_historia_user.css">
 </head>
@@ -32,12 +31,12 @@ $historias = array_fill(0, 12, [
         <?php echo htmlspecialchars($subtitulo); ?>
     </p>
 
-    <!-- BARRA DE PESQUISA -->
+    
     <div class="busca-container">
 
         <form action="" method="GET" class="busca-box">
 
-            <!-- LUPA -->
+            
             <span class="icone-busca" aria-hidden="true">
                 <img src="<?=URL?>/public/img/LUPA2.png" alt="Ícone de busca">
             </span>
@@ -53,14 +52,14 @@ $historias = array_fill(0, 12, [
     </div>
 
 
-    <!-- GRID DE HISTÓRIAS -->
+    
     <section class="grid-historias">
 
         <?php foreach ($historias as $item): ?>
 
             <div class="card-item">
 
-                <!-- IMAGEM -->
+                
                 <div class="card-imagem">
 
                     <?php if (!empty($item['imagem'])): ?>
@@ -75,7 +74,7 @@ $historias = array_fill(0, 12, [
                 </div>
 
 
-                <!-- INFORMAÇÕES DO CARD -->
+                
                 <div class="card-info">
 
                     <div class="card-texto">
@@ -91,7 +90,7 @@ $historias = array_fill(0, 12, [
                     </div>
 
 
-                    <!-- BOTÃO LER -->
+                    
                     <a href="<?=URL?>/usuarios/historias_user" class="btn-ler">
                         Ler história
                     </a>

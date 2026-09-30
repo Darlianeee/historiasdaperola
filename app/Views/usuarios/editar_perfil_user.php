@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Perfil</title>
+<title>Editar Perfil</title>
     <link rel="stylesheet" href="<?=URL?>/public/css/editar_perfil_user.css">
 </head>
 <body>

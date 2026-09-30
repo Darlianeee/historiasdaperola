@@ -1,37 +1,40 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
             background: #edf5e9;
             color: #111;
         }
 
-        /* CONTEÚDO PRINCIPAL */
+        
         .conteudo {            padding: 90px 49px 80px;
             position: relative;
         }
 
-        h1 {
-            font-size: 27px;
-            border-left: 5px solid #465625;
-            padding-left: 10px;
+        h1 {    font-size: 28px;
+    border-left: 5px solid #465722;
+    padding-left: 9px;
             margin-bottom: 6px;
             color: #111;
-        }
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0 0 0 0;}
 
-        .subtitulo {
-            font-size: 15px;
+        .subtitulo {    font-size: 16px;
             color: #333;
-            margin-left: 15px;
+    margin-left: 14px;
             margin-bottom: 25px;
-        }
+    line-height: 1.4;
+    margin-top: 8px;}
 
-        /* CARD / MODAL DA HISTÓRIA */
+        
         .modal-historia {
             max-width: 780px;
             width: 100%;
@@ -137,9 +140,7 @@
             margin-bottom: 18px;
         }
 
-        /* =========================================
-        BOTÕES DE IDIOMAS
-        ========================================= */
+        
 
         .botoes-idiomas {
             display: flex;
@@ -165,7 +166,7 @@
 
             cursor: pointer;
 
-            /* BOTÃO NORMAL */
+            
             background-color: #ffffff;
             border: 1px solid #ccc;
             color: #111 !important;
@@ -174,9 +175,7 @@
         }
 
 
-        /* =========================================
-        TEXTO DO BOTÃO NORMAL
-        ========================================= */
+        
 
         .btn-idioma:not(.ativo),
         .btn-idioma:not(.ativo) span {
@@ -184,9 +183,7 @@
         }
 
 
-        /* =========================================
-        BOTÃO SELECIONADO
-        ========================================= */
+        
 
         .btn-idioma.ativo {
             background-color: #c99829;
@@ -196,14 +193,14 @@
         }
 
 
-        /* TEXTO DO BOTÃO SELECIONADO */
+        
 
         .btn-idioma.ativo span {
             color: #ffffff !important;
             font-weight: bold;
         }
 
-        /* Imagem da Espanha - tamanho normal */
+        
         .img-espanha {
             width: 28px;
             height: 28px;
@@ -213,7 +210,7 @@
         }
 
 
-        /* Logo Wari Oro Nao - maior */
+        
         .img-wari {
             width: 28px;
             height: 28px;
@@ -223,7 +220,7 @@
             transform: scale(2.4);
         }
 
-        /* RESPONSIVIDADE */
+        
         @media (max-width: 900px) {
             .modal-historia {
                 padding: 20px;

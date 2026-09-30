@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TELA SAIR</title>
+<title>TELA SAIR</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/sair_adm.css">
 </head>

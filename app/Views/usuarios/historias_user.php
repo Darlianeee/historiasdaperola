@@ -9,7 +9,7 @@ $texto_lenda = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>História - Histórias na Pérola</title>
+<title>História - Histórias na Pérola</title>
     <link rel="stylesheet" href="<?=URL?>/public/css/historias_user.css">
 </head>
 <body>
@@ -66,7 +66,7 @@ $texto_lenda = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
             </div>
         </div>
 
-        <!-- SEÇÃO DE FEEDBACK DO USUÁRIO -->
+        
         <form action="" method="POST" class="secao-comentario">
             <div class="titulo-comentario">O que você achou desta lenda?</div>
             

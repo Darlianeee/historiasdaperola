@@ -1,3 +1,6 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 :root {
     --surface: #ffffff;
@@ -10,9 +13,7 @@
 }
 
 
-/* ==============================
-   RESET
-============================== */
+
 
 * {
     margin: 0;
@@ -27,7 +28,6 @@ body {
 }
 
 body {
-    font-family: 'Inria Sans', sans-serif;
     background: #eef6f2;
     color: var(--text);
     line-height: 1.5;
@@ -39,18 +39,14 @@ a {
 }
 
 
-/* ==============================
-   CONTEÚDO
-============================== */
+
 
 .content {
     width: 100%;
     padding: 120px 80px 80px;
 }
 
-/* ==============================
-   CABEÇALHO
-============================== */
+
 
 .page-header {
     width: 100%;
@@ -68,36 +64,31 @@ a {
 .title-row {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 9px;
 }
 
-.title-mark {
+.title-mark {    
     width: 5px;
-    height: 32px;
+    height: 31px;
     flex-shrink: 0;
     border-radius: 5px;
     background: var(--accent);
-}
+    min-width: 5px;}
 
-h1 {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    font-size: 17px;
+h1 {    margin: 0;
+    font-size: 28px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 31px;
     color: var(--title);
 }
 
-.subtitle {
-    margin-top: 5px;
-    font-size: 17px;
+.subtitle {    margin-top: 8px;
+    font-size: 16px;
     line-height: 1.4;
 }
 
 
-/* ==============================
-   PAINEL
-============================== */
+
 
 .detail-panel {
     width: 100%;
@@ -106,9 +97,7 @@ h1 {
 }
 
 
-/* ==============================
-   CARD DA NOTIFICAÇÃO
-============================== */
+
 
 .notification-detail-card {
     width: min(45%, 700px); 
@@ -127,9 +116,7 @@ h1 {
 }
 
 
-/* ==============================
-   INFORMAÇÕES DA MENSAGEM
-============================== */
+
 
 .message-info {
     width: 100%;
@@ -165,9 +152,7 @@ h1 {
 }
 
 
-/* ==============================
-   CONTEÚDO DA MENSAGEM
-============================== */
+
 
 .message-content {
     padding-top: 14px;
@@ -184,9 +169,7 @@ h1 {
 }
 
 
-/* ==============================
-   BOTÃO
-============================== */
+
 
 .detail-actions {
     display: flex;
@@ -227,10 +210,7 @@ h1 {
 }
 
 
-/* ==================================================
-   COMPUTADOR GRANDE
-   1600px ou mais
-================================================== */
+
 
 @media (min-width: 1600px) {
 
@@ -242,18 +222,18 @@ h1 {
         margin-bottom: 28px;
     }
 
-    .title-mark {
-        width: 5px;
-        height: 34px;
-    }
+    .title-mark {    width: 5px;
+    height: 31px;
+    min-width: 5px;}
 
-    h1 {
-        font-size: 14px;
-    }
+    h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .subtitle {
-        font-size: 18px;
-    }
+    .subtitle {    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
     .notification-detail-card {
         width: 50%;
@@ -276,10 +256,7 @@ h1 {
 }
 
 
-/* ==================================================
-   NOTEBOOK
-   1367px até 1599px
-================================================== */
+
 
 @media (max-width: 1599px) and (min-width: 1367px) {
 
@@ -292,20 +269,18 @@ h1 {
         max-width: 820px;
     }
 
-    h1 {
-        font-size: 22px;
-    }
+    h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .subtitle {
-        font-size: 17px;
-    }
+    .subtitle {    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 }
 
 
-/* ==================================================
-   NOTEBOOK MENOR
-   1101px até 1366px
-================================================== */
+
 
 @media (max-width: 1366px) and (min-width: 1101px) {
 
@@ -322,13 +297,14 @@ h1 {
         max-width: 780px;
     }
 
-    h1 {
-        font-size: 22px;
-    }
+    h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .subtitle {
-        font-size: 16px;
-    }
+    .subtitle {    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
     .message-info h2 {
         font-size: 20px;
@@ -344,10 +320,7 @@ h1 {
 }
 
 
-/* ==================================================
-   TABLET GRANDE
-   993px até 1100px
-================================================== */
+
 
 @media (max-width: 1100px) and (min-width: 993px) {
 
@@ -360,13 +333,14 @@ h1 {
         max-width: 760px;
     }
 
-    h1 {
-        font-size: 21px;
-    }
+    h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .subtitle {
-        font-size: 16px;
-    }
+    .subtitle {    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
     .message-info h2 {
         font-size: 20px;
@@ -378,15 +352,9 @@ h1 {
 }
 
 
-/* ==================================================
-   TABLET
-   769px até 992px
-================================================== */
 
-/* ==================================================
-   TABLET
-   769px até 992px
-================================================== */
+
+
 
 @media (max-width: 992px) and (min-width: 769px) {
 
@@ -398,17 +366,18 @@ h1 {
         margin-bottom: 20px;
     }
 
-    .title-mark {
-        height: 31px;
-    }
+    .title-mark {    height: 31px;
+    width: 5px;
+    min-width: 5px;}
 
-    h1 {
-        font-size: 21px;
-    }
+    h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .subtitle {
-        font-size: 15px;
-    }
+    .subtitle {    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
     .detail-panel {
         width: 100%;
@@ -444,10 +413,7 @@ h1 {
     }
 }
 
-/* ==================================================
-   CELULAR GRANDE
-   577px até 768px
-================================================== */
+
 
 @media (max-width: 768px) and (min-width: 577px) {
 
@@ -459,23 +425,21 @@ h1 {
         margin-bottom: 20px;
     }
 
-    .title-row {
-        gap: 8px;
+    .title-row {    gap: 9px;
     }
 
-    .title-mark {
-        width: 4px;
-        height: 29px;
-    }
+    .title-mark {    width: 5px;
+    height: 31px;
+    min-width: 5px;}
 
-    h1 {
-        font-size: 21px;
-    }
+    h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .subtitle {
-        margin-top: 4px;
-        font-size: 15px;
-    }
+    .subtitle {    margin-top: 8px;
+    font-size: 16px;
+    line-height: 1.4;}
 
     .notification-detail-card {
         width: 92%;
@@ -513,10 +477,7 @@ h1 {
 }
 
 
-/* ==================================================
-   CELULAR
-   481px até 576px
-================================================== */
+
 
 @media (max-width: 576px) and (min-width: 481px) {
 
@@ -529,23 +490,21 @@ h1 {
         margin-bottom: 18px;
     }
 
-    .title-row {
-        gap: 7px;
+    .title-row {    gap: 9px;
     }
 
-    .title-mark {
-        width: 4px;
-        height: 27px;
-    }
+    .title-mark {    width: 5px;
+    height: 31px;
+    min-width: 5px;}
 
-    h1 {
-        font-size: 20px;
-    }
+    h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .subtitle {
-        margin-top: 4px;
-        font-size: 14px;
-    }
+    .subtitle {    margin-top: 8px;
+    font-size: 16px;
+    line-height: 1.4;}
 
     .notification-detail-card {
         width: 100%;
@@ -589,10 +548,7 @@ h1 {
 }
 
 
-/* ==================================================
-   CELULAR PEQUENO
-   390px até 480px
-================================================== */
+
 
 @media (max-width: 480px) {
 
@@ -604,23 +560,21 @@ h1 {
         margin-bottom: 17px;
     }
 
-    .title-row {
-        gap: 7px;
+    .title-row {    gap: 9px;
     }
 
-    .title-mark {
-        width: 4px;
-        height: 25px;
-    }
+    .title-mark {    width: 5px;
+    height: 31px;
+    min-width: 5px;}
 
-    h1 {
-        font-size: 19px;
-    }
+    h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .subtitle {
-        margin-top: 4px;
-        font-size: 14px;
-    }
+    .subtitle {    margin-top: 8px;
+    font-size: 16px;
+    line-height: 1.4;}
 
     .notification-detail-card {
         width: 100%;
@@ -663,10 +617,7 @@ h1 {
 }
 
 
-/* ==================================================
-   CELULAR MUITO PEQUENO
-   até 390px
-================================================== */
+
 
 @media (max-width: 390px) {
 
@@ -678,18 +629,18 @@ h1 {
         margin-bottom: 15px;
     }
 
-    .title-mark {
-        width: 3px;
-        height: 23px;
-    }
+    .title-mark {    width: 5px;
+    height: 31px;
+    min-width: 5px;}
 
-    h1 {
-        font-size: 18px;
-    }
+    h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .subtitle {
-        font-size: 13px;
-    }
+    .subtitle {    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
     .notification-detail-card {
         min-height: 225px;

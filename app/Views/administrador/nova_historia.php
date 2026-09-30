@@ -5,16 +5,9 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Nova História</title>
+<title>Nova História</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/nova_historia.css">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-    >
-
 </head>
 
 
@@ -27,7 +20,7 @@
 <div class="container">
 
 
-    <!-- TÍTULO DA PÁGINA -->
+    
 
     <div class="titulo-pagina">
 
@@ -39,7 +32,7 @@
 
 
 
-    <!-- CARD -->
+    
 
     <div class="card">
 
@@ -50,12 +43,12 @@
 
 
 
-        <!-- IDIOMAS -->
+        
 
         <div class="idiomas">
 
 
-            <!-- PORTUGUÊS -->
+            
 
             <button
                 type="button"
@@ -74,7 +67,7 @@
 
 
 
-            <!-- ESPANHOL -->
+            
 
             <button
                 type="button"
@@ -92,7 +85,7 @@
 
 
 
-            <!-- WARI' ORO NAO -->
+            
 
             <button
                 type="button"
@@ -114,12 +107,12 @@
 
 
 
-        <!-- CATEGORIA + IMAGEM -->
+        
 
         <div class="linha">
 
 
-            <!-- CATEGORIA -->
+            
 
             <div class="campo">
 
@@ -145,7 +138,7 @@
 
 
 
-            <!-- IMAGEM -->
+            
 
             <div class="campo imagem">
 
@@ -165,12 +158,12 @@
 
 
 
-        <!-- TÍTULO + LEGENDA -->
+        
 
         <div class="linha">
 
 
-            <!-- TÍTULO -->
+            
 
             <div class="campo">
 
@@ -188,7 +181,7 @@
 
 
 
-            <!-- LEGENDA -->
+            
 
             <div class="campo">
 
@@ -209,7 +202,7 @@
 
 
 
-        <!-- TEXTO -->
+        
 
         <div class="campo">
 
@@ -226,12 +219,12 @@
 
 
 
-        <!-- AÇÕES -->
+        
 
         <div class="acoes">
 
 
-            <!-- CANCELAR -->
+            
 
             <button
                 type="button"
@@ -246,7 +239,7 @@
 
 
 
-            <!-- SALVAR -->
+            
 
             <button
                 type="button"

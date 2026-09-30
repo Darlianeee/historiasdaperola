@@ -1,4 +1,8 @@
 * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -35,32 +39,25 @@
 
     display: flex;
     align-items: center;
-
-    gap: 12px;
+    gap: 9px;
 }
 
-.title-mark {
-    width: 6px;
-    height: 45px;
+.title-mark {    width: 5px;
+    height: 31px;
 
     flex: 0 0 6px;
 
     background: #465722;
-}
+    min-width: 5px;}
 
-.title-row h1 {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    font-size: clamp(32px, 2.4vw, 40px);
+.title-row h1 {    margin: 0;
+    font-size: 28px;
     font-weight: 700;
     color: #13231d;
-    
-}
+    line-height: 31px;}
 
-.subtitle {
-    margin-top: 10px;
-
-    font-size: 18px;
+.subtitle {    margin-top: 8px;
+    font-size: 16px;
     line-height: 1.4;
 
     color: #1f1f1f;
@@ -281,13 +278,14 @@
         padding: 45px;
     }
 
-    .title-row h1 {
-        font-size: 42px;
-    }
+    .title-row h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .subtitle {
-        font-size: 19px;
-    }
+    .subtitle {    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
     .profile-card {
         width: min(100%, 1100px);
@@ -320,13 +318,14 @@
         padding: 32px;
     }
 
-    .title-row h1 {
-        font-size: 36px;
-    }
+    .title-row h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .subtitle {
-        font-size: 17px;
-    }
+    .subtitle {    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
     .profile-card {
         width: min(100%, 950px);
@@ -358,13 +357,14 @@
         margin-bottom: 30px;
     }
 
-    .title-row h1 {
-        font-size: 34px;
-    }
+    .title-row h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .subtitle {
-        font-size: 16px;
-    }
+    .subtitle {    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
     .profile-card {
         width: 100%;
@@ -451,32 +451,29 @@
         margin-bottom: 25px;
     }
 
-    .title-row {
-        gap: 10px;
+    .title-row {    gap: 9px;
     }
 
-    .title-mark {
-        width: 5px;
-        height: 38px;
+    .title-mark {    width: 5px;
+    height: 31px;
 
         flex-basis: 5px;
-    }
+    min-width: 5px;}
 
-    .title-row h1 {
-        font-size: 30px;
+    .title-row h1 {    font-size: 28px;
 
         overflow-wrap: anywhere;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
+
+    .subtitle {    margin-top: 8px;
+    font-size: 16px;
+    line-height: 1.4;
     }
 
-    .subtitle {
-        margin-top: 9px;
 
-        font-size: 16px;
-        line-height: 1.45;
-    }
-
-
-    /* CARD */
+    
 
     .profile-card {
         width: 100%;
@@ -494,7 +491,7 @@
     }
 
 
-    /* PERFIL VERTICAL */
+    
 
     .profile-grid {
         width: 100%;
@@ -511,7 +508,7 @@
     }
 
 
-    /* FOTO + BOTÕES */
+    
 
     .profile-aside {
         width: 100%;
@@ -540,7 +537,7 @@
     }
 
 
-    /* INFORMAÇÕES — UMA POR LINHA */
+    
 
     .info-grid {
         width: 100%;
@@ -564,7 +561,7 @@
     }
 
 
-    /* ÍCONE */
+    
 
     .info-icon {
         width: 40px;
@@ -578,7 +575,7 @@
     }
 
 
-    /* TEXTO */
+    
 
     .info-content {
         width: 0;
@@ -612,27 +609,26 @@
         padding: 20px 14px 28px;
     }
 
-    .title-row {
-        gap: 9px;
+    .title-row {    gap: 9px;
     }
 
-    .title-mark {
-        width: 5px;
-        height: 34px;
+    .title-mark {    width: 5px;
+    height: 31px;
 
         flex-basis: 5px;
-    }
+    min-width: 5px;}
 
-    .title-row h1 {
-        font-size: 27px;
-    }
+    .title-row h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .subtitle {
-        font-size: 15px;
-    }
+    .subtitle {    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
 
-    /* CARD */
+    
 
     .profile-card {
         margin-top: 22px;
@@ -645,7 +641,7 @@
     }
 
 
-    /* CONTEÚDO */
+    
 
     .profile-grid {
         padding: 26px 18px 30px;
@@ -654,7 +650,7 @@
     }
 
 
-    /* FOTO */
+    
 
     .avatar-frame img {
         width: 125px;
@@ -662,7 +658,7 @@
     }
 
 
-    /* BOTÕES */
+    
 
     .profile-actions {
         width: 100%;
@@ -676,7 +672,7 @@
     }
 
 
-    /* INFORMAÇÕES */
+    
 
     .info-grid {
         gap: 23px;
@@ -708,16 +704,17 @@
         padding: 18px 12px 25px;
     }
 
-    .title-row h1 {
-        font-size: 25px;
-    }
+    .title-row h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .subtitle {
-        font-size: 14px;
-    }
+    .subtitle {    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
 
-    /* CARD */
+    
 
     .profile-card h2 {
         padding: 15px 16px;
@@ -726,14 +723,14 @@
     }
 
 
-    /* CONTEÚDO */
+    
 
     .profile-grid {
         padding: 24px 15px 27px;
     }
 
 
-    /* FOTO */
+    
 
     .avatar-frame img {
         width: 115px;
@@ -741,14 +738,14 @@
     }
 
 
-    /* BOTÕES */
+    
 
     .profile-actions {
         max-width: 260px;
     }
 
 
-    /* INFORMAÇÕES */
+    
 
     .info-item {
         gap: 10px;
@@ -780,13 +777,14 @@
         padding: 16px 10px 22px;
     }
 
-    .title-row h1 {
-        font-size: 23px;
-    }
+    .title-row h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .subtitle {
-        font-size: 13px;
-    }
+    .subtitle {    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
     .profile-card h2 {
         padding: 14px;
@@ -795,14 +793,14 @@
     }
 
 
-    /* CONTEÚDO */
+    
 
     .profile-grid {
         padding: 22px 13px 25px;
     }
 
 
-    /* FOTO */
+    
 
     .avatar-frame img {
         width: 105px;
@@ -810,7 +808,7 @@
     }
 
 
-    /* BOTÕES */
+    
 
     .profile-actions {
         max-width: 240px;
@@ -821,7 +819,7 @@
     }
 
 
-    /* INFORMAÇÕES */
+    
 
     .info-grid {
         gap: 20px;

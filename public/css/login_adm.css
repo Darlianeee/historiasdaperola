@@ -1,13 +1,18 @@
-/* Reset básico para zerar margens do navegador */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background: #eef6eb; /* Fundo esverdeado claro do site */
+    background: #eef6eb; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,21 +20,19 @@ body {
     padding: 15px;
 }
 
-/* ==========================================================================
-   ESTILO PADRÃO: CELULAR (TUDO EMPILHADO)
-   ========================================================================== */
+
 .container {
     width: 100%;
-    max-width: 450px; /* Limita a largura para celulares e tablets pequenos */
+    max-width: 450px; 
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     display: flex;
-    flex-direction: column; /* Força um bloco a ficar embaixo do outro */
+    flex-direction: column; 
 }
 
-/* Painel Verde da Marca - No topo no celular */
+
 .lado-direito {
     width:42%; 
     background:#4c6123; 
@@ -49,6 +52,7 @@ body {
 }
 
 .lado-direito h2 {
+    font-family: 'Kaushan Script', cursive;
     color:#dba437; 
     font-size:24px; 
     font-style:italic; 
@@ -65,7 +69,7 @@ body {
     top:-60px;
 }
 
-/* Painel do Formulário - Na parte de baixo no celular */
+
 .formulario {
     width: 100%;
     padding: 30px 20px;
@@ -112,7 +116,7 @@ button {
     height: 42px;
     margin: 25px auto 10px;
     display: block;
-    background: #c99a22; /* Botão Mostarda */
+    background: #c99a22; 
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -147,22 +151,20 @@ button:hover {
 .esqueceu a:hover{
     color: #000;
 }
-/* ==========================================================================
-   MUDANÇA PARA COMPUTADORES (TELAS MAIORES QUE 768PX)
-   ========================================================================== */
+
 @media screen and (min-width: 769px) {
     .container {
         width: 900px;
-        height: 599px; /* Mantém as dimensões originais do seu projeto */
-        flex-direction: row; /* Coloca os blocos lado a lado no PC */
+        height: 599px; 
+        flex-direction: row; 
         max-width: none;
     }
 
-    /* Ajusta a proporção do formulário na esquerda */
+    
     .formulario {
         width: 58%;
         padding: 40px 70px;
-        order: 1; /* Garante que o formulário fique no lado ESQUERDO */
+        order: 1; 
     }
 
     .formulario h1 {
@@ -173,14 +175,14 @@ button:hover {
         font-size: 20px;
     }
 
-    /* Ajusta a proporção do bloco verde na direita */
+    
     .lado-direito {
         width: 42%;
         padding: 40px;
-        order: 2; /* Garante que o painel verde fique no lado DIREITO */
+        order: 2; 
     }
 
     .lado-direito img {
-        width: 230px; /* Retorna o tamanho original da imagem no PC */
+        width: 230px; 
     }
 }

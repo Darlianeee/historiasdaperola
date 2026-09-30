@@ -15,8 +15,7 @@ $historias = array_fill(0, 12, [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Gerenciar Histórias - Histórias na Pérola</title>
+<title>Gerenciar Histórias - Histórias na Pérola</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/gerenciar_historia_adm.css">
 </head>
@@ -34,10 +33,10 @@ $historias = array_fill(0, 12, [
     </p>
 
 
-    <!-- BARRA DE FERRAMENTAS -->
+    
     <div class="ferramentas-container">
 
-        <!-- BUSCA -->
+        
         <div class="busca-box">
 
             <span class="icone-busca" aria-hidden="true">
@@ -52,7 +51,7 @@ $historias = array_fill(0, 12, [
         </div>
 
 
-        <!-- CATEGORIA -->
+        
         <select class="select-categoria">
 
             <option value="">Categoria</option>
@@ -68,7 +67,7 @@ $historias = array_fill(0, 12, [
         </select>
 
 
-        <!-- NOVA HISTÓRIA -->
+        
         <a
             href="<?=URL?>/administrador/nova_historia"
             class="btn-nova-historia"
@@ -79,7 +78,7 @@ $historias = array_fill(0, 12, [
     </div>
 
 
-    <!-- GRID DE HISTÓRIAS -->
+    
     <section class="grid-historias">
 
         <?php foreach ($historias as $index => $item): ?>
@@ -127,7 +126,7 @@ $historias = array_fill(0, 12, [
                 </div>
 
 
-                <!-- PARTE BRANCA DO CARD -->
+                
                 <div class="card-info">
 
                     <div class="card-textos">

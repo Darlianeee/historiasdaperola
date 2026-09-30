@@ -1,6 +1,8 @@
-/* =========================================
-   RESET
-========================================= */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 
 * {
     margin: 0;
@@ -14,16 +16,13 @@ body {
     height: 100%;
 }
 
-body {    font-family: Arial, Helvetica, sans-serif;
 
     background: #eef7e9;
     color: #111;
 }
 
 
-/* =========================================
-   CONTEÚDO PRINCIPAL
-========================================= */
+
 
 .conteudo {
     position: relative;
@@ -32,9 +31,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   TÍTULO PRINCIPAL
-========================================= */
+
 
 
 .titulo {
@@ -43,27 +40,25 @@ body {    font-family: Arial, Helvetica, sans-serif;
     left: 34px;
 }
 
-.titulo h1 {
-    padding-left: 9px;
-    font-size: 29px;
+.titulo h1 {    padding-left: 9px;
+    font-size: 28px;
     font-weight: 700;
-    line-height: 34px;
-    border-left: 4px solid #30451d;
+    line-height: 31px;
+    border-left: 5px solid #465722;
     color: #111;
-}
+    margin: 0;}
 
 .descricao {
     position: absolute;
     top: 148px;
     left: 34px;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 1.4;
     color: #222;
-}
+    margin-top: 8px;
+    margin-left: 14px;}
 
-/* =========================================
-   ÁREA PRINCIPAL
-========================================= */
+
 
 .overlay {
     position: absolute;
@@ -80,9 +75,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   CARD / MODAL
-========================================= */
+
 
 .modal {
     width: 440px;
@@ -106,9 +99,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   ÍCONE DE SAÍDA — MAIOR
-========================================= */
+
 
 .icone-saida {
     width: 85px;
@@ -130,7 +121,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* imagem dentro do círculo */
+
 
 .icon-saida {
     width: 150px;
@@ -140,9 +131,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   TÍTULO DO CARD
-========================================= */
+
 
 .modal h2 {
     margin: 0 0 18px;
@@ -156,9 +145,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   TEXTO
-========================================= */
+
 
 .modal p {
     margin: 0;
@@ -170,9 +157,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   BOTÕES
-========================================= */
+
 
 .botoes {
     width: 100%;
@@ -186,9 +171,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   CANCELAR
-========================================= */
+
 
 .cancelar {
     width: 72px;
@@ -205,7 +188,6 @@ body {    font-family: Arial, Helvetica, sans-serif;
     color: #c79b21;
 
     font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
 
     cursor: pointer;
 
@@ -220,9 +202,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   SAIR
-========================================= */
+
 
 .Sair {
     width: 72px;
@@ -239,7 +219,6 @@ body {    font-family: Arial, Helvetica, sans-serif;
     color: #fff;
 
     font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
 
     cursor: pointer;
 
@@ -254,18 +233,14 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
+
 
 footer {
     flex-shrink: 0;
 }
 
 
-/* =========================================
-   TABLET
-========================================= */
+
 
 @media (min-width: 481px) and (max-width: 1100px) {
 
@@ -276,9 +251,7 @@ footer {
     }
 
 
-    /* =========================
-       TÍTULO
-    ========================= */
+    
 
     .titulo {
         position: relative;
@@ -289,15 +262,15 @@ footer {
         margin-bottom: 8px;
     }
 
-    .titulo h1 {
-        font-size: 31px;
-        line-height: 38px;
-    }
+    .titulo h1 {    font-size: 28px;
+    line-height: 31px;
+    padding-left: 9px;
+    font-weight: 700;
+    border-left: 5px solid #465722;
+    margin: 0;}
 
 
-    /* =========================
-       SUBTÍTULO
-    ========================= */
+    
 
     .descricao {
         position: relative;
@@ -312,9 +285,7 @@ footer {
     }
 
 
-    /* =========================
-       ÁREA DO CARD
-    ========================= */
+    
 
     .overlay {
         position: relative;
@@ -334,9 +305,7 @@ footer {
     }
 
 
-    /* =========================
-       CARD MAIOR
-    ========================= */
+    
 
     .modal {
         width: 620px;
@@ -350,9 +319,7 @@ footer {
     }
 
 
-    /* =========================
-       ÍCONE
-    ========================= */
+    
 
     .icone-saida {
         width: 125px;
@@ -367,9 +334,7 @@ footer {
     }
 
 
-    /* =========================
-       TÍTULO DO CARD
-    ========================= */
+    
 
     .modal h2 {
         margin-bottom: 22px;
@@ -379,9 +344,7 @@ footer {
     }
 
 
-    /* =========================
-       TEXTO DO CARD
-    ========================= */
+    
 
     .modal p {
         font-size: 16px;
@@ -389,9 +352,7 @@ footer {
     }
 
 
-    /* =========================
-       BOTÕES
-    ========================= */
+    
 
     .botoes {
         margin-top: 45px;
@@ -411,13 +372,9 @@ footer {
 }
 
 
-/* =========================================
-   CELULAR
-========================================= */
 
-/* =========================================
-   CELULAR
-========================================= */
+
+
 
 @media (max-width: 480px) {
 
@@ -427,9 +384,7 @@ footer {
     }
 
 
-    /* =========================
-       TÍTULO
-    ========================= */
+    
 
     .titulo {
         position: relative;
@@ -440,15 +395,15 @@ footer {
         margin-bottom: 6px;
     }
 
-    .titulo h1 {
-        font-size: 23px;
-        line-height: 28px;
-    }
+    .titulo h1 {    font-size: 28px;
+    line-height: 31px;
+    padding-left: 9px;
+    font-weight: 700;
+    border-left: 5px solid #465722;
+    margin: 0;}
 
 
-    /* =========================
-       SUBTÍTULO
-    ========================= */
+    
 
     .descricao {
         position: relative;
@@ -463,9 +418,7 @@ footer {
     }
 
 
-    /* =========================
-       ÁREA DO CARD
-    ========================= */
+    
 
     .overlay {
         position: relative;
@@ -484,9 +437,7 @@ footer {
     }
 
 
-    /* =========================
-       CARD MENOR
-    ========================= */
+    
 
     .modal {
         width: 100%;
@@ -500,9 +451,7 @@ footer {
     }
 
 
-    /* =========================
-       ÍCONE MENOR
-    ========================= */
+    
 
     .icone-saida {
         width: 65px;
@@ -517,9 +466,7 @@ footer {
     }
 
 
-    /* =========================
-       TÍTULO DO CARD
-    ========================= */
+    
 
     .modal h2 {
         margin-bottom: 10px;
@@ -529,9 +476,7 @@ footer {
     }
 
 
-    /* =========================
-       TEXTO
-    ========================= */
+    
 
     .modal p {
         font-size: 12px;
@@ -539,9 +484,7 @@ footer {
     }
 
 
-    /* =========================
-       BOTÕES
-    ========================= */
+    
 
     .botoes {
         margin-top: 20px;

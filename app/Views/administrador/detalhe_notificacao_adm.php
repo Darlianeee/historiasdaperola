@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Detalhe Notificação</title>
+<title>Detalhe Notificação</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/detalhe_notificacao_adm.css">
 </head>

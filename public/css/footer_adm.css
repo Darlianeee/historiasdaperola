@@ -1,13 +1,14 @@
-/* =========================================================
-   RESET
-========================================================= */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -21,7 +22,7 @@ body {
     flex-direction: column;
 }
 
-/* Principais áreas de conteúdo das páginas */
+
 body > main,
 body > .container,
 body > .conteudo,
@@ -30,7 +31,7 @@ body > .pagina {
     flex: 1 0 auto;
 }
 
-/* Evita que min-height: 100vh de uma página empurre o footer para fora da tela */
+
 body > .container,
 body > .conteudo,
 body > .content,
@@ -38,15 +39,13 @@ body > .pagina {
     min-height: 0 !important;
 }
 
-/* O footer fica depois do conteúdo e é empurrado para o final quando sobra espaço */
+
 .footer {
     margin-top: auto;
     flex-shrink: 0;
 }
 
-/* =========================================================
-   FOOTER
-========================================================= */
+
 
 .footer {
     width: 100%;
@@ -69,9 +68,7 @@ body > .pagina {
 }
 
 
-/* =========================================================
-   LINKS
-========================================================= */
+
 
 .footer-links {
     justify-self: start;
@@ -103,9 +100,7 @@ body > .pagina {
 }
 
 
-/* =========================================================
-   LOGO
-========================================================= */
+
 
 .footer-center {
     justify-self: center;
@@ -128,9 +123,7 @@ body > .pagina {
 }
 
 
-/* =========================================================
-   CONTATOS
-========================================================= */
+
 
 .footer-contact {
     justify-self: end;
@@ -145,10 +138,7 @@ body > .pagina {
 }
 
 
-/* =========================================================
-   TELAS GRANDES
-   A PARTIR DE 1600px
-========================================================= */
+
 
 @media screen and (min-width: 1600px) {
 
@@ -166,10 +156,7 @@ body > .pagina {
 }
 
 
-/* =========================================================
-   NOTEBOOK
-   ATÉ 1366px
-========================================================= */
+
 
 @media screen and (max-width: 1366px) {
 
@@ -185,10 +172,7 @@ body > .pagina {
 }
 
 
-/* =========================================================
-   TABLET
-   ATÉ 1024px
-========================================================= */
+
 
 @media screen and (max-width: 1024px) {
 
@@ -218,10 +202,7 @@ body > .pagina {
 }
 
 
-/* =========================================================
-   TABLET PEQUENO
-   ATÉ 768px
-========================================================= */
+
 
 @media screen and (max-width: 768px) {
 
@@ -257,10 +238,7 @@ body > .pagina {
 }
 
 
-/* =========================================================
-   CELULAR
-   ATÉ 600px
-========================================================= */
+
 
 @media screen and (max-width: 600px) {
 
@@ -281,7 +259,7 @@ body > .pagina {
     }
 
 
-    /* LINKS */
+    
 
     .footer-links {
         width: 100%;
@@ -306,7 +284,7 @@ body > .pagina {
     }
 
 
-    /* LOGO */
+    
 
     .footer-center {
         width: 100%;
@@ -335,7 +313,7 @@ body > .pagina {
     }
 
 
-    /* CONTATOS */
+    
 
     .footer-contact {
         width: 100%;
@@ -363,9 +341,7 @@ body > .pagina {
 }
 
 
-/* =========================================================
-   CELULARES ATÉ 480px
-========================================================= */
+
 
 @media screen and (max-width: 480px) {
 
@@ -391,9 +367,7 @@ body > .pagina {
 }
 
 
-/* =========================================================
-   CELULARES ATÉ 390px
-========================================================= */
+
 
 @media screen and (max-width: 390px) {
 
@@ -419,9 +393,7 @@ body > .pagina {
 }
 
 
-/* =========================================================
-   CELULARES ATÉ 320px
-========================================================= */
+
 
 @media screen and (max-width: 320px) {
 

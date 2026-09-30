@@ -1,6 +1,10 @@
-/* ============================== 
-   RESET 
-============================== */ 
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ 
  
 * { 
     margin: 0; 
@@ -16,9 +20,7 @@ body {
 } 
 
 
-/* ============================== 
-   CABEÇALHO 
-============================== */ 
+ 
  
 .header { 
     --header-height: 75px; 
@@ -41,9 +43,7 @@ body {
 } 
 
 
-/* ============================== 
-   BOTÃO MENU 
-============================== */ 
+ 
  
 .menu-toggle { 
     width: 45px; 
@@ -78,9 +78,7 @@ body {
 } 
 
 
-/* ============================== 
-   LOGO 
-============================== */ 
+ 
  
 .logo { 
     display: flex; 
@@ -103,12 +101,10 @@ body {
     flex-shrink: 0; 
 } 
  
-.logo p { 
-    color: #BE9628; 
- 
+.logo p {
     font-family: 'Kaushan Script', cursive; 
- 
-    font-size: 14px; 
+    color: #BE9628; 
+font-size: 14px; 
  
     line-height: 1; 
  
@@ -123,9 +119,7 @@ body {
 } 
 
 
-/* ============================== 
-   MENU LATERAL 
-============================== */ 
+ 
  
 nav { 
     position: fixed; 
@@ -161,9 +155,7 @@ nav.open {
 } 
 
 
-/* ============================== 
-   LISTA DO MENU 
-============================== */ 
+ 
  
 .menu { 
     display: flex; 
@@ -195,7 +187,6 @@ nav.open {
  
     text-decoration: none; 
  
-    font-family: Arial, Helvetica, sans-serif; 
  
     font-size: 17px; 
  
@@ -205,9 +196,7 @@ nav.open {
 } 
 
 
-/* ============================== 
-   ÍCONES 
-============================== */ 
+ 
  
 .menu-icon { 
     width: 45px; 
@@ -230,9 +219,7 @@ nav.open {
 } 
 
 
-/* ============================== 
-   HOVER 
-============================== */ 
+ 
  
 .menu a:hover { 
     background: rgba(240, 197, 65, .18); 
@@ -243,9 +230,7 @@ nav.open {
 } 
 
 
-/* ============================== 
-   COMPUTADORES GRANDES 
-============================== */ 
+ 
  
 @media (min-width: 1600px) { 
  
@@ -265,10 +250,7 @@ nav.open {
     } 
  
     nav { 
-        /*
-           Não precisa definir top manualmente.
-           Ele acompanha --header-height.
-        */
+        
         width: 300px; 
  
         height: calc(100dvh - var(--header-height) + 1px); 
@@ -280,9 +262,7 @@ nav.open {
 } 
 
 
-/* ============================== 
-   NOTEBOOKS 
-============================== */ 
+ 
  
 @media (max-width: 1366px) { 
  
@@ -298,9 +278,7 @@ nav.open {
 } 
 
 
-/* ============================== 
-   TABLETS GRANDES 
-============================== */ 
+ 
  
 @media (max-width: 1024px) { 
  
@@ -346,9 +324,7 @@ nav.open {
 } 
 
 
-/* ============================== 
-   TABLETS PEQUENOS 
-============================== */ 
+ 
  
 @media (max-width: 768px) { 
  
@@ -411,9 +387,7 @@ nav.open {
 } 
 
 
-/* ============================== 
-   CELULARES 
-============================== */ 
+ 
  
 @media (max-width: 600px) { 
  
@@ -476,9 +450,7 @@ nav.open {
 } 
 
 
-/* ============================== 
-   CELULARES PEQUENOS 
-============================== */ 
+ 
  
 @media (max-width: 400px) { 
  
@@ -541,9 +513,7 @@ nav.open {
 } 
 
 
-/* ============================== 
-   CELULARES MUITO PEQUENOS 
-============================== */ 
+ 
  
 @media (max-width: 340px) { 
  

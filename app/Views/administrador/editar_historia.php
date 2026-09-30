@@ -5,8 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Editar História</title>
+<title>Editar História</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/editar_historia.css">
 
@@ -19,12 +18,12 @@
 <?php include '../App/Views/administrador/menu_adm.php'; ?>
 
 
-<!-- CONTEÚDO PRINCIPAL -->
+
 
 <main class="pagina">
 
 
-    <!-- TÍTULO DA PÁGINA -->
+    
 
     <section class="cabecalho-pagina">
 
@@ -36,12 +35,12 @@
 
 
 
-    <!-- MODAL -->
+    
 
     <section class="modal">
 
 
-        <!-- CABEÇALHO -->
+        
 
         <div class="modal-header">
 
@@ -59,7 +58,7 @@
 
 
 
-        <!-- IMAGEM -->
+        
 
         <div class="imagem-container">
 
@@ -69,9 +68,9 @@
 
 
 
-        <!-- SELECIONAR LÍNGUA -->
+        
 
-        <!-- LÍNGUA + SUBSTITUIR IMAGEM -->
+        
 
         <div class="linha-lingua-imagem">
 
@@ -110,17 +109,17 @@
 
 
 
-        <!-- FORMULÁRIO -->
+        
 
         <form>
 
 
-            <!-- TÍTULO + LEGENDA -->
+            
 
             <div class="linha-campos">
 
 
-                <!-- TÍTULO -->
+                
 
                 <div class="campo">
 
@@ -139,7 +138,7 @@
 
 
 
-                <!-- LEGENDA -->
+                
 
                 <div class="campo">
 
@@ -161,7 +160,7 @@
 
 
 
-            <!-- TEXTO -->
+            
 
             <div class="campo texto-campo">
 
@@ -179,7 +178,7 @@
 
 
 
-            <!-- BOTÕES -->
+            
 
             <div class="botoes">
 

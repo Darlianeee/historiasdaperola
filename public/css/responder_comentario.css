@@ -1,4 +1,8 @@
 * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,7 +16,6 @@ body {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     background: #edf6f1;
     color: #111;
 
@@ -21,9 +24,7 @@ body {
 }
 
 
-/* ==============================
-   CONTEÚDO
-============================== */
+
 
 .content {
     width: 100%;
@@ -31,9 +32,7 @@ body {
 }
 
 
-/* ==============================
-   TÍTULO
-============================== */
+
 
 .page-title {
     display: flex;
@@ -46,9 +45,8 @@ body {
 
 .title-line {
     flex-shrink: 0;
-
     width: 5px;
-    height: 39px;
+    height: 31px;
 
     background: #465722;
 
@@ -61,28 +59,22 @@ body {
     min-width: 0;
 }
 
-.page-title h1 {
-    font-size: 28px;
+.page-title h1 {    font-size: 28px;
     font-weight: 700;
 
     color: #111;
-
-    line-height: 1.2;
+    line-height: 31px;
 
     margin-bottom: 5px;
-}
+    margin: 0;}
 
-.page-title p {
-    font-size: 16px;
+.page-title p {    font-size: 16px;
     color: #465722;
-
     line-height: 1.4;
-}
+    margin-top: 8px;}
 
 
-/* ==============================
-   CARD
-============================== */
+
 
 .reply-card {
     width: 100%;
@@ -102,9 +94,7 @@ body {
 }
 
 
-/* ==============================
-   USUÁRIO + HISTÓRIA
-============================== */
+
 
 .top-information {
     display: grid;
@@ -145,9 +135,7 @@ body {
 }
 
 
-/* ==============================
-   COMENTÁRIO
-============================== */
+
 
 .comment-section {
     margin-bottom: 0;
@@ -180,9 +168,7 @@ body {
 }
 
 
-/* ==============================
-   DATA E HORA
-============================== */
+
 
 .comment-date {
     width: 100%;
@@ -202,9 +188,7 @@ body {
 }
 
 
-/* ==============================
-   RESPOSTA
-============================== */
+
 
 .response-section {
     width: 100%;
@@ -241,7 +225,6 @@ body {
 
     outline: none;
 
-    font-family: Arial, Helvetica, sans-serif;
 
     font-size: 15px;
     line-height: 1.5;
@@ -262,9 +245,7 @@ body {
 }
 
 
-/* ==============================
-   BOTÕES
-============================== */
+
 
 .form-buttons {
     width: 100%;
@@ -289,7 +270,6 @@ body {
 
     border-radius: 6px;
 
-    font-family: Arial, Helvetica, sans-serif;
 
     font-size: 14px;
 
@@ -309,7 +289,7 @@ body {
 }
 
 
-/* CANCELAR */
+
 
 .cancel-button {
     background: white;
@@ -327,7 +307,7 @@ body {
 }
 
 
-/* RESPONDER */
+
 
 .reply-button {
     background: #BE9628;
@@ -342,9 +322,7 @@ body {
 }
 
 
-/* ==============================
-   TABLET
-============================== */
+
 
 @media (min-width: 601px) and (max-width: 900px) {
 
@@ -355,29 +333,29 @@ body {
     }
 
 
-    /* TÍTULO */
+    
 
     .page-title {
         margin-bottom: 28px;
     }
 
-    .title-line {
-        width: 5px;
-        height: 37px;
+    .title-line {    width: 5px;
+    height: 31px;
 
         margin-right: 11px;
     }
 
-    .page-title h1 {
-        font-size: 25px;
-    }
+    .page-title h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-    .page-title p {
-        font-size: 15px;
-    }
+    .page-title p {    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 8px;}
 
 
-    /* CARD */
+    
 
     .reply-card {
         width: 100%;
@@ -389,7 +367,7 @@ body {
     }
 
 
-    /* USUÁRIO + HISTÓRIA */
+    
 
     .top-information {
         grid-template-columns: 1fr 1fr;
@@ -408,7 +386,7 @@ body {
     }
 
 
-    /* COMENTÁRIO */
+    
 
     .comment-box {
         width: 100%;
@@ -420,7 +398,7 @@ body {
     }
 
 
-    /* DATA */
+    
 
     .comment-date {
         max-width: 100%;
@@ -431,7 +409,7 @@ body {
     }
 
 
-    /* RESPOSTA */
+    
 
     .response-section textarea {
         width: 100%;
@@ -443,7 +421,7 @@ body {
     }
 
 
-    /* BOTÕES */
+    
 
     .form-buttons {
         width: 100%;
@@ -464,9 +442,7 @@ body {
 }
 
 
-/* ==============================
-   CELULAR
-============================== */
+
 
 @media (max-width: 600px) {
 
@@ -477,9 +453,7 @@ body {
     }
 
 
-    /* ==========================
-       TÍTULO
-    ========================== */
+    
 
     .page-title {
         width: 100%;
@@ -491,31 +465,25 @@ body {
 
     .title-line {
         flex-shrink: 0;
-
-        width: 4px;
-        height: 49px;
+    width: 5px;
+    height: 31px;
 
         margin-right: 9px;
     }
 
-    .page-title h1 {
-        font-size: 22px;
-
-        line-height: 28px;
+    .page-title h1 {    font-size: 28px;
+    line-height: 31px;
 
         margin-bottom: 4px;
-    }
+    font-weight: 700;
+    margin: 0;}
 
-    .page-title p {
-        font-size: 13px;
-
-        line-height: 19px;
-    }
+    .page-title p {    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 8px;}
 
 
-    /* ==========================
-       CARD
-    ========================== */
+    
 
     .reply-card {
         width: 100%;
@@ -529,10 +497,7 @@ body {
     }
 
 
-    /* ==========================
-       USUÁRIO + HISTÓRIA
-       FICAM LADO A LADO
-    ========================== */
+    
 
     .top-information {
         display: grid;
@@ -563,9 +528,7 @@ body {
     }
 
 
-    /* ==========================
-       COMENTÁRIO
-    ========================== */
+    
 
     .comment-section {
         width: 100%;
@@ -585,9 +548,7 @@ body {
     }
 
 
-    /* ==========================
-       DATA
-    ========================== */
+    
 
     .comment-date {
         width: 100%;
@@ -606,9 +567,7 @@ body {
     }
 
 
-    /* ==========================
-       RESPOSTA
-    ========================== */
+    
 
     .response-section {
         width: 100%;
@@ -634,9 +593,7 @@ body {
     }
 
 
-    /* ==========================
-       BOTÕES
-    ========================== */
+    
 
 
     .form-buttons {
@@ -653,9 +610,7 @@ body {
     }
 
 
-/* ==============================
-   CELULARES PEQUENOS
-============================== */
+
 
 @media (max-width: 380px) {
 
@@ -664,33 +619,29 @@ body {
     }
 
 
-    /* TÍTULO */
+    
 
     .page-title {
         margin-bottom: 22px;
     }
 
-    .title-line {
-        width: 4px;
-        height: 48px;
+    .title-line {    width: 5px;
+    height: 31px;
 
         margin-right: 8px;
     }
 
-    .page-title h1 {
-        font-size: 20px;
+    .page-title h1 {    font-size: 28px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
-        line-height: 26px;
-    }
-
-    .page-title p {
-        font-size: 12px;
-
-        line-height: 18px;
-    }
+    .page-title p {    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 8px;}
 
 
-    /* CARD */
+    
 
     .reply-card {
         padding: 15px;
@@ -699,7 +650,7 @@ body {
     }
 
 
-    /* USUÁRIO + HISTÓRIA */
+    
 
     .top-information {
         gap: 12px;
@@ -716,7 +667,7 @@ body {
     }
 
 
-    /* COMENTÁRIO */
+    
 
     .comment-box {
         height: 105px;
@@ -727,7 +678,7 @@ body {
     }
 
 
-    /* DATA */
+    
 
     .comment-date {
         font-size: 10px;
@@ -736,7 +687,7 @@ body {
     }
 
 
-    /* RESPOSTA */
+    
 
     .response-section label {
         font-size: 13px;
@@ -749,7 +700,7 @@ body {
     }
 
 
-    /* BOTÕES */
+    
 
     .form-buttons {
         gap: 8px;

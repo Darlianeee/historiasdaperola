@@ -34,7 +34,7 @@
                 </a>
             </li>
 
-            <!-- HISTÓRIAS -->
+            
             <li>
                 <a href="<?=URL?>/administrador/gerenciar_historia_adm" class="menu-link">
                     <img src="<?=URL?>/public/img/icone_historias.png"
@@ -44,7 +44,7 @@
                 </a>
             </li>
 
-            <!-- NOTIFICAÇÕES -->
+            
             <li>
                 <a href="<?=URL?>/administrador/notificacoes_adm" class="menu-link">
                     <img src="<?=URL?>/public/img/icone_notificacoes.png"
@@ -54,7 +54,7 @@
                 </a>
             </li>
 
-            <!-- SOBRE NÓS -->
+            
             <li>
                 <a href="<?=URL?>/administrador/sobre_nos_adm" class="menu-link">
                     <img src="<?=URL?>/public/img/icone_sobreNos.png"
@@ -73,7 +73,7 @@
                 </a>
             </li>
 
-            <!-- SAIR -->
+            
             <li>
                 <a href="<?=URL?>/administrador/sair_adm" class="menu-link">
                     <img src="<?=URL?>/public/img/icone_sair.png"

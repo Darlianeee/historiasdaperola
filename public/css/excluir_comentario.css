@@ -1,6 +1,8 @@
-/* =========================================
-   RESET
-========================================= */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 
 * {
     margin: 0;
@@ -14,7 +16,6 @@ body {
     height: 100%;
 }
 
-body {    font-family: Arial, Helvetica, sans-serif;
 
     background: #eef7e9;
 
@@ -22,9 +23,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   CONTEÚDO PRINCIPAL
-========================================= */
+
 
 .conteudo {
     position: relative;
@@ -32,9 +31,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   TÍTULO PRINCIPAL
-========================================= */
+
 
 .titulo {
     position: absolute;
@@ -42,28 +39,26 @@ body {    font-family: Arial, Helvetica, sans-serif;
     left: 34px;
 }
 
-.titulo h1 {
-    padding-left: 9px;
-    font-size: 29px;
+.titulo h1 {    padding-left: 9px;
+    font-size: 28px;
     font-weight: 700;
-    line-height: 34px;
-    border-left: 4px solid #30451d;
+    line-height: 31px;
+    border-left: 5px solid #465722;
     color: #111;
-}
+    margin: 0;}
 
 .descricao {
     position: absolute;
     top: 145px;
     left: 34px;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 1.4;
     color: #222;
-}
+    margin-top: 8px;
+    margin-left: 14px;}
 
 
-/* =========================================
-   ÁREA PRINCIPAL
-========================================= */
+
 
 .overlay {
     position: absolute;
@@ -79,9 +74,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
     pointer-events: none;
 }
 
-/* =========================================
-   CARD
-========================================= */
+
 
 .modal {
     width: 440px;
@@ -105,9 +98,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   TÍTULO DO CARD
-========================================= */
+
 
 .modal h2 {
     margin: 0 0 22px;
@@ -121,9 +112,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   TEXTO DO CARD
-========================================= */
+
 
 .modal p {
     margin: 0;
@@ -135,9 +124,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   BOTÕES
-========================================= */
+
 
 .botoes {
     width: 100%;
@@ -151,9 +138,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   LINKS DOS BOTÕES
-========================================= */
+
 
 .botoes a {
     text-decoration: none;
@@ -162,9 +147,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   BOTÃO CANCELAR
-========================================= */
+
 
 .cancelar {
     width: 80px;
@@ -182,7 +165,6 @@ body {    font-family: Arial, Helvetica, sans-serif;
 
     font-size: 12px;
 
-    font-family: Arial, Helvetica, sans-serif;
 
     cursor: pointer;
 
@@ -197,9 +179,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   BOTÃO EXCLUIR
-========================================= */
+
 
 .excluir {
     width: 80px;
@@ -217,7 +197,6 @@ body {    font-family: Arial, Helvetica, sans-serif;
 
     font-size: 12px;
 
-    font-family: Arial, Helvetica, sans-serif;
 
     cursor: pointer;
 
@@ -232,18 +211,14 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
+
 
 footer {
     flex-shrink: 0;
 }
 
 
-/* =========================================
-   RESPONSIVIDADE
-========================================= */
+
 
 @media (max-width: 768px) {
 
@@ -253,7 +228,10 @@ footer {
 
     .descricao {
         left: 25px;
-    }
+    margin-top: 8px;
+    margin-left: 14px;
+    font-size: 16px;
+    line-height: 1.4;}
 
     .overlay {
         padding-top: 95px;
@@ -272,17 +250,21 @@ footer {
         left: 20px;
     }
 
-    .titulo h1 {
-        font-size: 26px;
-    }
+    .titulo h1 {    font-size: 28px;
+    padding-left: 9px;
+    line-height: 31px;
+    font-weight: 700;
+    border-left: 5px solid #465722;
+    margin: 0;}
 
     .descricao {
         top: 62px;
         left: 20px;
         right: 20px;
-
-        font-size: 14px;
-    }
+    font-size: 16px;
+    margin-top: 8px;
+    margin-left: 14px;
+    line-height: 1.4;}
 
     .overlay {
         padding: 100px 15px 20px;
@@ -306,7 +288,10 @@ footer {
 
     .descricao {
         left: 16px;
-    }
+    margin-top: 8px;
+    margin-left: 14px;
+    font-size: 16px;
+    line-height: 1.4;}
 
     .modal {
         max-width: 350px;

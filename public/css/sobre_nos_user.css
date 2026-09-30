@@ -1,6 +1,8 @@
-/* ==============================
-   RESET
-============================== */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 
 * {
     margin: 0;
@@ -9,12 +11,9 @@
 }
 
 
-/* ==============================
-   BODY
-============================== */
+
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
 
     background-color: #EAF3E6;
 
@@ -22,9 +21,7 @@ body {
 }
 
 
-/* ==============================
-   CONTEÚDO PRINCIPAL
-============================== */
+
 
 .conteudo {
     width: 100%;
@@ -35,9 +32,7 @@ body {
 }
 
 
-/* ==============================
-   CABEÇALHO
-============================== */
+
 
 .cabecalho-pagina {
     margin-bottom: 45px;
@@ -48,20 +43,18 @@ body {
     position: relative;
 
     display: inline-block;
-
-    font-size: 30px;
-
+    font-size: 28px;
     font-weight: 700;
 
     color: #10261f;
-
-    padding-left: 15px;
+    padding-left: 9px;
 
     margin-bottom: 7px;
-}
+    line-height: 31px;
+    margin: 0;}
 
 
-/* Barrinha do Sobre Nós */
+
 
 .cabecalho-pagina h1::before {
     content: "";
@@ -80,7 +73,7 @@ body {
 }
 
 
-/* Subtítulo */
+
 
 .cabecalho-pagina p {
     margin-left: 15px;
@@ -93,9 +86,7 @@ body {
 }
 
 
-/* ==============================
-   MOTIVO
-============================== */
+
 
 .motivo {
     width: 82%;
@@ -115,7 +106,7 @@ body {
 }
 
 
-/* TÍTULO */
+
 
 .motivo h2 {
     font-size: 20px;
@@ -130,7 +121,7 @@ body {
 }
 
 
-/* TEXTOS */
+
 
 .motivo p {
     font-size: 15px;
@@ -151,9 +142,7 @@ body {
     margin-bottom: 0;
 }
 
-/* ==============================
-   NOSSA EQUIPE
-============================== */
+
 
 .secao-equipe {
     width: 92%;
@@ -164,9 +153,7 @@ body {
 }
 
 
-/* ==============================
-   TÍTULO DA EQUIPE
-============================== */
+
 
 .titulo-equipe {
     text-align: center;
@@ -196,9 +183,7 @@ body {
 
 
 
-/* ==============================
-   EQUIPE
-============================== */
+
 
 .equipe {
     display: grid;
@@ -212,9 +197,7 @@ body {
 
 
 
-/* ==============================
-   CARD DO INTEGRANTE
-============================== */
+
 
 .integrante {
     min-height: 270px;
@@ -237,7 +220,7 @@ body {
 }
 
 
-/* Efeito ao passar o mouse */
+
 
 .integrante:hover {
     transform: translateY(-4px);
@@ -247,9 +230,7 @@ body {
 
 
 
-/* ==============================
-   FOTO
-============================== */
+
 
 .foto-integrante {
     width: 110px;
@@ -284,9 +265,7 @@ body {
 
 
 
-/* ==============================
-   INFORMAÇÕES
-============================== */
+
 
 .informacoes-integrante h3 {
     font-size: 14px;
@@ -302,9 +281,7 @@ body {
 
 
 
-/* ==============================
-   FUNÇÃO DA PESSOA
-============================== */
+
 
 .funcao {
     display: block;
@@ -324,9 +301,7 @@ body {
 
 
 
-/* ==============================
-   TABLET
-============================== */
+
 
 @media (max-width: 1100px) {
 
@@ -343,9 +318,7 @@ body {
 
 
 
-/* ==============================
-   CELULAR
-============================== */
+
 
 @media (max-width: 750px) {
 
@@ -359,19 +332,23 @@ body {
     }
 
 
-    .cabecalho-pagina h1 {
-        font-size: 27px;
-    }
+    .cabecalho-pagina h1 {    font-size: 28px;
+    padding-left: 9px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
 
-    .cabecalho-pagina h1::before {
-        height: 31px;
-    }
+    .cabecalho-pagina h1::before {    height: 31px;
+    width: 5px;
+    top: 0px;
+    background-color: #465722;}
 
 
-    .cabecalho-pagina p {
-        font-size: 15px;
-    }
+    .cabecalho-pagina p {    font-size: 16px;
+    margin-top: 8px;
+    margin-left: 14px;
+    line-height: 1.4;}
 
 
     .motivo {
@@ -406,22 +383,21 @@ body {
 
 
 
-/* ==============================
-   CELULAR PEQUENO
-============================== */
+
 
 @media (max-width: 480px) {
 
-    .cabecalho-pagina h1 {
-        font-size: 25px;
-    }
+    .cabecalho-pagina h1 {    font-size: 28px;
+    padding-left: 9px;
+    line-height: 31px;
+    font-weight: 700;
+    margin: 0;}
 
 
-    .cabecalho-pagina p {
-        font-size: 14px;
-
-        margin-left: 15px;
-    }
+    .cabecalho-pagina p {    font-size: 16px;
+    margin-left: 14px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
 
     .motivo {

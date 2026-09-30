@@ -1,6 +1,8 @@
-/* =========================================
-   RESET
-========================================= */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 
 * {
     margin: 0;
@@ -14,7 +16,6 @@ body {
     height: 100%;
 }
 
-body {    font-family: Arial, Helvetica, sans-serif;
 
     background: #eef7e9;
 
@@ -22,9 +23,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   CONTEÚDO PRINCIPAL
-========================================= */
+
 
 .conteudo {
     position: relative;
@@ -33,9 +32,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   TÍTULO PRINCIPAL
-========================================= */
+
 
 
 .titulo {
@@ -44,28 +41,26 @@ body {    font-family: Arial, Helvetica, sans-serif;
     left: 34px;
 }
 
-.titulo h1 {
-    padding-left: 9px;
-    font-size: 29px;
+.titulo h1 {    padding-left: 9px;
+    font-size: 28px;
     font-weight: 700;
-    line-height: 34px;
-    border-left: 4px solid #30451d;
+    line-height: 31px;
+    border-left: 5px solid #465722;
     color: #111;
-}
+    margin: 0;}
 
 .descricao {
     position: absolute;
     top: 145px;
     left: 34px;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 1.4;
     color: #222;
-}
+    margin-top: 8px;
+    margin-left: 14px;}
 
 
-/* =========================================
-   ÁREA PRINCIPAL
-========================================= */
+
 
 .overlay {
     position: absolute;
@@ -83,9 +78,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   CARD
-========================================= */
+
 
 .modal {
     width: 440px;
@@ -111,9 +104,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   TÍTULO DO CARD
-========================================= */
+
 
 .modal h2 {
     margin: 0 0 22px;
@@ -127,9 +118,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   TEXTO DO CARD
-========================================= */
+
 
 .modal p {
     margin: 0;
@@ -141,9 +130,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   BOTÕES
-========================================= */
+
 
 .botoes {
     width: 100%;
@@ -157,9 +144,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   LINKS DOS BOTÕES
-========================================= */
+
 
 .botoes a {
     text-decoration: none;
@@ -168,9 +153,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   BOTÃO CANCELAR
-========================================= */
+
 
 .cancelar {
     width: 80px;
@@ -188,7 +171,6 @@ body {    font-family: Arial, Helvetica, sans-serif;
 
     font-size: 12px;
 
-    font-family: Arial, Helvetica, sans-serif;
 
     cursor: pointer;
 
@@ -203,9 +185,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   BOTÃO EXCLUIR
-========================================= */
+
 
 .excluir {
     width: 80px;
@@ -223,7 +203,6 @@ body {    font-family: Arial, Helvetica, sans-serif;
 
     font-size: 12px;
 
-    font-family: Arial, Helvetica, sans-serif;
 
     cursor: pointer;
 
@@ -237,19 +216,12 @@ body {    font-family: Arial, Helvetica, sans-serif;
     background: #b38b1d;
 }
 
-/* =========================================
-   RESPONSIVIDADE
-========================================= */
 
 
-/* =========================================
-   TABLET
-   NÃO ALTERADO
-========================================= */
 
-/* =========================================
-   TABLET
-========================================= */
+
+
+
 
 @media (min-width: 481px) and (max-width: 768px) {
 
@@ -262,18 +234,20 @@ body {    font-family: Arial, Helvetica, sans-serif;
         left: 35px;
     }
 
-    .titulo h1 {
-        font-size: 31px;
-        line-height: 36px;
-    }
+    .titulo h1 {    font-size: 28px;
+    line-height: 31px;
+    padding-left: 9px;
+    font-weight: 700;
+    border-left: 5px solid #465722;
+    margin: 0;}
 
     .descricao {
         top: 125px;
         left: 35px;
-
-        font-size: 17px;
-        line-height: 22px;
-    }
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 8px;
+    margin-left: 14px;}
 
     .overlay {
         padding: 110px 25px 30px;
@@ -315,10 +289,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   CELULAR
-   NÃO ALTERADO
-========================================= */
+
 
 @media (max-width: 480px) {
 
@@ -328,9 +299,12 @@ body {    font-family: Arial, Helvetica, sans-serif;
         z-index: 3;
     }
 
-    .titulo h1 {
-        font-size: 26px;
-    }
+    .titulo h1 {    font-size: 28px;
+    padding-left: 9px;
+    line-height: 31px;
+    font-weight: 700;
+    border-left: 5px solid #465722;
+    margin: 0;}
 
     .descricao {
         position: absolute;
@@ -338,10 +312,10 @@ body {    font-family: Arial, Helvetica, sans-serif;
         left: 20px;
         right: 20px;
         z-index: 3;
-
-        font-size: 14px;
-        line-height: 20px;
-    }
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 8px;
+    margin-left: 14px;}
 
     .overlay {
         z-index: 1;
@@ -358,9 +332,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   CELULAR PEQUENO
-========================================= */
+
 
 @media (max-width: 390px) {
 
@@ -375,19 +347,21 @@ body {    font-family: Arial, Helvetica, sans-serif;
         top: 75px;
     }
 
-    .titulo h1 {
-        font-size: 21px;
-        line-height: 27px;
-    }
+    .titulo h1 {    font-size: 28px;
+    line-height: 31px;
+    padding-left: 9px;
+    font-weight: 700;
+    border-left: 5px solid #465722;
+    margin: 0;}
 
     .descricao {
         left: 16px;
         right: 16px;
         top: 112px;
-
-        font-size: 12px;
-        line-height: 17px;
-    }
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 8px;
+    margin-left: 14px;}
 
     .overlay {
         padding-left: 12px;
@@ -428,9 +402,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   CELULAR MUITO PEQUENO
-========================================= */
+
 
 @media (max-width: 320px) {
 
@@ -445,19 +417,21 @@ body {    font-family: Arial, Helvetica, sans-serif;
         top: 70px;
     }
 
-    .titulo h1 {
-        font-size: 19px;
-        line-height: 24px;
-    }
+    .titulo h1 {    font-size: 28px;
+    line-height: 31px;
+    padding-left: 9px;
+    font-weight: 700;
+    border-left: 5px solid #465722;
+    margin: 0;}
 
     .descricao {
         left: 12px;
         right: 12px;
         top: 104px;
-
-        font-size: 11px;
-        line-height: 16px;
-    }
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 8px;
+    margin-left: 14px;}
 
     .overlay {
         padding-left: 10px;
@@ -498,9 +472,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   TELAS GRANDES
-========================================= */
+
 
 @media (min-width: 1200px) {
 
@@ -515,7 +487,10 @@ body {    font-family: Arial, Helvetica, sans-serif;
 
     .descricao {
         left: 45px;
-    }
+    margin-top: 8px;
+    margin-left: 14px;
+    font-size: 16px;
+    line-height: 1.4;}
 
     .modal {
         width: 440px;
@@ -523,9 +498,7 @@ body {    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================================
-   TELAS MUITO GRANDES
-========================================= */
+
 
 @media (min-width: 1600px) {
 
@@ -540,5 +513,8 @@ body {    font-family: Arial, Helvetica, sans-serif;
 
     .descricao {
         left: 60px;
-    }
+    margin-top: 8px;
+    margin-left: 14px;
+    font-size: 16px;
+    line-height: 1.4;}
 }

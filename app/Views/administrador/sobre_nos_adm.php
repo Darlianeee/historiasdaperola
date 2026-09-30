@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sobre Nós</title>
+<title>Sobre Nós</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/sobre_nos_adm.css">
 </head>

@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Excluir Comentário</title>
+<title>Excluir Comentário</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/excluir_comentario.css">
 </head>

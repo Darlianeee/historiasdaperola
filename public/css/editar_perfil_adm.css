@@ -1,4 +1,8 @@
 * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,7 +17,6 @@ body {
 
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     background: #eef6eb;
     color: #14221f;
     overflow-x: hidden;
@@ -21,7 +24,6 @@ body {
 
 :root {
     color-scheme: light;
-    font-family: 'Inria Sans', sans-serif;
     background: #eef6f2;
     color: #14221f;
 }
@@ -48,30 +50,26 @@ a {
 .title-row {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 9px;
 }
 
 
-.title-mark {
-    width: 6px;
-    height: 38px;
+.title-mark {    width: 5px;
+    height: 31px;
     background: #465722;
-}
+    min-width: 5px;}
 
 
-h1 {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
+h1 {    margin: 0;
+    font-size: 28px;
     font-weight: 700;
     color: #13231d;
-}
+    line-height: 31px;}
 
 
-.subtitle {
-    margin-top: 10px;
-    font-size: 18px;
-}
+.subtitle {    margin-top: 8px;
+    font-size: 16px;
+    line-height: 1.4;}
 
 .profile-card {
     background: white;
@@ -182,7 +180,6 @@ h1 {
     transition: 0.3s;
     font-size: 15px;
     border: none;
-    font-family: inherit;
     cursor: pointer;
     width: 100%;
 }
@@ -269,7 +266,6 @@ h1 {
     font-size: 16px;
     background: #f8fbf8;
     color: #14221f;
-    font-family: inherit;
 }
 
 
@@ -407,9 +403,9 @@ h1 {
     }
 
 
-    .subtitle {
-        font-size: 16px;
-    }
+    .subtitle {    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
 
     .profile-card {
@@ -515,22 +511,20 @@ h1 {
     }
 
 
-    .title-row {
-        gap: 8px;
+    .title-row {    gap: 9px;
     }
 
 
-    .title-mark {
-        width: 5px;
-        height: 32px;
-    }
+    .title-mark {    width: 5px;
+    height: 31px;
+    min-width: 5px;}
 
 
     .subtitle {
         margin-left: 13px;
-
-        font-size: 14px;
-    }
+    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
 
     .profile-card {
@@ -655,22 +649,20 @@ h1 {
     }
 
 
-    .title-row {
-        gap: 7px;
+    .title-row {    gap: 9px;
     }
 
 
-    .title-mark {
-        width: 4px;
-        height: 28px;
-    }
+    .title-mark {    width: 5px;
+    height: 31px;
+    min-width: 5px;}
 
 
     .subtitle {
         margin-left: 11px;
-
-        font-size: 13px;
-    }
+    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
 
     .profile-card {
@@ -766,9 +758,9 @@ h1 {
     }
 
 
-    .subtitle {
-        font-size: 12px;
-    }
+    .subtitle {    font-size: 16px;
+    margin-top: 8px;
+    line-height: 1.4;}
 
 
     .profile-card h2 {

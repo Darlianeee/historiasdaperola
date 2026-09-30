@@ -9,7 +9,7 @@ $texto_lenda = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HISTÓRIAS NA PÉROLA
+<title>HISTÓRIAS NA PÉROLA
 </title>
 <link rel="stylesheet" href="<?=URL?>/public/css/historias_adm.css">
 </head>
@@ -28,7 +28,7 @@ $texto_lenda = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
         <h2 class="titulo-lenda"><?php echo htmlspecialchars($titulo_lenda); ?></h2>
 
         <div class="box-imagem">
-            <!-- Caso tenha imagem dinâmica, substitua a linha abaixo por: <img src="caminho_imagem.jpg" alt="Lenda"> -->
+            
             IMAGEM
         </div>
 

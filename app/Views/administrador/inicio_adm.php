@@ -10,8 +10,7 @@ $nome = $_SESSION['nome'] ?? 'Nome';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Início - Histórias na Pérola</title>
+<title>Início - Histórias na Pérola</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/inicio_adm.css">
 </head>
@@ -22,25 +21,25 @@ $nome = $_SESSION['nome'] ?? 'Nome';
 
     <main class="conteudo">
 
-        <!-- TÍTULO -->
+        
         <div class="titulo">
             <h1>Início</h1>
         </div>
 
-        <!-- BOAS-VINDAS -->
+        
         <p class="boas-vindas">
             Bem-vindo, <?php echo htmlspecialchars($nome); ?>!
         </p>
 
-        <!-- FRASE -->
+        
         <h2>
             Explore, conheça e valorize histórias em diferentes línguas!
         </h2>
 
-        <!-- CARDS -->
+        
         <div class="cards-inicio">
 
-            <!-- CARD 1 -->
+            
             <section class="card card-mito">
 
                 <h3>
@@ -74,7 +73,7 @@ $nome = $_SESSION['nome'] ?? 'Nome';
             </section>
 
 
-            <!-- CARD 2 -->
+            
             <section class="card card-gerenciar">
 
                 <h3>

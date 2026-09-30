@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Responder Comentário</title>
+<title>Responder Comentário</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/responder_comentario.css">
 </head>
@@ -16,7 +15,7 @@
 
     <main class="content">
 
-        <!-- TÍTULO -->
+        
         <div class="page-title">
 
             <div class="title-line"></div>
@@ -32,10 +31,10 @@
         </div>
 
 
-        <!-- CARD ÚNICO -->
+        
         <section class="reply-card">
 
-            <!-- USUÁRIO + HISTÓRIA -->
+            
             <div class="top-information">
 
                 <div class="info-section">
@@ -58,7 +57,7 @@
             </div>
 
 
-            <!-- COMENTÁRIO -->
+            
             <div class="info-section comment-section">
 
                 <span class="label">Comentário</span>
@@ -72,13 +71,13 @@
             </div>
 
 
-            <!-- DATA + HORA -->
+            
             <div class="comment-date">
                 dd/mm/aaaa às hh:mm:ss
             </div>
 
 
-            <!-- RESPOSTA -->
+            
             <div class="response-section">
 
                 <label for="resposta">
@@ -94,7 +93,7 @@
             </div>
 
 
-            <!-- BOTÕES -->
+            
             <div class="form-buttons">
 
                 <a
