@@ -255,11 +255,11 @@ body {
 }
 
 #titulo{
-    width: 260px;
+    width: 220px;
 }
 
 #legenda {
-    width: 310px;
+    width: 308px;
 }
 
 
@@ -377,9 +377,7 @@ textarea:focus {
 
 .btnImagem:hover {
     background: #BE9628;
-
     border-color: #BE9628;
-
     color: white;
 }
 
@@ -388,77 +386,47 @@ textarea:focus {
 
 .acoes {
     display: flex;
-
     gap: 330px;
-
     margin-left: 20px;
 }
 
 
-
-
 .cancelar {
     background: white;
-
-    color: #c79b21;
-
+    color: #BE9628;
     border: none;
-
     padding: 12px 35px;
-
     border-radius: 6px;
-
     cursor: pointer;
-
     font-size: 15px;
-
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
-
     transition: .3s;
 }
 
-.cancelar a {
-    color: #c79b21;
-
-    text-decoration: none;
-}
 
 .cancelar:hover {
-    background: #c79b21;
-
-    color: white;
+    background: #BE9628;
+    color: white !important;
 }
-
-.cancelar:hover a {
-    color: white;
-}
-
-
 
 
 .salvar {
-    background: #c79b21;
-
-    color: white;
-
+    background: white;
+    color: #BE9628;
     border: none;
-
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
     padding: 12px 35px;
-
     border-radius: 6px;
-
     cursor: pointer;
-
     font-size: 15px;
-
     transition: .3s;
+
 }
 
 .salvar:hover {
-    background: #a98218;
+    background: #BE9628;
+    color: white;
 }
-
-
 
 
 @media (max-width: 768px) {
