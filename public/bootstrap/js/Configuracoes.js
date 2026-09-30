@@ -1,6 +1,6 @@
 (function () {
     "use strict";
-    /* CHAVE DO LOCALSTORAGE */
+    /* CHAVE DO LOCALSTORAGEE */
     const STORAGE_KEY = "acessibilidade";
     /* CONFIGURAÇÕES PADRÃO */
     const padrao = {

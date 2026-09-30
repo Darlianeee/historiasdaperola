@@ -218,7 +218,7 @@ html.acessibilidade-alto-contraste .botao-restaurar {
     font-size: 0.9375rem;
 }
 
-/* FOCO DOS ELEMENTOS */
+/* FOCO DOS ELEMENTOSS */
 button:focus-visible {
     outline: 3px solid var(--ac-primary);
     outline-offset: 3px;
