@@ -995,7 +995,7 @@ body {
 
         height: 42px;
 
-        font-size: 14px;
+        font-size: 17px;
     }
 
 
@@ -1029,39 +1029,39 @@ body {
     .notificacao {
         min-height: 90px;
 
-        padding: 12px;
+        padding: 10px;
     }
 
     .icone {
-        width: 47px;
+        width: 50px;
 
-        height: 47px;
+        height: 50px;
 
-        min-width: 47px;
+        min-width: 49px;
     }
 
     .icon-estrela {
-        width: 32px;
+        width: 40px;
 
-        height: 32px;
+        height: 40px;
     }
 
     .icon-livro {
-        width: 41px;
+        width: 40px;
 
-        height: 41px;
+        height: 40px;
     }
 
     .icon-comentario {
-        width: 32px;
+        width: 40px;
 
-        height: 32px;
+        height: 40px;
     }
 
     .icon-caneta {
-        width: 35px;
+        width: 40px;
 
-        height: 39px;
+        height: 40px;
     }
 
     .texto {
@@ -1071,18 +1071,18 @@ body {
     }
 
     .texto h3 {
-        font-size: 17px;
+        font-size: 18px;
 
         line-height: 18px;
     }
 
     .texto p {
-        font-size: 17px;
-        line-height: 16px;
+        font-size: 18px;
+        line-height: 18px;
     }
 
     .texto span {
-        font-size: 17px;
+        font-size: 18px;
     }
 
     .menu-dots {
@@ -1285,5 +1285,35 @@ body {
 
     .footer-contact p {
         font-size: 11px;
+    }
+
+
+
+}
+
+@media screen and (width: 360px){
+.botao {
+   width: 99%;
+     height: 42px;
+     font-size: 15px;
+}
+ .topo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 24px;
+    }
+.data {
+    width: 99%;
+    height: 42px;
+    grid-column: 2;
+    grid-row: 2;
+    }
+.buscar {
+    width: 99%;
+    height: 42px;
+    min-width: 0;
+    grid-column: 1 / -1;
+    grid-row: 3;
     }
 }
