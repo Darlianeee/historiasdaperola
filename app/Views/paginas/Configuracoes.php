@@ -7,14 +7,16 @@
 
     <title>Configurações</title>
 
-    <link rel="stylesheet" href="Configuracoes.css">
+    <link rel="stylesheet" href="<?=URL?>/public/css/configuracoes.css">
 </head>
 
 <body>
+    <?php include '../App/Views/administrador/menu_adm.php'; ?>
+
     <main class="container-configuracoes">
         <!-- CABEÇALHO DA PÁGINA -->
         <section class="cabecalho-pagina">
-            <h1>Configurações de Acessibilidade</h1>
+            <h1>Configurações</h1>
             <p>Personalize a visualização da página de acordo com suas necessidades.</p>
         </section>
 
@@ -45,11 +47,11 @@
                 <p>Ajuste o tamanho dos textos da página.</p>
 
                 <div class="botoes-configuracao">
-                    <button type="button" data-acessibilidade-fonte="normal">A Normal</button>
+                    <button type="button" data-acessibilidade-fonte="normal">Normal</button>
 
-                    <button type="button" data-acessibilidade-fonte="grande">A Grande</button>
+                    <button type="button" data-acessibilidade-fonte="grande">Grande</button>
 
-                    <button type="button" data-acessibilidade-fonte="muito-grande">A Muito grande</button>
+                    <button type="button" data-acessibilidade-fonte="muito-grande">Muito grande</button>
                 </div>
 
             </div>
@@ -80,7 +82,8 @@
         </section>
     </main>
 
-    <script src="Configuracoes.js"></script>
+    <script src="<?=URL?>/public/js/configuracoes.js"></script>
+    <?php include '../App/Views/administrador/footer_adm.php'; ?>
 
 </body>
 </html>

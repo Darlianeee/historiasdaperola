@@ -8,7 +8,7 @@
 /* VARIÁVEIS DE ACESSIBILIDADE */
 :root {
     --ac-bg: #EAF3E6;
-    --ac-text: #000000;
+    --ac-text: #13231d;
     --ac-surface: #FFFFFF;
     --ac-border: #465722;
     --ac-primary: #465722;
@@ -32,21 +32,21 @@ body {
 
 /* TEMA ESCURO */
 html.acessibilidade-escuro {
-    --ac-bg: #465722;
+    --ac-bg: #1d3d12;
     --ac-text: #FFFFFF;
-    --ac-surface: #000000;
+    --ac-surface: #141313;
     --ac-border: #FFFFFF;
-    --ac-primary: #FFFFFF;
 
 }
 
 /* ALTO CONTRASTE */
 html.acessibilidade-alto-contraste {
     --ac-bg: #000000;
-    --ac-text: #FFFFFF;
-    --ac-surface: #000000;
-    --ac-border: #FFFFFF;
-    --ac-primary: #FFFFFF;
+    --ac-text: #dba437;
+    --ac-surface: #0b2408e5;
+    --ac-border: #d8d1d1;
+    --ac-primary: #465722;
+
 
 }
 
@@ -68,19 +68,21 @@ html.acessibilidade-fonte-muito-grande {
     width: 80%;
     min-height: 100vh;
     margin: 0 auto;
-    padding: 45px 0 80px;
+    padding: 60px 0 80px;
 }
 
 /* CABEÇALHO DA PÁGINA */
 .cabecalho-pagina {
     margin-bottom: 40px;
+    margin-top: 60px;
+    margin-left: -80px;
 }
 
 .cabecalho-pagina h1 {
     position: relative;
     padding-left: 18px;
     margin-bottom: 12px;
-    font-size: 2.25rem;
+    font-size: 28px;
     font-weight: 700;
     color: var(--ac-text);
 }
@@ -92,14 +94,15 @@ html.acessibilidade-fonte-muito-grande {
     left: 0;
     top: 2px;
     width: 5px;
-    height: 44px;
+    height: 31px;
     background-color: var(--ac-primary);
-    border-radius: 2px;
+    border-radius: 1px;
 }
 
 .cabecalho-pagina p {
-    font-size: 1.3125rem;
-    font-weight: 600;
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 1.4;
     color: var(--ac-text);
 }
 
@@ -192,13 +195,13 @@ html.acessibilidade-fonte-muito-grande {
 
 /* RESTAURAR - MODO ESCURO */
 html.acessibilidade-escuro .botao-restaurar {
-    background-color: #FFFFFF;
+    background-color: #dba437;
     color: #000000;
 }
 
 /* RESTAURAR - ALTO CONTRASTE */
 html.acessibilidade-alto-contraste .botao-restaurar {
-    background-color: #FFFFFF;
+    background-color: #dba437;
     color: #000000;
 }
 
@@ -231,11 +234,17 @@ button:focus-visible {
     }
 
     .cabecalho-pagina h1 {
-        font-size: 2rem;
+        font-size: 28px;
+        line-height: 31px;
+        font-weight: 700;
+        margin: 0;
     }
 
     .cabecalho-pagina p {
-        font-size: 1.1875rem;
+        margin-left: 13px;
+        font-size: 16px;
+        margin-top: 8px;
+        line-height: 1.4;
     }
 }
 
@@ -251,7 +260,10 @@ button:focus-visible {
     }
 
     .cabecalho-pagina h1 {
-        font-size: 1.75rem;
+        font-size: 28px;
+        line-height: 31px;
+        font-weight: 700;
+        margin: 0
     }
 
     .cabecalho-pagina h1::before {
@@ -275,8 +287,10 @@ button:focus-visible {
     }
 
     .cabecalho-pagina h1 {
-        font-size: 1.5625rem;
-        padding-left: 14px;
+        font-size: 24px;
+        line-height: 31px;
+        font-weight: 700;
+        margin: 0;
     }
 
     .cabecalho-pagina h1::before {
@@ -285,7 +299,7 @@ button:focus-visible {
     }
 
     .cabecalho-pagina p {
-        font-size: 1.0625rem;
+        font-size: 14px;
     }
 
     .painel-acessibilidade {

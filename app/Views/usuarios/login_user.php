@@ -24,7 +24,7 @@
 
         <form>
             
-            <label>SUAP</label>
+            <label>Matrícula</label>
             <input type="text">
 
 

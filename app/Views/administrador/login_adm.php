@@ -24,7 +24,7 @@
 
         <form>
             
-            <label>MATRÍCULA</label>
+            <label>Matrícula</label>
             <input type="text" id="matricula" name="matricula">
 
 
@@ -36,9 +36,6 @@
         </form>
         <p class="esqueceu">
            <a href="<?=URL?>/paginas/esqueceu_senha">Recuperar senha</a>
-        </p>
-        <p class="login">
-            Ainda não tem uma conta? <a href="<?=URL?>/administrador/cadastro_adm">Cadastre-se</a>
         </p>
     </div>
 

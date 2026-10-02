@@ -26,7 +26,7 @@
             <label>Nome Completo</label>
             <input type="text">
 
-            <label>SUAP</label>
+            <label>Matrícula</label>
             <input type="text">
 
             <label>E-mail</label>
