@@ -1,749 +1,215 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
+
+/* =========================================
+   LISTA DE COMENTÁRIOS
+========================================= */
+
+.lista-comentarios {
+    margin-top: 30px;
 }
 
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background: #edf5e9;
+.titulo-lista-comentarios {
+    font-size: 15px;
+    font-weight: bold;
     color: #111;
+
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.sem-comentarios {
+    font-size: 13px;
+    color: #666;
+    padding: 18px 0;
+}
+
+.comentario-item {
+    display: flex;
+    gap: 12px;
+
+    padding: 16px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.comentario-item:last-child {
+    border-bottom: none;
 }
 
 
+/* =========================================
+   AVATAR
+========================================= */
 
+.avatar-comentario {
+    flex-shrink: 0;
 
-.conteudo {    padding: 110px 49px 80px;
-    position: relative;
-}
+    width: 36px;
+    height: 36px;
 
-h1 {    font-size: 28px;
-    border-left: 5px solid #465722;
-    padding-left: 9px;
-    margin-bottom: 6px;
-    color: #111;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0 0 0 0;}
+    background-color: #465625;
+    color: #ffffff;
 
-.subtitulo {    font-size: 16px;
-    color: #333;
-    margin-left: 14px;
-    margin-bottom: 25px;
-    line-height: 1.4;
-    margin-top: 8px;}
-
-
-
-
-.modal-historia {
-    max-width: 780px;
-    width: 100%;
-    margin: 0 auto;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    padding: 35px 45px;
-    position: relative;
-}
-
-
-
-
-.btn-fechar {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.icon-close {
-    width: 24px;
-    height: 24px;
-    background-color: #ff4d4d;
     border-radius: 50%;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    color: white;
+    font-size: 15px;
     font-weight: bold;
+}
+
+
+/* =========================================
+   CORPO DO COMENTÁRIO
+========================================= */
+
+.corpo-comentario {
+    flex: 1;
+    min-width: 0;
+}
+
+.cabecalho-comentario {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+}
+
+.nome-comentario {
+    font-size: 13.5px;
+    font-weight: bold;
+    color: #111;
+}
+
+.data-comentario {
+    font-size: 11.5px;
+    color: #777;
+}
+
+.texto-comentario {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #222;
+
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+
+    margin: 4px 0 10px;
+}
+
+
+/* =========================================
+   BOTÃO CURTIR
+========================================= */
+
+.form-curtir {
+    margin: 0;
+}
+
+.btn-curtir {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    color: #555;
+
+    padding: 3px 12px;
+    border-radius: 20px;
+
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.btn-curtir:hover {
+    border-color: #c99829;
+    color: #c99829;
+}
+
+.btn-curtir.curtido {
+    background-color: #c99829;
+    border-color: #c99829;
+    color: #ffffff;
+}
+
+.btn-curtir.curtido:hover {
+    background-color: #b58721;
+    border-color: #b58721;
+    color: #ffffff;
+}
+
+.icone-curtir {
     font-size: 13px;
     line-height: 1;
 }
 
 
-
-
-.titulo-lenda {
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    color: #111;
-    margin-bottom: 20px;
-}
-
-
-
-
-.box-imagem {
-    width: 100%;
-    height: 230px;
-
-    background-color: #dcdcdc;
-    border-radius: 6px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 22px;
-    font-weight: bold;
-    color: #111;
-    letter-spacing: 1px;
-
-    margin-bottom: 15px;
-    overflow: hidden;
-}
-
-.box-imagem img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-
-.legenda {
-    font-size: 12px;
-    color: #333;
-    margin-bottom: 25px;
-    font-weight: 600;
-}
-
-
-
-
-.texto-lenda {
-    font-size: 13.5px;
-    line-height: 1.6;
-    color: #222;
-
-    word-wrap: break-word;
-
-    margin-bottom: 30px;
-
-    text-align: justify;
-}
-
-
-
-
-.secao-idiomas {
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-.titulo-idiomas {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    font-size: 14.5px;
-    font-weight: bold;
-
-    color: #111;
-
-    margin-bottom: 8px;
-}
-
-.titulo-idiomas img {
-    width: 22px;
-    height: 22px;
-}
-
-.subtitulo-idiomas {
-    font-size: 13px;
-    color: #444;
-    margin-bottom: 18px;
-}
-
-
-
-
-.botoes-idiomas {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.btn-idioma {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 10px;
-
-    min-height: 40px;
-    padding: 8px 18px;
-
-    border-radius: 6px;
-    text-decoration: none;
-
-    font-size: 14px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    color: #111 !important;
-
-    transition: none;
-}
-
-
-
-
-.btn-idioma:not(.ativo),
-.btn-idioma:not(.ativo) span {
-    color: #111 !important;
-}
-
-
-
-
-.btn-idioma.ativo {
-    background-color: #c99829;
-    border: 1px solid #c99829;
-
-    color: #ffffff !important;
-}
-
-
-
-
-.btn-idioma.ativo span {
-    color: #ffffff !important;
-    font-weight: bold;
-}
-
-
-.img-espanha {
-    width: 28px;
-    height: 28px;
-    object-fit: cover;
-    border-radius: 3px;
-    transform: scale(1.4);
-}
-
-
-
-.img-wari {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    border-radius: 3px;
-
-    transform: scale(2.4);
-}
-
-
-
-
-
-.btn-idioma.ativo:hover {
-    background-color: #c99829;
-    border-color: #c99829;
-    color: #ffffff !important;
-}
-
-
-
-
-.btn-idioma:not(.ativo):hover {
-    background-color: #ffffff;
-    border-color: #ccc;
-    color: #111 !important;
-}
-
-.btn-idioma:not(.ativo):hover span {
-    color: #111 !important;
-}
-
-
-
-
-.secao-comentario {
-    margin-top: 25px;
-
-    border-top: 1px solid #eee;
-
-    padding-top: 20px;
-}
-
-
-
-
-.titulo-comentario {
-    font-size: 15px;
-    font-weight: bold;
-    color: #111;
-
-    margin-bottom: 12px;
-}
-
-
-
-
-.rating-stars {
-    display: flex;
-
-    flex-direction: row-reverse;
-
-    justify-content: flex-end;
-
-    gap: 4px;
-
-    margin-bottom: 15px;
-}
-
-.rating-stars input {
-    display: none;
-}
-
-.rating-stars label {
-    font-size: 24px;
-
-    color: #ccc;
-
-    cursor: pointer;
-
-    transition: color 0.2s;
-}
-
-.rating-stars input:checked ~ label,
-.rating-stars label:hover,
-.rating-stars label:hover ~ label {
-    color: #c99829;
-}
-
-
-
-
-.area-texto-comentario {
-    width: 100%;
-    height: 90px;
-
-    padding: 12px;
-
-    border: 1px solid #ccc;
-
-    border-radius: 6px;
-
-    resize: none;
-
-
-    font-size: 13px;
-
-    color: #333;
-
-    outline: none;
-
-    margin-bottom: 15px;
-}
-
-.area-texto-comentario::placeholder {
-    color: #888;
-}
-
-
-
-
-.btn-enviar {
-    background-color: #c99829;
-
-    color: #ffffff;
-
-    border: none;
-
-    padding: 8px 30px;
-
-    border-radius: 6px;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: background 0.2s;
-}
-
-.btn-enviar:hover {
-    background-color: #b58721;
-
-    color: #ffffff;
-}
-
-
-
-
-
-
-
-@media (max-width: 900px) {
-
-    .conteudo {
-        padding: 100px 30px 60px;
-    }
-
-    .modal-historia {
-        max-width: 100%;
-
-        padding: 30px;
-    }
-
-}
-
-
-
-
-@media (max-width: 700px) {
-
-    .conteudo {
-        padding: 90px 20px 50px;
-    }
-
-    h1 {    font-size: 28px;
-    line-height: 31px;
-    font-weight: 700;
-    border-left: 5px solid #465722;
-    padding-left: 9px;
-    margin: 0 0 0 0;}
-
-    .subtitulo {    font-size: 16px;
-        margin-bottom: 20px;
-    line-height: 1.4;
-    margin-top: 8px;
-    margin-left: 14px;}
-
-    .modal-historia {
-        padding: 25px 20px;
-
-        border-radius: 8px;
-    }
-
-    .titulo-lenda {
-        font-size: 20px;
-    }
-
-    .box-imagem {
-        height: 210px;
-    }
-
-    .texto-lenda {
-        font-size: 13px;
-    }
-
-    .botoes-idiomas {
-        gap: 12px;
-    }
-
-    .btn-idioma {
-        padding: 8px 15px;
-    }
-
-}
-
-
-
+/* =========================================
+   AJUSTES RESPONSIVOS (colar no FINAL do arquivo)
+========================================= */
 
 @media (max-width: 500px) {
 
-    .conteudo {
-        padding: 80px 12px 40px;
+    .lista-comentarios {
+        margin-top: 25px;
     }
 
-    h1 {    font-size: 28px;
-
-        border-left-width: 4px;
-    padding-left: 9px;
-    line-height: 31px;
-    font-weight: 700;
-    border-left: 5px solid #465722;
-    margin: 0 0 0 0;}
-
-    .subtitulo {    font-size: 16px;
-    margin-left: 14px;
-    line-height: 1.4;
-    margin-top: 8px;}
-
-    .modal-historia {
-        padding: 25px 15px;
-
-        border-radius: 7px;
-    }
-
-    .btn-fechar {
-        top: 15px;
-        right: 15px;
-    }
-
-    .icon-close {
-        width: 22px;
-        height: 22px;
-
-        font-size: 12px;
-    }
-
-    .titulo-lenda {
-        font-size: 18px;
-
-        padding-right: 25px;
-
-        margin-bottom: 18px;
-    }
-
-    .box-imagem {
-        height: 180px;
-    }
-
-    .legenda {
-        font-size: 11px;
-
-        margin-bottom: 20px;
-    }
-
-    .texto-lenda {
-        font-size: 13px;
-
-        line-height: 1.55;
-    }
-
-
-    
-
-    .titulo-idiomas {
+    .titulo-lista-comentarios {
         font-size: 14px;
-
-        gap: 8px;
     }
 
-    .titulo-idiomas img {
-        width: 21px;
-        height: 21px;
-    }
-
-    .subtitulo-idiomas {
-        font-size: 12px;
-
-        line-height: 1.4;
-    }
-
-    .botoes-idiomas {
+    .comentario-item {
         gap: 10px;
+        padding: 14px 0;
     }
 
-    .btn-idioma {
-        min-height: 42px;
-
-        padding: 7px 14px;
-
-        font-size: 13px;
-
-        gap: 8px;
-    }
-
-    .btn-idioma img {
-        width: 27px;
-        height: 27px;
-    }
-
-
-    
-
-    .titulo-comentario {
+    .avatar-comentario {
+        width: 32px;
+        height: 32px;
         font-size: 14px;
     }
 
-    .rating-stars {
-        gap: 2px;
-    }
-
-    .rating-stars label {
-        font-size: 22px;
-    }
-
-    .area-texto-comentario {
-        height: 90px;
-
-        font-size: 12px;
-    }
-
-    .btn-enviar {
-        padding: 8px 26px;
-
+    .nome-comentario {
         font-size: 13px;
+    }
+
+    .data-comentario {
+        font-size: 11px;
+    }
+
+    .texto-comentario {
+        font-size: 12.5px;
+    }
+
+    .btn-curtir {
+        padding: 3px 11px;
+        font-size: 12px;
     }
 
 }
-
-
-
 
 @media (max-width: 380px) {
 
-    .conteudo {
-        padding: 75px 10px 35px;
-    }
-
-    h1 {    font-size: 28px;
-    line-height: 31px;
-    font-weight: 700;
-    border-left: 5px solid #465722;
-    padding-left: 9px;
-    margin: 0 0 0 0;}
-
-    .subtitulo {    font-size: 16px;
-    line-height: 1.4;
-    margin-top: 8px;
-    margin-left: 14px;}
-
-    .modal-historia {
-        padding: 22px 12px;
-    }
-
-    .titulo-lenda {
-        font-size: 17px;
-    }
-
-    .box-imagem {
-        height: 160px;
-    }
-
-    .texto-lenda {
-        font-size: 12px;
-    }
-
-
-    
-
-    .botoes-idiomas {
+    .comentario-item {
         gap: 8px;
     }
 
-    .btn-idioma {
-        padding: 7px 11px;
-
+    .avatar-comentario {
+        width: 28px;
+        height: 28px;
         font-size: 12px;
-
-        gap: 7px;
     }
 
-    .btn-idioma img {
-        width: 25px;
-        height: 25px;
-    }
-
-
-    
-
-    .titulo-comentario {
+    .titulo-lista-comentarios {
         font-size: 13px;
     }
 
-    .rating-stars label {
-        font-size: 21px;
-    }
-
-    .area-texto-comentario {
-        height: 85px;
-    }
-
-    .btn-enviar {
-        padding: 8px 23px;
-
+    .texto-comentario {
         font-size: 12px;
-    }
-
-}
-
-
-
-
-@media (max-width: 330px) {
-
-    .conteudo {
-        padding: 70px 8px 30px;
-    }
-
-    .modal-historia {
-        padding: 20px 10px;
-    }
-
-    h1 {    font-size: 28px;
-    line-height: 31px;
-    font-weight: 700;
-    border-left: 5px solid #465722;
-    padding-left: 9px;
-    margin: 0 0 0 0;}
-
-    .subtitulo {    font-size: 16px;
-    line-height: 1.4;
-    margin-top: 8px;
-    margin-left: 14px;}
-
-    .titulo-lenda {
-        font-size: 16px;
-    }
-
-    .box-imagem {
-        height: 145px;
-    }
-
-    .texto-lenda {
-        font-size: 11.5px;
-    }
-
-
-    
-
-    .btn-idioma {
-        padding: 6px 9px;
-
-        font-size: 11px;
-
-        gap: 6px;
-    }
-
-    .btn-idioma img {
-        width: 23px;
-        height: 23px;
-    }
-
-
-    
-
-    .area-texto-comentario {
-        font-size: 11px;
-    }
-
-    .btn-enviar {
-        padding: 7px 20px;
-
-        font-size: 11px;
     }
 
 }
