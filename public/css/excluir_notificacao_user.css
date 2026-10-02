@@ -17,14 +17,6 @@ body {
 }
 
 
-    background: #eef7e9;
-
-    color: #111;
-}
-
-
-
-
 .conteudo {
     position: relative;
     width: 100%;
@@ -156,71 +148,55 @@ body {
 
 
 .cancelar {
-    width: 80px;
+
+   width: 80px;
     height: 32px;
-
     padding: 0;
-
     border: none;
-
-    border-radius: 3px;
-
+    border-radius: 4px;
     background: #ffffff;
-
-    color: #c79b21;
-
+    color: #bda038;
     font-size: 12px;
-
-
     cursor: pointer;
-
-    box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.22);
-
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
     transition: 0.2s ease;
+    background-color: #ffff;
+    border: 1px solid #d3d3d3;
 }
 
 .cancelar:hover {
-    background: #fafafa;
-}
 
+     background-color: #bda038;
+    border-color: #c5c5c5;
+    color: #eef6e9;
+    transform: translateY(-1px);
+}
 
 
 
 .excluir {
-    width: 80px;
+ width: 80px;
     height: 32px;
-
     padding: 0;
-
     border: none;
-
     border-radius: 4px;
-
-    background: #c79b21;
-
-    color: #ffffff;
-
+    background: #ffffff;
+    color: #bda038;
     font-size: 12px;
-
-
     cursor: pointer;
-
-    box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.25);
-
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
     transition: 0.2s ease;
+    background-color: #ffff;
+    border: 1px solid #d3d3d3;
 }
 
 .excluir:hover {
-    background: #b38b1d;
+   
+     background-color: #bda038;
+    border-color: #c5c5c5;
+    color: #eef6e9;
+    transform: translateY(-1px);
 }
-
-
-
-
-
-
 
 
 @media (min-width: 481px) and (max-width: 768px) {
