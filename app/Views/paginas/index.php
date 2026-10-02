@@ -19,7 +19,7 @@
             <label>Sou:</label>
 
             <a href="<?=URL?>/usuarios/cadastro_user"><button type="button">Usuário</button></a>
-            <a href="<?=URL?>/administrador/cadastro_adm"><button type="button">Administrador</button></a>
+            <a href="<?=URL?>/administrador/login_adm"><button type="button">Administrador</button></a>
 
         </form>
 

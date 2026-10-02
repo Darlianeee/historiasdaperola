@@ -30,12 +30,12 @@
             <input type="text">
 
             <label>E-mail</label>
-            <input type="email">
+            <input type="email" id="email" name="email">
 
             <label>Senha</label>
-            <input type="password">
+            <input type="password" id="senha" name="senha">
 
-            <button type="submit">Entrar</button>
+            <button type="submit" id="botao-entrar">Entrar</button>
         </form>
 
         <p class="login">
