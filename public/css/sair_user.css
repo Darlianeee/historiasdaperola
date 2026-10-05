@@ -72,7 +72,7 @@ body {
 
 
 .modal {
-  width: 440px;
+ width: 440px;
 min-height: 230px;
 padding: 40px 40px 30px;
 background: #ffffff;
@@ -81,10 +81,10 @@ border-radius: 5px;
 box-shadow:
 0 3px 5px rgba(0, 0, 0, 0.35),
 0 1px 2px rgba(0, 0, 0, 0.15);
-
 text-align: center;
 pointer-events: auto;
 margin-bottom: -60px;
+margin-top: 40px;
 }
 
 
@@ -251,11 +251,12 @@ footer {
         margin-bottom: 8px;
     }
 
-    .titulo h1 {    font-size: 28px;
+    .titulo h1 {   
+     font-size: 36px;
     line-height: 31px;
     padding-left: 9px;
     font-weight: 700;
-    border-left: 5px solid #465722;
+    border-left: 9px solid #465722;
     margin: 0;}
 
 
@@ -263,13 +264,10 @@ footer {
 
     .descricao {
         position: relative;
-
         top: auto;
         left: auto;
-
         margin: 0;
-
-        font-size: 17px;
+        font-size: 25px;
         line-height: 23px;
     }
 
@@ -299,12 +297,10 @@ footer {
     .modal {
         width: 620px;
         max-width: 100%;
-
         min-height: 440px;
-
         padding: 40px 55px 38px;
-
         border-radius: 10px;
+        transform: translateY(-50px);
     }
 
 
@@ -354,9 +350,9 @@ footer {
     .cancelar,
     .Sair {
         width: 100px;
-        height: 40px;
+        height: 50px;
 
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -437,6 +433,7 @@ footer {
         padding: 20px 18px 18px;
 
         border-radius: 7px;
+        margin: 0;
     }
 
 
