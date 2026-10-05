@@ -394,7 +394,7 @@ h1 {    margin: 0;
         padding: 17px 19px;
 
         position: relative;
-        top: 150px;
+        top: 15px;
     }
 
     .message-info h2 {
@@ -666,4 +666,75 @@ h1 {    margin: 0;
         font-size: 12px;
     }
 }
+/* media query para telas maiores que 1032px */
 
+@media (min-width: 1032px) {
+.message-content p {
+    margin: 0;
+    font-size: 17px;
+}
+.subtitle{
+font-size: 19px;
+}
+.title-row h1{
+    font-size: 34px;
+}
+a.btn-primary {
+    font-size: 18px;
+}
+    .message-info h2 {
+        font-size: 24px
+}
+.message-date{
+    flex-shrink: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+}
+/* media query para telas maiores que 960px */
+@media (min-width: 960px) {
+.message-content p {
+    margin: 0;
+    font-size: 19px;
+}
+.subtitle{
+font-size: 30px;
+}
+.title-row h1{
+    font-size: 30px;
+}
+a.btn-primary {
+    font-size: 20px;
+}
+.message-info h2 {
+        font-size: 27px
+}
+.message-date{
+    flex-shrink: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+}
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+  .message-content p {
+    margin: 0;
+    font-size: 17px;
+}
+.subtitle{
+font-size: 20px;
+}
+.title-row h1{
+    font-size: 30px;
+}
+a.btn-primary {
+    font-size: 20px;
+}
+.message-info h2 {
+        font-size: 25px
+}
+.message-date{
+    flex-shrink: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+}

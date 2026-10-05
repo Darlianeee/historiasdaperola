@@ -35,7 +35,7 @@ body {
 
 .titulo h1 {  
  padding-left: 9px;
-    font-size: 38px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 31px;
     border-left: 8px solid #465722;
@@ -220,9 +220,9 @@ body {
     margin: 0;}
 
     .descricao {
-        top: 125px;
-        left: 35px;
-    font-size: 16px;
+     top: 125px;
+    left: 35px;
+    font-size: 20px;
     line-height: 1.4;
     margin-top: 8px;
     margin-left: 14px;}
