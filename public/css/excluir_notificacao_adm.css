@@ -6,6 +6,7 @@
 
 
 * {
+    background: transparent;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,6 +20,7 @@ body {
 
 
 .conteudo {
+
     position: relative;
     width: 100%;
     padding: 110px 49px 80px;
