@@ -24,10 +24,10 @@
 
         <form>
             <label>Nome Completo</label>
-            <input type="text">
+            <input type="text" id="nome" name="nome">
 
-            <label>SUAP</label>
-            <input type="text">
+            <label>Matrícula</label>
+            <input type="text" id="matricula" name="matricula">
 
             <label>E-mail</label>
             <input type="email" id="email" name="email">

@@ -40,6 +40,7 @@ body{
     text-align:center;
     font-size:40px;
     margin-bottom:10px;
+    margin-top: -40px;
 }
 
 .formulario p{
@@ -101,14 +102,14 @@ button:hover{
     letter-spacing:1px; 
     margin-bottom:5px;
     position:relative;
-    top:-70px;
+    top:-20px;
 }
 
 .lado-direito p {
     font-size:14px; 
     color:#f1f1f1;
     position:relative;
-    top:-70px;
+    top:-20px;
 }
 
 .login { 
@@ -147,18 +148,19 @@ button:hover{
 
     
     .lado-direito img {
-        width: 180px; 
+        width: 200px; 
     }
 
     
     .formulario {
         width: 100%;     
-        padding: 40px 30px; 
+        padding: 60px 40px; 
         order: 2;        
     }
 
     
     .formulario h1 {
         font-size: 28px; 
+        
     }
 }

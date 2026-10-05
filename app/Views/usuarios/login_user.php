@@ -24,14 +24,15 @@
 
         <form>
             
-            <label>SUAP</label>
-            <input type="text">
+            <label>Matrícula</label>
+            <input type="text" id="matricula" name="matricula">
+
 
 
             <label>Senha</label>
-            <input type="password">
+            <input type="password" id="senha" name="senha">
 
-            <button type="submit">Entrar</button>
+            <button type="submit" id="botao-entrar">Entrar</button>
 
         </form>
         <p class="esqueceu">

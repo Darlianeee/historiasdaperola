@@ -34,7 +34,7 @@ body {
 
 
 .lado-direito {
-    width:42%; 
+    width:100%; 
     background:#4c6123; 
     display:flex; 
     flex-direction:column; 
@@ -45,9 +45,9 @@ body {
 }
 
 .lado-direito img {
-    width: 300px !important;
+    width: 200px !important;
     height: auto;
-    margin-bottom: -10px;
+    margin-bottom: 30px;
     flex-shrink: 0;
 }
 
@@ -59,14 +59,14 @@ body {
     letter-spacing:1px; 
     margin-bottom:5px;
     position:relative;
-    top:-60px;
+    top:-50px;
 }
 
 .lado-direito p {
     font-size:14px; 
     color:#f1f1f1;
     position:relative;
-    top:-60px;
+    top:-50px;
 }
 
 
@@ -183,6 +183,6 @@ button:hover {
     }
 
     .lado-direito img {
-        width: 230px; 
+        width: 300px; 
     }
 }

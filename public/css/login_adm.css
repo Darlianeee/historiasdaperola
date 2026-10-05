@@ -59,14 +59,14 @@ body {
     letter-spacing:1px; 
     margin-bottom:5px;
     position:relative;
-    top:-60px;
+    top:-40px;
 }
 
 .lado-direito p {
     font-size:14px; 
     color:#f1f1f1;
     position:relative;
-    top:-60px;
+    top:-40px;
 }
 
 
@@ -143,14 +143,7 @@ button:hover {
 }
 
 
-.esqueceu a {
-    color: #c99a22;
-    text-decoration: none;
-    font-weight: bold;
-}
-.esqueceu a:hover{
-    color: #000;
-}
+
 
 @media screen and (min-width: 769px) {
     .container {
