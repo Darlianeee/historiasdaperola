@@ -1,4 +1,334 @@
 
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #edf5e9;
+    color: #111;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo {
+    padding: 110px 25px 80px;
+}
+
+h1 {
+    font-size: 26px;
+
+    border-left: 5px solid #465625;
+    padding-left: 10px;
+
+    margin-bottom: 6px;
+
+    color: #111;
+}
+
+.subtitulo {
+    font-size: 16px;
+    line-height: 1.4;
+
+    color: #333;
+
+    margin-top: 8px;
+    margin-left: 14px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   CARTÃO DA HISTÓRIA
+========================================= */
+
+.modal-historia {
+    position: relative;
+
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 30px 32px 34px;
+
+    background: #ffffff;
+    border: 1px solid #d2d2d2;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+
+    /* ao trocar de idioma, a página volta para o início do cartão sem ficar sob o menu fixo */
+    scroll-margin-top: 95px;
+}
+
+.btn-fechar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #555;
+    font-size: 17px;
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.btn-fechar:hover {
+    background: #f0f0f0;
+    color: #111;
+}
+
+.titulo-lenda {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.3;
+
+    color: #111;
+
+    /* espaço para o botão de fechar */
+    margin: 0 40px 18px 0;
+
+    overflow-wrap: anywhere;
+}
+
+.box-imagem {
+    width: 100%;
+    height: 320px;
+
+    background-color: #dcdcdc;
+    border-radius: 6px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #777;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.box-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+.legenda {
+    font-size: 12.5px;
+    font-style: italic;
+    line-height: 1.4;
+
+    color: #555;
+    text-align: center;
+
+    margin: 8px 0 22px;
+}
+
+.texto-lenda p {
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #222;
+
+    margin-bottom: 14px;
+
+    overflow-wrap: anywhere;
+}
+
+.texto-lenda p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   IDIOMAS
+========================================= */
+
+.secao-idiomas {
+    margin-top: 28px;
+    padding-top: 22px;
+
+    border-top: 1px solid #eee;
+}
+
+.titulo-idiomas {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    color: #111;
+}
+
+.titulo-idiomas img {
+    width: 22px;
+    height: 22px;
+
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.subtitulo-idiomas {
+    font-size: 13px;
+    line-height: 1.4;
+
+    color: #555;
+
+    margin: 6px 0 14px;
+}
+
+.botoes-idiomas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* mesmo visual dos botões de idioma da tela "Nova história" */
+.btn-idioma {
+    height: 34px;
+    padding: 6px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+
+    color: #111;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+.btn-idioma:hover {
+    border-color: #c79b21;
+    transform: translateY(-1px);
+}
+
+.btn-idioma.ativo {
+    background: #d4aa2a;
+    border-color: #c79b21;
+    color: #ffffff;
+}
+
+.btn-idioma img {
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.btn-idioma .img-brasil {
+    width: 25px;
+    height: 18px;
+
+    object-fit: cover;
+}
+
+.btn-idioma .img-espanha {
+    width: 30px;
+    height: 20px;
+
+    object-fit: cover;
+    transform: scale(1.2);
+}
+
+.btn-idioma .img-wari {
+    width: 24px;
+    height: 24px;
+
+    transform: scale(2.2);
+}
+
+
+/* =========================================
+   COMENTAR
+========================================= */
+
+.secao-comentario {
+    margin-top: 28px;
+    padding-top: 22px;
+
+    border-top: 1px solid #eee;
+}
+
+.titulo-comentario {
+    display: block;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    color: #111;
+
+    margin-bottom: 10px;
+}
+
+.area-texto-comentario {
+    display: block;
+
+    width: 100%;
+    min-height: 96px;
+    padding: 10px 12px;
+
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    color: #222;
+    font-size: 13px;
+    line-height: 1.5;
+
+    resize: vertical;
+}
+
+.area-texto-comentario::placeholder {
+    color: #777;
+}
+
+.btn-enviar {
+    margin-top: 12px;
+    padding: 9px 20px;
+
+    background: #c99720;
+    border: none;
+    border-radius: 5px;
+
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.btn-enviar:hover {
+    background: #b48718;
+    transform: translateY(-1px);
+}
+
+
 /* =========================================
    LISTA DE COMENTÁRIOS
 ========================================= */
@@ -118,7 +448,6 @@
     padding: 3px 12px;
     border-radius: 20px;
 
-    font-family: inherit;
     font-size: 12.5px;
     font-weight: bold;
 
@@ -126,19 +455,19 @@
 }
 
 .btn-curtir:hover {
-    border-color: #c99829;
-    color: #c99829;
+    border-color: #c99720;
+    color: #c99720;
 }
 
 .btn-curtir.curtido {
-    background-color: #c99829;
-    border-color: #c99829;
+    background-color: #c99720;
+    border-color: #c99720;
     color: #ffffff;
 }
 
 .btn-curtir.curtido:hover {
-    background-color: #b58721;
-    border-color: #b58721;
+    background-color: #b48718;
+    border-color: #b48718;
     color: #ffffff;
 }
 
@@ -149,10 +478,64 @@
 
 
 /* =========================================
-   AJUSTES RESPONSIVOS (colar no FINAL do arquivo)
+   FOCO VISÍVEL (teclado)
 ========================================= */
 
+.btn-fechar:focus-visible,
+.btn-idioma:focus-visible,
+.btn-enviar:focus-visible,
+.btn-curtir:focus-visible,
+.area-texto-comentario:focus-visible {
+    outline: 2px solid #465625;
+    outline-offset: 2px;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 768px) {
+
+    .conteudo {
+        padding: 100px 20px 70px;
+    }
+
+    .modal-historia {
+        padding: 24px 22px 28px;
+    }
+
+    .box-imagem {
+        height: 260px;
+    }
+
+}
+
 @media (max-width: 500px) {
+
+    .conteudo {
+        padding: 95px 15px 60px;
+    }
+
+    .modal-historia {
+        padding: 22px 16px 24px;
+    }
+
+    .titulo-lenda {
+        font-size: 19px;
+    }
+
+    .box-imagem {
+        height: 200px;
+    }
+
+    .texto-lenda p {
+        font-size: 14px;
+    }
+
+    .botoes-idiomas {
+        gap: 10px;
+    }
 
     .lista-comentarios {
         margin-top: 25px;
@@ -210,6 +593,21 @@
 
     .texto-comentario {
         font-size: 12px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .btn-fechar,
+    .btn-idioma,
+    .btn-enviar {
+        transition: none;
+    }
+
+    .btn-idioma:hover,
+    .btn-enviar:hover {
+        transform: none;
     }
 
 }
