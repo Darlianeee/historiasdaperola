@@ -124,26 +124,6 @@
 
                         </div>
 
-                        <div class="info-item">
-
-                            <span class="info-icon">
-
-                                <img src="<?=URL?>/img/icone_setor.png" alt="Ícone verde de um prédio, representando o setor onde o usuário trabalha">
-
-                            </span>
-
-                            <div class="info-content">
-
-                                <p class="info-label">
-                                    Setor
-                                </p>
-
-                                <input class="info-input" type="text" name="setor" value="Algum lugar">
-
-                            </div>
-
-                        </div>
-
                     </div>
 
                 </div>

@@ -35,7 +35,7 @@ a {
 
 
 .content {
-    padding: 10px 49px 80px;
+    padding: 30px 49px 80px;
 }
 
 .page-header {
@@ -67,7 +67,8 @@ h1 {    margin: 0;
     line-height: 31px;}
 
 
-.subtitle {    margin-top: 8px;
+.subtitle {    
+    margin-top: 8px;
     font-size: 16px;
     line-height: 1.4;}
 

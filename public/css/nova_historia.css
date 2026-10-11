@@ -540,21 +540,23 @@ textarea:focus {
         display: block;
     }
 
-    .titulo-pagina h1 {    font-size: 28px;
-    padding-left: 9px;
-
+    .titulo-pagina h1 {    
+        font-size: 28px;
+        padding-left: 9px;
         margin-bottom: 5px;
-    line-height: 31px;
-    font-weight: 700;
-    border-left: 5px solid #465722;
-    margin: 0;}
+        line-height: 31px;
+        font-weight: 700;
+        border-left: 5px solid #465722;
+        margin: 0;
+    }
 
-    .titulo-pagina p {    font-size: 16px;
-
+    .titulo-pagina p {    
+        font-size: 16px;
         margin-bottom: 22px;
-    margin-top: 8px;
-    margin-left: 14px;
-    line-height: 1.4;}
+        margin-top: 8px;
+        margin-left: 14px;
+        line-height: 1.4;
+    }
 
 
     

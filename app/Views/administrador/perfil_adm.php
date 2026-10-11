@@ -85,18 +85,7 @@
                             <p class="info-label">Matrícula</p> 
                             <p class="info-value">0000000</p> 
                         </div> 
-                    </div> 
-
-                    <div class="info-item"> 
-                        <span class="info-icon"> 
-                            <img src="<?=URL?>/img/icone_setor.png" alt="Ícone verde de um prédio, representando o setor onde o usuário trabalha">
-                        </span> 
-
-                        <div class="info-content"> 
-                            <p class="info-label">Setor</p> 
-                            <p class="info-value">Algum lugar</p> 
-                        </div> 
-                    </div> 
+                    </div>
 
                 </div> 
 
