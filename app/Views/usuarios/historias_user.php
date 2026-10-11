@@ -1,20 +1,75 @@
 <?php
-$nome = "Usuário";
-$titulo_lenda = "Título da Lenda";
-$legenda_imagem = "Legenda:xxxxxxxxx";
-$texto_lenda = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br><br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
+// Idiomas desta tela (os mesmos da tela "Nova história" do administrador)
+$idiomas = [
+    'pt' => [
+        'nome'   => 'Português',
+        'html'   => 'pt-BR',
+        'icone'  => 'brasil.png',
+        'classe' => 'img-brasil',
+    ],
+    'es' => [
+        'nome'   => 'Espanhol',
+        'html'   => 'es',
+        'icone'  => 'espanha.png',
+        'classe' => 'img-espanha',
+    ],
+    'wari' => [
+        'nome'   => "Wari' Oro Nao",
+        'html'   => 'pav',
+        'icone'  => 'icone_logo_menu.png',
+        'classe' => 'img-wari',
+    ],
+];
+
+$exemplo = trim(str_repeat('XXXXXXXXXX ', 14));
 
 /*
- * COMENTÁRIOS DOS USUÁRIOS
- * Por enquanto é um array de exemplo. Depois, troque por uma consulta ao banco, por exemplo:
- * $comentarios = $comentarioModel->listarPorHistoria($id_historia, $id_usuario_logado);
- * Cada item precisa ter: id, nome, data, texto, curtidas, curtiu (true/false).
+ * Cada idioma tem o seu título, legenda e texto.
+ * No texto, uma linha em branco separa um parágrafo do outro.
  */
-$comentarios = [
-    ['id' => 1, 'nome' => 'Maria Souza',   'data' => '18/09/2026', 'texto' => 'Adorei conhecer essa lenda, é muito bonita e importante para a nossa cultura.', 'curtidas' => 12, 'curtiu' => true],
-    ['id' => 2, 'nome' => 'João Pereira',  'data' => '17/09/2026', 'texto' => 'Minha avó contava uma versão parecida dessa história quando eu era criança.', 'curtidas' => 5,  'curtiu' => false],
-    ['id' => 3, 'nome' => 'Ana Karolina',  'data' => '15/09/2026', 'texto' => 'Muito legal poder ler em outros idiomas também!', 'curtidas' => 0,  'curtiu' => false],
+$historia = [
+    'imagem'  => '', // caminho da imagem; vazio mostra o espaço reservado
+    'versoes' => [
+        'pt' => [
+            'titulo'  => 'Título da Lenda',
+            'legenda' => 'Legenda da imagem',
+            'texto'   => $exemplo . "\n\n" . $exemplo,
+        ],
+        'es' => [
+            'titulo'  => 'Título de la leyenda',
+            'legenda' => 'Leyenda de la imagen',
+            'texto'   => $exemplo . "\n\n" . $exemplo,
+        ],
+        'wari' => [
+            'titulo'  => "Título da Lenda (Wari' Oro Nao)",
+            'legenda' => "Legenda da imagem (Wari' Oro Nao)",
+            'texto'   => $exemplo . "\n\n" . $exemplo,
+        ],
+    ],
 ];
+
+$comentarios = [
+    ['id' => 1, 'nome' => 'Maria Souza',  'data' => '18/09/2026', 'texto' => 'Adorei conhecer essa lenda, é muito bonita e importante para a nossa cultura.', 'curtidas' => 12, 'curtiu' => true],
+    ['id' => 2, 'nome' => 'João Pereira', 'data' => '17/09/2026', 'texto' => 'Minha avó contava uma versão parecida dessa história quando eu era criança.', 'curtidas' => 5,  'curtiu' => false],
+    ['id' => 3, 'nome' => 'Ana Karolina', 'data' => '15/09/2026', 'texto' => 'Muito legal poder ler em outros idiomas também!', 'curtidas' => 0,  'curtiu' => false],
+];
+
+// Idioma escolhido na URL (?lang=es). Qualquer valor fora da lista volta para o português.
+$lang         = $_GET['lang'] ?? 'pt';
+$idioma_atual = (is_string($lang) && isset($idiomas[$lang])) ? $lang : 'pt';
+$versao       = $historia['versoes'][$idioma_atual];
+
+// Parágrafos do texto escolhido
+$paragrafos = preg_split('/\R{2,}/', trim($versao['texto']));
+
+// Link para trocar de idioma (mantém outros parâmetros, sem o "url" interno do roteador)
+$linkIdioma = function ($codigo) {
+    $parametros = $_GET;
+    unset($parametros['url']);
+    $parametros['lang'] = $codigo;
+    return '?' . http_build_query($parametros) . '#historia';
+};
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -26,71 +81,83 @@ $comentarios = [
 </head>
 <body>
 
-<?php include '../App/Views/usuarios/menu_user.php'; ?>
+<!-- VLibras -->
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+<?php include APP . '/Views/usuarios/menu_user.php'; ?>
 
 <main class="conteudo">
+
     <h1>História</h1>
     <p class="subtitulo">Mito ou lenda escolhida.</p>
 
-    <section class="modal-historia">
-        <a href="<?=URL?>/public/usuarios/escolher_historia_user" class="btn-fechar" title="Fechar">
-            <div class="icon-close">✕</div>
+    <article class="modal-historia" id="historia">
+
+        <a href="<?=URL?>/usuarios/escolher_historia_user" class="btn-fechar" title="Fechar" aria-label="Fechar e voltar para as histórias">
+            <span aria-hidden="true">✕</span>
         </a>
 
-        <h2 class="titulo-lenda"><?php echo htmlspecialchars($titulo_lenda); ?></h2>
+        <div lang="<?= $idiomas[$idioma_atual]['html'] ?>">
 
-        <div class="box-imagem">
-            IMAGEM
+            <h2 class="titulo-lenda"><?= htmlspecialchars($versao['titulo']) ?></h2>
+
+            <div class="box-imagem">
+                <?php if (!empty($historia['imagem'])): ?>
+                    <img src="<?= htmlspecialchars($historia['imagem']) ?>" alt="<?= htmlspecialchars($versao['legenda']) ?>">
+                <?php else: ?>
+                    <span>IMAGEM</span>
+                <?php endif; ?>
+            </div>
+
+            <p class="legenda"><?= htmlspecialchars($versao['legenda']) ?></p>
+
+            <div class="texto-lenda">
+                <?php foreach ($paragrafos as $paragrafo): ?>
+                    <p><?= nl2br(htmlspecialchars($paragrafo)) ?></p>
+                <?php endforeach; ?>
+            </div>
+
         </div>
 
-        <p class="legenda"><?php echo htmlspecialchars($legenda_imagem); ?></p>
+        <!-- IDIOMAS -->
+        <section class="secao-idiomas">
 
-        <div class="texto-lenda">
-            <?php echo $texto_lenda; ?>
-        </div>
-
-        <div class="secao-idiomas">
             <div class="titulo-idiomas">
-                <img src="img/icone_globo.png" alt="Globo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'24\' height=\'24\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23333\' stroke-width=\'2\'><circle cx=\'12\' cy=\'12\' r=\'10\'/><line x1=\'2\' y1=\'12\' x2=\'22\' y2=\'12\'/><path d=\'M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\'/></svg>'">
+                <img src="<?=URL?>/public/img/icone_globo.png" alt="">
                 <span>Ler esta lenda em outras línguas</span>
             </div>
 
             <p class="subtitulo-idiomas">Escolha o idioma para ver a versão completa da lenda.</p>
 
-            <?php
-            $idioma_atual = $_GET['lang'] ?? 'es';
-            ?>
-
             <div class="botoes-idiomas">
-
-                <a href="?lang=es"
-                class="btn-idioma <?= $idioma_atual === 'es' ? 'ativo' : '' ?>">
-                    <img src="<?=URL?>/public/img/espanha.png" alt="Espanha" class="img-espanha">
-                    <span>Espanhol</span>
-                </a>
-
-                <a href="?lang=wari"
-                class="btn-idioma <?= $idioma_atual === 'wari' ? 'ativo' : '' ?>">
-                    <img src="<?=URL?>/public/img/icone_logo_menu.png" alt="Wari Oro Nao" class="img-wari">
-                    <span>Wari Oro Nao</span>
-                </a>
-
+                <?php foreach ($idiomas as $codigo => $idioma): ?>
+                    <a href="<?= htmlspecialchars($linkIdioma($codigo)) ?>"
+                       class="btn-idioma <?= $codigo === $idioma_atual ? 'ativo' : '' ?>"
+                       <?= $codigo === $idioma_atual ? 'aria-current="true"' : '' ?>>
+                        <img src="<?=URL?>/public/img/<?= $idioma['icone'] ?>" alt="" class="<?= $idioma['classe'] ?>">
+                        <span><?= htmlspecialchars($idioma['nome']) ?></span>
+                    </a>
+                <?php endforeach; ?>
             </div>
-        </div>
 
-        <!-- SEÇÃO DE COMENTÁRIO DO USUÁRIO (sem estrelas) -->
+        </section>
+
+        <!-- COMENTÁRIO DO USUÁRIO -->
         <form action="" method="POST" class="secao-comentario">
-            <div class="titulo-comentario">O que você achou desta lenda?</div>
+            <label for="comentario" class="titulo-comentario">O que você achou desta lenda?</label>
 
-            <textarea name="comentario" class="area-texto-comentario" placeholder="Digite aqui seu comentário..."></textarea>
+            <textarea id="comentario" name="comentario" class="area-texto-comentario" maxlength="1000" required placeholder="Digite aqui seu comentário..."></textarea>
 
-            <div>
-                <button type="submit" class="btn-enviar">Enviar</button>
-            </div>
+            <button type="submit" class="btn-enviar">Enviar</button>
         </form>
 
-        <!-- LISTA DE COMENTÁRIOS DOS USUÁRIOS -->
-        <div class="lista-comentarios">
+        <!-- LISTA DE COMENTÁRIOS -->
+        <section class="lista-comentarios">
             <div class="titulo-lista-comentarios">Comentários (<?= count($comentarios) ?>)</div>
 
             <?php if (empty($comentarios)): ?>
@@ -98,7 +165,8 @@ $comentarios = [
             <?php else: ?>
                 <?php foreach ($comentarios as $c): ?>
                     <div class="comentario-item">
-                        <div class="avatar-comentario">
+
+                        <div class="avatar-comentario" aria-hidden="true">
                             <?= htmlspecialchars(mb_strtoupper(mb_substr($c['nome'], 0, 1))) ?>
                         </div>
 
@@ -113,19 +181,32 @@ $comentarios = [
                             <!-- Curtir: envia o id do comentário para o PHP tratar (POST) -->
                             <form action="" method="POST" class="form-curtir">
                                 <input type="hidden" name="curtir_comentario" value="<?= (int)$c['id'] ?>">
-                                <button type="submit" class="btn-curtir <?= $c['curtiu'] ? 'curtido' : '' ?>" title="Curtir comentário">
-                                    <span class="icone-curtir">♥</span>
+                                <button type="submit"
+                                        class="btn-curtir <?= $c['curtiu'] ? 'curtido' : '' ?>"
+                                        aria-pressed="<?= $c['curtiu'] ? 'true' : 'false' ?>"
+                                        title="Curtir comentário">
+                                    <span class="icone-curtir" aria-hidden="true">♥</span>
                                     <span class="qtd-curtidas"><?= (int)$c['curtidas'] ?></span>
                                 </button>
                             </form>
                         </div>
+
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>
-        </div>
-    </section>
+        </section>
+
+    </article>
+
 </main>
 
-<?php include '../App/Views/usuarios/footer_user.php'; ?>
+<?php include APP . '/Views/usuarios/footer_user.php'; ?>
+
+<!-- VLibras -->
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
 </body>
 </html>
