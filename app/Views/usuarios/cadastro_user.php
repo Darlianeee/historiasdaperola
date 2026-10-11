@@ -26,16 +26,13 @@
             <label>Nome Completo</label>
             <input type="text">
 
-            <label>Matrícula</label>
-            <input type="text">
-
             <label>E-mail</label>
             <input type="email" id="email" name="email">
 
             <label>Senha</label>
             <input type="password" id="senha" name="senha">
 
-            <button type="submit" id="botao-entrar">Entrar</button>
+            <button type="submit" id="botao-cadastrar">Cadastrar</button>
         </form>
 
         <p class="login">

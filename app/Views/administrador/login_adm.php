@@ -24,9 +24,8 @@
 
         <form>
             
-            <label>Matrícula</label>
-            <input type="text" id="matricula" name="matricula">
-
+            <label>E-mail</label>
+            <input type="email" id="email" name="email">
 
             <label>Senha</label>
             <input type="password" id="senha" name="senha">
@@ -35,7 +34,7 @@
 
         </form>
         <p class="esqueceu">
-           <a href="<?=URL?>/paginas/esqueceu_senha">Recuperar senha</a>
+           <a href="<?=URL?>/paginas/esqueceu_senha">Esqueceu senha?</a>
         </p>
     </div>
 

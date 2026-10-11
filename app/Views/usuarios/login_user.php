@@ -24,8 +24,8 @@
 
         <form>
             
-            <label>Matrícula</label>
-            <input type="text">
+            <label>E-mail</label>
+            <input type="email">
 
 
             <label>Senha</label>
@@ -35,7 +35,7 @@
 
         </form>
         <p class="esqueceu">
-           <a href="<?=URL?>/paginas/esqueceu_senha">Recuperar senha</a>
+           <a href="<?=URL?>/paginas/esqueceu_senha">ESqueceu senha?</a>
         </p>
         <p class="login">
             Ainda não tem uma conta? <a href="<?=URL?>/usuarios/cadastro_user">Cadastre-se</a>
