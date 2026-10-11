@@ -1,242 +1,918 @@
+
 * {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+body {
+    background: #edf5e9;
+    color: #111;
 
-        body {
-            background: #edf5e9;
-            color: #111;
-        }
+    display: flex;
+    flex-direction: column;
+}
 
-        
-        .conteudo {            padding: 90px 49px 80px;
-            position: relative;
-        }
+.conteudo {
+    padding: 110px 25px 80px;
+}
 
-        h1 {    font-size: 28px;
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 31px;
+
     border-left: 5px solid #465722;
     padding-left: 9px;
-            margin-bottom: 6px;
-            color: #111;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0 0 0 0;}
 
-        .subtitulo {    font-size: 16px;
-            color: #333;
-    margin-left: 14px;
-            margin-bottom: 25px;
+    margin-bottom: 6px;
+
+    color: #111;
+}
+
+.subtitulo {
+    font-size: 16px;
     line-height: 1.4;
-    margin-top: 8px;}
 
-        
-        .modal-historia {
-            max-width: 780px;
-            width: 100%;
-            margin: 0 auto;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-            padding: 35px 45px;
-            position: relative;
-        }
+    color: #333;
 
-        .btn-fechar {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-fechar img, .icon-close {
-            width: 24px;
-            height: 24px;
-            background-color: #ff4d4d;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 1;
-        }
-
-        .titulo-lenda {
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
-            color: #111;
-            margin-bottom: 20px;
-        }
-
-        .box-imagem {
-            width: 100%;
-            height: 230px;
-            background-color: #dcdcdc;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            font-weight: bold;
-            color: #111;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            overflow: hidden;
-        }
-
-        .box-imagem img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .legenda {
-            font-size: 12px;
-            color: #333;
-            margin-bottom: 25px;
-            font-weight: 600;
-        }
-
-        .texto-lenda {
-            font-size: 13.5px;
-            line-height: 1.6;
-            color: #222;
-            word-wrap: break-word;
-            margin-bottom: 30px;
-            text-align: justify;
-        }
-
-        .secao-idiomas {
-            margin-top: 20px;
-        }
-
-        .titulo-idiomas {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 14.5px;
-            font-weight: bold;
-            color: #111;
-            margin-bottom: 8px;
-        }
-
-        .titulo-idiomas img {
-            width: 22px;
-            height: 22px;
-        }
-
-        .subtitulo-idiomas {
-            font-size: 13px;
-            color: #444;
-            margin-bottom: 18px;
-        }
-
-        
-
-        .botoes-idiomas {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .btn-idioma {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            gap: 10px;
-
-            min-height: 40px;
-            padding: 8px 18px;
-
-            border-radius: 6px;
-            text-decoration: none;
-
-            font-size: 14px;
-            font-weight: bold;
-
-            cursor: pointer;
-
-            
-            background-color: #ffffff;
-            border: 1px solid #ccc;
-            color: #111 !important;
-
-            transition: none;
-        }
+    margin-top: 8px;
+    margin-left: 14px;
+    margin-bottom: 25px;
+}
 
 
-        
+/* =========================================
+   CARTÃO DA HISTÓRIA
+========================================= */
 
-        .btn-idioma:not(.ativo),
-        .btn-idioma:not(.ativo) span {
-            color: #111 !important;
-        }
+.modal-historia {
+    position: relative;
+
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 30px 32px 34px;
+
+    background: #ffffff;
+    border: 1px solid #d2d2d2;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+
+    /* ao trocar de idioma, a página volta para o início do cartão sem ficar sob o menu fixo */
+    scroll-margin-top: 95px;
+}
+
+.btn-fechar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #555;
+    font-size: 17px;
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.btn-fechar:hover {
+    background: #f0f0f0;
+    color: #111;
+}
+
+.titulo-lenda {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.3;
+
+    color: #111;
+
+    /* espaço para o botão de fechar */
+    margin: 0 40px 18px 0;
+
+    overflow-wrap: anywhere;
+}
+
+.box-imagem {
+    width: 100%;
+    height: 320px;
+
+    background-color: #dcdcdc;
+    border-radius: 6px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #777;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.box-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+.legenda {
+    font-size: 12.5px;
+    font-style: italic;
+    line-height: 1.4;
+
+    color: #555;
+    text-align: center;
+
+    margin: 8px 0 22px;
+}
+
+.texto-lenda p {
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #222;
+
+    margin-bottom: 14px;
+
+    overflow-wrap: anywhere;
+}
+
+.texto-lenda p:last-child {
+    margin-bottom: 0;
+}
 
 
-        
+/* =========================================
+   IDIOMAS
+========================================= */
 
-        .btn-idioma.ativo {
-            background-color: #c99829;
-            border: 1px solid #c99829;
+.secao-idiomas {
+    margin-top: 28px;
+    padding-top: 22px;
 
-            color: #ffffff !important;
-        }
+    border-top: 1px solid #eee;
+}
+
+.titulo-idiomas {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    color: #111;
+}
+
+.titulo-idiomas img {
+    width: 22px;
+    height: 22px;
+
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.subtitulo-idiomas {
+    font-size: 13px;
+    line-height: 1.4;
+
+    color: #555;
+
+    margin: 6px 0 14px;
+}
+
+.botoes-idiomas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* mesmo visual dos botões de idioma da tela "Nova história" */
+.btn-idioma {
+    height: 34px;
+    padding: 6px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+
+    color: #111;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+.btn-idioma:hover {
+    border-color: #c79b21;
+    transform: translateY(-1px);
+}
+
+.btn-idioma.ativo {
+    background: #d4aa2a;
+    border-color: #c79b21;
+    color: #ffffff;
+}
+
+.btn-idioma img {
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.btn-idioma .img-brasil {
+    width: 25px;
+    height: 18px;
+
+    object-fit: cover;
+}
+
+.btn-idioma .img-espanha {
+    width: 30px;
+    height: 20px;
+
+    object-fit: cover;
+    transform: scale(1.2);
+}
+
+.btn-idioma .img-wari {
+    width: 24px;
+    height: 24px;
+
+    transform: scale(2.2);
+}
 
 
-        
+/* =========================================
+   COMENTAR
+========================================= */
 
-        .btn-idioma.ativo span {
-            color: #ffffff !important;
-            font-weight: bold;
-        }
+.secao-comentario {
+    margin-top: 28px;
+    padding-top: 22px;
 
-        
-        .img-espanha {
-            width: 28px;
-            height: 28px;
-            object-fit: cover;
-            border-radius: 3px;
-            transform: scale(1.4);
-        }
+    border-top: 1px solid #eee;
+}
+
+.titulo-comentario {
+    display: block;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    color: #111;
+
+    margin-bottom: 10px;
+}
+
+.area-texto-comentario {
+    display: block;
+
+    width: 100%;
+    min-height: 96px;
+    padding: 10px 12px;
+
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    color: #222;
+    font-size: 13px;
+    line-height: 1.5;
+
+    resize: vertical;
+}
+
+.area-texto-comentario::placeholder {
+    color: #777;
+}
+
+.btn-enviar {
+    margin-top: 12px;
+    padding: 9px 20px;
+
+    background: #c99720;
+    border: none;
+    border-radius: 5px;
+
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.btn-enviar:hover {
+    background: #b48718;
+    transform: translateY(-1px);
+}
 
 
-        
-        .img-wari {
-            width: 28px;
-            height: 28px;
-            object-fit: contain;
-            border-radius: 3px;
+/* =========================================
+   LISTA DE COMENTÁRIOS
+========================================= */
 
-            transform: scale(2.4);
-        }
+.lista-comentarios {
+    margin-top: 30px;
+}
 
-        
-        @media (max-width: 900px) {
-            .modal-historia {
-                padding: 20px;
-            }
-        }
+.titulo-lista-comentarios {
+    font-size: 15px;
+    font-weight: bold;
+    color: #111;
 
-        @media (max-width: 500px) {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
 
-            .botoes-idiomas {
-                justify-content: center;
-            }
+.sem-comentarios {
+    font-size: 13px;
+    color: #666;
+    padding: 18px 0;
+}
 
-            .botoes-idiomas .btn-idioma {
-                width: 150px;
-                height: 45px;
-            }
+.comentario-item {
+    display: flex;
+    gap: 12px;
 
-        }
+    padding: 16px 0;
+    border-bottom: 1px solid #eee;
+}
 
+.comentario-item:last-child {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   AVATAR
+========================================= */
+
+.avatar-comentario {
+    flex-shrink: 0;
+
+    width: 36px;
+    height: 36px;
+
+    background-color: #465625;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   CORPO DO COMENTÁRIO
+========================================= */
+
+.corpo-comentario {
+    flex: 1;
+    min-width: 0;
+}
+
+.cabecalho-comentario {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+}
+
+.nome-comentario {
+    font-size: 13.5px;
+    font-weight: bold;
+    color: #111;
+}
+
+.data-comentario {
+    font-size: 11.5px;
+    color: #777;
+}
+
+.texto-comentario {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #222;
+
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    white-space: pre-line;
+
+    margin: 4px 0 10px;
+}
+
+
+/* =========================================
+   BOTÃO CURTIR
+========================================= */
+
+.form-curtir {
+    margin: 0;
+}
+
+.btn-curtir {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    color: #555;
+
+    padding: 3px 12px;
+    border-radius: 20px;
+
+    font-size: 12.5px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.btn-curtir:hover {
+    border-color: #c99720;
+    color: #c99720;
+}
+
+.btn-curtir.curtido {
+    background-color: #c99720;
+    border-color: #c99720;
+    color: #ffffff;
+}
+
+.btn-curtir.curtido:hover {
+    background-color: #b48718;
+    border-color: #b48718;
+    color: #ffffff;
+}
+
+.icone-curtir {
+    font-size: 13px;
+    line-height: 1;
+}
+
+
+/* =========================================
+   FOCO VISÍVEL (teclado)
+========================================= */
+
+.btn-fechar:focus-visible,
+.btn-idioma:focus-visible,
+.btn-enviar:focus-visible,
+.btn-curtir:focus-visible,
+.btn-opcoes:focus-visible,
+.item-menu:focus-visible,
+.btn-cancelar:focus-visible,
+.btn-confirmar-excluir:focus-visible,
+.area-texto-comentario:focus-visible {
+    outline: 2px solid #465625;
+    outline-offset: 2px;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 768px) {
+
+    .conteudo {
+        padding: 100px 20px 70px;
+    }
+
+    .modal-historia {
+        padding: 24px 22px 28px;
+    }
+
+    .box-imagem {
+        height: 260px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .conteudo {
+        padding: 95px 15px 60px;
+    }
+
+    .modal-historia {
+        padding: 22px 16px 24px;
+    }
+
+    .titulo-lenda {
+        font-size: 19px;
+    }
+
+    .box-imagem {
+        height: 200px;
+    }
+
+    .texto-lenda p {
+        font-size: 14px;
+    }
+
+    .botoes-idiomas {
+        gap: 10px;
+    }
+
+    .lista-comentarios {
+        margin-top: 25px;
+    }
+
+    .titulo-lista-comentarios {
+        font-size: 14px;
+    }
+
+    .comentario-item {
+        gap: 10px;
+        padding: 14px 0;
+    }
+
+    .avatar-comentario {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .nome-comentario {
+        font-size: 13px;
+    }
+
+    .data-comentario {
+        font-size: 11px;
+    }
+
+    .texto-comentario {
+        font-size: 12.5px;
+    }
+
+    .btn-curtir {
+        padding: 3px 11px;
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .comentario-item {
+        gap: 8px;
+    }
+
+    .avatar-comentario {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .titulo-lista-comentarios {
+        font-size: 13px;
+    }
+
+    .texto-comentario {
+        font-size: 12px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .btn-fechar,
+    .btn-idioma,
+    .btn-enviar {
+        transition: none;
+    }
+
+    .btn-idioma:hover,
+    .btn-enviar:hover {
+        transform: none;
+    }
+
+}
+
+
+/* =========================================
+   ADMINISTRADOR: UTILITÁRIOS
+========================================= */
+
+/* garante que o atributo hidden esconda mesmo com display definido no CSS */
+[hidden] {
+    display: none !important;
+}
+
+.sr-only {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+/* =========================================
+   FAZER COMENTÁRIO (administrador)
+========================================= */
+
+.dica-comentario {
+    font-size: 12px;
+    color: #666;
+
+    margin: -4px 0 10px;
+}
+
+
+/* =========================================
+   LISTA: CONTADORES, SELOS E COMENTÁRIO OCULTO
+========================================= */
+
+.info-ocultos {
+    margin-left: 6px;
+
+    font-size: 12.5px;
+    font-weight: normal;
+    color: #777;
+}
+
+.selo {
+    display: inline-block;
+
+    padding: 1px 8px;
+    border-radius: 10px;
+
+    font-size: 10.5px;
+    font-weight: bold;
+    line-height: 14px;
+}
+
+.selo-admin {
+    background-color: #465625;
+    color: #ffffff;
+}
+
+.selo-oculto {
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    color: #555555;
+}
+
+/* avatar do administrador em dourado, para se diferenciar dos usuários */
+.comentario-item.do-admin .avatar-comentario {
+    background-color: #c99720;
+}
+
+.comentario-item.oculto .avatar-comentario {
+    background-color: #9b9b9b;
+}
+
+.comentario-item.oculto .texto-comentario {
+    color: #777;
+}
+
+.aviso-oculto {
+    font-size: 12px;
+    font-style: italic;
+    color: #777;
+
+    margin: 0 0 10px;
+}
+
+
+/* =========================================
+   OPÇÕES DO COMENTÁRIO (⋮) — mesmo padrão do menu das histórias
+========================================= */
+
+.opcoes-comentario {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.btn-opcoes {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+
+    color: #555;
+    font-size: 20px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.btn-opcoes:hover {
+    background: #f0f0f0;
+    color: #000;
+}
+
+.menu-opcoes-comentario {
+    display: none;
+
+    position: absolute;
+    top: 30px;
+    right: 0;
+    z-index: 20;
+
+    min-width: 190px;
+
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.20);
+
+    overflow: hidden;
+}
+
+.menu-opcoes-comentario.ativo {
+    display: block;
+}
+
+.item-menu {
+    display: block;
+
+    width: 100%;
+    padding: 10px 12px;
+
+    background: transparent;
+    border: none;
+
+    color: #333;
+    font-size: 13px;
+    text-align: left;
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.item-menu:hover {
+    background-color: #f2f2f2;
+}
+
+.item-menu.item-excluir {
+    color: #e53935;
+}
+
+.item-menu.item-excluir:hover {
+    background-color: #FCE8E8;
+}
+
+
+/* =========================================
+   CONFIRMAÇÃO DE EXCLUSÃO (mesmo visual da tela "Excluir comentário")
+========================================= */
+
+.dialogo-excluir {
+    /* o reset "* { margin: 0 }" tiraria o centralizado padrão do <dialog> */
+    margin: auto;
+
+    width: 440px;
+    max-width: calc(100% - 30px);
+    padding: 0;
+
+    background: #ffffff;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+
+    box-shadow:
+        0 3px 5px rgba(0, 0, 0, 0.35),
+        0 1px 2px rgba(0, 0, 0, 0.15);
+
+    color: #111;
+}
+
+.dialogo-excluir::backdrop {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.dialogo-conteudo {
+    padding: 40px 40px 30px;
+
+    text-align: center;
+}
+
+.dialogo-conteudo h2 {
+    margin: 0 0 22px;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+
+    color: #111;
+}
+
+.dialogo-conteudo p {
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #222;
+}
+
+.dialogo-botoes {
+    margin-top: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-cancelar,
+.btn-confirmar-excluir {
+    width: 80px;
+    height: 32px;
+
+    border: none;
+    border-radius: 4px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.btn-cancelar {
+    background: #ffffff;
+    color: #c79b21;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+}
+
+.btn-cancelar:hover {
+    background: #fafafa;
+}
+
+.btn-confirmar-excluir {
+    background: #c79b21;
+    color: #ffffff;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-confirmar-excluir:hover {
+    background: #b38b1d;
+}
+
+@media (max-width: 500px) {
+
+    .dialogo-conteudo {
+        padding: 30px 22px 24px;
+    }
+
+    .dialogo-conteudo h2 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .dialogo-botoes {
+        margin-top: 28px;
+    }
+
+    .info-ocultos {
+        display: block;
+
+        margin: 2px 0 0;
+    }
+
+}
