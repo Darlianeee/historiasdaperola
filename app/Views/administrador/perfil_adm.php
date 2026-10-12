@@ -76,17 +76,6 @@
                         </div> 
                     </div> 
 
-                    <div class="info-item"> 
-                        <span class="info-icon"> 
-                            <img src="<?=URL?>/img/icone_matricula.png" alt="Ícone verde de um documento de identificação com linhas, representando o número de matrícula do usuário"> 
-                        </span> 
-
-                        <div class="info-content"> 
-                            <p class="info-label">Matrícula</p> 
-                            <p class="info-value">0000000</p> 
-                        </div> 
-                    </div>
-
                 </div> 
 
             </div> 

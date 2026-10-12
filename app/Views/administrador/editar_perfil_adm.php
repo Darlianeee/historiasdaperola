@@ -112,16 +112,6 @@
 
                             </span>
 
-                            <div class="info-content">
-
-                                <p class="info-label">
-                                    Matrícula
-                                </p>
-
-                                <input class="info-input" type="text" name="matricula" value="0000000" readonly>
-
-                            </div>
-
                         </div>
 
                     </div>
