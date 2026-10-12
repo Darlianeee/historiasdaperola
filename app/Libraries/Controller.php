@@ -5,12 +5,16 @@ class Controller{
         return new $model;
     }
 
-    public function view($view, $dados = []){
-        $arquivo = APP.'/Views/'.$view.'.php';
-        if(file_exists($arquivo)){
+
+    public function view($view, $dados = []) {
+        $arquivo = APP . '/Views/' . $view . '.php';
+
+        if (file_exists($arquivo)) {
+            extract($dados);
             require_once $arquivo;
-        }else{
-            die("O arquivo não existe: ".$view);
+        } else {
+            die("O arquivo não existe: " . $view);
         }
     }
+
 }

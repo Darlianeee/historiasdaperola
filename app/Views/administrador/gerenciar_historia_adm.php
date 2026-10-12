@@ -1,25 +1,19 @@
+
 <?php
 $subtitulo = "Adicione novas histórias.";
 
-$historias = array_fill(0, 12, [
-    'id' => 1,
-    'titulo' => 'Nome da história',
-    'categoria' => 'Categoria',
-    'imagem' => ''
-]);
+$historias = $historias ?? [];
+$mensagem = $mensagem ?? '';
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gerenciar Histórias - Histórias na Pérola</title>
-
-    <link rel="stylesheet" href="<?=URL?>/public/css/gerenciar_historia_adm.css">
+    <title>Gerenciar Histórias - Histórias na Pérola</title>
+    <link rel="stylesheet" href="<?= URL ?>/public/css/gerenciar_historia_adm.css">
 </head>
-
 <body>
 
 <?php include '../App/Views/administrador/menu_adm.php'; ?>
@@ -29,47 +23,42 @@ $historias = array_fill(0, 12, [
     <h1>Gerenciar Histórias</h1>
 
     <p class="subtitulo">
-        <?= htmlspecialchars($subtitulo); ?>
+        <?= htmlspecialchars($subtitulo, ENT_QUOTES, 'UTF-8'); ?>
     </p>
 
+    <?php if ($mensagem !== ''): ?>
+        <div class="mensagem-sucesso" role="status">
+            <?= htmlspecialchars($mensagem, ENT_QUOTES, 'UTF-8'); ?>
+        </div>
+    <?php endif; ?>
 
-    
     <div class="ferramentas-container">
 
-        
         <div class="busca-box">
-
             <span class="icone-busca" aria-hidden="true">
-                <img src="<?=URL?>/public/img/LUPA2.png" alt="Ícone de busca">
+                <img src="<?= URL ?>/public/img/LUPA2.png" alt="">
             </span>
 
             <input
                 type="text"
+                id="buscaHistoria"
                 placeholder="Buscar História..."
+                aria-label="Buscar história pelo título"
             >
-
         </div>
 
-
-        
-        <select class="select-categoria">
-
+        <select
+            class="select-categoria"
+            id="filtroCategoria"
+            aria-label="Filtrar por categoria"
+        >
             <option value="">Categoria</option>
-
-            <option value="mito">
-                Mito
-            </option>
-
-            <option value="lenda">
-                Lenda
-            </option>
-
+            <option value="mito">Mito</option>
+            <option value="lenda">Lenda</option>
         </select>
 
-
-        
         <a
-            href="<?=URL?>/administrador/nova_historia"
+            href="<?= URL ?>/administrador/nova_historia"
             class="btn-nova-historia"
         >
             + Nova História
@@ -77,119 +66,174 @@ $historias = array_fill(0, 12, [
 
     </div>
 
+    <section class="grid-historias" id="gridHistorias">
 
-    
-    <section class="grid-historias">
+        <?php if (empty($historias)): ?>
 
-        <?php foreach ($historias as $index => $item): ?>
+            <p class="sem-historias" id="semHistorias">
+                Nenhuma história cadastrada ainda.
+            </p>
 
-            <div class="card-item">
+        <?php else: ?>
 
-                <div class="card-imagem-wrapper">
+            <?php foreach ($historias as $index => $item): ?>
 
-                    <?php if (!empty($item['imagem'])): ?>
+                <?php
+                $id = (int) $item->id;
+                $titulo = $item->titulo ?? '';
+                $categoria = $item->categoria ?? '';
+                $imagem = $item->imagem ?? '';
+                ?>
 
-                        <img 
-                            src="<?= htmlspecialchars($item['imagem']); ?>" 
-                            alt="Imagem da História"
+                <div
+                    class="card-item"
+                    data-titulo="<?= htmlspecialchars($titulo, ENT_QUOTES, 'UTF-8'); ?>"
+                    data-categoria="<?= htmlspecialchars(mb_strtolower($categoria, 'UTF-8'), ENT_QUOTES, 'UTF-8'); ?>"
+                >
+
+                    <div class="card-imagem-wrapper">
+
+                        <?php if ($imagem !== ''): ?>
+                            <img
+                                src="<?= htmlspecialchars($imagem, ENT_QUOTES, 'UTF-8'); ?>"
+                                alt="<?= htmlspecialchars($titulo, ENT_QUOTES, 'UTF-8'); ?>"
+                            >
+                        <?php endif; ?>
+
+                        <button
+                            class="btn-opcoes"
+                            type="button"
+                            onclick="toggleMenu(event, <?= $index; ?>)"
+                            aria-label="Opções da história"
+                            aria-expanded="false"
                         >
+                            ⋮
+                        </button>
 
-                    <?php endif; ?>
+                        <div class="menu-opcoes" id="menu-<?= $index; ?>">
 
-                    <button 
-                        class="btn-opcoes"
-                        type="button"
-                        onclick="toggleMenu(event, <?= $index; ?>)"
-                        aria-label="Opções da história"
-                    >
-                        ⋮
-                    </button>
+                            <a href="<?= URL ?>/administrador/editar_historia_adm?id=<?= $id; ?>">
+                                Editar História
+                            </a>
 
-                    <div 
-                        class="menu-opcoes"
-                        id="menu-<?= $index; ?>"
-                    >
+                            <a
+                                href="<?= URL ?>/administrador/excluir_historia_adm?id=<?= $id; ?>"
+                                class="btn-apagar"
+                            >
+                                Excluir História
+                            </a>
 
-                        <a href="<?=URL?>/administrador/editar_historia_adm?id=<?= $item['id']; ?>">
-                            Editar História
-                        </a>
+                        </div>
 
-                        <a 
-                            href="<?=URL?>/administrador/excluir_historia_adm?id=<?= $item['id']; ?>"
-                            class="btn-apagar"
+                    </div>
+
+                    <div class="card-info">
+
+                        <div class="card-textos">
+                            <div class="card-titulo">
+                                <?= htmlspecialchars($titulo, ENT_QUOTES, 'UTF-8'); ?>
+                            </div>
+
+                            <div class="card-categoria">
+                                <?= htmlspecialchars($categoria, ENT_QUOTES, 'UTF-8'); ?>
+                            </div>
+                        </div>
+
+                        <a
+                            href="<?= URL ?>/administrador/historias_adm?id=<?= $id; ?>"
+                            class="btn-ler"
                         >
-                            Excluir História
+                            Ver história
                         </a>
 
                     </div>
 
                 </div>
 
+            <?php endforeach; ?>
 
-                
-                <div class="card-info">
+            <p class="sem-resultados" id="semResultados" hidden>
+                Nenhuma história corresponde à sua busca.
+            </p>
 
-                    <div class="card-textos">
-
-                        <div class="card-titulo">
-                            <?= htmlspecialchars($item['titulo']); ?>
-                        </div>
-
-                        <div class="card-categoria">
-                            <?= htmlspecialchars($item['categoria']); ?>
-                        </div>
-
-                    </div>
-
-                    <a href="<?=URL?>/administrador/historias_adm" class="btn-ler">
-                        Ver história
-                    </a>
-
-                </div>
-
-            </div>
-
-        <?php endforeach; ?>
+        <?php endif; ?>
 
     </section>
 
 </main>
 
-
 <script>
-
 function toggleMenu(event, index) {
-
     event.stopPropagation();
 
-    const menus = document.querySelectorAll('.menu-opcoes');
-
-    menus.forEach((menu, i) => {
-
-        if (i !== index) {
-            menu.classList.remove('ativo');
-        }
-
-    });
-
     const menuAtual = document.getElementById('menu-' + index);
+    const estavaAberto = menuAtual.classList.contains('ativo');
 
-    menuAtual.classList.toggle('ativo');
-}
-
-
-document.addEventListener('click', function () {
-
-    const menus = document.querySelectorAll('.menu-opcoes');
-
-    menus.forEach(menu => {
+    document.querySelectorAll('.menu-opcoes').forEach(function(menu) {
         menu.classList.remove('ativo');
     });
 
+    document.querySelectorAll('.btn-opcoes').forEach(function(botao) {
+        botao.setAttribute('aria-expanded', 'false');
+    });
+
+    if (!estavaAberto) {
+        menuAtual.classList.add('ativo');
+        event.currentTarget.setAttribute('aria-expanded', 'true');
+    }
+}
+
+document.addEventListener('click', function() {
+    document.querySelectorAll('.menu-opcoes').forEach(function(menu) {
+        menu.classList.remove('ativo');
+    });
+
+    document.querySelectorAll('.btn-opcoes').forEach(function(botao) {
+        botao.setAttribute('aria-expanded', 'false');
+    });
 });
 
-</script>
+document.addEventListener('DOMContentLoaded', function() {
+    const busca = document.getElementById('buscaHistoria');
+    const filtro = document.getElementById('filtroCategoria');
+    const cartoes = document.querySelectorAll('.card-item');
+    const semResultados = document.getElementById('semResultados');
 
+    function filtrarHistorias() {
+        const textoBusca = busca.value
+            .trim()
+            .toLocaleLowerCase('pt-BR');
+
+        const categoriaSelecionada = filtro.value;
+        let quantidadeVisivel = 0;
+
+        cartoes.forEach(function(cartao) {
+            const titulo = cartao.dataset.titulo.toLocaleLowerCase('pt-BR');
+            const categoria = cartao.dataset.categoria;
+
+            const correspondeTitulo = titulo.includes(textoBusca);
+            const correspondeCategoria =
+                categoriaSelecionada === '' ||
+                categoria === categoriaSelecionada;
+
+            const mostrar = correspondeTitulo && correspondeCategoria;
+
+            cartao.hidden = !mostrar;
+
+            if (mostrar) {
+                quantidadeVisivel++;
+            }
+        });
+
+        if (semResultados) {
+            semResultados.hidden = quantidadeVisivel > 0;
+        }
+    }
+
+    busca.addEventListener('input', filtrarHistorias);
+    filtro.addEventListener('change', filtrarHistorias);
+});
+</script>
 
 <?php include '../App/Views/administrador/footer_adm.php'; ?>
 

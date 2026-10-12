@@ -508,6 +508,35 @@ h1 {
 }
 
 
+.mensagem-sucesso {
+    width: 100%;
+    padding: 13px 16px;
+    margin-bottom: 22px;
+    background: #e0eedb;
+    border: 1px solid #a8c99b;
+    border-radius: 5px;
+    color: #2f5728;
+    font-size: 14px;
+}
+
+.sem-historias,
+.sem-resultados {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 24px;
+    background: #fff;
+    border-radius: 6px;
+    color: #555;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.card-item[hidden],
+.sem-resultados[hidden] {
+    display: none;
+}
+
 
 
 @media (min-width: 1200px) {

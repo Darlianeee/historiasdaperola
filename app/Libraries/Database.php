@@ -3,8 +3,8 @@ class Database{
     private $host = "localhost";
     private $usuario = "root";
     private $senha = "";
-    private $banco = "framework";
-    private $porta = "3307"; //verificar a porta do seu banco
+    private $banco = "bd_historias";
+    private $porta = "3306"; //verificar a porta do seu banco
     private $dbh;
     private $stmt;
 
@@ -78,4 +78,22 @@ class Database{
     public function ultimoIdInserido(){
         return $this->dbh->lastInsertId();
     }//fim da função ultimoIdInserido
+
+    public function iniciarTransacao()
+    {
+        $this->dbh->beginTransaction();
+    }
+
+    public function confirmarTransacao()
+    {
+        $this->dbh->commit();
+    }
+
+    public function cancelarTransacao()
+    {
+        if ($this->dbh->inTransaction()) {
+            $this->dbh->rollBack();
+        }
+    }
+
 }//fim da classe Database
