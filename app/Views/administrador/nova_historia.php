@@ -158,7 +158,7 @@
 
 <?php include '../App/Views/administrador/footer_adm.php'; ?>
 
-<script src="<?= URL ?>/public/js/novas_historias.js"></script>
+<script src="<?= URL ?>/public/js/novas_historias.js" defer></script>
 
 </body>
 </html>

@@ -130,7 +130,11 @@ $mensagem = $mensagem ?? '';
                     <div class="card-info">
 
                         <div class="card-textos">
-                            <div class="card-titulo">
+                            <div
+                                class="card-titulo"
+                                data-titulo-pt="<?= htmlspecialchars($titulo, ENT_QUOTES, 'UTF-8'); ?>"
+                                data-titulo-es="<?= htmlspecialchars($item->titulo_es ?? '', ENT_QUOTES, 'UTF-8'); ?>"
+                                data-titulo-wari="<?= htmlspecialchars($item->titulo_wari ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                                 <?= htmlspecialchars($titulo, ENT_QUOTES, 'UTF-8'); ?>
                             </div>
 
@@ -162,80 +166,10 @@ $mensagem = $mensagem ?? '';
 
 </main>
 
-<script>
-function toggleMenu(event, index) {
-    event.stopPropagation();
-
-    const menuAtual = document.getElementById('menu-' + index);
-    const estavaAberto = menuAtual.classList.contains('ativo');
-
-    document.querySelectorAll('.menu-opcoes').forEach(function(menu) {
-        menu.classList.remove('ativo');
-    });
-
-    document.querySelectorAll('.btn-opcoes').forEach(function(botao) {
-        botao.setAttribute('aria-expanded', 'false');
-    });
-
-    if (!estavaAberto) {
-        menuAtual.classList.add('ativo');
-        event.currentTarget.setAttribute('aria-expanded', 'true');
-    }
-}
-
-document.addEventListener('click', function() {
-    document.querySelectorAll('.menu-opcoes').forEach(function(menu) {
-        menu.classList.remove('ativo');
-    });
-
-    document.querySelectorAll('.btn-opcoes').forEach(function(botao) {
-        botao.setAttribute('aria-expanded', 'false');
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const busca = document.getElementById('buscaHistoria');
-    const filtro = document.getElementById('filtroCategoria');
-    const cartoes = document.querySelectorAll('.card-item');
-    const semResultados = document.getElementById('semResultados');
-
-    function filtrarHistorias() {
-        const textoBusca = busca.value
-            .trim()
-            .toLocaleLowerCase('pt-BR');
-
-        const categoriaSelecionada = filtro.value;
-        let quantidadeVisivel = 0;
-
-        cartoes.forEach(function(cartao) {
-            const titulo = cartao.dataset.titulo.toLocaleLowerCase('pt-BR');
-            const categoria = cartao.dataset.categoria;
-
-            const correspondeTitulo = titulo.includes(textoBusca);
-            const correspondeCategoria =
-                categoriaSelecionada === '' ||
-                categoria === categoriaSelecionada;
-
-            const mostrar = correspondeTitulo && correspondeCategoria;
-
-            cartao.hidden = !mostrar;
-
-            if (mostrar) {
-                quantidadeVisivel++;
-            }
-        });
-
-        if (semResultados) {
-            semResultados.hidden = quantidadeVisivel > 0;
-        }
-    }
-
-    busca.addEventListener('input', filtrarHistorias);
-    filtro.addEventListener('change', filtrarHistorias);
-});
-</script>
-
 <?php include '../App/Views/administrador/footer_adm.php'; ?>
+
+<script src="<?= URL ?>/public/js/gerenciar_historia_adm.js"></script>
+
 
 </body>
 </html>

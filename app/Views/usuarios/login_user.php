@@ -35,7 +35,7 @@
 
         </form>
         <p class="esqueceu">
-           <a href="<?=URL?>/paginas/esqueceu_senha">ESqueceu senha?</a>
+           <a href="<?=URL?>/paginas/esqueceu_senha">Esqueceu senha?</a>
         </p>
         <p class="login">
             Ainda não tem uma conta? <a href="<?=URL?>/usuarios/cadastro_user">Cadastre-se</a>

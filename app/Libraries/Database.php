@@ -13,18 +13,29 @@ class Database{
         $dns = 'mysql:host='.$this->host.';port='.$this->porta.';dbname='.$this->banco;
         
         $opcoes = [
-             //armanezar em cache a conexão para ser reutilizada, evitando sobrecarga de uma nova conexão. 
-            PDO::ATTR_PERSISTENT => true,
-            //lança um PDOException se ocorrer um erro
-            PDO::ATTR_ERRMODE=> PDO::ERRMODE_EXCEPTION
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_PERSISTENT => false
         ];
         try{
             //cria a instacia do PDO
             $this->dbh = new PDO($dns, $this->usuario, $this->senha, $opcoes);
-        }catch(PDOException $error){
-          print "Error!";$error->getMessage()."<br/>";
-          die();
-          //fala
+        } catch (Throwable $erro) {
+
+            error_log(
+                'Erro original ao cadastrar história: ' .
+                $erro->getMessage()
+            );
+
+            try {
+                $this->dbh->cancelarTransacao();
+            } catch (Throwable $erroTransacao) {
+                error_log(
+                    'Erro ao desfazer a transação: ' .
+                    $erroTransacao->getMessage()
+                );
+            }
+
+            return false;
         }//fim do catch
     }//fim do método construtor
 
@@ -86,7 +97,9 @@ class Database{
 
     public function confirmarTransacao()
     {
-        $this->dbh->commit();
+        if ($this->dbh->inTransaction()) {
+            $this->dbh->commit();
+        }
     }
 
     public function cancelarTransacao()
