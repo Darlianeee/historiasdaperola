@@ -63,7 +63,8 @@
 
             <img
                 src="<?=URL?>/public/img/LUPA2.png"
-                alt="Pesquisar"
+                alt="Uma Lupa da cor cinza, representando a função de busca ou pesquisa. A lupa é um ícone universalmente reconhecido 
+                para indicar a capacidade de procurar informações ou itens específicos."
                 class="icon-Lupa"
             >
 
@@ -101,7 +102,8 @@
 
                 <img
                     src="<?=URL?>/public/img/logo estrela.png"
-                    alt="Estrela"
+                    alt="Círculo azul com uma estrela amarela no centro. A estrela representa uma avaliação 
+                    ou classificação positiva, indicando  que algo foi avaliado ou destacado de forma favorável."
                     class="icon-estrela"
                 >
 
@@ -147,7 +149,8 @@
 
                     <img
                         src="<?=URL?>/public/img/pontoo.png"
-                        alt="Opções"
+                        alt="Tres pontos horizontais indicando opções adicionais. Este ícone é comumente usado para representar um menu suspenso ou ações 
+                        adicionais disponíveis para o usuário.Tendo opções como ver detalhes, marcar como lida ou excluir a notificação."
                         class="icon-ponto"
                     >
 
@@ -195,7 +198,8 @@
 
                 <img
                     src="<?=URL?>/public/img/livro.png"
-                    alt="Livro"
+                    alt="Círculo amarelo com um livro aberto preto no centro. O livro representa conhecimento, aprendizado e leitura,
+                     indicando que uma nova história ou lenda foi adicionada à plataforma."
                     class="icon-livro"
                 >
 
@@ -239,7 +243,8 @@
 
                     <img
                         src="<?=URL?>/public/img/pontoo.png"
-                        alt="Opções"
+                        alt="Tres pontos horizontais indicando opções adicionais. Este ícone é comumente usado para representar um menu suspenso ou ações 
+                        adicionais disponíveis para o usuário.Tendo opções como ver detalhes, marcar como lida ou excluir a notificação."
                         class="icon-ponto"
                     >
 
@@ -287,7 +292,8 @@
 
                 <img
                     src="<?=URL?>/public/img/comen.png"
-                    alt="Comentário"
+                    alt="Círculo verde com um balão de fala preto no centro. O balão de fala representa comunicação e interação,
+                     indicando que um usuário comentou em uma história ou lenda."
                     class="icon-comentario"
                 >
 
@@ -331,7 +337,8 @@
 
                     <img
                         src="<?=URL?>/public/img/pontoo.png"
-                        alt="Opções"
+                        alt="Tres pontos horizontais indicando opções adicionais. Este ícone é comumente usado para representar um menu suspenso ou ações 
+                        adicionais disponíveis para o usuário.Tendo opções como ver detalhes, marcar como lida ou excluir a notificação."
                         class="icon-ponto"
                     >
 
@@ -378,7 +385,8 @@
 
                 <img
                     src="<?=URL?>/public/img/caneta.png"
-                    alt="Caneta"
+                    alt="Círculo azul com um lápis preto no centro. O lápis representa edição ou modificação,
+                     indicando que uma lenda foi editada ou alterada na plataforma."
                     class="icon-caneta"
                 >
 
@@ -422,7 +430,8 @@
 
                     <img
                         src="<?=URL?>/public/img/pontoo.png"
-                        alt="Opções"
+                        alt="Tres pontos horizontais indicando opções adicionais. Este ícone é comumente usado para representar um menu suspenso ou ações 
+                        adicionais disponíveis para o usuário.Tendo opções como ver detalhes, marcar como lida ou excluir a notificação."
                         class="icon-ponto"
                     >
 
