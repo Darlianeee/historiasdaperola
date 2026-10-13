@@ -645,3 +645,16 @@ body {
         font-size: 15px;
     }
 }
+
+.erro-campo {
+    display: block;
+    color: #ff0000 !important;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.erro-campo:empty {
+    display: none;
+}

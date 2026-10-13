@@ -12,10 +12,14 @@
     --ac-surface: #FFFFFF;
     --ac-border: #465722;
     --ac-primary: #465722;
+
+    /* Personalização visual do VLibras */
+    --vlibras-btn-focus-visible-outline: 2px solid #000;
+    --vlibras-btn-focus-visible-shadow: 0 0 10px 4px #0a0;
+    --vlibras-btn-hover-filter: brightness(1.2);
 }
 
-/* CONFIGURAÇÕES DO HTML */
-
+/* HTML */
 html {
     font-size: 100%;
 }
@@ -25,9 +29,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--ac-bg);
     color: var(--ac-text);
-    transition:
-        background-color 0.2s,
-        color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 /* TEMA ESCURO */
@@ -36,18 +38,15 @@ html.acessibilidade-escuro {
     --ac-text: #FFFFFF;
     --ac-surface: #141313;
     --ac-border: #FFFFFF;
-
 }
 
 /* ALTO CONTRASTE */
 html.acessibilidade-alto-contraste {
     --ac-bg: #000000;
     --ac-text: #dba437;
-    --ac-surface: #0b2408e5;
+    --ac-surface: #0b2408;
     --ac-border: #d8d1d1;
     --ac-primary: #465722;
-
-
 }
 
 /* TAMANHO DA FONTE */
@@ -71,11 +70,9 @@ html.acessibilidade-fonte-muito-grande {
     padding: 60px 0 80px;
 }
 
-/* CABEÇALHO DA PÁGINA */
+/* CABEÇALHO */
 .cabecalho-pagina {
-    margin-bottom: 40px;
-    margin-top: 60px;
-    margin-left: -80px;
+    margin: 60px 0 40px -80px;
 }
 
 .cabecalho-pagina h1 {
@@ -87,7 +84,6 @@ html.acessibilidade-fonte-muito-grande {
     color: var(--ac-text);
 }
 
-/* Barra lateral do título */
 .cabecalho-pagina h1::before {
     content: "";
     position: absolute;
@@ -106,7 +102,7 @@ html.acessibilidade-fonte-muito-grande {
     color: var(--ac-text);
 }
 
-/* PAINEL DE ACESSIBILIDADE */
+/* PAINEL */
 .painel-acessibilidade {
     width: 100%;
     padding: 30px 35px;
@@ -117,9 +113,9 @@ html.acessibilidade-fonte-muito-grande {
     box-shadow: 0 3px 7px var(--ac-border);
 }
 
-/* GRUPOS DE CONFIGURAÇÃO */
+/* GRUPOS */
 .grupo-configuracao {
-    padding: 0 0 25px;
+    padding-bottom: 25px;
     margin-bottom: 25px;
     border-bottom: 2px solid var(--ac-border);
 }
@@ -142,14 +138,13 @@ html.acessibilidade-fonte-muito-grande {
     color: var(--ac-text);
 }
 
-/* GRUPOS DE BOTÕES */
+/* BOTÕES */
 .botoes-configuracao {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
 }
 
-/* BOTÕES DE CONFIGURAÇÃO */
 .botoes-configuracao button {
     min-height: 45px;
     padding: 10px 18px;
@@ -160,10 +155,7 @@ html.acessibilidade-fonte-muito-grande {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     cursor: pointer;
-    transition:
-        background-color 0.2s,
-        color 0.2s,
-        transform 0.2s;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
 }
 
 .botoes-configuracao button:hover {
@@ -193,13 +185,7 @@ html.acessibilidade-fonte-muito-grande {
     cursor: pointer;
 }
 
-/* RESTAURAR - MODO ESCURO */
-html.acessibilidade-escuro .botao-restaurar {
-    background-color: #dba437;
-    color: #000000;
-}
-
-/* RESTAURAR - ALTO CONTRASTE */
+html.acessibilidade-escuro .botao-restaurar,
 html.acessibilidade-alto-contraste .botao-restaurar {
     background-color: #dba437;
     color: #000000;
@@ -221,13 +207,13 @@ html.acessibilidade-alto-contraste .botao-restaurar {
     font-size: 0.9375rem;
 }
 
-/* FOCO DOS ELEMENTOS */
+/* FOCO */
 button:focus-visible {
     outline: 3px solid var(--ac-primary);
     outline-offset: 3px;
 }
 
-/* RESPONSIVIDADE - 1000PX */
+/* RESPONSIVIDADE */
 @media (max-width: 1000px) {
     .container-configuracoes {
         width: 90%;
@@ -236,19 +222,14 @@ button:focus-visible {
     .cabecalho-pagina h1 {
         font-size: 28px;
         line-height: 31px;
-        font-weight: 700;
-        margin: 0;
     }
 
     .cabecalho-pagina p {
         margin-left: 13px;
         font-size: 16px;
-        margin-top: 8px;
-        line-height: 1.4;
     }
 }
 
-/* RESPONSIVIDADE - 750PX*/
 @media (max-width: 750px) {
     .container-configuracoes {
         width: 92%;
@@ -257,13 +238,6 @@ button:focus-visible {
 
     .painel-acessibilidade {
         padding: 25px;
-    }
-
-    .cabecalho-pagina h1 {
-        font-size: 28px;
-        line-height: 31px;
-        font-weight: 700;
-        margin: 0
     }
 
     .cabecalho-pagina h1::before {
@@ -279,7 +253,6 @@ button:focus-visible {
     }
 }
 
-/* RESPONSIVIDADE - 500PX */
 @media (max-width: 500px) {
     .container-configuracoes {
         width: 94%;
@@ -288,9 +261,6 @@ button:focus-visible {
 
     .cabecalho-pagina h1 {
         font-size: 24px;
-        line-height: 31px;
-        font-weight: 700;
-        margin: 0;
     }
 
     .cabecalho-pagina h1::before {
@@ -318,7 +288,8 @@ button:focus-visible {
         flex-direction: column;
     }
 
-    .botoes-configuracao button,.botao-restaurar {
+    .botoes-configuracao button,
+    .botao-restaurar {
         width: 100%;
     }
 }
@@ -333,4 +304,16 @@ button:focus-visible {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
+}
+
+/* VLIBRAS: CAMADA DE POSICIONAMENTO */
+[vw].enabled {
+    position: fixed !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 999999 !important;
+}
+
+[vw-access-button] {
+    z-index: 999999 !important;
 }
