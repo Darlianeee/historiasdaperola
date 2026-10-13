@@ -598,3 +598,32 @@ body {
         font-size: 15px;
     }
 }
+
+.erro-campo {
+    display: block;
+    color: #ff0000 !important;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.erro-campo:empty {
+    display: none;
+}
+
+/* Mensagens de erro dos campos */
+.erro-campo {
+    display: block;
+    color: #ff0000 !important;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 4px 0 12px 0;
+    padding: 0;
+    text-align: left;
+}
+
+.erro-campo:empty {
+    display: none;
+}

@@ -178,3 +178,13 @@ button:hover {
         margin-bottom: 15px;
     }
 }
+.erro-campo {
+    display: block;
+    color: #d93025;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.erro-campo:empty {
+    display: none;
+}
