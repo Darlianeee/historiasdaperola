@@ -30,7 +30,8 @@
                 <div class="icone-saida">
                     <img 
                         src="<?=URL?>/public/img/logo_saida.png"
-                        alt="Ícone de saída"
+                        alt="A imagem apresenta um ícone circular com fundo azul claro. No centro, há um símbolo de porta ou retângulo aberto à esquerda, 
+                        com uma seta apontando  para a direita, sugerindo a ação de sair ou encerrar sessão."
                         class="icon-saida"
                     >
                 </div>
