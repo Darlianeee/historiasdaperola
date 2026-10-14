@@ -82,36 +82,27 @@ body {
 
     font-size: 23px;
 
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .card > span {
     display: block;
-
-    text-align: center;
-
+    text-align: left;
     color: #777;
-
-    margin-bottom: 25px;
-
     font-size: 14px;
+    line-height: 1.5;
+    margin-top: 12px;
+    margin-bottom: 0;
 }
-
-
-
 
 .idiomas {
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     gap: 12px;
-
-    margin-bottom: 25px;
+    margin-top: 24px;
+    margin-bottom: 30px;
 }
-
 
 
 
@@ -398,22 +389,16 @@ textarea:focus {
 
 
 .cancelar {
-    background: white;
 
+    background: #be9628;
+    background-color: white;
     color: #c79b21;
-
     border: none;
-
-    padding: 12px 35px;
-
+    padding: 12px 15px;
     border-radius: 6px;
-
     cursor: pointer;
-
     font-size: 15px;
-
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
-
     transition: .3s;
 }
 
@@ -437,25 +422,24 @@ textarea:focus {
 
 
 .salvar {
-    background: #c79b21;
-
-    color: white;
-
+  background: #be9628;
+    background-color: white;
+    color: #c79b21;
     border: none;
-
-    padding: 12px 35px;
-
+    padding: 12px 15px;
     border-radius: 6px;
-
     cursor: pointer;
-
     font-size: 15px;
-
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
     transition: .3s;
+       
+       
 }
 
 .salvar:hover {
-    background: #a98218;
+    
+    background: #c79b21;
+    color: white;
 }
 
 
