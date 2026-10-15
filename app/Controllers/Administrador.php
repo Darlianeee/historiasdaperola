@@ -25,7 +25,6 @@ class Administrador extends Controller {
     public function gerenciar_perfis() {
         $this->view('administrador/gerenciar_perfis');
     }
-
     public function editar_usuarios() {
         $this->view('administrador/editar_usuarios');
     }
