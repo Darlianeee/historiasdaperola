@@ -54,6 +54,15 @@
                 </a>
             </li>
 
+            <li>
+                <a href="<?=URL?>/administrador/gerenciar_perfis" class="menu-link">
+                    <img src="<?=URL?>/public/img/perfis_icone.png"
+                         alt="Perfis"
+                         class="menu-icon perfis-icon">
+                    <span>Gerenciar Perfis</span>
+                </a>
+            </li>
+
             
             <li>
                 <a href="<?=URL?>/administrador/sobre_nos_adm" class="menu-link">

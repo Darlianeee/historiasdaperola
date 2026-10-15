@@ -22,6 +22,14 @@ class Administrador extends Controller {
         $this->view('administrador/comentarios_adm');
     }
 
+    public function gerenciar_perfis() {
+        $this->view('administrador/gerenciar_perfis');
+    }
+
+    public function editar_usuarios() {
+        $this->view('administrador/editar_usuarios');
+    }
+
     public function editar_historia() {
         $this->view('administrador/editar_historia');
     }
