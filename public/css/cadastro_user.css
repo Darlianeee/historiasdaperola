@@ -46,9 +46,9 @@ body {
 }
 
 .lado-direito img {
-    width: 200px !important;
+    width: 400px !important;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     flex-shrink: 0;
 }
 
@@ -174,8 +174,8 @@ button:hover {
     }
 
     .lado-direito img {
-        width: 300px;
-        margin-bottom: 15px;
+        width: 300px; 
+        margin-bottom:-50px;
     }
 }
 .erro-campo {
