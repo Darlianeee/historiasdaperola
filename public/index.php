@@ -28,6 +28,17 @@ include '../app/Autoload.php';
     <?php 
         $rotas = new Rota(); 
     ?>
-    
+      <!-- COMPONENTE DO VLIBRAS -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- SCRIPT OFICIAL DO VLIBRAS: CARREGAR UMA ÚNICA VEZ -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script> 
+
 </body> 
 </html>

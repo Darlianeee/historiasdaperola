@@ -28,26 +28,15 @@ $wari = $idiomas[3] ?? null;
     <section class="modal">
         <div class="modal-header">
             <h2>Editar História</h2>
-            <a href="<?= URL ?>/administrador/gerenciar_historia_adm"
-               class="fechar" aria-label="Fechar">×</a>
+            <a href="<?= URL ?>/administrador/gerenciar_historia_adm" class="fechar" aria-label="Fechar">×</a>
         </div>
 
-        <form
-            id="formEditarHistoria"
-            action="<?= URL ?>/administrador/atualizar_historia"
-            method="POST"
-            enctype="multipart/form-data"
-        >
+        <form id="formEditarHistoria" action="<?= URL ?>/administrador/atualizar_historia" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?= (int) $historia->id ?>">
 
             <div class="imagem-container">
-                <img
-                    id="imagemPreview"
-                    class="imagem-preview"
-                    src="<?= htmlspecialchars($historia->imagem_uri ?? '', ENT_QUOTES, 'UTF-8') ?>"
-                    alt="Imagem atual da história"
-                    style="object-fit: cover;"
-                >
+                <img id="imagemPreview" class="imagem-preview"
+                    src="<?= htmlspecialchars($historia->imagem_uri ?? '', ENT_QUOTES, 'UTF-8') ?>" alt="Imagem atual da história" style="object-fit: cover;">
             </div>
 
             <div class="linha-lingua-imagem">
@@ -63,13 +52,7 @@ $wari = $idiomas[3] ?? null;
                     Substituir imagem
                 </button>
 
-                <input
-                    type="file"
-                    id="imagem"
-                    name="imagem"
-                    accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
-                    hidden
-                >
+                <input type="file" id="imagem" name="imagem" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" hidden>
             </div>
 
             <div class="campo" style="margin-top: 20px;">
@@ -118,8 +101,7 @@ $wari = $idiomas[3] ?? null;
 
                 <div class="campo">
                     <label id="labelLegenda" for="legenda">Legenda da imagem (Português)</label>
-                    <input type="text" id="legenda"
-                           placeholder="Legenda da imagem..." required>
+                    <input type="text" id="legenda" placeholder="Legenda da imagem..." required>
                 </div>
             </div>
 
@@ -129,8 +111,7 @@ $wari = $idiomas[3] ?? null;
             </div>
 
             <div class="botoes">
-                <button type="button" class="btn-cancelar"
-                        onclick="window.location.href='<?= URL ?>/administrador/gerenciar_historia_adm'">
+                <button type="button" class="btn-cancelar" onclick="window.location.href='<?= URL ?>/administrador/gerenciar_historia_adm'">
                     Cancelar
                 </button>
 

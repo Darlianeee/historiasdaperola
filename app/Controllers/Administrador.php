@@ -22,6 +22,13 @@ class Administrador extends Controller {
         $this->view('administrador/comentarios_adm');
     }
 
+    public function gerenciar_perfis() {
+        $this->view('administrador/gerenciar_perfis');
+    }
+    public function editar_usuarios() {
+        $this->view('administrador/editar_usuarios');
+    }
+
     public function editar_historia() {
         $this->view('administrador/editar_historia');
     }
@@ -145,7 +152,7 @@ class Administrador extends Controller {
             die('Não foi possível ler a imagem.');
         }
 
-        $pessoa = 1;
+        $pessoa = 2;
 
         $historia = $this->model('Historia');
 
@@ -237,8 +244,6 @@ class Administrador extends Controller {
         if (!$historiaAtual) {
             die('História não encontrada.');
         }
-
-        $categoria = (int) $historiaAtual->categoria_id;
 
         $todosIdiomas = [
             [
