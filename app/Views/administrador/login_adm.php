@@ -29,18 +29,14 @@
 
 <body>
     <div class="container">
-
         <div class="lado-direito">
             <img src="<?= URL ?>/public/img/icone_logo_menu.png" alt="Logo">
-
             <h2>HISTÓRIAS NA PÉROLA</h2>
-
             <p>Área do administrador</p>
         </div>
 
         <div class="formulario">
             <h1>Bem-vindo, administrador!</h1>
-
             <p>Entre para continuar</p>
 
             <form id="form-login-adm"
@@ -78,6 +74,8 @@
         </div>
     </div>
 
+    <script src="<?= URL ?>/public/js/filtro-caracteres.js"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const formulario = document.getElementById("form-login-adm");
@@ -87,12 +85,11 @@
             const erroSenha = document.getElementById("erro-senha");
 
             function emailValido(valor) {
-                return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(valor);
+                return /^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,}$/.test(valor);
             }
 
-            // Validação do e-mail
             email.addEventListener("input", function () {
-                this.value = this.value.replace(/\s/g, "");
+                this.value = this.value.replace(/[^a-zA-Z0-9.@]/g, "");
 
                 if (this.value && !emailValido(this.value)) {
                     erroEmail.textContent =
@@ -102,7 +99,6 @@
                 }
             });
 
-            // Validação da senha
             senha.addEventListener("input", function () {
                 if (this.value.length < 8) {
                     erroSenha.textContent =
@@ -112,7 +108,6 @@
                 }
             });
 
-            // Validação antes de enviar
             formulario.addEventListener("submit", function (evento) {
                 let valido = true;
 

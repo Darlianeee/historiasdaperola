@@ -14,7 +14,7 @@ $nome = $_SESSION['nome'] ?? 'Nome';
 
     <link rel="stylesheet" href="<?=URL?>/public/css/inicio_user.css">
 </head>
-
+<script src="public/js/filtro-caracteres.js"></script>
 <body>
 
 <?php include '../App/Views/usuarios/menu_user.php'; ?>
