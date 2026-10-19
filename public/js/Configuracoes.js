@@ -1,198 +1,171 @@
+
 (function () {
     "use strict";
-    /* CHAVE DO LOCALSTORAGE */
-    const STORAGE_KEY = "acessibilidade";
-    /* CONFIGURAÇÕES PADRÃO */
+
+    const CHAVE = "acessibilidade";
+
     const padrao = {
         tema: "claro",
         fonte: "normal",
         contraste: false
     };
-    /* CARREGAR CONFIGURAÇÕES */
-    function carregarConfiguracoes() {
+
+    function carregar() {
         try {
-            const salvo = localStorage.getItem(STORAGE_KEY);
-            if (salvo) {
-                return {
-                    ...padrao,
-                    ...JSON.parse(salvo)
-                };
-            }
-        }
-        catch (erro) {
-            console.warn("Não foi possível carregar as configurações.", erro);
-        }
-        return {
-            ...padrao
-        };
-    }
+            const dados = JSON.parse(localStorage.getItem(CHAVE));
 
-    let configuracoes = carregarConfiguracoes();
-    /* SALVAR CONFIGURAÇÕES */
-    function salvarConfiguracoes() {
-        try {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(configuracoes));
-        }
-        catch (erro) {
-            console.warn("Não foi possível salvar as configurações.", erro);
-        }
-    }
-
-    /* APLICAR CONFIGURAÇÕES */
-    function aplicarConfiguracoes() {
-        const html = document.documentElement;
-        /* TEMA */
-        html.classList.toggle("acessibilidade-escuro", configuracoes.tema === "escuro");
-        /* TAMANHO DA FONTE */
-        html.classList.remove("acessibilidade-fonte-normal", "acessibilidade-fonte-grande", "acessibilidade-fonte-muito-grande");
-        html.classList.add(`acessibilidade-fonte-${configuracoes.fonte}`);
-        /* ALTO CONTRASTE */
-        html.classList.toggle("acessibilidade-alto-contraste", configuracoes.contraste === true);
-        atualizarInterface();
-        atualizarStatus();
-    }
-
-    /* ATUALIZAR INTERFACE */
-    function atualizarInterface() {
-        /* BOTÕES DE TEMA */
-        document.querySelectorAll("[data-acessibilidade-tema]").forEach(function (botao) {
-                botao.classList.toggle("ativo", configuracoes.tema === botao.dataset.acessibilidadeTema);
-            });
-
-        /*  BOTÕES DE FONTE */
-        document
-            .querySelectorAll("[data-acessibilidade-fonte]").forEach(function (botao) {
-                botao.classList.toggle("ativo", configuracoes.fonte === botao.dataset.acessibilidadeFonte);
-            });
-
-        /* BOTÃO DE CONTRASTE */
-        document.querySelectorAll("[data-acessibilidade-contraste]").forEach(function (botao) {
-                botao.classList.toggle("ativo", configuracoes.contraste === true);
-
-                botao.setAttribute("aria-pressed", configuracoes.contraste? "true": "false");
-            });
-    }
-
-    /*  ATUALIZAR STATUS */
-    function atualizarStatus() {
-        const status = document.getElementById("status");
-        if (!status) {
-            return;
-        }
-
-        const tema = configuracoes.tema === "claro"? "Claro": "Escuro";
-
-        const fontes = {
-            normal: "Normal",
-            grande: "Grande",
-            "muito-grande": "Muito grande"
-        };
-
-        const fonte = fontes[configuracoes.fonte];
-
-        const contraste = configuracoes.contraste? "Ativado": "Desativado";
-
-        status.textContent = `Tema: ${tema} | ` + `Fonte: ${fonte} | ` + `Alto contraste: ${contraste}`;
-    }
-
-    /* DEFINIR TEMA */
-    function definirTema(tema) {
-        if (tema !== "claro" && tema !== "escuro") {
-            return;
-        }
-
-        configuracoes.tema = tema;
-
-        salvarConfiguracoes();
-
-        aplicarConfiguracoes();
-    }
-
-    /* DEFINIR TAMANHO DA FONTE */
-    function definirFonte(tamanho) {
-        const permitidos = ["normal", "grande", "muito-grande"
-    ];
-        if (!permitidos.includes(tamanho)) {
-            return;
-        }
-
-        configuracoes.fonte = tamanho;
-
-        salvarConfiguracoes();
-
-        aplicarConfiguracoes();
-    }
-
-    /* ALTERNAR ALTO CONTRASTE */
-    function alternarContraste() {
-        configuracoes.contraste = !configuracoes.contraste;
-
-        salvarConfiguracoes();
-
-        aplicarConfiguracoes();
-    }
-
-    /* RESTAURAR CONFIGURAÇÕES */
-    function restaurarPadrao() {
-        configuracoes = {
-            ...padrao
-        };
-
-        salvarConfiguracoes();
-
-        aplicarConfiguracoes();
-    }
-
-    /* EVENTOS DOS BOTÕES */
-    document.addEventListener("click", function (evento) {
-            /* TEMA */
-            const botaoTema = evento.target.closest("[data-acessibilidade-tema]");
-            if (botaoTema) {
-                definirTema(botaoTema.dataset.acessibilidadeTema);
-                return;
+            if (!dados || typeof dados !== "object") {
+                return { ...padrao };
             }
 
-            /* FONTE */
-            const botaoFonte = evento.target.closest("[data-acessibilidade-fonte]");
-            if (botaoFonte) {
-                definirFonte(botaoFonte.dataset.acessibilidadeFonte);
-                return;
-            }
-            /* CONTRASTE */
-            const botaoContraste = evento.target.closest("[data-acessibilidade-contraste]");
-            if (botaoContraste) {
-                alternarContraste();
-                return;
-            }
-            /* RESTAURAR */
-            const botaoRestaurar = evento.target.closest("[data-acessibilidade-restaurar]");
-            if (botaoRestaurar) {
-                restaurarPadrao();
-            }
-        }
-    );
-
-    /* INICIALIZAÇÃO */
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", aplicarConfiguracoes);
-    }
-    else {
-        aplicarConfiguracoes();
-    }
-
-    /* API PÚBLICA */
-    window.Acessibilidade = {
-        obterConfiguracoes: function () {
             return {
-                ...configuracoes
+                tema: ["claro", "escuro"].includes(dados.tema)
+                    ? dados.tema : padrao.tema,
+
+                fonte: ["normal", "grande", "muito-grande"].includes(dados.fonte)
+                    ? dados.fonte : padrao.fonte,
+
+                contraste: dados.contraste === true
             };
-        },
-        definirTema,
-        definirFonte,
-        alternarContraste,
-        restaurarPadrao,
-        aplicar: aplicarConfiguracoes
+        } catch (erro) {
+            return { ...padrao };
+        }
+    }
+
+    let config = carregar();
+
+    function salvar() {
+        try {
+            localStorage.setItem(CHAVE, JSON.stringify(config));
+        } catch (erro) {
+            console.error("Não foi possível salvar as configurações.", erro);
+        }
+    }
+
+    function aplicar() {
+        const html = document.documentElement;
+
+        html.classList.toggle(
+            "acessibilidade-escuro",
+            config.tema === "escuro"
+        );
+
+        html.classList.toggle(
+            "acessibilidade-alto-contraste",
+            config.contraste
+        );
+
+        html.classList.remove(
+            "acessibilidade-fonte-normal",
+            "acessibilidade-fonte-grande",
+            "acessibilidade-fonte-muito-grande"
+        );
+
+        html.classList.add("acessibilidade-fonte-" + config.fonte);
+
+        document.querySelectorAll("[data-acessibilidade-tema]").forEach(function (botao) {
+            botao.setAttribute(
+                "aria-pressed",
+                String(botao.dataset.acessibilidadeTema === config.tema)
+            );
+        });
+
+        document.querySelectorAll("[data-acessibilidade-fonte]").forEach(function (botao) {
+            botao.setAttribute(
+                "aria-pressed",
+                String(botao.dataset.acessibilidadeFonte === config.fonte)
+            );
+        });
+
+        document.querySelectorAll("[data-acessibilidade-contraste]").forEach(function (botao) {
+            botao.setAttribute("aria-pressed", String(config.contraste));
+        });
+    }
+
+    function definirTema(tema) {
+        if (!["claro", "escuro"].includes(tema)) return;
+
+        config.tema = tema;
+        salvar();
+        aplicar();
+    }
+
+    function definirFonte(fonte) {
+        if (!["normal", "grande", "muito-grande"].includes(fonte)) return;
+
+        config.fonte = fonte;
+        salvar();
+        aplicar();
+    }
+
+    function alternarContraste() {
+        config.contraste = !config.contraste;
+        salvar();
+        aplicar();
+    }
+
+    function restaurar() {
+        config = { ...padrao };
+        salvar();
+        aplicar();
+    }
+
+    document.addEventListener("click", function (evento) {
+        const alvo = evento.target;
+
+        if (!(alvo instanceof Element)) return;
+
+        const tema = alvo.closest("[data-acessibilidade-tema]");
+        const fonte = alvo.closest("[data-acessibilidade-fonte]");
+        const contraste = alvo.closest("[data-acessibilidade-contraste]");
+        const restaurarBotao = alvo.closest("[data-acessibilidade-restaurar]");
+
+        if (tema) {
+            definirTema(tema.dataset.acessibilidadeTema);
+            return;
+        }
+
+        if (fonte) {
+            definirFonte(fonte.dataset.acessibilidadeFonte);
+            return;
+        }
+
+        if (contraste) {
+            alternarContraste();
+            return;
+        }
+
+        if (restaurarBotao) {
+            restaurar();
+            return;
+        }
+
+        // Compatibilidade com botões que utilizam IDs.
+        const id = alvo.closest("button, a, input")?.id;
+
+        const botoes = {
+            "tema-claro": () => definirTema("claro"),
+            "tema-escuro": () => definirTema("escuro"),
+            "fonte-normal": () => definirFonte("normal"),
+            "fonte-grande": () => definirFonte("grande"),
+            "fonte-muito-grande": () => definirFonte("muito-grande"),
+            "alto-contraste": alternarContraste,
+            "restaurar-acessibilidade": restaurar
+        };
+
+        if (id && botoes[id]) {
+            evento.preventDefault();
+            botoes[id]();
+        }
+    });
+
+    window.Acessibilidade = {
+        definirTema: definirTema,
+        definirFonte: definirFonte,
+        alternarContraste: alternarContraste,
+        restaurarConfiguracoes: restaurar,
+        aplicarConfiguracoes: aplicar
     };
-}
-)
-();
+
+    aplicar();
+})();
