@@ -60,20 +60,20 @@ body {
     letter-spacing:1px; 
     margin-bottom:5px;
     position:relative;
-    top:-60px;
+    top:-50px;
 }
 
 .lado-direito p {
     font-size:14px; 
     color:#f1f1f1;
     position:relative;
-    top:-60px;
+    top:-50px;
 }
 
 
 .formulario {
     width: 100%;
-    padding: 30px 20px;
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -174,8 +174,13 @@ button:hover {
     }
 
     .lado-direito img {
+<<<<<<< HEAD
         width: 300px; 
         margin-bottom:-50px;
+=======
+        width: 300px;
+        margin-bottom: 35px;
+>>>>>>> origin
     }
 }
 .erro-campo {

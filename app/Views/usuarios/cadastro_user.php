@@ -22,6 +22,7 @@
         <h1>Crie sua conta!</h1>
         <p>Cadastre-se para continuar</p>
 
+<<<<<<< HEAD
         <form id="form-cadastro" action="<?= URL ?>/usuarios/cadastro_user" method="POST">
 
             <label for="nome">Nome completo</label>
@@ -33,6 +34,14 @@
                 required
             >
             <small class="erro-campo" id="erro-nome"></small>
+=======
+        <form>
+            <label>Nome Completo</label>
+            <input type="text" id="nome" name="nome">
+
+            <label>Matrícula</label>
+            <input type="text" id="matricula" name="matricula">
+>>>>>>> origin
 
             <label for="email">E-mail</label>
             <input

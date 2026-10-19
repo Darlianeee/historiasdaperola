@@ -100,14 +100,23 @@
             const erroEmail = document.getElementById("erro-email");
             const erroSenha = document.getElementById("erro-senha");
 
+<<<<<<< HEAD
             function emailValido(valor) {
                 return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(valor);
             }
+=======
+        <form>
+            
+            <label>Matrícula</label>
+            <input type="text" id="matricula" name="matricula">
+
+>>>>>>> origin
 
             // Verifica o e-mail enquanto digita
             email.addEventListener("input", function () {
                 this.value = this.value.replace(/\s/g, "");
 
+<<<<<<< HEAD
                 if (this.value && !emailValido(this.value)) {
                     erroEmail.textContent =
                         "Digite um e-mail válido. Exemplo: nome@email.com";
@@ -125,6 +134,12 @@
                     erroSenha.textContent = "";
                 }
             });
+=======
+            <label>Senha</label>
+            <input type="password" id="senha" name="senha">
+
+            <button type="submit" id="botao-entrar">Entrar</button>
+>>>>>>> origin
 
             // Valida antes de enviar
             formulario.addEventListener("submit", function (evento) {

@@ -96,7 +96,7 @@ button:hover{
 }
 
 .lado-direito img {
-    width: 300px !important;
+    width: 250px !important;
     height: auto;
     margin-bottom: -10px;
     flex-shrink: 0;
@@ -110,14 +110,14 @@ button:hover{
     letter-spacing:1px; 
     margin-bottom:5px;
     position:relative;
-    top:-60px;
+    top:-20px;
 }
 
 .lado-direito p {
     font-size:14px; 
     color:#f1f1f1;
     position:relative;
-    top:-60px;
+    top:-20px;
 }
 
 
