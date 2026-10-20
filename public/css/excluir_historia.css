@@ -1,3 +1,4 @@
+
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -146,64 +147,43 @@ body {
 
 
 .cancelar {
-    width: 80px;
-    height: 32px;
 
-    padding: 0;
-
-    border: none;
-
-    border-radius: 3px;
-
-    background: #ffffff;
-
+    background: #be9628;
+    background-color: white;
     color: #c79b21;
-
-    font-size: 12px;
-
-
+    border: none;
+    padding: 12px 15px;
+    border-radius: 6px;
     cursor: pointer;
-
-    box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.22);
-
-    transition: 0.2s ease;
+    font-size: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+    transition: .3s;
 }
 
 .cancelar:hover {
-    background: #fafafa;
+    background: #c79b21;
+    color: white;
 }
-
-
 
 
 .excluir {
-    width: 80px;
-    height: 32px;
 
-    padding: 0;
 
+    background: #be9628;
+    background-color: white;
+    color: #c79b21;
     border: none;
-
-    border-radius: 4px;
-
-    background: #c79b21;
-
-    color: #ffffff;
-
-    font-size: 12px;
-
-
+    padding: 12px 15px;
+    border-radius: 6px;
     cursor: pointer;
-
-    box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.25);
-
-    transition: 0.2s ease;
+    font-size: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+    transition: .3s;
 }
 
 .excluir:hover {
-    background: #b38b1d;
+    background: #c79b21;
+    color: white;
 }
 
 

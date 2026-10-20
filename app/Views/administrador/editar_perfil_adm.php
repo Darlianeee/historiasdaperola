@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -101,16 +102,6 @@
                                 <input class="info-input" type="email" name="email" value="nome@ifro.edu.br">
 
                             </div>
-
-                        </div>
-
-                        <div class="info-item">
-
-                            <span class="info-icon">
-
-                                <img src="<?=URL?>/img/icone_matricula.png" alt="Ícone verde de um documento de identificação com linhas, representando o número de matrícula do administrador">
-
-                            </span>
 
                         </div>
 
