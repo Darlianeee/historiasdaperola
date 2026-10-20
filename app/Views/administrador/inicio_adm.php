@@ -13,7 +13,7 @@ $nome = $_SESSION['nome'] ?? 'Nome';
 <title>Início - Histórias na Pérola</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/inicio_adm.css">
-    <link rel="stylesheet" href="<?= URL ?>/public/css/acessibilidade.css">
+    <link rel="stylesheet" href="<?= URL ?>/public/css/Configuracoes.css">
  
 </head>
 

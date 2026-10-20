@@ -8,6 +8,7 @@
 <title>Meu Perfil</title> 
  
     <link rel="stylesheet" href="<?=URL?>/public/css/perfil_usuario.css"> 
+    <link rel="stylesheet" href="<?= URL ?>/public/css/Configuracoes.css">
 </head> 
 
 <body> 
@@ -86,6 +87,7 @@
     </main> 
 
     <?php include '../App/Views/usuarios/footer_user.php'; ?>
+        <script src="<?= URL ?>/public/js/Configuracoes.js"></script>
 
 </body> 
 

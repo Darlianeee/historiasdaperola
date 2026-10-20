@@ -61,6 +61,21 @@ html.acessibilidade-fonte-grande {
 html.acessibilidade-fonte-muito-grande {
     font-size: 140%;
 }
+/* TAMANHO DA FONTE */
+html.acessibilidade-fonte-normal {
+    font-size: 100%;
+    zoom: 1;
+}
+
+html.acessibilidade-fonte-grande {
+    font-size: 100%;
+    zoom: 1.15;
+}
+
+html.acessibilidade-fonte-muito-grande {
+    font-size: 100%;
+    zoom: 1.30;
+}
 
 /* CONTAINER PRINCIPAL */
 .container-configuracoes {
@@ -317,3 +332,98 @@ button:focus-visible {
 [vw-access-button] {
     z-index: 999999 !important;
 }
+
+
+
+
+/* ==================================
+   ACESSIBILIDADE - INICIO ADMIN
+================================== */
+
+/* MODO ESCURO */
+html.acessibilidade-escuro body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+html.acessibilidade-escuro .conteudo {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+
+
+html.acessibilidade-escuro .titulo h1,
+html.acessibilidade-escuro .boas-vindas,
+html.acessibilidade-escuro .conteudo > h2,
+html.acessibilidade-escuro .card h3,
+html.acessibilidade-escuro .texto-card p,
+html.acessibilidade-escuro .card-gerenciar > p {
+    color: #ffffff !important;
+}
+
+html.acessibilidade-escuro .card {
+    background-color: #070707 !important;
+    border-color: #ffff !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-escuro .card-mito h3,
+html.acessibilidade-escuro .card-gerenciar h3 {
+    color: #dba437 !important;
+}
+
+html.acessibilidade-escuro .btn-historias {
+    color: #ffffff !important;
+    border: 1px solid #ffff !important;
+    box-shadow: none !important;
+    background-color: #1d3d12;
+}
+
+/* ALTO CONTRASTE */
+html.acessibilidade-alto-contraste body,
+html.acessibilidade-alto-contraste .conteudo {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste .titulo {
+    border-left-color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste .titulo h1,
+html.acessibilidade-alto-contraste .boas-vindas,
+html.acessibilidade-alto-contraste .conteudo > h2,
+html.acessibilidade-alto-contraste .card h3,
+html.acessibilidade-alto-contraste .texto-card p,
+html.acessibilidade-alto-contraste .card-gerenciar > p {
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste .card {
+    background-color: #0b2408 !important;
+    color: #dba437 !important;
+    border: 1px solid #ffffff !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-alto-contraste .card-mito h3,
+html.acessibilidade-alto-contraste .card-gerenciar h3 {
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste .btn-historias {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #ffffff !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+}
+
+/* REMOVE EFEITOS COLORIDOS DOS CARTÕES */
+html.acessibilidade-escuro .card:hover,
+html.acessibilidade-alto-contraste .card:hover {
+    transform: none;
+    box-shadow: none !important;
+}
+
