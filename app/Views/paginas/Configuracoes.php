@@ -102,7 +102,7 @@
     </main>
 
     <!-- JAVASCRIPT DAS CONFIGURAÇÕES -->
-    <script src="<?= URL ?>/public/js/configuracoes.js"></script>
+    <script src="<?= URL ?>/public/js/Configuracoes.js"></script>
 
     <!-- RODAPÉ -->
     <?php include '../App/Views/administrador/footer_adm.php'; ?>

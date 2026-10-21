@@ -180,3 +180,13 @@ h1 {
     background: #BE9628;
     color: #ffffff;
 }
+/* Modo claro: manter os campos brancos */
+html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-input,
+html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-input:hover,
+html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-input:focus,
+html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-input:active {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    color: #14221f !important;
+    box-shadow: none !important;
+}

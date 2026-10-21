@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Editar Perfil</title>
     <link rel="stylesheet" href="<?=URL?>/public/css/editar_perfil_adm.css">
+        <link rel="stylesheet" href="<?= URL ?>/public/css/Configuracoes.css">
+
 </head>
 <body>
 
@@ -118,6 +120,8 @@
     <?php include '../App/Views/administrador/footer_adm.php'; ?>
 
     <script src="<?=URL?>/public/js/foto_perfil.js"></script>
+        <script src="<?= URL ?>/public/js/Configuracoes.js"></script>
+
 
 </body>
 </html>

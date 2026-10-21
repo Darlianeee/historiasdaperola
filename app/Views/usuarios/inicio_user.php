@@ -13,6 +13,7 @@ $nome = $_SESSION['nome'] ?? 'Nome';
 <title>Início - Histórias na Pérola</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/inicio_user.css">
+    <link rel="stylesheet" href="<?= URL ?>/public/css/acessibilidade-global.css">
 </head>
 <script src="public/js/filtro-caracteres.js"></script>
 <body>
@@ -92,6 +93,6 @@ $nome = $_SESSION['nome'] ?? 'Nome';
 
 
 <?php include '../App/Views/usuarios/footer_user.php'; ?>
-
+<script src="<?= URL ?>/public/js/Configuracoes.js"></script>
 </body>
 </html>

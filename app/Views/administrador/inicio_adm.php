@@ -13,6 +13,8 @@ $nome = $_SESSION['nome'] ?? 'Nome';
 <title>Início - Histórias na Pérola</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/inicio_adm.css">
+    <link rel="stylesheet" href="<?= URL ?>/public/css/Configuracoes.css">
+ 
 </head>
 
 <body>
@@ -96,7 +98,7 @@ $nome = $_SESSION['nome'] ?? 'Nome';
     </main>
 
     <?php include '../App/Views/administrador/footer_adm.php'; ?>
-
+    <script src="<?= URL ?>/public/js/Configuracoes.js"></script>
 </body>
 
 </html>
