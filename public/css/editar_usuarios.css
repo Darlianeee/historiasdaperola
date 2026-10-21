@@ -89,7 +89,7 @@ body {
 }
 
 .campo input[readonly] {
-    background-color: #edf0e9;
+    background-color: #0b2408;
     color: #62685c;
     cursor: default;
 }
