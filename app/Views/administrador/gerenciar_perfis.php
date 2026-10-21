@@ -8,6 +8,8 @@
     <title>Gerenciar Perfis - Histórias na Pérola</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/gerenciar_perfis.css">
+        <link rel="stylesheet" href="<?=URL?>/public/css/Configuracoes.css">
+
 </head>
 
 <body>
@@ -169,6 +171,8 @@
     <?php include '../App/Views/administrador/footer_adm.php'; ?>
 
     <script src="<?=URL?>/public/js/gerenciar_perfis.js"></script>
+        <script src="<?=URL?>/public/js/Configuracoes.js"></script>
+
 
 </body>
 

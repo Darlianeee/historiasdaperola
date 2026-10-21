@@ -8,6 +8,7 @@
     <title>Editar Usuários - Histórias na Pérola</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/editar_usuarios.css">
+
 </head>
 
 <body>
@@ -82,6 +83,7 @@
     <?php include '../App/Views/administrador/footer_adm.php'; ?>
     
     <script src="<?=URL?>/public/js/editar_usuarios.js"></script>
+
 
 </body>
 
