@@ -155,7 +155,7 @@ body {
     border-radius: 3px;
     background-color: white;
     background: #ffffff;
-    color: #c79b21;
+    color: #dba437;
     font-size: 12px;
     cursor: pointer;
     box-shadow:
@@ -165,7 +165,7 @@ body {
 
 .cancelar:hover {
 
-    background: #c79b21;
+    background: #dba437;
     color: white;
 }
 
@@ -178,7 +178,7 @@ body {
     border-radius: 3px;
     background-color: white;
     background: #ffffff;
-    color: #c79b21;
+    color: #dba437;
     font-size: 12px;
     cursor: pointer;
     box-shadow:
@@ -188,7 +188,7 @@ body {
 
 .excluir:hover {
     
-    background: #c79b21;
+    background: #dba437;
     color: white;
 }
 

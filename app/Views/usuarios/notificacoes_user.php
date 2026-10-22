@@ -9,6 +9,7 @@
 <link
         rel="stylesheet"
         href="<?=URL?>/public/css/notificacoes_user.css"
+
     >
 
     <title>Notificações</title>
@@ -476,6 +477,7 @@
 </main>
 
 <?php include '../App/Views/usuarios/footer_user.php'; ?>
+
 
 </body>
 
