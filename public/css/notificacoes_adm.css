@@ -85,7 +85,7 @@ body {
     border-radius: 7px;
 
     background: #FFFFFF;
-    color: #BE9628;
+    color: #dba437;
 
     font-size: 15px;
 
@@ -98,7 +98,7 @@ body {
 }
 
 .botao:hover {
-    background: #BE9628;
+    background: #dba437;
     color: #FFFFFF;
 }
 
@@ -352,28 +352,20 @@ body {
 .menu-dots {
     width: 34px;
     height: 34px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     margin: 0;
     padding: 0;
-
     border: none;
-
     background: transparent;
-
     cursor: pointer;
 }
 
 .icon-ponto {
     display: block;
-
     width: 21px;
     height: 21px;
-
     object-fit: contain;
 }
 
@@ -1316,4 +1308,29 @@ body {
     grid-column: 1 / -1;
     grid-row: 3;
     }
+}
+
+
+/* TRÊS PONTOS BRANCOS NO MODO ESCURO */
+html.acessibilidade-escuro .icon-ponto {
+    filter: brightness(0) invert(1);
+    background-color: transparent !important;
+}
+
+/* TRÊS PONTOS BRANCOS NO ALTO CONTRASTE */
+html.acessibilidade-alto-contraste .icon-ponto {
+    filter: brightness(0) invert(1);
+    background-color: transparent !important;
+}
+
+/* LUPA BRANCA NO MODO ESCURO */
+html.acessibilidade-escuro img.icon-Lupa {
+    filter: brightness(0) saturate(100%) invert(1) !important;
+    background: transparent !important;
+}
+
+/* LUPA BRANCA NO ALTO CONTRASTE */
+html.acessibilidade-alto-contraste img.icon-Lupa {
+    filter: brightness(0) saturate(100%) invert(1) !important;
+    background: transparent !important;
 }
