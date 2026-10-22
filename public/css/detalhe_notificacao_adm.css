@@ -206,14 +206,14 @@ h1 {
     background: var(--button);
     color: #ffffff;
     font-size: 16px;
-    
 }
 
 .btn-primary:hover {
     background: var(--button-hover);
     transform: translateY(-1px);
- 
 }
+
+
 
 
 @media (min-width: 1600px) {

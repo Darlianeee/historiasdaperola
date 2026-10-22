@@ -7,7 +7,6 @@
 <title>Excluir Notificação</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/excluir_notificacao_adm.css">
-    <link rel="stylesheet" href="<?= URL ?>/public/css/Configuracoes.css">
 </head>
 
 <body>
@@ -60,7 +59,6 @@
     </main>
 
     <?php include '../App/Views/administrador/footer_adm.php'; ?>
- <script src="<?= URL ?>/public/js/Configuracoes.js"></script>
 
 </body>
 
