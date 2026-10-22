@@ -446,11 +446,14 @@ html.acessibilidade-escuro body .info-value {
 }
 
 html.acessibilidade-escuro body .profile-card,
-html.acessibilidade-escuro body .info-item {
+html.acessibilidade-escuro body  {
     background-color: #070707;
-    color: #FFFFFF;
     border-color: #FFFFFF;
+    color: #FFFFFF;
     box-shadow: none;
+}
+html.acessibilidade-escuro body .profile-card {
+ border: 1px solid #FFFFFF;
 }
 
 html.acessibilidade-escuro body .title-mark {
@@ -716,6 +719,98 @@ html.acessibilidade-escuro .opcao-administrador.opcao-sair {
     border-color: #ffffff;
 }
 
+
+/* =========================================
+   MODO ESCURO - SAIR ADM
+========================================= */
+
+/* Cartão Sair ADM nas configurações */
+html.acessibilidade-escuro .opcao-administrador.opcao-sair {
+    background-color: #101010 !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+html.acessibilidade-escuro .opcao-administrador.opcao-sair .opcao-titulo h2,
+html.acessibilidade-escuro .opcao-administrador.opcao-sair p,
+html.acessibilidade-escuro .opcao-administrador.opcao-sair .opcao-link {
+    color: #ffffff !important;
+}
+
+/* Caixa de confirmação - somente página Sair ADM */
+html.acessibilidade-escuro body:has(.modal) .modal {
+    background-color: #070707
+ !important;
+    box-shadow: 0 3px 7px var(--ac-border) !important;
+    color: #ffffff !important;
+}
+
+/* Título e texto da caixa */
+html.acessibilidade-escuro body:has(.modal) .modal h2,
+html.acessibilidade-escuro body:has(.modal) .modal p {
+    color: #ffffff !important;
+}
+
+
+/* Botão Cancelar: transparente com borda branca */
+html.acessibilidade-escuro body:has(.modal) .modal .cancelar {
+    background-color: transparent !important;
+    border: 1px solid #ffffff !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-escuro body:has(.modal) .modal .cancelar a {
+    color: #ffffff !important;
+}
+
+/* Botão Sair: preto com borda branca */
+html.acessibilidade-escuro body:has(.modal) .modal .Sair {
+    background-color: #1d3d12!important;
+    border: 1px solid #ffffff !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-escuro body:has(.modal) .modal .Sair a {
+    color: #ffffff !important;
+}
+
+/* Ícone de saída */
+html.acessibilidade-escuro body:has(.modal) .modal .icone-saida {
+    background-color: #000000 !important;
+    border: 1px solid #555555 !important;
+    box-shadow: none !important;
+}
+
+/* Traço ao lado do título Sair */
+html.acessibilidade-escuro body:has(.modal) .titulo h1 {
+    border-left: 5px solid #3e5919 !important;
+    color: #ffffff !important;
+}
+
+/* Descrição abaixo do título */
+html.acessibilidade-escuro body:has(.modal) .descricao {
+    color: #ffffff !important;
+}
+
+
+/* ========================================
+   SAIR ADM - ALTO CONTRASTE
+   ======================================== */
+/* Título e texto da caixa */
+html.acessibilidade-alto-contraste body:has(.modal) .modal h2,
+html.acessibilidade-alto-contraste body:has(.modal) .modal p {
+    color: #dba437 !important;
+}
+/*alto contraste*/
+/* Caixa de confirmação - somente página Sair ADM */
+html.acessibilidade-alto-contraste body:has(.modal) .modal {
+    background-color: #0b2408
+ !important;
+    box-shadow: 0 3px 7px var(--ac-border) !important;
+    color: #ffffff !important;
+}
 /* ALTO CONTRASTE */
 html.acessibilidade-alto-contraste .opcao-administrador.opcao-sair {
     background-color: #000000;
@@ -798,78 +893,29 @@ html.acessibilidade-alto-contraste body:has(.modal) .titulo h1 {
 html.acessibilidade-alto-contraste .descricao {
     color: #e5a323 !important;
 }
-
-/* =========================================
-   MODO ESCURO - SAIR ADM
-========================================= */
-
-/* Cartão Sair ADM nas configurações */
-html.acessibilidade-escuro .opcao-administrador.opcao-sair {
-    background-color: #101010 !important;
-    color: #ffffff !important;
-    border-color: #ffffff !important;
+html.acessibilidade-alto-contraste body:has(.modal) .descricao {
+    color: #e5a323 !important;
+}
+html.acessibilidade-alto-contraste body:has(.modal) .modal .cancelar a {
+    color: #e5a323 !important;
+}
+html.acessibilidade-alto-contraste body:has(.modal) .modal .Sair a {
+    color: #e5a323 !important;
 }
 
-html.acessibilidade-escuro .opcao-administrador.opcao-sair .opcao-titulo h2,
-html.acessibilidade-escuro .opcao-administrador.opcao-sair p,
-html.acessibilidade-escuro .opcao-administrador.opcao-sair .opcao-link {
-    color: #ffffff !important;
-}
-
-/* Caixa de confirmação - somente página Sair ADM */
-html.acessibilidade-escuro body:has(.modal) .modal {
-    background-color: #070707 !important;
-    box-shadow: 0 3px 7px var(--ac-border) !important;
-    color: #ffffff !important;
-}
-
-/* Título e texto da caixa */
-html.acessibilidade-escuro body:has(.modal) .modal h2,
-html.acessibilidade-escuro body:has(.modal) .modal p {
-    color: #ffffff !important;
-}
-
-/* Botão Cancelar: transparente com borda branca */
-html.acessibilidade-escuro body:has(.modal) .modal .cancelar {
-    background-color: transparent !important;
-    border: 1px solid #ffffff !important;
-    color: #ffffff !important;
-    box-shadow: none !important;
-}
-
-html.acessibilidade-escuro body:has(.modal) .modal .cancelar a {
-    color: #ffffff !important;
-}
-
-/* Botão Sair: preto com borda branca */
-html.acessibilidade-escuro body:has(.modal) .modal .Sair {
-    background-color: #1d3d12!important;
-    border: 1px solid #ffffff !important;
-    color: #ffffff !important;
-    box-shadow: none !important;
-}
-
-html.acessibilidade-escuro body:has(.modal) .modal .Sair a {
-    color: #ffffff !important;
-}
-
-/* Ícone de saída */
-html.acessibilidade-escuro body:has(.modal) .modal .icone-saida {
+html.acessibilidade-alto-contraste body:has(.modal) .modal .Sair {
     background-color: #000000 !important;
-    border: 1px solid #555555 !important;
+    color: #ffffff !important;
     box-shadow: none !important;
 }
 
-/* Traço ao lado do título Sair */
-html.acessibilidade-escuro body:has(.modal) .titulo h1 {
-    border-left: 5px solid #3e5919 !important;
-    color: #ffffff !important;
-}
 
-/* Descrição abaixo do título */
-html.acessibilidade-escuro body:has(.modal) .descricao {
-    color: #ffffff !important;
-}
+
+
+
+
+
+
 
 
 
