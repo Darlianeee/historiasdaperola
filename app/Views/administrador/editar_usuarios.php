@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="<?=URL?>/public/css/editar_usuarios.css">
     <link rel="stylesheet" href="<?= URL ?>/public/css/Configuracoes.css">
-</head>sssssss
+  </head>
 
 <body>
 
@@ -85,6 +85,7 @@
     <script src="<?=URL?>/public/js/editar_usuarios.js"></script>
     
  <script src="<?= URL ?>/public/js/Configuracoes.js"></script>
+
 
 
 </body>
