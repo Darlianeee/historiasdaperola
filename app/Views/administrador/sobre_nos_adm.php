@@ -7,6 +7,7 @@
 <title>Sobre Nós</title>
 
     <link rel="stylesheet" href="<?=URL?>/public/css/sobre_nos_adm.css">
+    <link rel="stylesheet" href="<?=URL?>/public/css/Configuracoes.css">
 </head>
 
 <body>
@@ -227,6 +228,7 @@
 
 
 <?php include '../App/Views/administrador/footer_adm.php'; ?>
+        <script src="<?= URL ?>/public/js/Configuracoes.js"></script>
 
 
 </body>

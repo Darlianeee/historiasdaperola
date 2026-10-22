@@ -15,13 +15,15 @@ body {
     color: #10261f;
 }
 
+
 .conteudo {
     width: 100%;
-
     min-height: 800px;
-
     padding: 90px 49px 80px;
+    padding-left: 49px;
+    overflow-x: hidden;
 }
+
 
 .cabecalho-pagina {
     margin-bottom: 45px;
