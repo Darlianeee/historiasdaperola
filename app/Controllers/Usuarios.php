@@ -2,14 +2,6 @@
 
 class Usuarios extends Controller {
 
-    public function login_user() {
-        $this->view('usuarios/login_user');
-    }
-
-    public function cadastro_user() {
-        $this->view('usuarios/cadastro_user');
-    }
-
     public function alterar_senha_user() {
         $this->view('usuarios/alterar_senha_user');
     }

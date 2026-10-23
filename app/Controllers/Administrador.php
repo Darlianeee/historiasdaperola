@@ -2,14 +2,6 @@
 
 class Administrador extends Controller {
 
-    public function login_adm() {
-        $this->view('administrador/login_adm');
-    }
-
-    public function cadastro_adm() {
-        $this->view('administrador/cadastro_adm');
-    }
-
     public function alterar_senha_adm() {
         $this->view('administrador/alterar_senha_adm');
     }
@@ -367,10 +359,6 @@ class Administrador extends Controller {
 
     public function excluir_comentario() {
         $this->view('administrador/excluir_comentario');
-    }
-
-    public function responder_comentario() {
-        $this->view('administrador/responder_comentario');
     }
 
     public function historias_adm() {

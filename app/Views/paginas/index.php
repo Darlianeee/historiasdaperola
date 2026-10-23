@@ -18,14 +18,14 @@
 
             <label>Sou:</label>
 
-            <a href="<?=URL?>/usuarios/cadastro_user"><button type="button">Usuário</button></a>
-            <a href="<?=URL?>/administrador/login_adm"><button type="button">Administrador</button></a>
+            <a href="<?=URL?>/paginas/cadastro"><button type="button">Usuário</button></a>
+            <a href="<?=URL?>/paginas/login"><button type="button">Administrador</button></a>
 
         </form>
 
 
         <p class="login">
-            Já tem uma conta? <a href="<?=URL?>/usuarios/login_user">Login</a>
+            Já tem uma conta? <a href="<?=URL?>/paginas/login">Login</a>
         </p>
 
     
