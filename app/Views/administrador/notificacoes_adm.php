@@ -1,3 +1,4 @@
+notificação adm
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -6,10 +7,8 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link
-        rel="stylesheet"
-        href="<?=URL?>/public/css/notificacoes_adm.css"
-    >
+<link rel="stylesheet" href="<?=URL?>/public/css/notificacoes_adm.css" >
+ <link rel="stylesheet" href="<?= URL ?>/public/css/Configuracoes.css">
 
     <title>Notificações</title>
 
@@ -475,7 +474,7 @@
 </main>
 
 <?php include '../App/Views/administrador/footer_adm.php'; ?>
-
+ <script src="<?= URL ?>/public/js/Configuracoes.js"></script>
 </body>
 
 </html>
