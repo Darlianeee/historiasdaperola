@@ -446,14 +446,11 @@ html.acessibilidade-escuro body .info-value {
 }
 
 html.acessibilidade-escuro body .profile-card,
-html.acessibilidade-escuro body  {
+html.acessibilidade-escuro body .info-item {
     background-color: #070707;
-    border-color: #FFFFFF;
     color: #FFFFFF;
+    border-color: #FFFFFF;
     box-shadow: none;
-}
-html.acessibilidade-escuro body .profile-card {
- border: 1px solid #FFFFFF;
 }
 
 html.acessibilidade-escuro body .title-mark {
@@ -719,98 +716,6 @@ html.acessibilidade-escuro .opcao-administrador.opcao-sair {
     border-color: #ffffff;
 }
 
-
-/* =========================================
-   MODO ESCURO - SAIR ADM
-========================================= */
-
-/* Cartão Sair ADM nas configurações */
-html.acessibilidade-escuro .opcao-administrador.opcao-sair {
-    background-color: #101010 !important;
-    color: #ffffff !important;
-    border-color: #ffffff !important;
-}
-
-html.acessibilidade-escuro .opcao-administrador.opcao-sair .opcao-titulo h2,
-html.acessibilidade-escuro .opcao-administrador.opcao-sair p,
-html.acessibilidade-escuro .opcao-administrador.opcao-sair .opcao-link {
-    color: #ffffff !important;
-}
-
-/* Caixa de confirmação - somente página Sair ADM */
-html.acessibilidade-escuro body:has(.modal) .modal {
-    background-color: #070707
- !important;
-    box-shadow: 0 3px 7px var(--ac-border) !important;
-    color: #ffffff !important;
-}
-
-/* Título e texto da caixa */
-html.acessibilidade-escuro body:has(.modal) .modal h2,
-html.acessibilidade-escuro body:has(.modal) .modal p {
-    color: #ffffff !important;
-}
-
-
-/* Botão Cancelar: transparente com borda branca */
-html.acessibilidade-escuro body:has(.modal) .modal .cancelar {
-    background-color: transparent !important;
-    border: 1px solid #ffffff !important;
-    color: #ffffff !important;
-    box-shadow: none !important;
-}
-
-html.acessibilidade-escuro body:has(.modal) .modal .cancelar a {
-    color: #ffffff !important;
-}
-
-/* Botão Sair: preto com borda branca */
-html.acessibilidade-escuro body:has(.modal) .modal .Sair {
-    background-color: #1d3d12!important;
-    border: 1px solid #ffffff !important;
-    color: #ffffff !important;
-    box-shadow: none !important;
-}
-
-html.acessibilidade-escuro body:has(.modal) .modal .Sair a {
-    color: #ffffff !important;
-}
-
-/* Ícone de saída */
-html.acessibilidade-escuro body:has(.modal) .modal .icone-saida {
-    background-color: #000000 !important;
-    border: 1px solid #555555 !important;
-    box-shadow: none !important;
-}
-
-/* Traço ao lado do título Sair */
-html.acessibilidade-escuro body:has(.modal) .titulo h1 {
-    border-left: 5px solid #3e5919 !important;
-    color: #ffffff !important;
-}
-
-/* Descrição abaixo do título */
-html.acessibilidade-escuro body:has(.modal) .descricao {
-    color: #ffffff !important;
-}
-
-
-/* ========================================
-   SAIR ADM - ALTO CONTRASTE
-   ======================================== */
-/* Título e texto da caixa */
-html.acessibilidade-alto-contraste body:has(.modal) .modal h2,
-html.acessibilidade-alto-contraste body:has(.modal) .modal p {
-    color: #dba437 !important;
-}
-/*alto contraste*/
-/* Caixa de confirmação - somente página Sair ADM */
-html.acessibilidade-alto-contraste body:has(.modal) .modal {
-    background-color: #0b2408
- !important;
-    box-shadow: 0 3px 7px var(--ac-border) !important;
-    color: #ffffff !important;
-}
 /* ALTO CONTRASTE */
 html.acessibilidade-alto-contraste .opcao-administrador.opcao-sair {
     background-color: #000000;
@@ -893,29 +798,78 @@ html.acessibilidade-alto-contraste body:has(.modal) .titulo h1 {
 html.acessibilidade-alto-contraste .descricao {
     color: #e5a323 !important;
 }
-html.acessibilidade-alto-contraste body:has(.modal) .descricao {
-    color: #e5a323 !important;
-}
-html.acessibilidade-alto-contraste body:has(.modal) .modal .cancelar a {
-    color: #e5a323 !important;
-}
-html.acessibilidade-alto-contraste body:has(.modal) .modal .Sair a {
-    color: #e5a323 !important;
+
+/* =========================================
+   MODO ESCURO - SAIR ADM
+========================================= */
+
+/* Cartão Sair ADM nas configurações */
+html.acessibilidade-escuro .opcao-administrador.opcao-sair {
+    background-color: #101010 !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
 }
 
-html.acessibilidade-alto-contraste body:has(.modal) .modal .Sair {
-    background-color: #000000 !important;
+html.acessibilidade-escuro .opcao-administrador.opcao-sair .opcao-titulo h2,
+html.acessibilidade-escuro .opcao-administrador.opcao-sair p,
+html.acessibilidade-escuro .opcao-administrador.opcao-sair .opcao-link {
+    color: #ffffff !important;
+}
+
+/* Caixa de confirmação - somente página Sair ADM */
+html.acessibilidade-escuro body:has(.modal) .modal {
+    background-color: #070707 !important;
+    box-shadow: 0 3px 7px var(--ac-border) !important;
+    color: #ffffff !important;
+}
+
+/* Título e texto da caixa */
+html.acessibilidade-escuro body:has(.modal) .modal h2,
+html.acessibilidade-escuro body:has(.modal) .modal p {
+    color: #ffffff !important;
+}
+
+/* Botão Cancelar: transparente com borda branca */
+html.acessibilidade-escuro body:has(.modal) .modal .cancelar {
+    background-color: transparent !important;
+    border: 1px solid #ffffff !important;
     color: #ffffff !important;
     box-shadow: none !important;
 }
 
+html.acessibilidade-escuro body:has(.modal) .modal .cancelar a {
+    color: #ffffff !important;
+}
 
+/* Botão Sair: preto com borda branca */
+html.acessibilidade-escuro body:has(.modal) .modal .Sair {
+    background-color: #1d3d12!important;
+    border: 1px solid #ffffff !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
 
+html.acessibilidade-escuro body:has(.modal) .modal .Sair a {
+    color: #ffffff !important;
+}
 
+/* Ícone de saída */
+html.acessibilidade-escuro body:has(.modal) .modal .icone-saida {
+    background-color: #000000 !important;
+    border: 1px solid #555555 !important;
+    box-shadow: none !important;
+}
 
+/* Traço ao lado do título Sair */
+html.acessibilidade-escuro body:has(.modal) .titulo h1 {
+    border-left: 5px solid #3e5919 !important;
+    color: #ffffff !important;
+}
 
-
-
+/* Descrição abaixo do título */
+html.acessibilidade-escuro body:has(.modal) .descricao {
+    color: #ffffff !important;
+}
 
 
 
@@ -1048,3 +1002,687 @@ html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) body:has(.s
     top: -30px;
 }
 
+
+/*LAIS*/
+
+/* TRANSIÇÃO */
+body,
+.container,
+.cabecalho,
+.cabecalho h1,
+.cabecalho p,
+.topo,
+.botao,
+.buscar,
+.buscar input,
+.data,
+.notificacao,
+.texto,
+.texto h3,
+.texto p,
+.texto span,
+.dropdown-menu,
+.dropdown-menu a,
+.footer {
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+/* =========================
+   MODO ESCURO*/
+
+html.acessibilidade-escuro body {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .container {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .cabecalho h1,
+html.acessibilidade-escuro .cabecalho p,
+html.acessibilidade-escuro .texto h3 {
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .notificacao {
+    background: #070707 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-escuro .texto p {
+    color: #E0E0E0 !important;
+}
+
+html.acessibilidade-escuro .texto span {
+    color: #dba437 !important;
+}
+
+html.acessibilidade-escuro .botao,
+html.acessibilidade-escuro .buscar,
+html.acessibilidade-escuro .data {
+    background: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-escuro .buscar input {
+    background: transparent !important;
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .buscar input::placeholder {
+    color: #CCCCCC !important;
+    opacity: 1;
+}
+
+html.acessibilidade-escuro .dropdown-menu {
+    background: #070707 !important;
+    border: 1px solid #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .dropdown-menu a {
+    background: #070707 !important;
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .dropdown-menu a:hover,
+html.acessibilidade-escuro .botao:hover {
+    background: #dba437 !important;
+    color: #000000 !important;
+}
+
+html.acessibilidade-escuro .dropdown-menu .delete-btn {
+    color: #FF7777 !important;
+}
+
+html.acessibilidade-escuro .footer {
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .footer a,
+html.acessibilidade-escuro .footer p {
+    color: #FFFFFF !important;
+}
+
+/* =========================
+   ALTO CONTRASTE*/
+
+html.acessibilidade-alto-contraste body,
+html.acessibilidade-alto-contraste .container {
+    background: #000000 !important;
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste .cabecalho h1,
+html.acessibilidade-alto-contraste .cabecalho p,
+html.acessibilidade-alto-contraste .texto h3,
+html.acessibilidade-alto-contraste .texto p,
+html.acessibilidade-alto-contraste .texto span {
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste .notificacao {
+    background: #0b2408 !important;
+    color: #dba437 !important;
+    border: 2px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-alto-contraste .botao,
+html.acessibilidade-alto-contraste .buscar,
+html.acessibilidade-alto-contraste .data {
+    background: #000000 !important;
+    color: #dba437 !important;
+    border: 2px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-alto-contraste .buscar input {
+    background: transparent !important;
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-alto-contraste .buscar input::placeholder {
+    color: #dba437 !important;
+    opacity: 1;
+}
+
+html.acessibilidade-alto-contraste .botao:hover,
+html.acessibilidade-alto-contraste .dropdown-menu a:hover {
+    background: #dba437!important;
+    color: #000000 !important;
+}
+
+html.acessibilidade-alto-contraste .dropdown-menu {
+    background: #000000 !important;
+   
+}
+
+html.acessibilidade-alto-contraste .dropdown-menu a {
+    background: #000000 !important;
+    color: #dba437 !important;
+    border-bottom: 1px solid #FFFFFF !important;
+}
+
+html.acessibilidade-alto-contraste .dropdown-menu .delete-btn {
+    color: #FF7777 !important;
+}
+
+html.acessibilidade-alto-contraste .footer {
+    color: #dba437 !important;
+   
+}
+
+html.acessibilidade-alto-contraste .footer a,
+html.acessibilidade-alto-contraste .footer p {
+    color: #dba437 !important;
+}
+
+/* =========================
+   TAMANHO DA FONTE*/
+
+html.acessibilidade-fonte-grande .container {
+    font-size: 120% !important;
+}
+
+html.acessibilidade-fonte-muito-grande .container {
+    font-size: 140% !important;
+}
+
+html.acessibilidade-fonte-grande .texto,
+html.acessibilidade-fonte-muito-grande .texto {
+    overflow-wrap: anywhere;
+}
+
+html.acessibilidade-fonte-grande .texto h3,
+html.acessibilidade-fonte-grande .texto p,
+html.acessibilidade-fonte-muito-grande .texto h3,
+html.acessibilidade-fonte-muito-grande .texto p {
+    line-height: 1.5;
+}
+
+/* =========================
+   FOCO E TECLADO*/
+
+html.acessibilidade-escuro .botao:focus-visible,
+html.acessibilidade-escuro .buscar input:focus-visible,
+html.acessibilidade-escuro .data:focus-visible,
+html.acessibilidade-escuro .dropdown-menu a:focus-visible,
+html.acessibilidade-alto-contraste .botao:focus-visible,
+html.acessibilidade-alto-contraste .buscar input:focus-visible,
+html.acessibilidade-alto-contraste .data:focus-visible,
+html.acessibilidade-alto-contraste .dropdown-menu a:focus-visible {
+    outline: 3px solid #dba437 !important;
+    outline-offset: 3px;
+}
+
+html.acessibilidade-escuro .data,
+html.acessibilidade-alto-contraste .data {
+    color-scheme: dark;
+}
+
+/* REMOVER BORDA AMARELA DA BUSCA NO ALTO CONTRASTE */
+html.acessibilidade-alto-contraste .buscar:focus,
+html.acessibilidade-alto-contraste .buscar:focus-within,
+html.acessibilidade-alto-contraste .buscar input:focus,
+html.acessibilidade-alto-contraste .buscar input:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* REMOVER BORDA AMARELA DO CAMPO DE DATA */
+html.acessibilidade-alto-contraste .data:focus,
+html.acessibilidade-alto-contraste .data:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* REMOVER BORDA AMARELA DA BUSCA NO MODO ESCURO */
+html.acessibilidade-escuro .buscar:focus,
+html.acessibilidade-escuro .buscar:focus-within,
+html.acessibilidade-escuro .buscar input:focus,
+html.acessibilidade-escuro .buscar input:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* REMOVER BORDA AMARELA DO CAMPO DE DATA NO MODO ESCURO */
+html.acessibilidade-escuro .data:focus,
+html.acessibilidade-escuro .data:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+/* PONTINHOS BRANCOS NO MODO ESCURO E ALTO CONTRASTE */
+html.acessibilidade-escuro .icon-ponto,
+html.acessibilidade-alto-contraste .icon-ponto {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* LUPA BRANCA NO MODO ESCURO */
+html.acessibilidade-escuro .icon-Lupa {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* LUPA BRANCA NO ALTO CONTRASTE */
+html.acessibilidade-alto-contraste .icon-Lupa {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* ==========================================
+   ACESSIBILIDADE - DETALHES DA NOTIFICAÇÃO
+
+/* TRANSIÇÕES */
+.content,
+.page-header,
+.page-header h1,
+.page-header .subtitle,
+.message-info,
+.message-info h2,
+.message-date,
+.message-content,
+.btn {
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+/* ==========================================
+   MODO ESCURO*/
+
+html.acessibilidade-escuro body {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro body .content {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .page-header h1,
+html.acessibilidade-escuro .page-header .subtitle {
+    color: #FFFFFF !important;
+}
+
+
+html.acessibilidade-escuro .notification-detail-card {
+    background: #070707 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-escuro .message-info {
+    border-bottom: 1px solid #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .message-info h2,
+html.acessibilidade-escuro .message-date,
+html.acessibilidade-escuro .message-content {
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .btn-primary {
+    background: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+
+}
+
+html.acessibilidade-escuro .btn-primary:hover {
+    background: #28551a !important;
+    color: #FFFFFF !important;
+}
+
+/* ==========================================
+   ALTO CONTRASTE*/
+
+html.acessibilidade-alto-contraste body,
+html.acessibilidade-alto-contraste body .content {
+    background: #000000 !important;
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste .page-header h1,
+html.acessibilidade-alto-contraste .page-header .subtitle {
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste .title-mark {
+    background: #465722 !important;
+}
+
+html.acessibilidade-alto-contraste .notification-detail-card {
+    background: #0b2408 !important;
+    color: #dba437 !important;
+    border: 2px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-alto-contraste .message-info {
+    border-bottom: 1px solid #FFFFFF !important;
+}
+
+html.acessibilidade-alto-contraste .message-info h2,
+html.acessibilidade-alto-contraste .message-date,
+html.acessibilidade-alto-contraste .message-content {
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste .btn-primary {
+    background: #000000 !important;
+    color: #dba437 !important;
+    border: 2px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-alto-contraste .btn-primary:hover {
+    background: #dba437 !important;
+    color: #000000 !important;
+}
+
+/* ==========================================
+   AUMENTO DA FONTE*/
+
+html.acessibilidade-fonte-grande .notification-detail-card {
+    font-size: 120% !important;
+}
+
+html.acessibilidade-fonte-muito-grande .notification-detail-card {
+    font-size: 140% !important;
+}
+
+html.acessibilidade-fonte-grande .message-info h2,
+html.acessibilidade-fonte-muito-grande .message-info h2 {
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+html.acessibilidade-fonte-grande .message-content,
+html.acessibilidade-fonte-muito-grande .message-content {
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* 
+   FOCO DOS BOTÕES*/
+
+html.acessibilidade-escuro .btn:focus-visible,
+html.acessibilidade-alto-contraste .btn:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 3px;
+}
+
+/* ACESSIBILIDADE — EXCLUIR NOTIFICAÇÃO */
+
+/* TRANSIÇÃO */
+.conteudo,
+.titulo h1,
+.descricao,
+.modal,
+.modal h2,
+.modal p,
+.cancelar,
+.excluir {
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+/* MODO ESCURO*/
+
+html.acessibilidade-escuro body {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .conteudo {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .titulo h1 {
+    color: #FFFFFF !important;
+    border-left-color:#465722 !important;
+}
+
+html.acessibilidade-escuro .descricao {
+    color: #E0E0E0 !important;
+}
+
+/* MODAL */
+html.acessibilidade-escuro .modal {
+    background: #141313 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-escuro .modal h2 {
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .modal p {
+    color: #E0E0E0 !important;
+}
+
+/* BOTÃO CANCELAR */
+html.acessibilidade-escuro .cancelar {
+    background: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+
+
+/* BOTÃO EXCLUIR */
+html.acessibilidade-escuro .excluir {
+    background: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* EFEITO DOS BOTÕES */
+html.acessibilidade-escuro .cancelar:hover,
+html.acessibilidade-escuro .excluir:hover {
+    background: #dba437 !important;
+    color: #000000 !important;
+    border-color: #dba437 !important;
+}
+
+/* ALTO CONTRASTE*/
+
+html.acessibilidade-alto-contraste body {
+    background: #000000 !important;
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste .conteudo {
+    background: #000000 !important;
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste .titulo h1 {
+    color: #dba437 !important;
+    border-left-color: #465722 !important;
+}
+
+html.acessibilidade-alto-contraste .descricao {
+    color: #dba437 !important;
+}
+
+/* MODAL */
+html.acessibilidade-alto-contraste .modal {
+    background: #0b2408 !important;
+    color: #dba437 !important;
+    border: 1px solid var(--ac-border);
+    box-shadow: none !important;
+}
+
+html.acessibilidade-alto-contraste .modal h2 {
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste .modal p {
+    color: #dba437 !important;
+}
+
+/* BOTÃO CANCELAR */
+html.acessibilidade-alto-contraste .cancelar {
+    background: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid var(--ac-border);
+    box-shadow: none !important;
+}
+
+/* BOTÃO EXCLUIR */
+html.acessibilidade-alto-contraste .excluir {
+    background: #000000 !important;
+    color: #dba437 !important;
+    box-shadow: none !important;
+    border: 1px solid var(--ac-border);
+}
+
+/* EFEITO DOS BOTÕES */
+html.acessibilidade-alto-contraste .cancelar:hover,
+html.acessibilidade-alto-contraste .excluir:hover {
+    background: #dba437 !important;
+    color: #000000 !important;
+    border-color: #FFFFFF !important;
+}
+
+ /*  FOCO E NAVEGAÇÃO POR TECLADO */
+
+html.acessibilidade-escuro .cancelar:focus-visible,
+html.acessibilidade-escuro .excluir:focus-visible,
+html.acessibilidade-alto-contraste .cancelar:focus-visible,
+html.acessibilidade-alto-contraste .excluir:focus-visible {
+    outline: 3px solid #dba437 !important;
+    outline-offset: 3px;
+}
+
+
+   /*  TAMANHO DA FONTE */
+
+html.acessibilidade-fonte-grande .modal {
+    font-size: 120% !important;
+}
+
+html.acessibilidade-fonte-muito-grande .modal {
+    font-size: 140% !important;
+}
+
+html.acessibilidade-fonte-grande .modal h2 {
+    font-size: 1.25em;
+}
+
+html.acessibilidade-fonte-muito-grande .modal h2 {
+    font-size: 1.4em;
+}
+
+html.acessibilidade-fonte-grande .modal p,
+html.acessibilidade-fonte-muito-grande .modal p {
+    line-height: 1.6;
+}
+
+
+/* CORREÇÃO - EDITAR USUÁRIOS ADM */
+
+/* MODO ESCURO */
+html.acessibilidade-escuro .conteudo:has(#formularioPerfil),
+html.acessibilidade-escuro .conteudo:has(#formularioPerfil) .formulario {
+    background: #141313 !important;
+    color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-escuro .conteudo:has(#formularioPerfil) h1,
+html.acessibilidade-escuro .conteudo:has(#formularioPerfil) h2,
+html.acessibilidade-escuro .conteudo:has(#formularioPerfil) p,
+html.acessibilidade-escuro .conteudo:has(#formularioPerfil) label {
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro #formularioPerfil input,
+html.acessibilidade-escuro #formularioPerfil select {
+    background: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+}
+
+html.acessibilidade-escuro #formularioPerfil .btn-cancelar,
+html.acessibilidade-escuro #formularioPerfil .btn-salvar {
+    background: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+}
+
+/* ALTO CONTRASTE */
+html.acessibilidade-alto-contraste .conteudo:has(#formularioPerfil),
+html.acessibilidade-alto-contraste .conteudo:has(#formularioPerfil) .formulario {
+    background: #000000 !important;
+    color: #dba437 !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-alto-contraste .conteudo:has(#formularioPerfil) h1,
+html.acessibilidade-alto-contraste .conteudo:has(#formularioPerfil) h2,
+html.acessibilidade-alto-contraste .conteudo:has(#formularioPerfil) p,
+html.acessibilidade-alto-contraste .conteudo:has(#formularioPerfil) label {
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste #formularioPerfil input,
+html.acessibilidade-alto-contraste #formularioPerfil select {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FFFFFF !important;
+}
+
+html.acessibilidade-alto-contraste #formularioPerfil .btn-cancelar,
+html.acessibilidade-alto-contraste #formularioPerfil .btn-salvar {
+    background: #000000 !important;
+    color: #dba437 !important;
+    border: 2px solid #FFFFFF !important;
+}
+
+/* MODO ESCURO — CAIXA PRINCIPAL VERDE */
+html.acessibilidade-escuro .conteudo:has(#formularioPerfil) .formulario {
+    background-color: #0b2408  !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+/* CAMPOS NOME, E-MAIL, PERFIL E STATUS PRETOS */
+html.acessibilidade-escuro #formularioPerfil input,
+html.acessibilidade-escuro #formularioPerfil select {
+    background-color: #000000 !important;
+    color: #dba437!important;
+    border: 1px solid #ffffff !important;
+}
+
+/* TEXTOS E TÍTULOS BRANCOS */
+html.acessibilidade-escuro .conteudo:has(#formularioPerfil) h1,
+html.acessibilidade-escuro .conteudo:has(#formularioPerfil) h2,
+html.acessibilidade-escuro .conteudo:has(#formularioPerfil) label {
+    color: #dba437 !important;
+}
+
+/* BOTÕES */
+html.acessibilidade-escuro #formularioPerfil .btn-cancelar,
+html.acessibilidade-escuro #formularioPerfil .btn-salvar {
+    background-color: #000000 !important;
+    border: 1px solid #ffffff !important;
+}
