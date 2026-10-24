@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sobre Nós</title>
 
-    <link rel="stylesheet" href="<?=URL?>/public/css/sobre_nos_adm.css">
-    <link rel="stylesheet" href="<?=URL?>/public/css/Configuracoes.css">
+    <link rel="stylesheet" href="<?=URL?>/public/css/sobre_nos.css">
 </head>
 
 <body>
 
-<?php include '../App/Views/administrador/menu_adm.php'; ?>
+<?php include '../App/Views/usuarios/menu_user.php'; ?>
 
 
 <main class="conteudo">
+
+    
 
     <section class="cabecalho-pagina">
 
@@ -26,6 +27,10 @@
         </p>
 
     </section>
+
+
+
+    
 
     <section class="motivo">
 
@@ -49,6 +54,10 @@
 
     </section>
 
+
+
+    
+
     <section class="secao-equipe">
 
         <div class="titulo-equipe">
@@ -63,6 +72,9 @@
 
 
         <div class="equipe">
+
+
+            
 
             <div class="integrante">
 
@@ -90,6 +102,10 @@
 
             </div>
 
+
+
+            
+
             <div class="integrante">
 
                 <div class="foto-integrante">
@@ -116,6 +132,10 @@
 
             </div>
 
+
+
+            
+
             <div class="integrante">
 
                 <div class="foto-integrante">
@@ -140,6 +160,10 @@
                 </div>
 
             </div>
+
+
+
+            
 
             <div class="integrante">
 
@@ -167,6 +191,10 @@
 
             </div>
 
+
+
+            
+
             <div class="integrante">
 
                 <div class="foto-integrante">
@@ -192,6 +220,10 @@
                 </div>
 
             </div>
+
+
+
+            
 
             <div class="integrante">
 
@@ -227,8 +259,7 @@
 </main>
 
 
-<?php include '../App/Views/administrador/footer_adm.php'; ?>
-        <script src="<?= URL ?>/public/js/Configuracoes.js"></script>
+<?php include '../App/Views/usuarios/footer_user.php'; ?>
 
 
 </body>

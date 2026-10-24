@@ -46,7 +46,7 @@
             </li>
 
             <li>
-                <a href="<?=URL?>/usuarios/sobre_nos_user" class="menu-link">
+                <a href="<?=URL?>/paginas/sobre_nos" class="menu-link">
                     <img src="<?=URL?>/public/img/icone_sobreNos.png"
                          alt="Sobre nós"
                          class="menu-icon sobre-nós-icon">
@@ -62,7 +62,7 @@
             </li>
 
             <li>
-                <a href="<?=URL?>/usuarios/sair_user" class="menu-link">
+                <a href="<?=URL?>/paginas/sair" class="menu-link">
                     <img src="<?=URL?>/public/img/icone_sair.png" alt="Sair" class="menu-icon sair-icon">
                     <span>Sair</span>
                 </a>

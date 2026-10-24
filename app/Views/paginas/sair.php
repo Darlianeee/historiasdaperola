@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TELA SAIR</title>
 
-    <link rel="stylesheet" href="<?=URL?>/public/css/sair_user.css">
+    <link rel="stylesheet" href="<?=URL?>/public/css/sair.css">
         <link rel="stylesheet" href="<?=URL?>/public/css/Configuracoes.css">
 
 </head>
 
 <body>
 
-    <?php include '../App/Views/usuarios/menu_user.php'; ?>
+    <?php include '../App/Views/administrador/menu_adm.php'; ?>
 
     <main class="conteudo">
 
@@ -33,7 +33,7 @@
                     <img 
                         src="<?=URL?>/public/img/logo_saida.png"
                         alt="A imagem apresenta um ícone circular com fundo azul claro. No centro, há um símbolo de porta ou retângulo aberto à esquerda, 
-                        com uma seta apontando  para a direita, sugerindo a ação de sair ou encerrar sessão."
+                        com uma seta apontando para a direita , sugerindo a ação de sair ou encerrar sessão. "
                         class="icon-saida"
                     >
                 </div>
@@ -48,13 +48,13 @@
                 <div class="botoes">
 
                     <button type="button" class="cancelar">
-                        <a href="<?=URL?>/usuarios/inicio_user">
+                        <a href="<?=URL?>/administrador/inicio_adm">
                             Cancelar    
                         </a>
                     </button>
 
                     <button type="button" class="Sair">
-                        <a href="<?=URL?>/usuarios/login_user">
+                        <a href="<?=URL?>/paginas/login">
                             Sair
                         </a>
                     </button>
@@ -67,9 +67,8 @@
 
     </main>
 
-    <?php include '../App/Views/usuarios/footer_user.php'; ?>
-            <script src="<?= URL ?>/public/js/Configuracoes.js"></script>
-
+    <?php include '../App/Views/administrador/footer_adm.php'; ?>
+        <script src="<?= URL ?>/public/js/Configuracoes.js"></script>
 
 </body>
 

@@ -337,14 +337,6 @@ class Administrador extends Controller {
         $this->view('administrador/notificacoes_adm');
     }
 
-    public function sobre_nos_adm() {
-        $this->view('administrador/sobre_nos_adm');
-    }
-
-    public function sair_adm() {
-        $this->view('administrador/sair_adm');
-    }
-
     public function inicio_adm() {
         $this->view('administrador/inicio_adm');
     }

@@ -21,4 +21,13 @@ class Paginas extends Controller {
     public function cadastro() {
         $this->view('paginas/cadastro');
     }
+    
+    public function sobre_nos() {
+        $this->view('paginas/sobre_nos');
+    }
+
+    public function sair() {
+        $this->view('paginas/sair');
+    }
+
 }

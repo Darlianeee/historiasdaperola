@@ -42,14 +42,6 @@ class Usuarios extends Controller {
         $this->view('usuarios/excluir_notificacao_user');
     }
 
-    public function sobre_nos_user() {
-        $this->view('usuarios/sobre_nos_user');
-    }
-
-    public function sair_user() {
-        $this->view('usuarios/sair_user');
-    }
-
     public function footer_user() {
         $this->view('usuarios/footer_user');
     }

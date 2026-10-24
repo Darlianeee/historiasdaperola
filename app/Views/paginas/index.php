@@ -1,48 +1,111 @@
+<?php
+$subtitulo = "Visualize e leia novas histórias.";
+
+$historias = array_fill(0, 12, [
+    'titulo' => 'Nome da história',
+    'categoria' => 'Categoria',
+    'imagem' => ''
+]);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cadastro</title>
-    <link rel="stylesheet" href="<?=URL?>/public/css/index.css">
+<title>Histórias - Histórias na Pérola</title>
+
+    <link rel="stylesheet" href="<?=URL?>/public/css/escolher_historia_user.css">
 </head>
+
 <body>
 
-<div class="container">
+<?php include '../App/Views/usuarios/menu_user.php'; ?>
 
-    <div class="formulario">
-        <h1>Identifique-se</h1>
-        <p>Selecione uma das opções</p>
+<main class="conteudo">
 
-        <form>
+    <h1>Histórias</h1>
 
-            <label>Sou:</label>
+    <p class="subtitulo">
+        <?php echo htmlspecialchars($subtitulo); ?>
+    </p>
 
-            <a href="<?=URL?>/paginas/cadastro"><button type="button">Usuário</button></a>
-            <a href="<?=URL?>/paginas/login"><button type="button">Administrador</button></a>
+    
+    <div class="busca-container">
+
+        <form action="" method="GET" class="busca-box">
+
+            
+            <span class="icone-busca" aria-hidden="true">
+                <img src="<?=URL?>/public/img/LUPA2.png" alt="Ícone de busca">
+            </span>
+
+            <input 
+                type="text" 
+                name="busca" 
+                placeholder="Digite nome de uma lenda ou de um mito.."
+            >
 
         </form>
 
+    </div>
 
-        <p class="login">
-            Já tem uma conta? <a href="<?=URL?>/paginas/login">Login</a>
-        </p>
 
     
+    <section class="grid-historias">
 
-    </div>
+        <?php foreach ($historias as $item): ?>
 
-    <div class="lado-direito">
+            <div class="card-item">
 
-        <img src="<?=URL?>/public/img/icone_logo_menu.png" alt="Logo">
+                
+                <div class="card-imagem">
 
-        <h2>HISTÓRIAS NA PÉROLA</h2>
+                    <?php if (!empty($item['imagem'])): ?>
 
-        <p>Conectando culturas através de línguas</p>
+                        <img 
+                            src="<?php echo htmlspecialchars($item['imagem']); ?>" 
+                            alt="Imagem da História"
+                        >
 
-    </div>
+                    <?php endif; ?>
 
-</div>
+                </div>
+
+
+                
+                <div class="card-info">
+
+                    <div class="card-texto">
+
+                        <div class="card-titulo">
+                            <?php echo htmlspecialchars($item['titulo']); ?>
+                        </div>
+
+                        <div class="card-categoria">
+                            <?php echo htmlspecialchars($item['categoria']); ?>
+                        </div>
+
+                    </div>
+
+
+                    
+                    <a href="<?=URL?>/paginas/login" class="btn-ler">
+                        Ler história
+                    </a>
+
+                </div>
+
+            </div>
+
+        <?php endforeach; ?>
+
+    </section>
+
+</main>
+
+<?php include '../App/Views/usuarios/footer_user.php'; ?>
 
 </body>
 </html>

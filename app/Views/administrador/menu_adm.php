@@ -65,7 +65,7 @@
 
             
             <li>
-                <a href="<?=URL?>/administrador/sobre_nos_adm" class="menu-link">
+                <a href="<?=URL?>/paginas/sobre_nos" class="menu-link">
                     <img src="<?=URL?>/public/img/icone_sobreNos.png"
                          alt="Sobre nós"
                          class="menu-icon sobre-nós-icon">
@@ -81,7 +81,7 @@
             </li>
             
             <li>
-                <a href="<?=URL?>/administrador/sair_adm" class="menu-link">
+                <a href="<?=URL?>/paginas/sair" class="menu-link">
                     <img src="<?=URL?>/public/img/icone_sair.png"
                          alt="Sair"
                          class="menu-icon sair-icon">
