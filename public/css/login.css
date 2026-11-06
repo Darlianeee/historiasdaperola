@@ -253,3 +253,176 @@ button:hover {
 .campo-senha input::-ms-reveal {
     display: none;
 }
+
+
+/* CELULAR */
+@media screen and (max-width: 600px) {
+
+    body {
+        min-height: 100vh;
+        padding: 20px 15px;
+        background: #eef6eb;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        min-height: 0;
+        flex-direction: column;
+    }
+
+    .lado-direito {
+        width: 100%;
+        padding: 5px 10px 5px;
+        order: 1;
+    }
+
+    .lado-direito img {
+        width: 250px !important;
+        height: auto;
+        margin-bottom: -65px;
+    }
+
+    .lado-direito h2 {
+        font-size: 22px;
+        margin-bottom: 3px;
+        top: 0;
+    }
+
+    .lado-direito p {
+        font-size: 12px;
+        top: 0;
+    }
+
+    .formulario {
+        width: 100%;
+        padding: 18px 25px 22px;
+        order: 2;
+    }
+
+    .formulario h1 {
+        font-size: 26px;
+        margin-bottom: 3px;
+    }
+
+    .formulario p {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    label {
+        font-size: 14px;
+        margin-top: 8px;
+        margin-bottom: 4px;
+    }
+
+    input {
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .campo-senha button#mostrar-senha {
+        height: 36px;
+    }
+
+    button {
+        height: 38px;
+        margin: 15px auto 8px;
+        font-size: 15px;
+    }
+
+    .login {
+        margin-top: 10px;
+    }
+}
+
+
+/* TABLET */
+@media screen and (min-width: 601px) and (max-width: 1023px) {
+
+    body {
+        min-height: 100vh;
+        padding: 30px;
+        background: #eef6eb;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 550px;
+        height: auto;
+        min-height: 0;
+        flex-direction: column;
+    }
+
+    .lado-direito {
+        width: 100%;
+        padding: 10px 15px 5px;
+        order: 1;
+    }
+
+    .lado-direito img {
+        width: 340px !important;
+        height: auto;
+        margin-bottom: -88px;
+    }
+
+    .lado-direito h2 {
+        font-size: 25px;
+        margin-bottom: 5px;
+        top: 0;
+    }
+
+    .lado-direito p {
+        font-size: 14px;
+        top: 0;
+    }
+
+    .formulario {
+        width: 100%;
+        padding: 25px 55px 30px;
+        order: 2;
+    }
+
+    .formulario h1 {
+        font-size: 32px;
+    }
+
+    .formulario p {
+        font-size: 15px;
+        margin-bottom: 18px;
+    }
+
+    label {
+        font-size: 17px;
+    }
+
+    input {
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .campo-senha button#mostrar-senha {
+        height: 40px;
+    }
+
+    button {
+        height: 42px;
+        margin: 20px auto 10px;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+
+    .lado-direito img,
+    .lado-direito h2,
+    .lado-direito p {
+        transform: translateY(-40px);
+    }
+
+}
