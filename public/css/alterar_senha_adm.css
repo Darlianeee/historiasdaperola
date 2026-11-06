@@ -1,15 +1,13 @@
+
 * {
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 :root {
     color-scheme: light;
     background: #eef6f2;
     color: #14221f;
-}
-
-*, *::before, *::after {
-    box-sizing: border-box;
 }
 
 body {
@@ -22,9 +20,17 @@ a {
     color: inherit;
 }
 
+/* ==========================================
+   CONTEÚDO PRINCIPAL
+========================================== */
+
 .content {
     padding: 30px 40px 40px;
 }
+
+/* ==========================================
+   CABEÇALHO E TÍTULO
+========================================== */
 
 .page-header {
     justify-content: space-between;
@@ -44,14 +50,14 @@ a {
     flex-direction: column;
 }
 
-.title-mark {    
+.title-mark {
     width: 5px;
     height: 31px;
-    background: #465722;
     min-width: 5px;
+    background: #465722;
 }
 
-h1 {   
+h1 {
     margin: 0;
     font-size: 28px;
     font-weight: 700;
@@ -59,27 +65,37 @@ h1 {
     line-height: 31px;
 }
 
-.subtitle {    
+.subtitle {
     margin-top: 8px;
     font-size: 16px;
     line-height: 1.4;
 }
 
+/* ==========================================
+   CARD ALTERAR SENHA
+========================================== */
+
 .password-card {
-    background: #ffffff;
-    border-radius: 22px;
-    padding: 32px;
     width: 100%;
     max-width: 700px;
+
     margin: 40px auto;
+    padding: 32px;
+
+    background: #ffffff;
+    border-radius: 22px;
+
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
 }
+
+/* Título interno */
 
 .card-heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 18px;
+
     margin-bottom: 28px;
 }
 
@@ -94,6 +110,10 @@ h1 {
     height: 1px;
     background: #dbe4e2;
 }
+
+/* ==========================================
+   FORMULÁRIO
+========================================== */
 
 .password-form {
     display: flex;
@@ -113,6 +133,8 @@ h1 {
     color: #14221f;
 }
 
+/* Campos de senha */
+
 .password-input-wrapper {
     position: relative;
     display: flex;
@@ -121,12 +143,17 @@ h1 {
 
 .password-input {
     width: 100%;
+
     border: 2px solid #d9d9d9;
     border-radius: 10px;
-    padding: 14px 48px 14px 16px;
+
+    padding: 14px 45px 14px 16px;
+
     font-size: 16px;
     color: #14221f;
+
     background: #ffffff;
+
     transition: border-color 0.25s ease;
 }
 
@@ -135,18 +162,28 @@ h1 {
     border-color: #BE9628;
 }
 
+/* ==========================================
+   BOTÃO MOSTRAR / OCULTAR SENHA
+========================================== */
+
 .password-toggle {
     position: absolute;
+
     right: -30px;
     top: 85%;
+
     transform: translateY(-50%);
+
     background: none;
     border: none;
     cursor: pointer;
+
     padding: 4px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     transition: opacity 0.2s ease;
 }
 
@@ -159,20 +196,28 @@ h1 {
     height: 120px;
     display: block;
 }
+/* ==========================================
+   BOTÕES DO FORMULÁRIO
+========================================== */
 
 .form-actions {
     display: flex;
     gap: 14px;
+
     margin-top: 8px;
+
     justify-content: flex-end;
 }
 
 .password-btn {
     border: none;
     border-radius: 12px;
+
     padding: 14px 28px;
+
     font-size: 16px;
     font-weight: 700;
+
     cursor: pointer;
 }
 
@@ -180,7 +225,11 @@ h1 {
     background: #BE9628;
     color: #ffffff;
 }
-/* Modo claro: manter os campos brancos */
+
+/* ==========================================
+   MODO CLARO
+========================================== */
+
 html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-input,
 html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-input:hover,
 html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-input:focus,
@@ -189,4 +238,159 @@ html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-i
     background-color: #FFFFFF !important;
     color: #14221f !important;
     box-shadow: none !important;
+}
+
+/* ==========================================
+   RESPONSIVIDADE - TABLET
+========================================== */
+
+@media (max-width: 992px) and (min-width: 601px) {
+
+    .content {
+        padding: 25px 28px 35px;
+    }
+
+    .password-card {
+        max-width: 620px;
+        padding: 28px;
+        margin: 35px auto;
+    }
+
+    .card-heading h2 {
+        font-size: 21px;
+    }
+
+    .password-form {
+        gap: 24px;
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVIDADE - CELULAR
+========================================== */
+
+@media (max-width: 600px) {
+
+    /* Conteúdo principal */
+
+    .content {
+        padding: 18px 16px 35px;
+    }
+
+    /* Cabeçalho */
+
+    .page-header {
+        margin-bottom: 0;
+    }
+
+    .title-row {
+        gap: 8px;
+    }
+
+    .title-mark {
+        width: 4px;
+        min-width: 4px;
+        height: 27px;
+    }
+
+    h1 {
+        font-size: 23px;
+        line-height: 27px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-top: 5px;
+        line-height: 1.4;
+    }
+
+    /* Card */
+
+    .password-card {
+        width: 100%;
+        max-width: 420px;
+
+        margin: 25px auto 20px;
+
+        padding: 24px 20px;
+
+        border-radius: 17px;
+
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
+    }
+
+    /* Título interno */
+
+    .card-heading {
+        margin-bottom: 22px;
+        gap: 10px;
+    }
+
+    .card-heading h2 {
+        font-size: 19px;
+        line-height: 24px;
+    }
+
+    .section-line {
+        display: none;
+    }
+
+    /* Formulário */
+
+    .password-form {
+        gap: 20px;
+    }
+
+    .password-group {
+        gap: 8px;
+    }
+
+    .password-group label {
+        font-size: 14px;
+    }
+
+    /* Campos */
+
+    .password-input {
+        width: 100%;
+
+        padding: 12px 42px 12px 13px;
+
+        font-size: 15px;
+
+        border: 1.5px solid #d9d9d9;
+        border-radius: 9px;
+    }
+
+    /* Olhinhos */
+
+.password-toggle {
+    right: -45px;
+    top: 85%;
+    transform: translateY(-50%);
+}
+
+.eye-icon {
+    width: 100px;
+    height: 100px;
+}
+
+    /* Botão */
+
+    .form-actions {
+        margin-top: 5px;
+        justify-content: center;
+    }
+
+    .password-btn {
+        width: 100%;
+
+        padding: 12px 18px;
+
+        font-size: 14px;
+
+        border-radius: 9px;
+    }
+
 }

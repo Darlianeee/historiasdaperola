@@ -229,7 +229,7 @@ footer {
         line-height: 31px;
         padding-left: 9px;
         font-weight: 700;
-        border-left: 9px solid #465722;
+        border-left: 6px solid #465722;
         margin: 0;
     }
 
@@ -245,13 +245,13 @@ footer {
         line-height: 23px;
     }
 
-
-
     .overlay {
         position: relative;
         width: 100%;
         height: auto;
-        padding: 30px 0 45px;
+
+        padding: 65px 0 45px;
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -293,7 +293,7 @@ footer {
 
 
     .modal p {
-        font-size: 16px;
+        font-size: 19px;
         line-height: 24px;
     }
 
@@ -313,11 +313,15 @@ footer {
         width: 100px;
         height: 50px;
 
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
-/* Ajustes responsivos para celulares. */
+
+/* ==========================================
+   RESPONSIVIDADE - CELULAR
+========================================== */
+
 @media (max-width: 480px) {
 
     .conteudo {
@@ -325,114 +329,103 @@ footer {
         padding: 80px 16px 45px;
     }
 
-
-
+    /* Título */
 
     .titulo {
         position: relative;
-
         top: auto;
         left: auto;
-
         margin-bottom: 6px;
     }
 
     .titulo h1 {
-        font-size: 28px;
-        line-height: 31px;
+        font-size: 24px;
+        line-height: 25px;
         padding-left: 9px;
         font-weight: 700;
         border-left: 5px solid #465722;
         margin: 0;
     }
 
-
-
+    /* Descrição */
 
     .descricao {
         position: relative;
-
         top: auto;
         left: auto;
-
         margin: 0;
-
         font-size: 13px;
         line-height: 18px;
     }
 
-
-
-
-    .overlay {
-        position: relative;
-
-        top: auto;
-        left: auto;
-
-        width: 100%;
-        height: auto;
-
-        padding: 30px 0 20px;
-
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
+    /* Posicionamento do card */
 
     .overlay {
         position: relative;
         width: 100%;
         height: auto;
-        padding: 25px 0 40px;
+
+        padding: 25px 0 30px;
+
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .icone-saida {
-        width: 65px;
-        height: 65px;
+    /* Card */
 
+    .modal {
+        width: 100%;
+        max-width: 300px;
+
+        min-height: 0;
+
+        padding: 22px 18px 20px;
+
+        border-radius: 7px;
+    }
+
+    /* Ícone de saída */
+
+    .icone-saida {
+        width: 60px;
+        height: 60px;
         margin: 0 auto 10px;
     }
 
     .icon-saida {
-        width: 90px;
-        height: 90px;
+        width: 65px;
+        height: 65px;
+        object-fit: contain;
     }
 
-
-
+    /* Título do card */
 
     .modal h2 {
         margin-bottom: 10px;
-
         font-size: 16px;
         line-height: 20px;
     }
 
-
-
+    /* Texto do card */
 
     .modal p {
         font-size: 12px;
         line-height: 16px;
     }
 
-
-
+    /* Botões */
 
     .botoes {
-        margin-top: 50px;
+        margin-top: 25px;
         gap: 9px;
     }
 
     .cancelar,
     .Sair {
         width: 70px;
+        min-width: 70px;
         height: 29px;
-
         font-size: 11px;
     }
 }

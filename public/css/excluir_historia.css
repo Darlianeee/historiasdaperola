@@ -21,7 +21,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 0;
-    padding: 110px 49px 60px;
+    padding: 140px 49px 60px;
 }
 
 .titulo {
@@ -134,7 +134,7 @@ body {
     background-color: white;
     background: #ffffff;
     color: #c79b21;
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
     box-shadow:
         0 2px 4px rgba(0, 0, 0, 0.22);
@@ -173,7 +173,7 @@ body {
 @media (min-width: 481px) and (max-width: 768px) {
 
     .conteudo {
-        padding: 120px 35px 70px;
+        padding: 250px 35px 70px;
     }
 
     .titulo {
@@ -191,7 +191,7 @@ body {
     }
 
     .descricao {
-        top: 125px;
+        top: 115px;
         left: 35px;
         font-size: 16px;
         line-height: 1.4;
@@ -300,8 +300,8 @@ body {
     }
 
     .titulo h1 {
-        font-size: 28px;
-        line-height: 31px;
+        font-size: 24px;
+        line-height: 25px;
         padding-left: 9px;
         font-weight: 700;
         border-left: 5px solid #465722;
@@ -311,7 +311,7 @@ body {
     .descricao {
         left: 16px;
         right: 16px;
-        top: 112px;
+        top: 95px;
         font-size: 16px;
         line-height: 1.4;
         margin-top: 8px;

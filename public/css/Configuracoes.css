@@ -61,6 +61,7 @@ html.acessibilidade-fonte-grande {
 html.acessibilidade-fonte-muito-grande {
     font-size: 140%;
 }
+
 /* TAMANHO DA FONTE */
 html.acessibilidade-fonte-normal {
     font-size: 100%;
@@ -234,15 +235,24 @@ button:focus-visible {
         width: 90%;
     }
 
+    .cabecalho-pagina {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0;
+        padding-left: 0;
+    }
+
     .cabecalho-pagina h1 {
-        font-size: 28px;
-        line-height: 31px;
+        margin-left: 0;
+        padding-left: 18px;
     }
 
     .cabecalho-pagina p {
-        margin-left: 13px;
-        font-size: 16px;
+        margin-left: 0;
+        padding-left: 0;
+        width: 100%;
     }
+
 }
 
 @media (max-width: 750px) {
@@ -288,7 +298,10 @@ button:focus-visible {
     }
 
     .painel-acessibilidade {
-        padding: 20px;
+        width: 92%;
+        margin: 0 auto;
+        padding: 18px;
+        border-radius: 10px;
     }
 
     .grupo-configuracao h2 {
@@ -311,6 +324,7 @@ button:focus-visible {
 
 /* MOVIMENTO REDUZIDO */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -355,10 +369,10 @@ html.acessibilidade-escuro .conteudo {
 
 html.acessibilidade-escuro .titulo h1,
 html.acessibilidade-escuro .boas-vindas,
-html.acessibilidade-escuro .conteudo > h2,
+html.acessibilidade-escuro .conteudo>h2,
 html.acessibilidade-escuro .card h3,
 html.acessibilidade-escuro .texto-card p,
-html.acessibilidade-escuro .card-gerenciar > p {
+html.acessibilidade-escuro .card-gerenciar>p {
     color: #ffffff !important;
 }
 
@@ -393,10 +407,10 @@ html.acessibilidade-alto-contraste .titulo {
 
 html.acessibilidade-alto-contraste .titulo h1,
 html.acessibilidade-alto-contraste .boas-vindas,
-html.acessibilidade-alto-contraste .conteudo > h2,
+html.acessibilidade-alto-contraste .conteudo>h2,
 html.acessibilidade-alto-contraste .card h3,
 html.acessibilidade-alto-contraste .texto-card p,
-html.acessibilidade-alto-contraste .card-gerenciar > p {
+html.acessibilidade-alto-contraste .card-gerenciar>p {
     color: #dba437 !important;
 }
 
@@ -446,14 +460,15 @@ html.acessibilidade-escuro body .info-value {
 }
 
 html.acessibilidade-escuro body .profile-card,
-html.acessibilidade-escuro body  {
+html.acessibilidade-escuro body {
     background-color: #070707;
     border-color: #FFFFFF;
     color: #FFFFFF;
     box-shadow: none;
 }
+
 html.acessibilidade-escuro body .profile-card {
- border: 1px solid #FFFFFF;
+    border: 1px solid #FFFFFF;
 }
 
 html.acessibilidade-escuro body .title-mark {
@@ -530,6 +545,7 @@ html.acessibilidade-fonte-grande body .content {
 html.acessibilidade-fonte-muito-grande body .content {
     font-size: 140%;
 }
+
 /* ==========================================
    ACESSIBILIDADE - EDITAR PERFIL ADM
    ========================================== */
@@ -645,12 +661,12 @@ html.acessibilidade-alto-contraste body .password-btn-primary {
     color: #dba437 !important;
     border: 2px solid #FFFFFF !important;
 }
+
 /* ÍCONE DO OLHO - AMARELO DOURADO */
 html.acessibilidade-escuro .password-toggle .eye-icon {
-    filter: brightness(0) saturate(100%)
-            invert(76%) sepia(47%) saturate(623%)
-            hue-rotate(4deg) brightness(95%) contrast(90%);
+    filter: brightness(0) saturate(100%) invert(76%) sepia(47%) saturate(623%) hue-rotate(4deg) brightness(95%) contrast(90%);
 }
+
 /* ALTO CONTRASTE - CAIXA GRANDE ALTERAR SENHA */
 html.acessibilidade-alto-contraste body .password-card {
     background-color: #0b2408 !important;
@@ -658,12 +674,14 @@ html.acessibilidade-alto-contraste body .password-card {
     border: 1px solid #FFFFFF !important;
     box-shadow: none !important;
 }
+
 /* TÍTULOS */
 html.acessibilidade-alto-contraste body .password-card h2,
 html.acessibilidade-alto-contraste body .page-header h1,
 html.acessibilidade-alto-contraste body .page-header .subtitle {
     color: #dba437 !important;
 }
+
 /* ALTERAR SENHA — COR FIXA DOS CAMPOS */
 
 /* Modo escuro */
@@ -744,8 +762,7 @@ html.acessibilidade-escuro .opcao-administrador.opcao-sair .opcao-link {
 
 /* Caixa de confirmação - somente página Sair ADM */
 html.acessibilidade-escuro body:has(.modal) .modal {
-    background-color: #070707
- !important;
+    background-color: #070707 !important;
     box-shadow: 0 3px 7px var(--ac-border) !important;
     color: #ffffff !important;
 }
@@ -771,7 +788,7 @@ html.acessibilidade-escuro body:has(.modal) .modal .cancelar a {
 
 /* Botão Sair: preto com borda branca */
 html.acessibilidade-escuro body:has(.modal) .modal .Sair {
-    background-color: #1d3d12!important;
+    background-color: #1d3d12 !important;
     border: 1px solid #ffffff !important;
     color: #ffffff !important;
     box-shadow: none !important;
@@ -808,20 +825,22 @@ html.acessibilidade-alto-contraste body:has(.modal) .modal h2,
 html.acessibilidade-alto-contraste body:has(.modal) .modal p {
     color: #dba437 !important;
 }
+
 /*alto contraste*/
 /* Caixa de confirmação - somente página Sair ADM */
 html.acessibilidade-alto-contraste body:has(.modal) .modal {
-    background-color: #0b2408
- !important;
+    background-color: #0b2408 !important;
     box-shadow: 0 3px 7px var(--ac-border) !important;
     color: #ffffff !important;
 }
+
 /* ALTO CONTRASTE */
 html.acessibilidade-alto-contraste .opcao-administrador.opcao-sair {
     background-color: #000000;
     color: #e5a323;
     border-color: #e5a323;
 }
+
 html.acessibilidade-alto-contraste .modal-sair .modal-content {
     background-color: #000000;
     color: #e5a323;
@@ -861,7 +880,7 @@ html.acessibilidade-alto-contraste .modal .Sair {
 /* TEXTOS DOS LINKS */
 html.acessibilidade-alto-contraste .modal .cancelar a,
 html.acessibilidade-alto-contraste .modal .Sair a {
-    color: #e5a323!important;
+    color: #e5a323 !important;
 }
 
 /* ÍCONE DE SAÍDA */
@@ -898,12 +917,15 @@ html.acessibilidade-alto-contraste body:has(.modal) .titulo h1 {
 html.acessibilidade-alto-contraste .descricao {
     color: #e5a323 !important;
 }
+
 html.acessibilidade-alto-contraste body:has(.modal) .descricao {
     color: #e5a323 !important;
 }
+
 html.acessibilidade-alto-contraste body:has(.modal) .modal .cancelar a {
     color: #e5a323 !important;
 }
+
 html.acessibilidade-alto-contraste body:has(.modal) .modal .Sair a {
     color: #e5a323 !important;
 }
@@ -967,7 +989,7 @@ html.acessibilidade-escuro .conteudo:has(.secao-equipe) .foto-integrante {
 }
 
 html.acessibilidade-escuro .conteudo:has(.secao-equipe) .cabecalho-pagina h1::before {
-    background-color: #465722!important;
+    background-color: #465722 !important;
 }
 
 
@@ -1037,7 +1059,8 @@ body:has(.secao-equipe) .cabecalho-pagina h1 {
     left: 0 !important;
     margin-left: 0 !important;
     transform: none !important;
-    top: -20px; /* move 20px para cima */
+    top: -20px;
+    /* move 20px para cima */
 }
 
 @media (max-width: 750px) {
@@ -1048,23 +1071,27 @@ body:has(.secao-equipe) .cabecalho-pagina h1 {
 
 
 /* SOBRE NÓS - SUBIR SOMENTE O SUBTÍTULO */
-html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) body:has(.secao-equipe) .cabecalho-pagina > p {
+html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) body:has(.secao-equipe) .cabecalho-pagina>p {
     position: relative;
     top: -30px;
 }
+
 /*INICIO USER*/
-html.acessibilidade-escuro .card-explorar > p {
+html.acessibilidade-escuro .card-explorar>p {
     color: #465722 !important;
-   
+
 }
+
 /*////////////////// LOGIN /////////////////*/
 
 /*MODO ESCURO*/
-html.acessibilidade-escuro .formulario { 
-    background-color: #070707 !important; 
-   border: 1px solid #ffffff !important; /* Aplica a borda em todos os lados */
-    border-right: none !important;        /* Remove especificamente a borda da direita */
-} 
+html.acessibilidade-escuro .formulario {
+    background-color: #070707 !important;
+    border: 1px solid #ffffff !important;
+    /* Aplica a borda em todos os lados */
+    border-right: none !important;
+    /* Remove especificamente a borda da direita */
+}
 
 /* MODO ESCURO: olho branco */
 html.acessibilidade-escuro .campo-senha button#mostrar-senha {
@@ -1087,25 +1114,32 @@ html.acessibilidade-escuro .campo-senha button#mostrar-senha:hover {
 
 
 
-/* CONTAINER */ 
-html.acessibilidade-escuro .lado-direito { 
-    border: none !important; /* Remove topo, baixo e direita */
-    border: 1px solid #ffffff !important; /* Aplica apenas na esquerda */
-    border-left: none !important;        /* Remove especificamente a borda da direita */
+/* CONTAINER */
+html.acessibilidade-escuro .lado-direito {
+    border: none !important;
+    /* Remove topo, baixo e direita */
+    border: 1px solid #ffffff !important;
+    /* Aplica apenas na esquerda */
+    border-left: none !important;
+    /* Remove especificamente a borda da direita */
 
 }
+
 /*TEXTO*/
-html.acessibilidade-escuro .formulario h1 { 
-    color: #ffffff !important; 
+html.acessibilidade-escuro .formulario h1 {
+    color: #ffffff !important;
 }
-html.acessibilidade-escuro .formulario p { 
-    color: #ffffff !important; 
+
+html.acessibilidade-escuro .formulario p {
+    color: #ffffff !important;
 }
-html.acessibilidade-escuro .formulario label { 
-    color: #ffffff !important; 
+
+html.acessibilidade-escuro .formulario label {
+    color: #ffffff !important;
 }
-html.acessibilidade-escuro .esqueceu a:hover { 
-    color: #ffffff !important; 
+
+html.acessibilidade-escuro .esqueceu a:hover {
+    color: #ffffff !important;
 }
 
 
@@ -1113,11 +1147,14 @@ html.acessibilidade-escuro .esqueceu a:hover {
 
 
 /*ALTO CONTRASTE*/
-html.acessibilidade-alto-contraste .formulario { 
-    background-color: #0b2408 !important; 
-   border: 1px solid #ffffff !important; /* Aplica a borda em todos os lados */
-    border-right: none !important;        /* Remove especificamente a borda da direita */
-} 
+html.acessibilidade-alto-contraste .formulario {
+    background-color: #0b2408 !important;
+    border: 1px solid #ffffff !important;
+    /* Aplica a borda em todos os lados */
+    border-right: none !important;
+    /* Remove especificamente a borda da direita */
+}
+
 /* ALTO CONTRASTE: olho amarelo */
 html.acessibilidade-alto-contraste .campo-senha button#mostrar-senha {
     color: #E5A323 !important;
@@ -1126,34 +1163,41 @@ html.acessibilidade-alto-contraste .campo-senha button#mostrar-senha {
 html.acessibilidade-alto-contraste .campo-senha button#mostrar-senha:hover {
     color: #E5A323 !important;
 }
+
 html.acessibilidade-alto-contraste .campo-senha button#mostrar-senha svg {
     stroke: currentColor !important;
 }
-/* CONTAINER */ 
-html.acessibilidade-alto-contraste .lado-direito { 
-    border: none !important; /* Remove topo, baixo e direita */
-    border: 1px solid #ffffff !important; /* Aplica apenas na esquerda */
-    border-left: none !important;        /* Remove especificamente a borda da direita */
+
+/* CONTAINER */
+html.acessibilidade-alto-contraste .lado-direito {
+    border: none !important;
+    /* Remove topo, baixo e direita */
+    border: 1px solid #ffffff !important;
+    /* Aplica apenas na esquerda */
+    border-left: none !important;
+    /* Remove especificamente a borda da direita */
 
 }
+
 /*TEXTO*/
-html.acessibilidade-alto-contraste .formulario h1 { 
-    color: #dba437
- !important; 
+html.acessibilidade-alto-contraste .formulario h1 {
+    color: #dba437 !important;
 }
-html.acessibilidade-alto-contraste .formulario p { 
-    color: #dba437
-!important; 
+
+html.acessibilidade-alto-contraste .formulario p {
+    color: #dba437 !important;
 }
-html.acessibilidade-alto-contraste .formulario label { 
-    color: #dba437
- !important; 
+
+html.acessibilidade-alto-contraste .formulario label {
+    color: #dba437 !important;
 }
-html.acessibilidade-alto-contraste .esqueceu a:hover { 
-    color: #ffffff !important; 
+
+html.acessibilidade-alto-contraste .esqueceu a:hover {
+    color: #ffffff !important;
 }
-html.acessibilidade-alto-contraste .login a { 
-    color: #f6d27d !important; 
+
+html.acessibilidade-alto-contraste .login a {
+    color: #f6d27d !important;
 }
 
 /*GERENCIAR HISTORIAS ADM*/
@@ -1369,6 +1413,7 @@ html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .mensagem-suce
     border: 1px solid #E5A323 !important;
     box-shadow: none !important;
 }
+
 /* LUPA BRANCA NO MODO ESCURO */
 html.acessibilidade-escuro .busca-box .icone-busca img {
     filter: brightness(0) invert(1) !important;
@@ -1376,18 +1421,18 @@ html.acessibilidade-escuro .busca-box .icone-busca img {
 
 /* LUPA AMARELA NO ALTO CONTRASTE */
 html.acessibilidade-alto-contraste .busca-box .icone-busca img {
-    filter: brightness(0) saturate(100%)
-            invert(69%) sepia(70%) saturate(600%)
-            hue-rotate(5deg) brightness(95%) contrast(95%) !important;
+    filter: brightness(0) saturate(100%) invert(69%) sepia(70%) saturate(600%) hue-rotate(5deg) brightness(95%) contrast(95%) !important;
 }
+
 /*INICIO - USUARIO*/
-html.acessibilidade-escuro .card-explorar > p {
+html.acessibilidade-escuro .card-explorar>p {
     color: #FFFFFF !important;
-   
+
 }
-html.acessibilidade-alto-contraste .card-explorar > p {
+
+html.acessibilidade-alto-contraste .card-explorar>p {
     color: #E5A323 !important;
-   
+
 }
 
 /* =========================================
@@ -1400,10 +1445,11 @@ html.acessibilidade-escuro body {
     color: #FFFFFF !important;
 }
 
-html.acessibilidade-escuro .conteudo{
+html.acessibilidade-escuro .conteudo {
     color: #FFFFFF !important;
     border-color: #FFFFFF !important;
 }
+
 html.acessibilidade-escuro .modal-historia {
     background-color: #141313 !important;
     border: 1px solid var(--ac-border);
@@ -1424,10 +1470,12 @@ html.acessibilidade-escuro .lista-comentarios,
 html.acessibilidade-escuro .comentario-item {
     color: #FFFFFF !important;
 }
-html.acessibilidade-escuro .secao-idiomas{
+
+html.acessibilidade-escuro .secao-idiomas {
     color: #FFFFFF !important;
-    background-color: #141313  !important;
+    background-color: #141313 !important;
 }
+
 html.acessibilidade-escuro .nome-comentario {
     color: #FFFFFF !important;
 }
@@ -1435,6 +1483,7 @@ html.acessibilidade-escuro .nome-comentario {
 html.acessibilidade-escuro .texto-comentario {
     color: #ffffff !important;
 }
+
 html.acessibilidade-escuro .box-imagem {
     background-color: #2b2b2b !important;
     border-color: #FFFFFF !important;
@@ -1461,11 +1510,12 @@ html.acessibilidade-escuro .estrelas label {
     color: #FFFFFF !important;
 }
 
-html.acessibilidade-escuro .estrelas input:checked ~ label {
+html.acessibilidade-escuro .estrelas input:checked~label {
     color: #E5A323 !important;
 }
+
 html.acessibilidade-escuro .titulo-idiomas img {
-   filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
 }
 
 /* =========================================
@@ -1523,7 +1573,7 @@ html.acessibilidade-alto-contraste .estrelas label {
     color: #E5A323 !important;
 }
 
-html.acessibilidade-alto-contraste .estrelas input:checked ~ label {
+html.acessibilidade-alto-contraste .estrelas input:checked~label {
     color: #E5A323 !important;
 }
 
