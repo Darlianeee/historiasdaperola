@@ -4,11 +4,11 @@ function toggleMenu(event, index) {
     const menuAtual = document.getElementById('menu-' + index);
     const estavaAberto = menuAtual.classList.contains('ativo');
 
-    document.querySelectorAll('.menu-opcoes').forEach(function(menu) {
+    document.querySelectorAll('.menu-opcoes').forEach(function (menu) {
         menu.classList.remove('ativo');
     });
 
-    document.querySelectorAll('.btn-opcoes').forEach(function(botao) {
+    document.querySelectorAll('.btn-opcoes').forEach(function (botao) {
         botao.setAttribute('aria-expanded', 'false');
     });
 
@@ -18,17 +18,17 @@ function toggleMenu(event, index) {
     }
 }
 
-document.addEventListener('click', function() {
-    document.querySelectorAll('.menu-opcoes').forEach(function(menu) {
+document.addEventListener('click', function () {
+    document.querySelectorAll('.menu-opcoes').forEach(function (menu) {
         menu.classList.remove('ativo');
     });
 
-    document.querySelectorAll('.btn-opcoes').forEach(function(botao) {
+    document.querySelectorAll('.btn-opcoes').forEach(function (botao) {
         botao.setAttribute('aria-expanded', 'false');
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const busca = document.getElementById('buscaHistoria');
     const filtro = document.getElementById('filtroCategoria');
     const cartoes = document.querySelectorAll('.card-item');
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const categoriaSelecionada = filtro.value;
         let quantidadeVisivel = 0;
 
-        cartoes.forEach(function(cartao) {
+        cartoes.forEach(function (cartao) {
             const tituloCard = cartao.querySelector('.card-titulo');
 
             const tituloPt = tituloCard.dataset.tituloPt || '';
@@ -63,18 +63,22 @@ document.addEventListener('DOMContentLoaded', function() {
             let idiomaEncontrado = 'pt';
 
             if (textoBusca !== '') {
-                const correspondencia = titulos.find(function(item) {
-                    return normalizar(item.texto).includes(textoBusca);
-                });
+                const correspondencia = titulos.find(item =>
+                    normalizar(item.texto).includes(textoBusca)
+                );
 
-                const tituloCorrespondente = correspondencia ||
-                    titulos.find(function(item) {
-                        return normalizar(item.texto).includes(textoBusca);
-                    });
-
-                if (tituloCorrespondente) {
-                    idiomaEncontrado = tituloCorrespondente.idioma;
+                if (correspondencia) {
+                    idiomaEncontrado = correspondencia.idioma;
                 }
+            }
+
+            // Atualiza o idioma que será utilizado na página de leitura.
+            const linkLeitura = cartao.querySelector('.btn-ler');
+
+            if (linkLeitura) {
+                const url = new URL(linkLeitura.href);
+                url.searchParams.set('lang', idiomaEncontrado);
+                linkLeitura.href = url.href;
             }
 
             const tituloParaMostrar = {
@@ -86,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const tituloExibido = tituloParaMostrar[idiomaEncontrado];
 
             const correspondeTitulo = textoBusca === '' ||
-                titulos.some(function(item) {
+                titulos.some(function (item) {
                     return normalizar(item.texto).includes(textoBusca);
                 });
 

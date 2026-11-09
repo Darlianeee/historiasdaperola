@@ -1,7 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
-/* CONFIGURAÇÕES GERAIS */
+/* ==========================================
+   CONFIGURAÇÕES GERAIS
+========================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +12,7 @@
 }
 
 /* BODY */
+
 body {
     background: #eef6eb;
     display: flex;
@@ -19,7 +22,10 @@ body {
     padding: 20px;
 }
 
-/* CARD PRINCIPAL */
+/* ==========================================
+   CARD PRINCIPAL
+========================================== */
+
 .container {
     width: 900px;
     height: 500px;
@@ -30,7 +36,10 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* FORMULÁRIO BRANCO */
+/* ==========================================
+   FORMULÁRIO
+========================================== */
+
 .formulario {
     width: 58%;
     padding: 40px 70px;
@@ -87,7 +96,10 @@ button:hover {
     background: #a57d17;
 }
 
-/* ÁREA VERDE */
+/* ==========================================
+   ÁREA VERDE
+========================================== */
+
 .lado-direito {
     width: 42%;
     background: #4c6123;
@@ -121,59 +133,51 @@ button:hover {
     color: #f1f1f1;
 }
 
+/* APROXIMAR TÍTULO E SUBTÍTULO DA LOGO */
 
-/* =================================
+.lado-direito h2,
+.lado-direito p {
+    transform: translateY(-75px);
+}
+
+
+/* ==========================================
    TABLETS
-================================= */
+   MESMO DESIGN DO COMPUTADOR
+========================================== */
+
 @media (min-width: 601px) and (max-width: 1024px) {
 
     body {
-        padding: 25px;
+        padding: 20px;
     }
+
+    /* CARD HORIZONTAL */
 
     .container {
-        width: 85%;
-        max-width: 650px;
-        height: auto;
-        flex-direction: column;
+        width: 95%;
+        max-width: 900px;
+        height: 450px;
+        flex-direction: row;
     }
 
-    /* ÁREA VERDE MENOR */
-    .lado-direito {
-        min-height: 290px;
-        padding: 25px 20px;
-    }
+    /* FORMULÁRIO À ESQUERDA */
 
-    .lado-direito img {
-        width: 320px;
-        max-width: 100%;
-    }
-
-    .lado-direito h2 {
-        font-size: 21px;
-        margin: 0 0 3px;
-    }
-
-    .lado-direito p {
-        font-size: 12px;
-        margin: 0;
-    }
-
-    /* ÁREA BRANCA MAIOR */
     .formulario {
-        order: 2;
-        width: 100%;
-        min-height: 330px;
-        padding: 40px 65px;
+        order: 1;
+        width: 58%;
+        height: 100%;
+        padding: 25px 35px;
+        min-height: 0;
     }
 
     .formulario h1 {
-        font-size: 32px;
+        font-size: 30px;
         margin-bottom: 10px;
     }
 
     .formulario p {
-        font-size: 15px;
+        font-size: 14px;
         margin-bottom: 25px;
     }
 
@@ -192,17 +196,47 @@ button:hover {
         font-size: 16px;
         margin-top: 25px;
     }
+
+    /* ÁREA VERDE À DIREITA */
+
+    .lado-direito {
+        order: 2;
+        width: 42%;
+        height: 100%;
+        min-height: 0;
+        padding: 15px;
+        flex: none;
+    }
+
+    .lado-direito img {
+        width: 300px;
+        max-width: 90%;
+        margin-bottom: 5px;
+    }
+
+    .lado-direito h2 {
+        font-size: 20px;
+    }
+
+    .lado-direito p {
+        font-size: 12px;
+    }
+
 }
 
-/* =================================
+
+/* ==========================================
    CELULARES
-================================= */
+========================================== */
+
 @media (max-width: 600px) {
 
     body {
         padding: 12px;
         min-height: 100vh;
     }
+
+    /* CARD VERTICAL */
 
     .container {
         width: 88%;
@@ -212,32 +246,42 @@ button:hover {
         margin: 0 auto;
     }
 
-    /* ÁREA VERDE MENOR */
+    /* ÁREA VERDE EM CIMA */
+
     .lado-direito {
-        min-height: 220px;
-        padding: 20px 10px;
+        order: 1;
+        width: 100%;
+        min-height: 180px;
+        padding: 12px 10px;
+        flex: none;
     }
 
     .lado-direito img {
-        width: 210px;
+        width: 165px;
         max-width: 100%;
+        margin: 0 0 -13px;
     }
 
     .lado-direito h2 {
         font-size: 17px;
-        margin: 0 0 2px;
+        margin: 0 0 1px;
+        line-height: 1.1;
+        transform: translateY(-25px);
     }
 
     .lado-direito p {
         font-size: 10px;
         margin: 0;
+        line-height: 1.1;
+        transform: translateY(-25px);
     }
 
-    /* ÁREA BRANCA MAIOR */
+    /* FORMULÁRIO EMBAIXO */
+
     .formulario {
         order: 2;
         width: 100%;
-        min-height: 290px;
+        min-height: 330px;
         padding: 35px 20px;
     }
 
@@ -270,9 +314,14 @@ button:hover {
         font-size: 14px;
         margin: 22px auto 0;
     }
+
 }
 
-/* CELULARES MENORES */
+
+/* ==========================================
+   CELULARES MENORES
+========================================== */
+
 @media (max-width: 360px) {
 
     .container {
@@ -280,195 +329,17 @@ button:hover {
     }
 
     .lado-direito {
-        height: 105px;
-        min-height: 105px;
+        min-height: 165px;
+        padding: 10px;
     }
 
     .lado-direito img {
-        width: 165px;
+        width: 145px;
     }
 
     .formulario {
-        min-height: 280px;
+        min-height: 320px;
         padding: 30px 16px;
     }
-}
 
-/* CORREÇÃO DO CARD - TABLET E CELULAR */
-@media (max-width: 1024px) {
-
-    .container {
-        display: flex;
-        flex-direction: column !important;
-        height: auto !important;
-    }
-
-    /* PARTE VERDE */
-    .lado-direito {
-        order: 1;
-        width: 100% !important;
-        height: auto;
-        min-height: 180px;
-        flex: none !important;
-    }
-
-    /* PARTE BRANCA */
-    .formulario {
-        order: 2;
-        width: 100% !important;
-        height: auto;
-        flex: none !important;
-    }
-
-}
-
-
-/* ==========================================
-   AJUSTE DA ÁREA VERDE E BRANCA
-   ========================================== */
-
-/* TABLETS */
-@media (min-width: 601px) and (max-width: 1024px) {
-
-    .lado-direito {
-        width: 100% !important;
-        min-height: 205px !important;
-        padding: 15px 20px !important;
-        gap: 0;
-    }
-
-    .lado-direito img {
-        width: 190px !important;
-        max-width: 100%;
-        margin-bottom: -5px;
-    }
-
-    .lado-direito h2 {
-        font-size: 21px;
-        margin: 0 0 2px !important;
-    }
-
-    .lado-direito p {
-        font-size: 12px;
-        margin: 0 !important;
-    }
-
-    .formulario {
-        width: 100% !important;
-        min-height: 390px !important;
-        padding: 45px 65px !important;
-    }
-}
-
-
-/* ==========================================
-   CELULARES
-   ========================================== */
-
-@media (max-width: 600px) {
-
-    .container {
-        width: 88%;
-        max-width: 340px;
-        height: auto !important;
-    }
-
-    .lado-direito {
-        width: 100% !important;
-        min-height: 180px !important;
-        padding: 12px 10px !important;
-        gap: 0;
-    }
-
-    .lado-direito img {
-        width: 165px !important;
-        max-width: 100%;
-        margin-bottom: -5px;
-    }
-
-    .lado-direito h2 {
-        font-size: 17px !important;
-        margin: 0 0 2px !important;
-    }
-
-    .lado-direito p {
-        font-size: 10px !important;
-        margin: 0 !important;
-    }
-
-    .formulario {
-        width: 100% !important;
-        min-height: 330px !important;
-        padding: 35px 20px !important;
-    }
-}
-
-
-/* CELULARES MENORES */
-@media (max-width: 360px) {
-
-    .lado-direito {
-        min-height: 165px !important;
-        padding: 10px !important;
-    }
-
-    .lado-direito img {
-        width: 145px !important;
-    }
-
-    .formulario {
-        min-height: 320px !important;
-        padding: 30px 16px !important;
-    }
-}
-
-
-/* APROXIMAR LOGO, TÍTULO E SUBTÍTULO */
-
-/* TABLET */
-@media (min-width: 601px) and (max-width: 1024px) {
-
-    .lado-direito {
-        justify-content: center !important;
-        gap: 0 !important;
-    }
-
-    .lado-direito img {
-        width: 170px !important;
-        margin: 0 0 -15px !important;
-    }
-
-    .lado-direito h2 {
-        margin: 0 0 2px !important;
-        line-height: 1.1;
-    }
-
-    .lado-direito p {
-        margin: 0 !important;
-        line-height: 1.1;
-    }
-}
-
-/* CELULAR */
-@media (max-width: 600px) {
-
-    .lado-direito {
-        justify-content: center !important;
-        gap: 0 !important;
-    }
-
-    .lado-direito img {
-        width: 145px !important;
-        margin: 0 0 -13px !important;
-    }
-
-    .lado-direito h2 {
-        margin: 0 0 1px !important;
-        line-height: 1.1;
-    }
-
-    .lado-direito p {
-        margin: 0 !important;
-        line-height: 1.1;
-    }
 }

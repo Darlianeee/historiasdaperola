@@ -150,9 +150,7 @@ $mensagem = $mensagem ?? '';
                                 </div>
                             </div>
 
-                            <a
-                                href="<?= URL ?>/administrador/historias_adm?id=<?= $id; ?>"
-                                class="btn-ler">
+                            <a href="<?= URL ?>/administrador/historias_adm?id=<?= $id; ?>&lang=pt" class="btn-ler">
                                 Ver história
                             </a>
 
