@@ -61,7 +61,6 @@ html.acessibilidade-fonte-grande {
 html.acessibilidade-fonte-muito-grande {
     font-size: 140%;
 }
-
 /* TAMANHO DA FONTE */
 html.acessibilidade-fonte-normal {
     font-size: 100%;
@@ -235,24 +234,15 @@ button:focus-visible {
         width: 90%;
     }
 
-    .cabecalho-pagina {
-        width: 100%;
-        margin-left: 0 !important;
-        margin-right: 0;
-        padding-left: 0;
-    }
-
     .cabecalho-pagina h1 {
-        margin-left: 0;
-        padding-left: 18px;
+        font-size: 28px;
+        line-height: 31px;
     }
 
     .cabecalho-pagina p {
-        margin-left: 0;
-        padding-left: 0;
-        width: 100%;
+        margin-left: 13px;
+        font-size: 16px;
     }
-
 }
 
 @media (max-width: 750px) {
@@ -298,10 +288,7 @@ button:focus-visible {
     }
 
     .painel-acessibilidade {
-        width: 92%;
-        margin: 0 auto;
-        padding: 18px;
-        border-radius: 10px;
+        padding: 20px;
     }
 
     .grupo-configuracao h2 {
@@ -324,7 +311,6 @@ button:focus-visible {
 
 /* MOVIMENTO REDUZIDO */
 @media (prefers-reduced-motion: reduce) {
-
     *,
     *::before,
     *::after {
@@ -369,10 +355,10 @@ html.acessibilidade-escuro .conteudo {
 
 html.acessibilidade-escuro .titulo h1,
 html.acessibilidade-escuro .boas-vindas,
-html.acessibilidade-escuro .conteudo>h2,
+html.acessibilidade-escuro .conteudo > h2,
 html.acessibilidade-escuro .card h3,
 html.acessibilidade-escuro .texto-card p,
-html.acessibilidade-escuro .card-gerenciar>p {
+html.acessibilidade-escuro .card-gerenciar > p {
     color: #ffffff !important;
 }
 
@@ -407,10 +393,10 @@ html.acessibilidade-alto-contraste .titulo {
 
 html.acessibilidade-alto-contraste .titulo h1,
 html.acessibilidade-alto-contraste .boas-vindas,
-html.acessibilidade-alto-contraste .conteudo>h2,
+html.acessibilidade-alto-contraste .conteudo > h2,
 html.acessibilidade-alto-contraste .card h3,
 html.acessibilidade-alto-contraste .texto-card p,
-html.acessibilidade-alto-contraste .card-gerenciar>p {
+html.acessibilidade-alto-contraste .card-gerenciar > p {
     color: #dba437 !important;
 }
 
@@ -460,15 +446,14 @@ html.acessibilidade-escuro body .info-value {
 }
 
 html.acessibilidade-escuro body .profile-card,
-html.acessibilidade-escuro body {
+html.acessibilidade-escuro body  {
     background-color: #070707;
     border-color: #FFFFFF;
     color: #FFFFFF;
     box-shadow: none;
 }
-
 html.acessibilidade-escuro body .profile-card {
-    border: 1px solid #FFFFFF;
+ border: 1px solid #FFFFFF;
 }
 
 html.acessibilidade-escuro body .title-mark {
@@ -545,7 +530,6 @@ html.acessibilidade-fonte-grande body .content {
 html.acessibilidade-fonte-muito-grande body .content {
     font-size: 140%;
 }
-
 /* ==========================================
    ACESSIBILIDADE - EDITAR PERFIL ADM
    ========================================== */
@@ -556,11 +540,6 @@ html.acessibilidade-escuro body select,
 html.acessibilidade-escuro body textarea {
     background-color: #070707;
     color: #FFFFFF;
-}
-
-html.acessibilidade-escuro .info-input[readonly] {
-    color: #ffffff;
-    background-color: #070707;
 }
 
 /* Campo selecionado */
@@ -661,12 +640,12 @@ html.acessibilidade-alto-contraste body .password-btn-primary {
     color: #dba437 !important;
     border: 2px solid #FFFFFF !important;
 }
-
 /* ÍCONE DO OLHO - AMARELO DOURADO */
 html.acessibilidade-escuro .password-toggle .eye-icon {
-    filter: brightness(0) saturate(100%) invert(76%) sepia(47%) saturate(623%) hue-rotate(4deg) brightness(95%) contrast(90%);
+    filter: brightness(0) saturate(100%)
+            invert(76%) sepia(47%) saturate(623%)
+            hue-rotate(4deg) brightness(95%) contrast(90%);
 }
-
 /* ALTO CONTRASTE - CAIXA GRANDE ALTERAR SENHA */
 html.acessibilidade-alto-contraste body .password-card {
     background-color: #0b2408 !important;
@@ -674,14 +653,12 @@ html.acessibilidade-alto-contraste body .password-card {
     border: 1px solid #FFFFFF !important;
     box-shadow: none !important;
 }
-
 /* TÍTULOS */
 html.acessibilidade-alto-contraste body .password-card h2,
 html.acessibilidade-alto-contraste body .page-header h1,
 html.acessibilidade-alto-contraste body .page-header .subtitle {
     color: #dba437 !important;
 }
-
 /* ALTERAR SENHA — COR FIXA DOS CAMPOS */
 
 /* Modo escuro */
@@ -762,7 +739,8 @@ html.acessibilidade-escuro .opcao-administrador.opcao-sair .opcao-link {
 
 /* Caixa de confirmação - somente página Sair ADM */
 html.acessibilidade-escuro body:has(.modal) .modal {
-    background-color: #070707 !important;
+    background-color: #141313
+ !important;
     box-shadow: 0 3px 7px var(--ac-border) !important;
     color: #ffffff !important;
 }
@@ -776,7 +754,7 @@ html.acessibilidade-escuro body:has(.modal) .modal p {
 
 /* Botão Cancelar: transparente com borda branca */
 html.acessibilidade-escuro body:has(.modal) .modal .cancelar {
-    background-color: transparent !important;
+    background-color: #000000 !important;
     border: 1px solid #ffffff !important;
     color: #ffffff !important;
     box-shadow: none !important;
@@ -788,7 +766,7 @@ html.acessibilidade-escuro body:has(.modal) .modal .cancelar a {
 
 /* Botão Sair: preto com borda branca */
 html.acessibilidade-escuro body:has(.modal) .modal .Sair {
-    background-color: #1d3d12 !important;
+    background-color: #1d3d12!important;
     border: 1px solid #ffffff !important;
     color: #ffffff !important;
     box-shadow: none !important;
@@ -825,26 +803,64 @@ html.acessibilidade-alto-contraste body:has(.modal) .modal h2,
 html.acessibilidade-alto-contraste body:has(.modal) .modal p {
     color: #dba437 !important;
 }
-
 /*alto contraste*/
 /* Caixa de confirmação - somente página Sair ADM */
 html.acessibilidade-alto-contraste body:has(.modal) .modal {
-    background-color: #0b2408 !important;
+    background-color: #0b2408
+ !important;
     box-shadow: 0 3px 7px var(--ac-border) !important;
     color: #ffffff !important;
 }
-
 /* ALTO CONTRASTE */
 html.acessibilidade-alto-contraste .opcao-administrador.opcao-sair {
     background-color: #000000;
     color: #e5a323;
     border-color: #e5a323;
 }
-
 html.acessibilidade-alto-contraste .modal-sair .modal-content {
     background-color: #000000;
     color: #e5a323;
     border-color: #e5a323;
+}
+
+/* ==========================================
+   EXCLUIR HISTÓRIA - BOTÃO NO ALTO CONTRASTE
+========================================== */
+
+html.acessibilidade-alto-contraste body .modal .botoes .excluir,
+html.acessibilidade-alto-contraste body .modal .botoes a.excluir,
+html.acessibilidade-alto-contraste body .modal .botoes .excluir:hover {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* Texto dentro do botão */
+html.acessibilidade-alto-contraste body .modal .botoes .excluir a,
+html.acessibilidade-alto-contraste body .modal .botoes .excluir span {
+    color: #dba437 !important;
+}
+
+/* EXCLUIR HISTÓRIA — BOTÕES VERDES NO MODO ESCURO */
+
+html.acessibilidade-escuro .cancelar,
+html.acessibilidade-escuro .excluir {
+    background: #1d3d12 !important;
+    background-color: #1d3d12 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+}
+
+/* EXCLUIR HISTÓRIA — BOTÕES VERDES NO ALTO CONTRASTE */
+
+html.acessibilidade-alto-contraste .cancelar,
+html.acessibilidade-alto-contraste .excluir {
+    background: #1d3d12 !important;
+    background-color: #1d3d12 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
 }
 
 
@@ -880,7 +896,7 @@ html.acessibilidade-alto-contraste .modal .Sair {
 /* TEXTOS DOS LINKS */
 html.acessibilidade-alto-contraste .modal .cancelar a,
 html.acessibilidade-alto-contraste .modal .Sair a {
-    color: #e5a323 !important;
+    color: #e5a323!important;
 }
 
 /* ÍCONE DE SAÍDA */
@@ -917,15 +933,12 @@ html.acessibilidade-alto-contraste body:has(.modal) .titulo h1 {
 html.acessibilidade-alto-contraste .descricao {
     color: #e5a323 !important;
 }
-
 html.acessibilidade-alto-contraste body:has(.modal) .descricao {
     color: #e5a323 !important;
 }
-
 html.acessibilidade-alto-contraste body:has(.modal) .modal .cancelar a {
     color: #e5a323 !important;
 }
-
 html.acessibilidade-alto-contraste body:has(.modal) .modal .Sair a {
     color: #e5a323 !important;
 }
@@ -935,14 +948,6 @@ html.acessibilidade-alto-contraste body:has(.modal) .modal .Sair {
     color: #ffffff !important;
     box-shadow: none !important;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -961,7 +966,6 @@ html.acessibilidade-escuro .conteudo:has(.secao-equipe) .titulo-equipe h2,
 html.acessibilidade-escuro .conteudo:has(.secao-equipe) .titulo-equipe p {
     color: #ffffff !important;
     position: relative;
-    top: -30px;
 }
 
 html.acessibilidade-escuro body:has(.secao-equipe) {
@@ -989,7 +993,7 @@ html.acessibilidade-escuro .conteudo:has(.secao-equipe) .foto-integrante {
 }
 
 html.acessibilidade-escuro .conteudo:has(.secao-equipe) .cabecalho-pagina h1::before {
-    background-color: #465722 !important;
+    background-color: #465722!important;
 }
 
 
@@ -1059,8 +1063,7 @@ body:has(.secao-equipe) .cabecalho-pagina h1 {
     left: 0 !important;
     margin-left: 0 !important;
     transform: none !important;
-    top: -20px;
-    /* move 20px para cima */
+    top: -20px; /* move 20px para cima */
 }
 
 @media (max-width: 750px) {
@@ -1071,27 +1074,23 @@ body:has(.secao-equipe) .cabecalho-pagina h1 {
 
 
 /* SOBRE NÓS - SUBIR SOMENTE O SUBTÍTULO */
-html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) body:has(.secao-equipe) .cabecalho-pagina>p {
+html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) body:has(.secao-equipe) .cabecalho-pagina > p {
     position: relative;
     top: -30px;
 }
-
 /*INICIO USER*/
-html.acessibilidade-escuro .card-explorar>p {
+html.acessibilidade-escuro .card-explorar > p {
     color: #465722 !important;
-
+   
 }
-
 /*////////////////// LOGIN /////////////////*/
 
 /*MODO ESCURO*/
-html.acessibilidade-escuro .formulario {
-    background-color: #070707 !important;
-    border: 1px solid #ffffff !important;
-    /* Aplica a borda em todos os lados */
-    border-right: none !important;
-    /* Remove especificamente a borda da direita */
-}
+html.acessibilidade-escuro .formulario { 
+    background-color: #070707 !important; 
+   border: 1px solid #ffffff !important; /* Aplica a borda em todos os lados */
+    border-right: none !important;        /* Remove especificamente a borda da direita */
+} 
 
 /* MODO ESCURO: olho branco */
 html.acessibilidade-escuro .campo-senha button#mostrar-senha {
@@ -1114,32 +1113,25 @@ html.acessibilidade-escuro .campo-senha button#mostrar-senha:hover {
 
 
 
-/* CONTAINER */
-html.acessibilidade-escuro .lado-direito {
-    border: none !important;
-    /* Remove topo, baixo e direita */
-    border: 1px solid #ffffff !important;
-    /* Aplica apenas na esquerda */
-    border-left: none !important;
-    /* Remove especificamente a borda da direita */
+/* CONTAINER */ 
+html.acessibilidade-escuro .lado-direito { 
+    border: none !important; /* Remove topo, baixo e direita */
+    border: 1px solid #ffffff !important; /* Aplica apenas na esquerda */
+    border-left: none !important;        /* Remove especificamente a borda da direita */
 
 }
-
 /*TEXTO*/
-html.acessibilidade-escuro .formulario h1 {
-    color: #ffffff !important;
+html.acessibilidade-escuro .formulario h1 { 
+    color: #ffffff !important; 
 }
-
-html.acessibilidade-escuro .formulario p {
-    color: #ffffff !important;
+html.acessibilidade-escuro .formulario p { 
+    color: #ffffff !important; 
 }
-
-html.acessibilidade-escuro .formulario label {
-    color: #ffffff !important;
+html.acessibilidade-escuro .formulario label { 
+    color: #ffffff !important; 
 }
-
-html.acessibilidade-escuro .esqueceu a:hover {
-    color: #ffffff !important;
+html.acessibilidade-escuro .esqueceu a:hover { 
+    color: #ffffff !important; 
 }
 
 
@@ -1147,14 +1139,11 @@ html.acessibilidade-escuro .esqueceu a:hover {
 
 
 /*ALTO CONTRASTE*/
-html.acessibilidade-alto-contraste .formulario {
-    background-color: #0b2408 !important;
-    border: 1px solid #ffffff !important;
-    /* Aplica a borda em todos os lados */
-    border-right: none !important;
-    /* Remove especificamente a borda da direita */
-}
-
+html.acessibilidade-alto-contraste .formulario { 
+    background-color: #0b2408 !important; 
+   border: 1px solid #ffffff !important; /* Aplica a borda em todos os lados */
+    border-right: none !important;        /* Remove especificamente a borda da direita */
+} 
 /* ALTO CONTRASTE: olho amarelo */
 html.acessibilidade-alto-contraste .campo-senha button#mostrar-senha {
     color: #E5A323 !important;
@@ -1163,180 +1152,184 @@ html.acessibilidade-alto-contraste .campo-senha button#mostrar-senha {
 html.acessibilidade-alto-contraste .campo-senha button#mostrar-senha:hover {
     color: #E5A323 !important;
 }
-
 html.acessibilidade-alto-contraste .campo-senha button#mostrar-senha svg {
     stroke: currentColor !important;
 }
-
-/* CONTAINER */
-html.acessibilidade-alto-contraste .lado-direito {
-    border: none !important;
-    /* Remove topo, baixo e direita */
-    border: 1px solid #ffffff !important;
-    /* Aplica apenas na esquerda */
-    border-left: none !important;
-    /* Remove especificamente a borda da direita */
+/* CONTAINER */ 
+html.acessibilidade-alto-contraste .lado-direito { 
+    border: none !important; /* Remove topo, baixo e direita */
+    border: 1px solid #ffffff !important; /* Aplica apenas na esquerda */
+    border-left: none !important;        /* Remove especificamente a borda da direita */
 
 }
-
 /*TEXTO*/
-html.acessibilidade-alto-contraste .formulario h1 {
-    color: #dba437 !important;
+html.acessibilidade-alto-contraste .formulario h1 { 
+    color: #dba437
+ !important; 
+}
+html.acessibilidade-alto-contraste .formulario p { 
+    color: #dba437
+!important; 
+}
+html.acessibilidade-alto-contraste .formulario label { 
+    color: #dba437
+ !important; 
+}
+html.acessibilidade-alto-contraste .esqueceu a:hover { 
+    color: #ffffff !important; 
+}
+html.acessibilidade-alto-contraste .login a { 
+    color: #f6d27d !important; 
 }
 
-html.acessibilidade-alto-contraste .formulario p {
-    color: #dba437 !important;
+
+/* ==========================================
+   GERENCIAR HISTÓRIAS - AJUSTES DE ACESSIBILIDADE
+========================================== */
+
+/* TRÊS PONTINHOS PRETOS EM TODOS OS MODOS */
+.conteudo:has(.grid-historias) .btn-opcoes,
+html.acessibilidade-escuro .conteudo:has(.grid-historias) .btn-opcoes,
+html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .btn-opcoes {
+    color: #000000 !important;
+    background: transparent !important;
+    border: none !important;
 }
 
-html.acessibilidade-alto-contraste .formulario label {
-    color: #dba437 !important;
-}
-
-html.acessibilidade-alto-contraste .esqueceu a:hover {
-    color: #ffffff !important;
-}
-
-html.acessibilidade-alto-contraste .login a {
-    color: #f6d27d !important;
-}
-
-/*GERENCIAR HISTORIAS ADM*/
-
-/*  GERENCIAR HISTÓRIAS - MODO ESCURO */
-
+/* MODO ESCURO */
 html.acessibilidade-escuro body:has(.grid-historias) {
-    background: #101010 !important;
-    color: #ffffff !important;
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .conteudo:has(.grid-historias) {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .conteudo:has(.grid-historias) h1,
+html.acessibilidade-escuro .conteudo:has(.grid-historias) .subtitulo {
+    color: #FFFFFF !important;
 }
 
 html.acessibilidade-escuro .conteudo:has(.grid-historias) h1 {
-    color: #ffffff !important;
-    border-left-color: #465722 !important;
+    border-left: 5px solid #465722 !important;
 }
 
-html.acessibilidade-escuro .conteudo:has(.grid-historias) .subtitulo {
-    color: #dddddd !important;
+html.acessibilidade-escuro .conteudo:has(.grid-historias) .card-item,
+html.acessibilidade-escuro .conteudo:has(.grid-historias) .card-info {
+    background-color: #070707 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
 }
 
-/* Busca */
-html.acessibilidade-escuro .conteudo:has(.grid-historias) .busca-box {
-    background: #202020 !important;
-    border-color: #666666 !important;
+html.acessibilidade-escuro .conteudo:has(.grid-historias) .card-titulo,
+html.acessibilidade-escuro .conteudo:has(.grid-historias) .card-categoria {
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .conteudo:has(.grid-historias) .busca-box,
+html.acessibilidade-escuro .conteudo:has(.grid-historias) .select-categoria {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
     box-shadow: none !important;
 }
 
 html.acessibilidade-escuro .conteudo:has(.grid-historias) .busca-box input {
-    color: #ffffff !important;
     background: transparent !important;
+    color: #FFFFFF !important;
 }
 
 html.acessibilidade-escuro .conteudo:has(.grid-historias) .busca-box input::placeholder {
-    color: #cccccc !important;
-}
-
-/* Filtro de categorias */
-html.acessibilidade-escuro .conteudo:has(.grid-historias) .select-categoria {
-    background: #202020 !important;
-    color: #ffffff !important;
-    border-color: #666666 !important;
-    box-shadow: none !important;
+    color: #FFFFFF !important;
 }
 
 html.acessibilidade-escuro .conteudo:has(.grid-historias) .select-categoria option {
-    background: #202020 !important;
-    color: #ffffff !important;
+    background-color: #070707 !important;
+    color: #FFFFFF !important;
 }
 
-/* Cards das histórias */
-html.acessibilidade-escuro .conteudo:has(.grid-historias) .card-item,
-html.acessibilidade-escuro .conteudo:has(.grid-historias) .card-info {
-    background: #202020 !important;
-    color: #ffffff !important;
-    border-color: #555555 !important;
-}
-
-html.acessibilidade-escuro .conteudo:has(.grid-historias) .card-titulo {
-    color: #ffffff !important;
-}
-
-html.acessibilidade-escuro .conteudo:has(.grid-historias) .card-categoria {
-    color: #cccccc !important;
-}
-
-/* Menu de opções dos cards */
 html.acessibilidade-escuro .conteudo:has(.grid-historias) .menu-opcoes {
-    background: #202020 !important;
-    border-color: #666666 !important;
+    background-color: #070707 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
 }
 
 html.acessibilidade-escuro .conteudo:has(.grid-historias) .menu-opcoes a {
-    background: #202020 !important;
-    color: #ffffff !important;
+    background-color: #070707 !important;
+    color: #FFFFFF !important;
 }
 
 html.acessibilidade-escuro .conteudo:has(.grid-historias) .menu-opcoes a:hover {
-    background: #383838 !important;
+    background-color: #1d3d12 !important;
 }
 
 html.acessibilidade-escuro .conteudo:has(.grid-historias) .menu-opcoes a.btn-apagar {
-    color: #ff7777 !important;
+    color: #FF7777 !important;
 }
 
-/* Botões */
 html.acessibilidade-escuro .conteudo:has(.grid-historias) .btn-nova-historia,
 html.acessibilidade-escuro .conteudo:has(.grid-historias) .btn-ler {
-    background: #383838 !important;
-    color: #ffffff !important;
-    border: 1px solid #777777 !important;
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
 }
 
-html.acessibilidade-escuro .conteudo:has(.grid-historias) .btn-opcoes {
-    color: #ffffff !important;
-}
-
-/* Mensagens */
 html.acessibilidade-escuro .conteudo:has(.grid-historias) .sem-historias,
-html.acessibilidade-escuro .conteudo:has(.grid-historias) .sem-resultados {
-    background: #202020 !important;
-    color: #ffffff !important;
-    border: 1px solid #555555 !important;
-}
-
+html.acessibilidade-escuro .conteudo:has(.grid-historias) .sem-resultados,
 html.acessibilidade-escuro .conteudo:has(.grid-historias) .mensagem-sucesso {
-    background: #202020 !important;
-    color: #ffffff !important;
-    border-color: #777777 !important;
+    background-color: #070707 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
 }
 
-
-/* ========================================
-   GERENCIAR HISTÓRIAS - ALTO CONTRASTE
-======================================== */
-
+/* ALTO CONTRASTE */
 html.acessibilidade-alto-contraste body:has(.grid-historias) {
-    background: #000000 !important;
+    background-color: #000000 !important;
     color: #E5A323 !important;
 }
 
-html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) h1 {
-    background: transparent !important;
+html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) {
+    background-color: #000000 !important;
     color: #E5A323 !important;
-    border-left: 5px solid #465722 !important;
 }
 
+html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) h1,
 html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .subtitulo {
     color: #E5A323 !important;
 }
 
-/* Busca */
-html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .busca-box {
-    background: #0b2408 !important;
-    border: 1px solid #E5A323 !important;
+html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) h1 {
+    border-left: 5px solid #465722 !important;
+}
+
+html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .card-item,
+html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .card-info {
+    background-color: #0b2408 !important;
+    color: #E5A323 !important;
+    border: 1px solid white !important;
+    box-shadow: none !important;
+
+}
+
+html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .card-titulo,
+html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .card-categoria {
+    color: #E5A323 !important;
+}
+
+html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .busca-box,
+html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .select-categoria {
+    background-color: #070707 !important;
+    color: #E5A323 !important;
+    border: 1px solid white !important;
     box-shadow: none !important;
 }
 
 html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .busca-box input {
-    background: #0b2408 !important;
+    background: #070707 !important;
     color: #E5A323 !important;
 }
 
@@ -1345,239 +1338,1133 @@ html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .busca-box inp
     opacity: 1 !important;
 }
 
-/* Filtro */
-html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .select-categoria {
-    background: #0b2408 !important;
-    color: #E5A323 !important;
-    border: 1px solid #E5A323 !important;
-    box-shadow: none !important;
-}
-
 html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .select-categoria option {
-    background: #000000 !important;
+    background-color: #000000 !important;
     color: #E5A323 !important;
 }
 
-/* Cards */
-html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .card-item,
-html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .card-info {
-    background: #000000 !important;
-    color: #E5A323 !important;
-    border: 1px solid #E5A323 !important;
-    box-shadow: none !important;
-}
-
-html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .card-titulo,
-html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .card-categoria {
-    color: #E5A323 !important;
-}
-
-/* Menu de opções */
 html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .menu-opcoes {
-    background: #000000 !important;
-    border: 1px solid #E5A323 !important;
+    background-color: #000000 !important;
+    border: 1px solid white !important;
     box-shadow: none !important;
 }
 
-html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .menu-opcoes a,
-html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .menu-opcoes a.btn-apagar {
-    background: #000000 !important;
+html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .menu-opcoes a {
+    background-color: #000000 !important;
     color: #E5A323 !important;
 }
 
 html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .menu-opcoes a:hover {
-    background: #292000 !important;
-    color: #E5A323 !important;
+    background-color: #292000 !important;
 }
 
-/* Botões */
 html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .btn-nova-historia,
 html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .btn-ler {
-    background: #0b2408 !important;
+    background-color: #000000 !important;
     color: #E5A323 !important;
-    border: 1px solid #E5A323 !important;
+    border: 1px solid white !important;
     box-shadow: none !important;
 }
 
-html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .btn-opcoes {
-    background: transparent !important;
-    color: #E5A323 !important;
-}
-
-/* Mensagens */
 html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .sem-historias,
 html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .sem-resultados,
 html.acessibilidade-alto-contraste .conteudo:has(.grid-historias) .mensagem-sucesso {
-    background: #000000 !important;
+    background-color: #000000 !important;
     color: #E5A323 !important;
     border: 1px solid #E5A323 !important;
     box-shadow: none !important;
 }
 
-/* LUPA BRANCA NO MODO ESCURO */
+/* LUPA BRANCA - GERENCIAR HISTÓRIAS */
+/* Modo escuro */
 html.acessibilidade-escuro .busca-box .icone-busca img {
     filter: brightness(0) invert(1) !important;
 }
 
-/* LUPA AMARELA NO ALTO CONTRASTE */
+/* Alto contraste */
 html.acessibilidade-alto-contraste .busca-box .icone-busca img {
-    filter: brightness(0) saturate(100%) invert(69%) sepia(70%) saturate(600%) hue-rotate(5deg) brightness(95%) contrast(95%) !important;
+    filter: brightness(0) invert(1) !important;
 }
 
-/*INICIO - USUARIO*/
-html.acessibilidade-escuro .card-explorar>p {
-    color: #FFFFFF !important;
+/* ==========================================
+   ACESSIBILIDADE - EDITAR HISTÓRIA
+========================================== */
 
-}
+/* ==========================================
+   MODO ESCURO
+========================================== */
 
-html.acessibilidade-alto-contraste .card-explorar>p {
-    color: #E5A323 !important;
-
-}
-
-/* =========================================
-   ACESSIBILIDADE - HISTORIAS USER
-   ========================================= */
-
-/* MODO ESCURO */
-html.acessibilidade-escuro body {
+/* FUNDO DA PÁGINA */
+html.acessibilidade-escuro body:has(.pagina) {
     background-color: #000000 !important;
     color: #FFFFFF !important;
 }
 
-html.acessibilidade-escuro .conteudo {
-    color: #FFFFFF !important;
-    border-color: #FFFFFF !important;
-}
-
-html.acessibilidade-escuro .modal-historia {
-    background-color: #141313 !important;
-    border: 1px solid var(--ac-border);
-    border-radius: 10px;
-    color: var(--ac-text);
-    box-shadow: 0 3px 7px var(--ac-border);
-
-}
-
-html.acessibilidade-escuro .conteudo h1,
-html.acessibilidade-escuro .subtitulo,
-html.acessibilidade-escuro .titulo-lenda,
-html.acessibilidade-escuro .legenda,
-html.acessibilidade-escuro .texto-lenda,
-html.acessibilidade-escuro .secao-avaliacao,
-html.acessibilidade-escuro .secao-comentario,
-html.acessibilidade-escuro .lista-comentarios,
-html.acessibilidade-escuro .comentario-item {
+/* CABEÇALHO */
+html.acessibilidade-escuro .pagina .cabecalho-pagina h1,
+html.acessibilidade-escuro .pagina .cabecalho-pagina p {
     color: #FFFFFF !important;
 }
 
-html.acessibilidade-escuro .secao-idiomas {
+/* CARD PRINCIPAL */
+html.acessibilidade-escuro .pagina .modal {
+    background-color: #070707 !important;
     color: #FFFFFF !important;
-    background-color: #141313 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
 }
 
-html.acessibilidade-escuro .nome-comentario {
+/* TÍTULO DO CARD */
+html.acessibilidade-escuro .pagina .modal-header h2 {
     color: #FFFFFF !important;
 }
 
-html.acessibilidade-escuro .texto-comentario {
+/* LABELS */
+html.acessibilidade-escuro .pagina .campo label {
+    color: #FFFFFF !important;
+}
+
+/* CAMPOS DE TEXTO */
+html.acessibilidade-escuro .pagina input:not([type="hidden"]),
+html.acessibilidade-escuro .pagina select,
+html.acessibilidade-escuro .pagina textarea {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* PLACEHOLDER */
+html.acessibilidade-escuro .pagina input::placeholder,
+html.acessibilidade-escuro .pagina textarea::placeholder {
+    color: #FFFFFF !important;
+    opacity: 0.8 !important;
+}
+
+/* OPÇÕES DO SELECT */
+html.acessibilidade-escuro .pagina select option {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+}
+
+/* CAMPOS AO CLICAR */
+html.acessibilidade-escuro .pagina input:focus,
+html.acessibilidade-escuro .pagina select:focus,
+html.acessibilidade-escuro .pagina textarea:focus {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #dba437 !important;
+    outline: 2px solid #dba437 !important;
+}
+
+/* BOTÃO SUBSTITUIR IMAGEM */
+html.acessibilidade-escuro .pagina .btn-substituir {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+}
+
+/* BOTÃO CANCELAR */
+html.acessibilidade-escuro .pagina .btn-cancelar {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* BOTÃO SALVAR */
+html.acessibilidade-escuro .pagina .btn-salvar {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* ==========================================
+   ALTO CONTRASTE
+========================================== */
+
+/* FUNDO DA PÁGINA */
+html.acessibilidade-alto-contraste body:has(.pagina) {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+}
+
+/* CABEÇALHO */
+html.acessibilidade-alto-contraste .pagina .cabecalho-pagina h1,
+html.acessibilidade-alto-contraste .pagina .cabecalho-pagina p {
+    color: #dba437 !important;
+}
+
+/* CARD PRINCIPAL */
+html.acessibilidade-alto-contraste .pagina .modal {
+    background-color: #0b2408 !important;
+    color: #dba437 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* TÍTULO DO CARD */
+html.acessibilidade-alto-contraste .pagina .modal-header h2 {
+    color: #dba437 !important;
+}
+
+/* LABELS */
+html.acessibilidade-alto-contraste .pagina .campo label {
+    color: #dba437 !important;
+}
+
+/* CAMPOS DE TEXTO */
+html.acessibilidade-alto-contraste .pagina input:not([type="hidden"]),
+html.acessibilidade-alto-contraste .pagina select,
+html.acessibilidade-alto-contraste .pagina textarea {
+    background-color: #000000 !important;
+    color: #dba437!important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* PLACEHOLDER */
+html.acessibilidade-alto-contraste .pagina input::placeholder,
+html.acessibilidade-alto-contraste .pagina textarea::placeholder {
+    color: #FFFFFF !important;
+    opacity: 0.8 !important;
+}
+
+/* OPÇÕES DO SELECT */
+html.acessibilidade-alto-contraste .pagina select option {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+/* CAMPOS AO CLICAR */
+html.acessibilidade-alto-contraste .pagina input:focus,
+html.acessibilidade-alto-contraste .pagina select:focus,
+html.acessibilidade-alto-contraste .pagina textarea:focus {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #dba437 !important;
+    outline: 2px solid #dba437 !important;
+}
+
+/* BOTÃO SUBSTITUIR IMAGEM */
+html.acessibilidade-alto-contraste .pagina .btn-substituir {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #FFFFFF !important;
+}
+
+/* BOTÃO CANCELAR */
+html.acessibilidade-alto-contraste .pagina .btn-cancelar {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* BOTÃO SALVAR */
+html.acessibilidade-alto-contraste .pagina .btn-salvar {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 2px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* FOCO DOS BOTÕES */
+html.acessibilidade-escuro .pagina button:focus-visible,
+html.acessibilidade-alto-contraste .pagina button:focus-visible {
+    outline: 3px solid #dba437 !important;
+    outline-offset: 3px !important;
+}
+
+
+/* ==========================================
+   ACESSIBILIDADE - NOTIFICAÇÕES
+========================================== */
+
+
+/* ==========================================
+   MODO ESCURO
+========================================== */
+
+/* FUNDO DA PÁGINA */
+html.acessibilidade-escuro body:has(.lista-notificacoes) {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+/* CONTEÚDO PRINCIPAL */
+html.acessibilidade-escuro .container {
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+}
+
+/* TÍTULO E SUBTÍTULO */
+html.acessibilidade-escuro .cabecalho h1,
+html.acessibilidade-escuro .cabecalho p {
+    color: #FFFFFF !important;
+}
+
+/* TRAÇO DO TÍTULO */
+html.acessibilidade-escuro .cabecalho h1 {
+    border-left-color: #465722 !important;
+}
+
+/* BOTÕES DE FILTRO */
+html.acessibilidade-escuro .botao {
+    background-color: #1d3d12  !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-escuro .botao:hover {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+}
+
+/* CAMPO DE PESQUISA */
+html.acessibilidade-escuro .buscar {
+    background-color: #1d3d12 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* INPUT DE PESQUISA */
+html.acessibilidade-escuro .buscar input {
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .buscar input::placeholder {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+}
+
+/* LUPA BRANCA */
+html.acessibilidade-escuro .icon-Lupa {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* CAMPO DE DATA */
+html.acessibilidade-escuro .data {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+    color-scheme: dark;
+}
+
+/* NOTIFICAÇÕES */
+html.acessibilidade-escuro .notificacao {
+    background-color: #070707 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* TEXTOS */
+html.acessibilidade-escuro .texto h3,
+html.acessibilidade-escuro .texto p,
+html.acessibilidade-escuro .texto span {
+    color: #FFFFFF !important;
+}
+
+/* TRÊS PONTINHOS BRANCOS */
+html.acessibilidade-escuro .icon-ponto {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* MENU SUSPENSO */
+html.acessibilidade-escuro .dropdown-menu {
+    background-color: #070707 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-escuro .dropdown-menu a {
+    background-color: #070707 !important;
+    color: #FFFFFF !important;
+}
+
+html.acessibilidade-escuro .dropdown-menu a:hover {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+}
+
+/* EXCLUIR */
+html.acessibilidade-escuro .dropdown-menu .delete-btn {
+    color: #FF7777 !important;
+}
+
+html.acessibilidade-escuro .dropdown-menu .delete-btn:hover {
+    background-color: #351010 !important;
+    color: #FF7777 !important;
+}
+
+
+/* ==========================================
+   ALTO CONTRASTE
+========================================== */
+
+/* FUNDO DA PÁGINA */
+html.acessibilidade-alto-contraste body:has(.lista-notificacoes) {
+    background-color: #000000 !important;
+    color: #E5A323 !important;
+}
+
+/* CONTEÚDO PRINCIPAL */
+html.acessibilidade-alto-contraste .container {
+    background-color: transparent !important;
+    color: #E5A323 !important;
+}
+
+/* TÍTULO E SUBTÍTULO */
+html.acessibilidade-alto-contraste .cabecalho h1,
+html.acessibilidade-alto-contraste .cabecalho p {
+    color: #E5A323 !important;
+}
+
+/* TRAÇO DO TÍTULO */
+html.acessibilidade-alto-contraste .cabecalho h1 {
+    border-left-color: #1d3d12  !important;
+}
+
+/* BOTÕES DE FILTRO */
+html.acessibilidade-alto-contraste .botao {
+    background-color: #000000 !important;
+    color: #E5A323 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-alto-contraste .botao:hover {
+    background-color: #0b2408 !important;
+    color: #E5A323 !important;
+}
+
+/* CAMPO DE PESQUISA */
+html.acessibilidade-alto-contraste .buscar {
+    background-color: #000000 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* INPUT DE PESQUISA */
+html.acessibilidade-alto-contraste .buscar input {
+    background-color: transparent !important;
+    color: #E5A323 !important;
+}
+
+html.acessibilidade-alto-contraste .buscar input::placeholder {
+    color: #E5A323 !important;
+    opacity: 1 !important;
+}
+
+/* LUPA BRANCA */
+html.acessibilidade-alto-contraste .icon-Lupa {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* CAMPO DE DATA */
+html.acessibilidade-alto-contraste .data {
+    background-color: #000000 !important;
+    color: #E5A323 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+    color-scheme: dark;
+}
+
+/* NOTIFICAÇÕES */
+html.acessibilidade-alto-contraste .notificacao {
+    background-color: #0b2408 !important;
+    color: #E5A323 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* TEXTOS */
+html.acessibilidade-alto-contraste .texto h3,
+html.acessibilidade-alto-contraste .texto p,
+html.acessibilidade-alto-contraste .texto span {
+    color: #E5A323 !important;
+}
+
+/* TRÊS PONTINHOS BRANCOS */
+html.acessibilidade-alto-contraste .icon-ponto {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* MENU SUSPENSO */
+html.acessibilidade-alto-contraste .dropdown-menu {
+    background-color: #000000 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-alto-contraste .dropdown-menu a {
+    background-color: #000000 !important;
+    color: #E5A323 !important;
+}
+
+html.acessibilidade-alto-contraste .dropdown-menu a:hover {
+    background-color: #292000 !important;
+    color: #E5A323 !important;
+}
+
+/* EXCLUIR */
+html.acessibilidade-alto-contraste .dropdown-menu .delete-btn {
+    color: #FF7777 !important;
+}
+
+html.acessibilidade-alto-contraste .dropdown-menu .delete-btn:hover {
+    background-color: #351010 !important;
+    color: #FF7777 !important;
+}
+
+
+/* ==========================================
+   FOCO DOS CAMPOS
+========================================== */
+
+html.acessibilidade-escuro .buscar:focus-within,
+html.acessibilidade-alto-contraste .buscar:focus-within {
+    outline: 2px solid #E5A323 !important;
+    outline-offset: 2px;
+}
+
+html.acessibilidade-escuro .data:focus,
+html.acessibilidade-alto-contraste .data:focus {
+    outline: 2px solid #E5A323 !important;
+    outline-offset: 2px;
+}
+
+/* ==========================================
+   ACESSIBILIDADE — MODO ESCURO
+========================================== */
+
+html.acessibilidade-escuro body {
+    background: #121212 !important;
     color: #ffffff !important;
 }
 
-html.acessibilidade-escuro .box-imagem {
-    background-color: #2b2b2b !important;
+html.acessibilidade-escuro .content {
+    background: #121212 !important;
+    color: #ffffff !important;
+}
+
+
+html.acessibilidade-escuro .notification-detail-card {
+    background: #141313 !important;
+    border: 1px solid #ffffff !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-escuro .message-info {
+    border-bottom: 1px solid #666 !important;
+}
+
+html.acessibilidade-escuro .message-info h2,
+html.acessibilidade-escuro .message-date,
+html.acessibilidade-escuro .message-content,
+html.acessibilidade-escuro .message-content p {
+    color: #ffffff !important;
+}
+
+/* Botão principal */
+html.acessibilidade-escuro .btn-primary {
+    background: #1d3d12 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+}
+
+/* Botão secundário */
+html.acessibilidade-escuro .btn-secondary {
+    background: #1d3d12!important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+}
+
+
+
+/* ==========================================
+   ACESSIBILIDADE — ALTO CONTRASTE
+========================================== */
+
+html.acessibilidade-alto-contraste body {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+html.acessibilidade-alto-contraste .content {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+html.acessibilidade-alto-contraste .notification-detail-card {
+    background: #0b2408!important;
+    border: 2px solid #ffffff !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-alto-contraste .message-info {
+    border-bottom: 1px solid #ffffff !important;
+}
+
+html.acessibilidade-alto-contraste .message-info h2,
+html.acessibilidade-alto-contraste .message-date,
+html.acessibilidade-alto-contraste .message-content,
+html.acessibilidade-alto-contraste .message-content p {
+    color: #dba437 !important;
+}
+
+/* Botão principal */
+html.acessibilidade-alto-contraste .btn-primary {
+    background: #000000 !important;
+    border: 1px solid #ffffff !important;
+    color: #dba437 !important;
+}
+
+/* Botão secundário */
+html.acessibilidade-alto-contraste .btn-secondary {
+    background: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #ffffff !important;
+}
+
+/* ==========================================
+   ACESSIBILIDADE — GERENCIAR USUÁRIOS
+   MODO ESCURO
+========================================== */
+
+html.acessibilidade-escuro .conteudo {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+html.acessibilidade-escuro .conteudo > .titulo h1,
+html.acessibilidade-escuro .conteudo > .descricao {
+    color: #ffffff !important;
+}
+
+html.acessibilidade-escuro .area-tabela {
+    background-color: #141313!important;
+    border: 1px solid #ffffff !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-escuro .cabecalho-tabela h2 {
+    color: #ffffff !important;
+}
+
+html.acessibilidade-escuro thead {
+    background-color: #333333 !important;
+}
+
+html.acessibilidade-escuro th {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+html.acessibilidade-escuro td {
+    color: #ffffff !important;
+    border-bottom-color: 1px solid #ffffff !important;
+}
+
+html.acessibilidade-escuro tbody tr:hover {
+    background-color: #383838 !important;
+}
+
+html.acessibilidade-escuro .campo-pesquisa input {
+    background-color: #1d3d12 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+}
+
+html.acessibilidade-escuro .campo-pesquisa input::placeholder {
+    color: #cccccc !important;
+}
+
+html.acessibilidade-escuro .icone-pesquisa {
+    color: #ffffff !important;
+}
+
+html.acessibilidade-escuro .sem-resultado td {
+    color: #ffffff !important;
+}
+
+/* Modal de exclusão */
+html.acessibilidade-escuro .caixa-excluir {
+    background-color: #242424 !important;
+    border-color: #555555 !important;
+}
+
+html.acessibilidade-escuro .caixa-excluir h2,
+html.acessibilidade-escuro .caixa-excluir p,
+html.acessibilidade-escuro .caixa-excluir p strong {
+    color: #ffffff !important;
+}
+
+/* Botão cancelar */
+html.acessibilidade-escuro .btn-cancelar {
+    background-color: #242424 !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+html.acessibilidade-escuro .btn-cancelar:hover {
+    background-color: #3a3a3a !important;
+    color: #ffffff !important;
+}
+
+/* Mensagens */
+html.acessibilidade-escuro .mensagem {
+    background-color: #302b1d !important;
+    color: #ffffff !important;
+    border-color: #c99b1d !important;
+}
+
+html.acessibilidade-escuro .mensagem-exclusao {
+    background-color: #242424 !important;
+    color: #ffffff !important;
+    border-color: #c99b1d !important;
+}
+
+
+/* ==========================================
+   ACESSIBILIDADE — GERENCIAR USUÁRIOS
+   ALTO CONTRASTE
+========================================== */
+
+html.acessibilidade-alto-contraste .conteudo {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+html.acessibilidade-alto-contraste .conteudo > .titulo h1,
+html.acessibilidade-alto-contraste .conteudo > .descricao {
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste .area-tabela {
+    background-color: #0b2408 !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-alto-contraste .cabecalho-tabela h2 {
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste thead,
+html.acessibilidade-alto-contraste th {
+    background-color: #162e0d !important;
+    color: #dba437 !important;
+    border-bottom: 1px solid #ffffff !important;
+}
+
+html.acessibilidade-alto-contraste td {
+    background-color: #0b2408 !important;
+    color: #dba437 !important;
+    border-bottom: 1px solid #ffffff !important;
+}
+
+html.acessibilidade-alto-contraste tbody tr:hover td {
+    background-color: #242424 !important;
+}
+
+html.acessibilidade-alto-contraste .campo-pesquisa input {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+}
+
+html.acessibilidade-alto-contraste .campo-pesquisa input::placeholder {
+    color: #ffffff !important;
+}
+
+html.acessibilidade-alto-contraste .icone-pesquisa {
+    color: #ffffff !important;
+}
+
+html.acessibilidade-alto-contraste .sem-resultado td {
+    color: #ffffff !important;
+}
+
+/* Modal de exclusão */
+html.acessibilidade-alto-contraste .caixa-excluir {
+    background-color: #000000 !important;
+    border: 2px solid #ffffff !important;
+}
+
+html.acessibilidade-alto-contraste .caixa-excluir h2,
+html.acessibilidade-alto-contraste .caixa-excluir p,
+html.acessibilidade-alto-contraste .caixa-excluir p strong {
+    color: #ffffff !important;
+}
+
+/* Botão cancelar */
+html.acessibilidade-alto-contraste .btn-cancelar {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+}
+
+html.acessibilidade-alto-contraste .btn-cancelar:hover {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+/* Botão editar */
+html.acessibilidade-alto-contraste .btn-editar {
+    background-color: #dba437 !important;
+    color: #000000 !important;
+    border: 2px solid #ffffff !important;
+}
+
+/* Mensagens */
+html.acessibilidade-alto-contraste .mensagem {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+html.acessibilidade-alto-contraste .mensagem-exclusao {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+}
+
+/* ==========================================
+   CAIXINHAS — MODO ESCURO
+========================================== */
+
+html.acessibilidade-escuro .perfil.usuario,
+html.acessibilidade-escuro .perfil.administrador,
+html.acessibilidade-escuro .situacao.ativo,
+html.acessibilidade-escuro .situacao.inativo {
+    background-color: #1d3d12 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+}
+
+
+/* ==========================================
+   CAIXINHAS — ALTO CONTRASTE
+========================================== */
+
+html.acessibilidade-alto-contraste .perfil.usuario,
+html.acessibilidade-alto-contraste .perfil.administrador,
+html.acessibilidade-alto-contraste .situacao.ativo,
+html.acessibilidade-alto-contraste .situacao.inativo {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #ffffff !important;
+}
+/* ==========================================
+   BOTÕES EDITAR E EXCLUIR — MODO ESCURO
+========================================== */
+
+html.acessibilidade-escuro .btn-editar,
+html.acessibilidade-escuro .btn-excluir {
+    background-color: #1d3d12 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-escuro .btn-editar:hover,
+html.acessibilidade-escuro .btn-excluir:hover {
+    color: #ffffff !important;
+}
+
+
+/* ==========================================
+   BOTÕES EDITAR E EXCLUIR — ALTO CONTRASTE
+========================================== */
+
+html.acessibilidade-alto-contraste .btn-editar,
+html.acessibilidade-alto-contraste .btn-excluir {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-alto-contraste .btn-editar:hover,
+html.acessibilidade-alto-contraste .btn-excluir:hover {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+/* CAMPO DE PESQUISA — ALTO CONTRASTE */
+
+html.acessibilidade-alto-contraste .campo-pesquisa input::placeholder {
+    color: #dba437 !important;
+    opacity: 1 !important;
+}
+
+html.acessibilidade-alto-contraste .campo-pesquisa input {
+    color: #dba437 !important;
+}
+
+/* ==========================================
+   REMOVER FUNDO CINZA AO PASSAR O MOUSE
+========================================== */
+
+/* MODO ESCURO */
+
+/* Linhas das tabelas */
+html.acessibilidade-escuro tbody tr:hover,
+html.acessibilidade-escuro tbody tr:hover td {
+    background-color: #141313 !important;
+    color: #FFFFFF !important;
+}
+
+/* Botão Cancelar */
+html.acessibilidade-escuro .btn-cancelar:hover {
+    background-color: #242424 !important;
+    color: #FFFFFF !important;
+}
+
+/* ALTO CONTRASTE */
+
+/* Linhas das tabelas */
+html.acessibilidade-alto-contraste tbody tr:hover,
+html.acessibilidade-alto-contraste tbody tr:hover td {
+    background-color: #1d3d12 !important;
+    color: #dba437 !important;
+}
+
+/* Botões Editar e Excluir */
+html.acessibilidade-alto-contraste .btn-editar:hover,
+html.acessibilidade-alto-contraste .btn-excluir:hover {
+    background-color: #000000 !important;
+    color: #dba437 !important;
     border-color: #FFFFFF !important;
 }
 
-html.acessibilidade-escuro .btn-idioma,
-html.acessibilidade-escuro .btn-enviar {
-    background-color: #1D3D12 !important;
-    color: #FFFFFF !important;
-    border: 1px solid #FFFFFF !important;
+/* Botão Cancelar */
+html.acessibilidade-alto-contraste .btn-cancelar:hover {
+    background-color: #000000 !important;
+    color: #dba437 !important;
 }
 
-html.acessibilidade-escuro .area-texto-comentario {
+/* ==========================================
+   ACESSIBILIDADE — MODO ESCURO
+========================================== */
+
+html.acessibilidade-escuro body {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* Título e descrição */
+html.acessibilidade-escuro .titulo {
+    border-left-color: #8da65a !important;
+}
+
+html.acessibilidade-escuro .titulo h1,
+html.acessibilidade-escuro .descricao {
+    color: #ffffff !important;
+}
+
+/* Formulário */
+html.acessibilidade-escuro .formulario {
     background-color: #141313 !important;
-    color: #FFFFFF !important;
-    border: 1px solid #FFFFFF !important;
+    border-color: 1px solid #ffffff !important;
+    box-shadow: none !important;
 }
 
-html.acessibilidade-escuro .area-texto-comentario::placeholder {
-    color: #CCCCCC !important;
+/* Subtítulo */
+html.acessibilidade-escuro .subtitulo-formulario {
+    color: #ffffff !important;
 }
 
-html.acessibilidade-escuro .estrelas label {
-    color: #FFFFFF !important;
+/* Labels */
+html.acessibilidade-escuro .campo label {
+    color: #ffffff !important;
 }
 
-html.acessibilidade-escuro .estrelas input:checked~label {
-    color: #E5A323 !important;
+/* Campos */
+html.acessibilidade-escuro .campo input,
+html.acessibilidade-escuro .campo select {
+    background-color: #1d3d12!important;
+    color: #ffffff !important;
+    border-color: #666666 !important;
 }
 
-html.acessibilidade-escuro .titulo-idiomas img {
-    filter: brightness(0) invert(1);
+html.acessibilidade-escuro .campo input[readonly] {
+    background-color: #1d3d12 !important;
+    color: #cccccc !important;
 }
 
-/* =========================================
-   ALTO CONTRASTE
-   ========================================= */
+html.acessibilidade-escuro .campo input:focus,
+html.acessibilidade-escuro .campo select:focus {
+    border-color: #8da65a !important;
+    box-shadow: 0 0 0 2px rgba(141, 166, 90, 0.2) !important;
+}
+
+/* Botão Cancelar */
+html.acessibilidade-escuro .btn-cancelar {
+    background-color: #1d3d12 !important;
+    border-color: #666666 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-escuro .btn-cancelar:hover {
+    background-color: #242424 !important;
+    border-color: #8da65a !important;
+    color: #ffffff !important;
+    transform: none !important;
+}
+
+/* Botão Salvar */
+html.acessibilidade-escuro .btn-salvar {
+    background-color: #1d3d12 !important;
+    border-color: #465722 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+html.acessibilidade-escuro .btn-salvar:hover {
+    background-color: #465722 !important;
+    border-color: #8da65a !important;
+    color: #ffffff !important;
+    transform: none !important;
+}
+
+
+/* ==========================================
+   ACESSIBILIDADE — ALTO CONTRASTE
+========================================== */
 
 html.acessibilidade-alto-contraste body {
     background-color: #000000 !important;
-    color: #E5A323 !important;
+    color: #dba437 !important;
 }
 
-html.acessibilidade-alto-contraste .conteudo,
-html.acessibilidade-alto-contraste .modal-historia {
-    background-color: #0B2408 !important;
-    color: #E5A323 !important;
-    border: 1px solid #D8D1D1 !important;
+/* Título e descrição */
+html.acessibilidade-alto-contraste .titulo {
+    border-left-color: #dba437 !important;
 }
 
-html.acessibilidade-alto-contraste .conteudo h1,
-html.acessibilidade-alto-contraste .subtitulo,
-html.acessibilidade-alto-contraste .titulo-lenda,
-html.acessibilidade-alto-contraste .legenda,
-html.acessibilidade-alto-contraste .texto-lenda,
-html.acessibilidade-alto-contraste .secao-idiomas,
-html.acessibilidade-alto-contraste .secao-avaliacao,
-html.acessibilidade-alto-contraste .secao-comentario,
-html.acessibilidade-alto-contraste .lista-comentarios,
-html.acessibilidade-alto-contraste .comentario-item {
-    color: #E5A323 !important;
+html.acessibilidade-alto-contraste .titulo h1,
+html.acessibilidade-alto-contraste .descricao {
+    color: #dba437 !important;
 }
 
-html.acessibilidade-alto-contraste .box-imagem {
+/* Formulário */
+html.acessibilidade-alto-contraste .formulario {
+    background-color: #0b2408 !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: none !important;
+}
+
+/* Subtítulo */
+html.acessibilidade-alto-contraste .subtitulo-formulario {
+    color: #dba437 !important;
+    border-bottom-color: #ffffff !important;
+}
+
+/* Labels */
+html.acessibilidade-alto-contraste .campo label {
+    color: #dba437 !important;
+}
+
+/* Campos */
+html.acessibilidade-alto-contraste .campo input,
+html.acessibilidade-alto-contraste .campo select {
     background-color: #000000 !important;
-    border: 1px solid #D8D1D1 !important;
+    color: #dba437  !important;
+    border: 2px solid #ffffff !important;
 }
 
-html.acessibilidade-alto-contraste .btn-idioma,
-html.acessibilidade-alto-contraste .btn-enviar {
+html.acessibilidade-alto-contraste .campo input[readonly] {
     background-color: #000000 !important;
-    color: #E5A323 !important;
-    border: 1px solid #D8D1D1 !important;
+    color: #dba437 !important;
+    border: 1px solid #ffffff !important;
 }
 
-html.acessibilidade-alto-contraste .area-texto-comentario {
+html.acessibilidade-alto-contraste .campo input:focus,
+html.acessibilidade-alto-contraste .campo select:focus {
+    border-color: #ffffff !important;
+    box-shadow: 0 0 0 2px #dba437 !important;
+}
+
+/* Botão Cancelar */
+html.acessibilidade-alto-contraste .btn-cancelar {
     background-color: #000000 !important;
-    color: #E5A323 !important;
-    border: 1px solid #D8D1D1 !important;
+    border: 1px solid #ffffff !important;
+    color: #dba437 !important;
+    box-shadow: none !important;
 }
 
-html.acessibilidade-alto-contraste .area-texto-comentario::placeholder {
-    color: #E5A323 !important;
+html.acessibilidade-alto-contraste .btn-cancelar:hover {
+    background-color: #000000 !important;
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+    transform: none !important;
 }
 
-html.acessibilidade-alto-contraste .estrelas label {
-    color: #E5A323 !important;
+/* Botão Salvar */
+html.acessibilidade-alto-contraste .btn-salvar {
+    background-color: #000000 !important;
+    border: 1px solid #ffffff !important;
+    color: #dba437 !important;
+    box-shadow: none !important;
 }
 
-html.acessibilidade-alto-contraste .estrelas input:checked~label {
-    color: #E5A323 !important;
+html.acessibilidade-alto-contraste .btn-salvar:hover {
+    background-color: #000000 !important;
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+    transform: none !important;
 }
 
-/* Remove sublinhado dos links no alto contraste */
-html.acessibilidade-alto-contraste a {
-    text-decoration: none !important;
+/* Faixa do título — cor mais verde */
+.titulo {
+    border-left-color: #2E7D32 !important;
+}
+
+/* Modo escuro */
+html.acessibilidade-escuro .titulo {
+    border-left-color: #465722 !important;
+}
+
+/* ==========================================
+   REMOVER ALTERAÇÃO DE COR AO PASSAR O MOUSE
+========================================== */
+
+/* MODO ESCURO */
+html.acessibilidade-escuro tbody tr:hover,
+html.acessibilidade-escuro tbody tr:hover td {
+    background-color: inherit !important;
+    color: inherit !important;
+}
+
+/* ALTO CONTRASTE */
+html.acessibilidade-alto-contraste tbody tr:hover,
+html.acessibilidade-alto-contraste tbody tr:hover td {
+    background-color: inherit !important;
+    color: inherit !important;
+}
+
+/* REMOVER EFEITOS DE HOVER DAS LINHAS */
+html.acessibilidade-escuro tbody tr,
+html.acessibilidade-escuro tbody tr td,
+html.acessibilidade-alto-contraste tbody tr,
+html.acessibilidade-alto-contraste tbody tr td {
+    transition: none !important;
+}
+/* MODO ESCURO — MANTER TEXTOS AMARELOS NO HOVER */
+html.acessibilidade-escuro tbody tr:hover td,
+html.acessibilidade-escuro tbody tr:hover td * {
+    color: #ffb000 !important;
+}
+
+/* ALTO CONTRASTE — MANTER A COR MOSTARDA */
+html.acessibilidade-alto-contraste tbody tr:hover td,
+html.acessibilidade-alto-contraste tbody tr:hover td * {
+    color: #dba437 !important;
 }
