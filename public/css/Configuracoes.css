@@ -366,6 +366,7 @@ html.acessibilidade-escuro .card {
     background-color: #070707 !important;
     border-color: #ffff !important;
     box-shadow: none !important;
+    box-shadow: 0 3px 7px var(--ac-border) !important;
 }
 
 html.acessibilidade-escuro .card-mito h3,
@@ -405,6 +406,9 @@ html.acessibilidade-alto-contraste .card {
     color: #dba437 !important;
     border: 1px solid #ffffff !important;
     box-shadow: none !important;
+        box-shadow: 0 3px 7px var(--ac-border) !important;
+
+
 }
 
 html.acessibilidade-alto-contraste .card-mito h3,
@@ -454,6 +458,7 @@ html.acessibilidade-escuro body  {
 }
 html.acessibilidade-escuro body .profile-card {
  border: 1px solid #FFFFFF;
+     box-shadow: 0 3px 7px var(--ac-border) !important;
 }
 
 html.acessibilidade-escuro body .title-mark {
@@ -567,6 +572,7 @@ html.acessibilidade-escuro body .password-card {
     color: #FFFFFF !important;
     border: 1px solid #FFFFFF !important;
     box-shadow: none !important;
+        box-shadow: 0 3px 7px var(--ac-border) !important;
 }
 
 /* TÍTULOS */
@@ -652,6 +658,8 @@ html.acessibilidade-alto-contraste body .password-card {
     color: #dba437 !important;
     border: 1px solid #FFFFFF !important;
     box-shadow: none !important;
+        box-shadow: 0 3px 7px var(--ac-border) !important;
+
 }
 /* TÍTULOS */
 html.acessibilidade-alto-contraste body .password-card h2,
@@ -754,7 +762,7 @@ html.acessibilidade-escuro body:has(.modal) .modal p {
 
 /* Botão Cancelar: transparente com borda branca */
 html.acessibilidade-escuro body:has(.modal) .modal .cancelar {
-    background-color: #000000 !important;
+    
     border: 1px solid #ffffff !important;
     color: #ffffff !important;
     box-shadow: none !important;
@@ -978,6 +986,7 @@ html.acessibilidade-escuro .conteudo:has(.secao-equipe) .integrante {
     border-color: #ffffff !important;
     color: #ffffff !important;
     box-shadow: none !important;
+        box-shadow: 0 3px 7px var(--ac-border) !important;
 }
 
 html.acessibilidade-escuro .conteudo:has(.secao-equipe) .motivo h2,
@@ -1951,6 +1960,7 @@ html.acessibilidade-escuro .area-tabela {
     background-color: #141313!important;
     border: 1px solid #ffffff !important;
     box-shadow: none !important;
+    box-shadow: 0 3px 7px var(--ac-border) !important;
 }
 
 html.acessibilidade-escuro .cabecalho-tabela h2 {
@@ -2012,11 +2022,6 @@ html.acessibilidade-escuro .btn-cancelar {
     border-color: #ffffff !important;
 }
 
-html.acessibilidade-escuro .btn-cancelar:hover {
-    background-color: #3a3a3a !important;
-    color: #ffffff !important;
-}
-
 /* Mensagens */
 html.acessibilidade-escuro .mensagem {
     background-color: #302b1d !important;
@@ -2048,8 +2053,10 @@ html.acessibilidade-alto-contraste .conteudo > .descricao {
 
 html.acessibilidade-alto-contraste .area-tabela {
     background-color: #0b2408 !important;
-    border: 2px solid #ffffff !important;
+    border: 1px solid #ffffff !important;
     box-shadow: none !important;
+        box-shadow: 0 3px 7px var(--ac-border) !important;
+
 }
 
 html.acessibilidade-alto-contraste .cabecalho-tabela h2 {
@@ -2220,11 +2227,6 @@ html.acessibilidade-escuro tbody tr:hover td {
     color: #FFFFFF !important;
 }
 
-/* Botão Cancelar */
-html.acessibilidade-escuro .btn-cancelar:hover {
-    background-color: #242424 !important;
-    color: #FFFFFF !important;
-}
 
 /* ALTO CONTRASTE */
 
@@ -2273,6 +2275,8 @@ html.acessibilidade-escuro .formulario {
     background-color: #141313 !important;
     border-color: 1px solid #ffffff !important;
     box-shadow: none !important;
+    box-shadow: 0 3px 7px var(--ac-border) !important;
+
 }
 
 /* Subtítulo */
@@ -2290,12 +2294,14 @@ html.acessibilidade-escuro .campo input,
 html.acessibilidade-escuro .campo select {
     background-color: #1d3d12!important;
     color: #ffffff !important;
-    border-color: #666666 !important;
+    border-color: #ffffff !important;
 }
 
 html.acessibilidade-escuro .campo input[readonly] {
     background-color: #1d3d12 !important;
     color: #cccccc !important;
+    border-color: #ffffff !important;
+
 }
 
 html.acessibilidade-escuro .campo input:focus,
@@ -2307,29 +2313,22 @@ html.acessibilidade-escuro .campo select:focus {
 /* Botão Cancelar */
 html.acessibilidade-escuro .btn-cancelar {
     background-color: #1d3d12 !important;
-    border-color: #666666 !important;
+    border-color: #ffffff !important;
     color: #ffffff !important;
     box-shadow: none !important;
 }
 
-html.acessibilidade-escuro .btn-cancelar:hover {
-    background-color: #242424 !important;
-    border-color: #8da65a !important;
-    color: #ffffff !important;
-    transform: none !important;
-}
 
 /* Botão Salvar */
 html.acessibilidade-escuro .btn-salvar {
     background-color: #1d3d12 !important;
-    border-color: #465722 !important;
+    border-color: #ffffff !important;
     color: #ffffff !important;
     box-shadow: none !important;
 }
 
 html.acessibilidade-escuro .btn-salvar:hover {
-    background-color: #465722 !important;
-    border-color: #8da65a !important;
+   
     color: #ffffff !important;
     transform: none !important;
 }
@@ -2357,8 +2356,10 @@ html.acessibilidade-alto-contraste .descricao {
 /* Formulário */
 html.acessibilidade-alto-contraste .formulario {
     background-color: #0b2408 !important;
-    border: 2px solid #ffffff !important;
+    border: 1px solid #ffffff !important;
     box-shadow: none !important;
+        box-shadow: 0 3px 7px var(--ac-border) !important;
+
 }
 
 /* Subtítulo */
@@ -2467,4 +2468,499 @@ html.acessibilidade-escuro tbody tr:hover td * {
 html.acessibilidade-alto-contraste tbody tr:hover td,
 html.acessibilidade-alto-contraste tbody tr:hover td * {
     color: #dba437 !important;
+}
+
+
+/* ==========================================
+   ACESSIBILIDADE - NOVA HISTÓRIA
+========================================== */
+
+/* ==========================================
+   MODO ESCURO
+========================================== */
+
+/* FUNDO DA PÁGINA */
+html.acessibilidade-escuro body:has(#formHistoria) {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+/* TÍTULO E SUBTÍTULO */
+html.acessibilidade-escuro body:has(#formHistoria) .titulo-pagina h1,
+html.acessibilidade-escuro body:has(#formHistoria) .titulo-pagina p {
+    color: #FFFFFF !important;
+}
+
+/* CARD PRINCIPAL */
+html.acessibilidade-escuro body:has(#formHistoria) .card {
+    background-color: #070707 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: 0 3px 7px var(--ac-border);
+
+}
+
+/* TÍTULO DO CARD */
+html.acessibilidade-escuro body:has(#formHistoria) .card h2 {
+    color: #FFFFFF !important;
+}
+
+/* TEXTO DE ORIENTAÇÃO */
+html.acessibilidade-escuro body:has(#formHistoria) .card > form > span {
+    color: #FFFFFF !important;
+}
+
+/* LABELS */
+html.acessibilidade-escuro body:has(#formHistoria) .campo label {
+    color: #FFFFFF !important;
+}
+
+/* CAMPOS DE TEXTO */
+html.acessibilidade-escuro body:has(#formHistoria) input:not([type="hidden"]),
+html.acessibilidade-escuro body:has(#formHistoria) select,
+html.acessibilidade-escuro body:has(#formHistoria) textarea {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* PLACEHOLDER */
+html.acessibilidade-escuro body:has(#formHistoria) input::placeholder,
+html.acessibilidade-escuro body:has(#formHistoria) textarea::placeholder {
+    color: #FFFFFF !important;
+    opacity: 0.8 !important;
+}
+
+/* OPÇÕES DA CATEGORIA */
+html.acessibilidade-escuro body:has(#formHistoria) select option {
+    background-color: #070707 !important;
+    color: #FFFFFF !important;
+}
+
+/* CAMPO DE IMAGEM */
+html.acessibilidade-escuro body:has(#formHistoria) input[type="file"] {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+}
+
+/* BOTÕES DOS IDIOMAS */
+html.acessibilidade-escuro body:has(#formHistoria) .idiomas button {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+}
+
+/* IDIOMA SELECIONADO */
+html.acessibilidade-escuro body:has(#formHistoria) .idiomas button.ativo {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+}
+
+/* HOVER DOS IDIOMAS */
+html.acessibilidade-escuro body:has(#formHistoria) .idiomas button:hover {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+}
+
+/* BOTÃO CANCELAR */
+html.acessibilidade-escuro body:has(#formHistoria) .acoes .cancelar {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* BOTÃO SALVAR */
+html.acessibilidade-escuro body:has(#formHistoria) .acoes .salvar {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* HOVER DOS BOTÕES */
+html.acessibilidade-escuro body:has(#formHistoria) .acoes .cancelar:hover,
+html.acessibilidade-escuro body:has(#formHistoria) .acoes .salvar:hover {
+    background-color: #1d3d12 !important;
+    color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+}
+
+/* FOCO DOS CAMPOS */
+html.acessibilidade-escuro body:has(#formHistoria) input:focus,
+html.acessibilidade-escuro body:has(#formHistoria) select:focus,
+html.acessibilidade-escuro body:has(#formHistoria) textarea:focus {
+    border: 1px solid #dba437 !important;
+    outline: 2px solid #dba437 !important;
+}
+
+/* MENSAGENS DO SISTEMA */
+html.acessibilidade-escuro body:has(#formHistoria) .card .alert,
+html.acessibilidade-escuro body:has(#formHistoria) .card .mensagem {
+    background-color: #070707 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+}
+
+
+/* ==========================================
+   ALTO CONTRASTE
+========================================== */
+
+/* FUNDO DA PÁGINA */
+html.acessibilidade-alto-contraste body:has(#formHistoria) {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+}
+
+/* TÍTULO E SUBTÍTULO */
+html.acessibilidade-alto-contraste body:has(#formHistoria) .titulo-pagina h1,
+html.acessibilidade-alto-contraste body:has(#formHistoria) .titulo-pagina p {
+    color: #dba437 !important;
+}
+
+/* CARD PRINCIPAL */
+html.acessibilidade-alto-contraste body:has(#formHistoria) .card {
+    background-color: #0b2408 !important;
+    color: #dba437 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: 0 3px 7px var(--ac-border) !important;
+
+}
+
+/* TÍTULO DO CARD */
+html.acessibilidade-alto-contraste body:has(#formHistoria) .card h2 {
+    color: #dba437 !important;
+}
+
+/* TEXTO DE ORIENTAÇÃO */
+html.acessibilidade-alto-contraste body:has(#formHistoria) .card > form > span {
+    color: #dba437 !important;
+}
+
+/* LABELS */
+html.acessibilidade-alto-contraste body:has(#formHistoria) .campo label {
+    color: #dba437 !important;
+}
+
+/* CAMPOS DE TEXTO */
+html.acessibilidade-alto-contraste body:has(#formHistoria) input:not([type="hidden"]),
+html.acessibilidade-alto-contraste body:has(#formHistoria) select,
+html.acessibilidade-alto-contraste body:has(#formHistoria) textarea {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* PLACEHOLDER */
+html.acessibilidade-alto-contraste body:has(#formHistoria) input::placeholder,
+html.acessibilidade-alto-contraste body:has(#formHistoria) textarea::placeholder {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+}
+
+/* OPÇÕES DA CATEGORIA */
+html.acessibilidade-alto-contraste body:has(#formHistoria) select option {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+}
+
+/* CAMPO DE IMAGEM */
+html.acessibilidade-alto-contraste body:has(#formHistoria) input[type="file"] {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+}
+
+/* BOTÕES DOS IDIOMAS */
+html.acessibilidade-alto-contraste body:has(#formHistoria) .idiomas button {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #FFFFFF !important;
+}
+
+/* IDIOMA SELECIONADO */
+html.acessibilidade-alto-contraste body:has(#formHistoria) .idiomas button.ativo {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 2px solid #dba437 !important;
+}
+
+/* HOVER DOS IDIOMAS */
+html.acessibilidade-alto-contraste body:has(#formHistoria) .idiomas button:hover {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+}
+
+/* BOTÃO CANCELAR */
+html.acessibilidade-alto-contraste body:has(#formHistoria) .acoes .cancelar {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* BOTÃO SALVAR */
+html.acessibilidade-alto-contraste body:has(#formHistoria) .acoes .salvar {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 2px solid #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+/* HOVER DOS BOTÕES */
+html.acessibilidade-alto-contraste body:has(#formHistoria) .acoes .cancelar:hover,
+html.acessibilidade-alto-contraste body:has(#formHistoria) .acoes .salvar:hover {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border-color: #FFFFFF !important;
+}
+
+/* FOCO DOS CAMPOS */
+html.acessibilidade-alto-contraste body:has(#formHistoria) input:focus,
+html.acessibilidade-alto-contraste body:has(#formHistoria) select:focus,
+html.acessibilidade-alto-contraste body:has(#formHistoria) textarea:focus {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #dba437 !important;
+    outline: 2px solid #dba437 !important;
+}
+
+/* MENSAGENS DO SISTEMA */
+html.acessibilidade-alto-contraste body:has(#formHistoria) .card .alert,
+html.acessibilidade-alto-contraste body:has(#formHistoria) .card .mensagem {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #dba437 !important;
+}
+
+/* FOCO DOS BOTÕES */
+html.acessibilidade-escuro body:has(#formHistoria) button:focus-visible,
+html.acessibilidade-alto-contraste body:has(#formHistoria) button:focus-visible {
+    outline: 3px solid #dba437 !important;
+    outline-offset: 3px !important;
+}
+/* PLACEHOLDER MOSTARDA — ALTO CONTRASTE */
+html.acessibilidade-alto-contraste body:has(#formHistoria) #formHistoria input::placeholder,
+html.acessibilidade-alto-contraste body:has(#formHistoria) #formHistoria textarea::placeholder {
+    color: #dba437 !important;
+    opacity: 1 !important;
+}
+
+
+/* =========================================
+   ACESSIBILIDADE — PÁGINA HISTÓRIA (ADMIN)
+========================================= */
+
+/* =========================================
+   MODO ESCURO
+========================================= */
+
+html.acessibilidade-escuro body:has(.modal-historia) {
+    background-color: #1d3d12 !important;
+    color: #ffffff !important;
+}
+
+html.acessibilidade-escuro body:has(.modal-historia) .conteudo {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+html.acessibilidade-escuro body:has(.modal-historia) .conteudo h1,
+html.acessibilidade-escuro body:has(.modal-historia) .subtitulo,
+html.acessibilidade-escuro body:has(.modal-historia) .titulo-lenda,
+html.acessibilidade-escuro body:has(.modal-historia) .texto-lenda,
+html.acessibilidade-escuro body:has(.modal-historia) .legenda,
+html.acessibilidade-escuro body:has(.modal-historia) .resumo-avaliacao,
+html.acessibilidade-escuro body:has(.modal-historia) .titulo-idiomas,
+html.acessibilidade-escuro body:has(.modal-historia) .subtitulo-idiomas,
+html.acessibilidade-escuro body:has(.modal-historia) .titulo-lista-comentarios,
+html.acessibilidade-escuro body:has(.modal-historia) .sem-comentarios,
+html.acessibilidade-escuro body:has(.modal-historia) .nome-comentario,
+html.acessibilidade-escuro body:has(.modal-historia) .texto-comentario,
+html.acessibilidade-escuro body:has(.modal-historia) .data-comentario {
+    color: #ffffff !important;
+}
+
+/* CARD PRINCIPAL */
+html.acessibilidade-escuro body:has(.modal-historia) .modal-historia {
+   background-color: #141313 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  box-shadow: 0 3px 7px var(--ac-border) !important;
+}
+/* IMAGEM */
+html.acessibilidade-escuro body:has(.modal-historia) .box-imagem {
+    background-color: #141313 !important;
+    color: #ffffff !important;
+    border-color: #465722 !important;
+}
+
+/* AVALIAÇÃO */
+html.acessibilidade-escuro body:has(.modal-historia) .resumo-avaliacao strong {
+    color: #dba437 !important;
+}
+
+/* IDIOMAS */
+html.acessibilidade-escuro body:has(.modal-historia) .btn-idioma {
+    background-color: #1d3d12 !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+html.acessibilidade-escuro body:has(.modal-historia) .btn-idioma:hover,
+html.acessibilidade-escuro body:has(.modal-historia) .btn-idioma.ativo {
+    background-color: #1d3d12 !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+/* COMENTÁRIOS */
+html.acessibilidade-escuro body:has(.modal-historia) .lista-comentarios {
+    background-color: #141313 !important;
+    color: #ffffff !important;
+    border-color: #465722 !important;
+}
+
+html.acessibilidade-escuro body:has(.modal-historia) .comentario-item {
+    background-color: #1d3d12 !important;
+    color: #ffffff !important;
+    border-color: #465722 !important;
+}
+
+html.acessibilidade-escuro body:has(.modal-historia) .avatar-comentario {
+    background-color: #465722 !important;
+    color: #ffffff !important;
+}
+
+/* BOTÃO EXCLUIR COMENTÁRIO */
+html.acessibilidade-escuro body:has(.modal-historia) .btn-excluir-comentario {
+    background-color: #465722 !important;
+    color: #ffffff !important;
+    border-color: #465722 !important;
+}
+
+html.acessibilidade-escuro body:has(.modal-historia) .btn-excluir-comentario:hover {
+    background-color: #dba437 !important;
+    color: #000000 !important;
+    border-color: #dba437 !important;
+}
+
+/* BOTÕES INFERIORES */
+html.acessibilidade-escuro body:has(.modal-historia) .acoes-historia .btn-secundario {
+    background-color: #1d3d12 !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+html.acessibilidade-escuro body:has(.modal-historia) .acoes-historia .btn-primario {
+    background-color: #1d3d12  !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+
+/* =========================================
+   ALTO CONTRASTE
+========================================= */
+
+html.acessibilidade-alto-contraste body:has(.modal-historia) {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste body:has(.modal-historia) .conteudo {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste body:has(.modal-historia) .modal-historia {
+    background-color: #0b2408 !important;
+    color: #dba437 !important;
+    border: 1px solid #ffffff !important;
+    box-shadow: none !important;
+        box-shadow: 0 3px 7px var(--ac-border) !important;
+
+}
+
+/* TEXTOS */
+html.acessibilidade-alto-contraste body:has(.modal-historia) .conteudo h1,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .subtitulo,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .titulo-lenda,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .texto-lenda,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .legenda,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .resumo-avaliacao,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .titulo-idiomas,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .subtitulo-idiomas,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .titulo-lista-comentarios,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .sem-comentarios,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .nome-comentario,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .texto-comentario,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .data-comentario {
+    color: #dba437 !important;
+}
+
+/* IMAGEM */
+html.acessibilidade-alto-contraste body:has(.modal-historia) .box-imagem {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #dba437 !important;
+}
+
+/* AVALIAÇÃO */
+html.acessibilidade-alto-contraste body:has(.modal-historia) .resumo-avaliacao strong {
+    color: #dba437 !important;
+}
+
+/* IDIOMAS */
+html.acessibilidade-alto-contraste body:has(.modal-historia) .btn-idioma {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #ffffff !important;
+}
+
+html.acessibilidade-alto-contraste body:has(.modal-historia) .btn-idioma:hover,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .btn-idioma.ativo {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #ffffff !important;
+}
+
+/* COMENTÁRIOS */
+html.acessibilidade-alto-contraste body:has(.modal-historia) .lista-comentarios,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .comentario-item {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #dba437 !important;
+}
+
+html.acessibilidade-alto-contraste body:has(.modal-historia) .avatar-comentario {
+    background-color: #dba437 !important;
+    color: #000000 !important;
+}
+
+/* BOTÕES */
+html.acessibilidade-alto-contraste body:has(.modal-historia) .btn-excluir-comentario,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .acoes-historia .btn-secundario,
+html.acessibilidade-alto-contraste body:has(.modal-historia) .acoes-historia .btn-primario {
+    background-color: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #ffffff !important;
+}
+
+/* REMOVER BORDA AMARELA DOS COMENTÁRIOS */
+html.acessibilidade-alto-contraste body:has(.modal-historia) .lista-comentarios {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* REMOVER FUNDO PRETO DA ÁREA DE COMENTÁRIOS */
+html.acessibilidade-alto-contraste body:has(.modal-historia) .lista-comentarios {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
