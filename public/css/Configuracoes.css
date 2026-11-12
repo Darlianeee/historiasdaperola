@@ -431,11 +431,9 @@ html.acessibilidade-alto-contraste .card:hover {
     box-shadow: none !important;
 }
 
-/* 
-   ACESSIBILIDADE - PERFIL ADM
-    */
+/*  ACESSIBILIDADE - PERFIL ADM  */
+/*  MODO ESCURO  */
 
-/* MODO ESCURO */
 html.acessibilidade-escuro body .content {
     background-color: #000000;
     color: #FFFFFF;
@@ -535,6 +533,10 @@ html.acessibilidade-fonte-grande body .content {
 html.acessibilidade-fonte-muito-grande body .content {
     font-size: 140%;
 }
+/*teste*/
+/* AJUSTE EXCLUSIVO DA PÁGINA MEU PERFIL */
+
+/*teste*/
 /* ==========================================
    ACESSIBILIDADE - EDITAR PERFIL ADM
    ========================================== */
@@ -1090,7 +1092,7 @@ html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) body:has(.s
 }
 /*INICIO USER*/
 html.acessibilidade-escuro .card-explorar > p {
-    color: #ffffff !important;
+    color: #FFFFFF !important;
    
 }
 /*////////////////// LOGIN /////////////////*/
@@ -2927,6 +2929,7 @@ html.acessibilidade-alto-contraste body:has(.modal-historia) .btn-idioma.ativo {
     background-color: #000000 !important;
     color: #dba437 !important;
     border: 1px solid #ffffff !important;
+    margin-left: 40px;
 }
 
 /* COMENTÁRIOS */
@@ -3452,10 +3455,13 @@ html.acessibilidade-alto-contraste body:has(.secao-idiomas) .titulo-idiomas,
 html.acessibilidade-alto-contraste body:has(.secao-idiomas) .titulo-idiomas span,
 html.acessibilidade-alto-contraste body:has(.secao-idiomas) .subtitulo-idiomas {
     color: #dba437 !important;
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
 html.acessibilidade-alto-contraste body:has(.secao-idiomas) .titulo-idiomas img {
     filter: brightness(0) invert(1) !important;
+    margin-left: 20px !important;
 }
 
 html.acessibilidade-alto-contraste body:has(.secao-idiomas) .btn-idioma {
@@ -3485,7 +3491,7 @@ html.acessibilidade-alto-contraste body:has(.modal-historia) main.conteudo > h1 
 
 html.acessibilidade-alto-contraste body:has(.modal-historia) main.conteudo > h1,
 html.acessibilidade-alto-contraste body:has(.modal-historia) main.conteudo > h1 + p {
-    transform: translateX(-70px) !important;
+    transform: translateX(-7px) !important;
     overflow: visible !important;
 }
 
@@ -3553,11 +3559,13 @@ html.acessibilidade-alto-contraste body:has(.lista-comentarios) .titulo-lista-co
     margin-top: 15px !important;
 }
 
-/* SUBIR TODO O CABEÇALHO DO PERFIL */
+/* CORREÇÃO DOS CABEÇALHOS DAS PÁGINAS DO USUÁRIO */
 
-.content .page-header {
-    position: relative !important;
-    top: -45px !important;
+body .content .page-header {
+    position: relative;
+    top: 0 !important;
+    margin-top: 0;
+    overflow: visible;
 }
 
 /* CAIXA DE TODOS OS COMENTÁRIOS */
@@ -3577,4 +3585,3 @@ html.acessibilidade-alto-contraste body:has(.lista-comentarios) .titulo-lista-co
     border-radius: 0 !important;
     box-shadow: none !important;
 }
-
