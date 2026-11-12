@@ -65,6 +65,11 @@ class Usuarios extends Controller
             Url::redirecionar('paginas/cadastro');
         }
 
+        if (!$this->dominioEmailExiste($email)) {
+    Sessao::flash('O domínio deste e-mail não existe ou não possui configuração DNS válida.', 'erro');
+    Url::redirecionar('paginas/cadastro');
+        }
+
         if (strlen($senha) < 8 || strlen($senha) > 30) {
             Sessao::flash('A senha precisa ter entre 8 e 30 caracteres.', 'erro');
             Url::redirecionar('paginas/cadastro');
@@ -96,6 +101,21 @@ class Usuarios extends Controller
         }
         Url::redirecionar('usuarios/inicio_user');
     }
+
+    // validação do dominio
+    private function dominioEmailExiste($email)
+{
+    $partes = explode('@', $email);
+
+    if (count($partes) !== 2) {
+        return false;
+    }
+
+    $dominio = $partes[1];
+
+    // Verifica exclusivamente registros MX
+    return checkdnsrr($dominio, 'MX');
+}
 
     public function logout()
     {
