@@ -82,7 +82,7 @@ h1 {
     display: block;
     width: 100%;
     height: auto;
-    max-height: 430px;
+    max-height: 700px;
     object-fit: cover;
     border-radius: 10px;
 }
