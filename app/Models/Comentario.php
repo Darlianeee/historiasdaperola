@@ -5,7 +5,8 @@ class Comentario {
 
     public function __construct() {
         $this->db = new Database();
-    }
+    } 
+    /* teste */
 
     public function listarPorHistoria($historiaId) {
         $this->db->query(
