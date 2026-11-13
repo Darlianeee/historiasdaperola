@@ -1,14 +1,17 @@
 <?php
 
-class Comentario {
+class Comentario
+{
     private $db;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->db = new Database();
-    } 
+    }
     /* teste */
 
-    public function listarPorHistoria($historiaId) {
+    public function listarPorHistoria($historiaId)
+    {
         $this->db->query(
             "SELECT come_id, come_texto, come_data_pessoa, pess_id, pess_nome
              FROM vw_comentarios
@@ -19,7 +22,8 @@ class Comentario {
         return $this->db->resultados();
     }
 
-    public function buscarPorId($id) {
+    public function buscarPorId($id)
+    {
         $this->db->query(
             "SELECT come_id, come_texto, come_data_pessoa, pess_id, pess_nome, hist_id, hiid_titulo
              FROM vw_comentarios
@@ -31,14 +35,18 @@ class Comentario {
     }
 
 
-    public function totalPorHistoria($historiaId) {
-        $this->db->query("SELECT fn_total_comentarios_historia(:historia) AS total");
+
+    public function totalPorHistoria($historiaId)
+    {
+        $this->db->query("SELECT fc_total_comentarios_historia(:historia) AS total");
         $this->db->bind(':historia', (int) $historiaId, PDO::PARAM_INT);
         $resultado = $this->db->resultado();
         return $resultado ? (int) $resultado->total : 0;
     }
 
-    public function cadastrar($historiaId, $pessoaId, $texto) {
+
+    public function cadastrar($historiaId, $pessoaId, $texto)
+    {
         try {
             $this->db->query(
                 "INSERT INTO comentario (come_texto, pess_id, hist_id) VALUES (:texto, :pessoa, :historia)"
@@ -56,7 +64,8 @@ class Comentario {
 
     // Se $pessoaId for informado, só exclui se o comentário for dessa pessoa.
     // $atorId identifica quem executou a exclusão para o gatilho SQL.
-    public function excluir($id, $pessoaId = null, $atorId = null) {
+    public function excluir($id, $pessoaId = null, $atorId = null)
+    {
         // Para exclusão própria, o autor também é quem executa a ação.
         // Para exclusão administrativa, o controller informa $atorId explicitamente.
         if ($atorId === null && $pessoaId !== null) {

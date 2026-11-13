@@ -1,16 +1,19 @@
 <?php
 
-class Avaliacao {
+class Avaliacao
+{
     private $db;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->db = new Database();
     }
 
     // Grava a nota (1 a 5). Se a pessoa já avaliou, atualiza a nota.
     // Na primeira avaliação o trigger tg_avaliacao_notificacao_pos_ins
     // avisa os administradores.
-    public function salvar($historiaId, $pessoaId, $nota) {
+    public function salvar($historiaId, $pessoaId, $nota)
+    {
         try {
             $this->db->query(
                 "SELECT avai_id FROM avaliacao WHERE hist_id = :historia AND pess_id = :pessoa LIMIT 1"
@@ -42,17 +45,25 @@ class Avaliacao {
     }
 
     // Média e total de avaliações da história.
-    public function resumo($historiaId) {
+
+    public function resumo($historiaId)
+    {
         $this->db->query(
-            "SELECT COUNT(*) AS total, fn_media_avaliacoes_historia(:historia) AS media
-             FROM avaliacao WHERE hist_id = :historia_contagem"
+            "SELECT COUNT(*) AS total,
+                fc_media_avaliacoes_historia(:historia) AS media
+         FROM avaliacao
+         WHERE hist_id = :historia_contagem"
         );
+
         $this->db->bind(':historia', (int) $historiaId, PDO::PARAM_INT);
         $this->db->bind(':historia_contagem', (int) $historiaId, PDO::PARAM_INT);
+
         return $this->db->resultado();
     }
 
-    public function notaDaPessoa($historiaId, $pessoaId) {
+
+    public function notaDaPessoa($historiaId, $pessoaId)
+    {
         $this->db->query(
             "SELECT avai_nota FROM avaliacao WHERE hist_id = :historia AND pess_id = :pessoa LIMIT 1"
         );
