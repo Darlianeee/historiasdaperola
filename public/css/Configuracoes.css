@@ -3585,3 +3585,34 @@ body .content .page-header {
     border-radius: 0 !important;
     box-shadow: none !important;
 }
+
+/* ==========================================
+   MEU PERFIL - AJUSTAR POSIÇÃO
+   MODO ESCURO E ALTO CONTRASTE
+========================================== */
+
+/* MODO ESCURO */
+html.acessibilidade-escuro body:has(.profile-card) .content {
+    padding-top: 55px !important;
+}
+
+html.acessibilidade-escuro body:has(.profile-card) .page-header {
+    margin-bottom: 25px !important;
+}
+
+html.acessibilidade-escuro body:has(.profile-card) .profile-card {
+    margin-top: 0 !important;
+}
+
+/* ALTO CONTRASTE */
+html.acessibilidade-alto-contraste body:has(.profile-card) .content {
+    padding-top: 55px !important;
+}
+
+html.acessibilidade-alto-contraste body:has(.profile-card) .page-header {
+    margin-bottom: 25px !important;
+}
+
+html.acessibilidade-alto-contraste body:has(.profile-card) .profile-card {
+    margin-top: 0 !important;
+}

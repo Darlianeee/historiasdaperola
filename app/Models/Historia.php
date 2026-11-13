@@ -10,7 +10,7 @@ class Historia {
 
 
     public function totalCadastradas() {
-        $this->db->query("SELECT fn_total_historias_cadastradas() AS total");
+        $this->db->query("SELECT fc_total_historias_cadastradas() AS total");
         $resultado = $this->db->resultado();
         return $resultado ? (int) $resultado->total : 0;
     }
