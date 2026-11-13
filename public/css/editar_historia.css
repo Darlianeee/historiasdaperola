@@ -157,15 +157,13 @@ body {
     margin-top: 23px;
 }
 
-.imagem-preview {
-    display: block;
+.imagem-container .imagem-preview {
     width: 300px;
     max-width: 100%;
     height: 148px;
-
-    object-fit: cover;
-    background-color: #d5d5d5;
-    border-radius: 6px;
+    object-fit: fill;
+    object-position: center;
+    display: block;
 }
 
 
@@ -758,4 +756,14 @@ body {
         padding: 6px 8px;
         font-size: 12px;
     }
+}
+
+/* CORREÇÃO DA IMAGEM NA EDIÇÃO */
+img.imagem-preview {
+    width: 300px !important;
+    max-width: 100% !important;
+    height: 148px !important;
+    object-fit: fill !important;
+    object-position: center !important;
+    display: block !important;
 }

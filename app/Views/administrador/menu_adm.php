@@ -10,7 +10,7 @@
 
     <div class="logo">
         <img src="<?= URL ?>/public/img/icone_logo_menu.png" alt="Logo">
-        <p>HISTÓRIAS NA PERÓLA</p>
+        <p>HISTÓRIAS NA PÉROLA</p>
     </div>
 
     <nav id="mainNav">

@@ -36,7 +36,14 @@ trait AcoesDaConta {
 
         $pessoa = $this->model('Pessoa')->buscarPorEmail($email);
 
-        if (!$pessoa || !password_verify($senha, $pessoa->pess_senha)) {
+        $pessoa = $this->model('Pessoa')->buscarPorEmail($email);
+
+        if (!$pessoa) {
+            Sessao::flash('Conta não encontrada. Cadastre-se primeiro.', 'erro');
+            Url::redirecionar($paginaLogin);
+        }
+
+        if (!password_verify($senha, $pessoa->pess_senha)) {
             Sessao::flash('E-mail ou senha incorretos.', 'erro');
             Url::redirecionar($paginaLogin);
         }
@@ -53,6 +60,7 @@ trait AcoesDaConta {
 
         unset($_SESSION['antigo_email']);
         Sessao::entrar($pessoa);
+        Sessao::flash('Login realizado com sucesso!');
 
         // Se o login começou no catálogo, o usuário continua para a história escolhida.
         if ($pessoa->perf_nome !== 'Administrador' && !empty($_SESSION['historia_apos_login'])) {
