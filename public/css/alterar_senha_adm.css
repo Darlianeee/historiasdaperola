@@ -394,3 +394,14 @@ html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-i
     }
 
 }
+.erro-senha {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: inherit;
+}
+
+.erro-senha:empty {
+    display: none;
+}
