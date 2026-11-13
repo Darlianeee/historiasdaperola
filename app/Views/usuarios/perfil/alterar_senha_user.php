@@ -40,6 +40,7 @@
                 </div>
                 <div class="password-group">
                     <label for="new-password">Digite a nova senha:</label>
+                    <p id="erro-nova-senha" class="erro-senha"></p>
                     <div class="password-input-wrapper">
                         <input id="new-password" name="nova_senha" class="password-input" type="password" autocomplete="new-password" minlength="8" maxlength="30" required>
                         <button type="button" class="password-toggle" data-target="new-password" title="Mostrar/Ocultar senha">

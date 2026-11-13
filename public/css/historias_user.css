@@ -458,3 +458,30 @@ a:focus-visible {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* CORREÇÃO DO TÍTULO CORTADO PELO MENU FIXO */
+
+main.conteudo {
+    padding-top: 100px !important;
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    main.conteudo {
+        padding-top: 90px !important;
+    }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 400px) {
+    main.conteudo {
+        padding-top: 85px !important;
+    }
+}
+
+/* TELAS MUITO PEQUENAS */
+@media (max-width: 340px) {
+    main.conteudo {
+        padding-top: 82px !important;
+    }
+}

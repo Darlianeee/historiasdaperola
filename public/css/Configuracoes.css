@@ -1413,11 +1413,15 @@ html.acessibilidade-escuro body:has(.pagina) {
 }
 
 /* CABEÇALHO */
-html.acessibilidade-escuro .pagina .cabecalho-pagina h1,
-html.acessibilidade-escuro .pagina .cabecalho-pagina p {
+html.acessibilidade-escuro .pagina .cabecalho-pagina h1{
     color: #FFFFFF !important;
+    transform: translate(-100px);
 }
-
+html.acessibilidade-escuro .pagina .cabecalho-pagina p{
+    color: #FFFFFF !important;
+    position: relative;
+    right: 105px;
+}
 /* CARD PRINCIPAL */
 html.acessibilidade-escuro .pagina .modal {
     background-color: #070707 !important;
@@ -1612,11 +1616,16 @@ html.acessibilidade-escuro .container {
 }
 
 /* TÍTULO E SUBTÍTULO */
-html.acessibilidade-escuro .cabecalho h1,
-html.acessibilidade-escuro .cabecalho p {
+html.acessibilidade-escuro .cabecalho h1 {
     color: #FFFFFF !important;
+    transform: translate(-95px);
+    
 }
-
+html.acessibilidade-escuro .cabecalho p{
+    color: #FFFFFF !important;
+    position: relative;
+    right: 110px;
+}
 /* TRAÇO DO TÍTULO */
 html.acessibilidade-escuro .cabecalho h1 {
     border-left-color: #465722 !important;
@@ -1732,14 +1741,23 @@ html.acessibilidade-alto-contraste .container {
 }
 
 /* TÍTULO E SUBTÍTULO */
-html.acessibilidade-alto-contraste .cabecalho h1,
-html.acessibilidade-alto-contraste .cabecalho p {
+html.acessibilidade-alto-contraste .cabecalho h1{
     color: #E5A323 !important;
+    position: relative;
+    right: 60px;
+
+}
+html.acessibilidade-alto-contraste .cabecalho p{
+        color: #E5A323 !important;
+        position: relative;
+        right: 110px;
+
 }
 
 /* TRAÇO DO TÍTULO */
 html.acessibilidade-alto-contraste .cabecalho h1 {
     border-left-color: #465722  !important;
+    transform: translateX(-40px) !important;
 }
 
 /* BOTÕES DE FILTRO */
@@ -3616,3 +3634,56 @@ html.acessibilidade-alto-contraste body:has(.profile-card) .page-header {
 html.acessibilidade-alto-contraste body:has(.profile-card) .profile-card {
     margin-top: 0 !important;
 }
+
+
+
+
+/* ==========================================
+   SOMENTE TELA HISTÓRIA DO ADMINISTRADOR
+========================================== */
+
+/* CORRIGIR TÍTULO CORTADO */
+html.acessibilidade-escuro body:has(#comentarios) main.conteudo > h1,
+html.acessibilidade-alto-contraste body:has(#comentarios) main.conteudo > h1 {
+    transform: none !important;
+    left: 0 !important;
+    top: 15px !important;
+    overflow: visible !important;
+}
+
+/* CORRIGIR SUBTÍTULO */
+html.acessibilidade-escuro body:has(#comentarios) main.conteudo > .subtitulo,
+html.acessibilidade-alto-contraste body:has(#comentarios) main.conteudo > .subtitulo {
+    transform: none !important;
+    left: 0 !important;
+    overflow: visible !important;
+}
+
+/* CAIXA DE IDIOMAS - MODO ESCURO */
+html.acessibilidade-escuro body:has(#comentarios) .secao-idiomas {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 158px !important;
+    box-sizing: border-box !important;
+    padding: 20px !important;
+    background: #141313 !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+}
+
+/* CAIXA DE IDIOMAS - ALTO CONTRASTE */
+html.acessibilidade-alto-contraste body:has(#comentarios) .secao-idiomas {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 158px !important;
+    box-sizing: border-box !important;
+    padding: 20px !important;
+    background: #000000 !important;
+    color: #dba437 !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+}
+
+
