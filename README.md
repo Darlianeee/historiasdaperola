@@ -34,6 +34,21 @@ troque para `max_allowed_packet=16M` e reinicie o MySQL.
 Usuário, senha, porta e nome do banco ficam em `app/Libraries/Database.php`
 (padrão do XAMPP: `root`, sem senha, porta `3306`).
 
+## Recuperação de senha ("Esqueceu senha?")
+
+1. Na tela de login, clique em **Esqueceu senha?**, digite o e-mail e clique em **Enviar link**.
+2. O sistema envia para esse e-mail um link para **Criar nova senha** (válido por 60 minutos, uso único).
+3. A nova senha precisa ter de 8 a 30 caracteres e **não pode ser igual à senha atual**.
+
+Não usa nenhuma tabela nova: o link é assinado com uma chave secreta (`app/Libraries/RecuperacaoSenha.php`)
+e leva junto o hash da senha atual; quando a senha muda, o link para de funcionar.
+
+**Configuração do e-mail:** `app/configuracao_email.php` (fica fora do Git, ver `.gitignore`).
+Para Gmail, `senha` é uma **senha de app** (Conta Google > Segurança > Verificação em duas etapas > Senhas de app),
+não a senha normal. O XAMPP precisa da extensão `openssl` ativa no `php.ini` (vem ativa por padrão)
+e de internet para falar com o `smtp.gmail.com`. Se o envio falhar, o motivo aparece em
+`C:\xampp\apache\logs\error.log`. O PHPMailer já está incluído em `app/Libraries/PHPMailer` (não precisa de Composer).
+
 ## O que o banco guarda
 
 | Tela | Tabelas |

@@ -25,6 +25,16 @@
         .erro-campo:empty {
             display: none;
         }
+
+        .voltar-login {
+            text-align: center;
+            margin: 18px 0 0 !important;
+        }
+
+        .voltar-login a {
+            color: #2f5d34;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -37,7 +47,11 @@
             <h1>Esqueceu a senha?</h1>
             <p>Digite seu e-mail para recuperar sua conta</p>
 
-            <form id="form-esqueceu-senha">
+            <?php Sessao::exibirFlash(); ?>
+
+            <form id="form-esqueceu-senha"
+                  action="<?= URL ?>/paginas/esqueceu_senha"
+                  method="POST">
 
                 <label for="email">E-mail</label>
 
@@ -47,14 +61,20 @@
                     name="email"
                     autocomplete="email"
                     placeholder="Digite seu e-mail"
+                    value="<?= Html::e($_SESSION['antigo_email'] ?? '') ?>"
                     required
                 >
+                <?php unset($_SESSION['antigo_email']); ?>
 
                 <small class="erro-campo" id="erro-email"></small>
 
-                <button type="submit">Enviar</button>
+                <button type="submit" id="botao-enviar">Enviar link</button>
 
             </form>
+
+            <p class="voltar-login">
+                <a href="<?= URL ?>/paginas/login">Voltar para o login</a>
+            </p>
 
         </div>
 
@@ -83,12 +103,12 @@
             const erroEmail = document.getElementById("erro-email");
 
             function emailValido(valor) {
-                return /^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,}$/.test(valor);
+                return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(valor);
             }
 
             email.addEventListener("input", function () {
 
-                this.value = this.value.replace(/[^a-zA-Z0-9.@]/g, "");
+                this.value = this.value.replace(/[^a-zA-Z0-9._%+@-]/g, "");
 
                 if (this.value && !emailValido(this.value)) {
                     erroEmail.textContent =
@@ -108,7 +128,13 @@
                         "Digite um e-mail válido. Exemplo: nome@email.com";
 
                     email.focus();
+                    return;
                 }
+
+                // Evita clicar duas vezes enquanto o e-mail é enviado.
+                const botao = document.getElementById("botao-enviar");
+                botao.disabled = true;
+                botao.textContent = "Enviando...";
 
             });
 
