@@ -1,10 +1,10 @@
-/* Histórias na Pérola — tela de histórias do administrador */
-
+/* Define as configurações gerais dos elementos. */
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Define a aparência geral da página. */
 body {
     margin: 0;
     background: #edf5e9;
@@ -12,11 +12,13 @@ body {
     line-height: 1.5;
 }
 
+/* Organiza o conteúdo principal da página. */
 .conteudo {
     padding: 95px 49px 80px;
     position: relative;
 }
 
+/* Define o título principal. */
 h1 {
     font-size: 28px;
     border-left: 5px solid #465722;
@@ -26,12 +28,14 @@ h1 {
     font-weight: 700;
 }
 
+/* Define o texto abaixo do título. */
 .subtitulo {
     font-size: 16px;
     color: #333;
     margin: 8px 0 25px 14px;
 }
 
+/* Organiza o quadro que apresenta a história. */
 .modal-historia {
     max-width: 850px;
     width: 100%;
@@ -43,6 +47,7 @@ h1 {
     position: relative;
 }
 
+/* Posiciona o botão de fechar. */
 .btn-fechar {
     position: absolute;
     top: 20px;
@@ -50,6 +55,7 @@ h1 {
     text-decoration: none;
 }
 
+/* Estiliza o ícone de fechar. */
 .icon-close {
     width: 34px;
     height: 34px;
@@ -62,6 +68,7 @@ h1 {
     font-size: 21px;
 }
 
+/* Define a aparência do título da história. */
 .titulo-lenda {
     text-align: center;
     font-size: 22px;
@@ -70,6 +77,7 @@ h1 {
     margin: 0 35px 20px;
 }
 
+/* Define o espaço reservado para a imagem. */
 .box-imagem {
     width: 85%;
     height: 380px;
@@ -80,6 +88,7 @@ h1 {
     margin: 0 auto 15px;
 }
 
+/* Ajusta a imagem ao espaço reservado. */
 .box-imagem img {
     width: 100%;
     height: 100%;
@@ -87,6 +96,7 @@ h1 {
     display: block;
 }
 
+/* Define a aparência da legenda da imagem. */
 .legenda {
     font-size: 12px;
     color: #333;
@@ -94,6 +104,7 @@ h1 {
     font-weight: 600;
 }
 
+/* Formata o texto da história. */
 .texto-lenda {
     font-size: 13.5px;
     line-height: 1.7;
@@ -103,14 +114,14 @@ h1 {
     text-align: justify;
 }
 
-/* Seção de idiomas */
-
+/* Organiza a seção de idiomas disponíveis. */
 .secao-idiomas {
     margin-top: 20px;
     padding-bottom: 25px;
     border-bottom: 1px solid #e3e6df;
 }
 
+/* Alinha o título da seção de idiomas e seu ícone. */
 .titulo-idiomas {
     display: flex;
     align-items: center;
@@ -121,33 +132,35 @@ h1 {
     margin-bottom: 8px;
 }
 
+/* Ajusta o tamanho do ícone dos idiomas. */
 .titulo-idiomas img {
     width: 22px;
     height: 22px;
     object-fit: contain;
 }
 
+/* Formata o texto de orientação dos idiomas. */
 .subtitulo-idiomas {
     font-size: 13px;
     color: #444;
     margin-bottom: 18px;
 }
 
+/* Organiza os botões de seleção de idioma. */
 .botoes-idiomas {
     display: flex;
     gap: 18px;
     flex-wrap: wrap;
 }
 
+/* Define a aparência dos botões de idioma. */
 .btn-idioma {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 9px;
-
     min-height: 40px;
     padding: 3px 14px;
-
     border-radius: 6px;
     text-decoration: none;
     font-size: 14px;
@@ -158,6 +171,7 @@ h1 {
     white-space: nowrap;
 }
 
+/* Ajusta as imagens das bandeiras. */
 .btn-idioma img {
     width: 28px;
     height: 28px;
@@ -166,7 +180,7 @@ h1 {
     flex-shrink: 0;
 }
 
-/* Imagem do Wari */
+/* Ajusta o tamanho e a posição da imagem do Wari. */
 .btn-idioma img.img-wari {
     width: 28px !important;
     height: 28px !important;
@@ -174,6 +188,7 @@ h1 {
     object-fit: contain;
 }
 
+/* Ajusta o tamanho e a posição da bandeira da Espanha. */
 .btn-idioma img.img-espanha {
     width: 28px !important;
     height: 28px !important;
@@ -181,54 +196,31 @@ h1 {
     object-fit: contain;
 }
 
-/* Bandeira do Brasil */
+/* Define o tamanho padrão das bandeiras, exceto a do Wari. */
 .btn-idioma img:not(.img-wari) {
     width: 25px;
     height: 25px;
 }
 
+/* Ajusta especificamente a bandeira do botão em português. */
 .btn-idioma[href*="lang=pt"] img {
     width: 21px !important;
     height: 21px !important;
 }
 
-.botoes-idiomas {
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-}
-
-.btn-idioma {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-
-    min-height: 40px;
-    padding: 3px 14px;
-
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-    background: #fff;
-    border: 1px solid #ccc;
-    color: #111;
-    white-space: nowrap;
-}
-
+/* Destaca o idioma selecionado. */
 .btn-idioma.ativo {
     background: #c99829;
     border-color: #c99829;
     color: #fff;
 }
 
-/* Lista de comentários */
-
+/* Organiza a lista de comentários. */
 .lista-comentarios {
     margin-top: 28px;
 }
 
+/* Formata o título da lista de comentários. */
 .titulo-lista-comentarios {
     margin: 0;
     padding-bottom: 12px;
@@ -236,12 +228,14 @@ h1 {
     font-size: 16px;
 }
 
+/* Define a aparência da mensagem quando não existem comentários. */
 .sem-comentarios {
     padding: 18px 0;
     color: #62665d;
     font-size: 14px;
 }
 
+/* Organiza cada comentário. */
 .comentario-item {
     display: flex;
     gap: 13px;
@@ -249,10 +243,12 @@ h1 {
     border-bottom: 1px solid #e3e6df;
 }
 
+/* Remove a borda do último comentário. */
 .comentario-item:last-child {
     border-bottom: 0;
 }
 
+/* Estiliza o círculo com a identificação do usuário. */
 .avatar-comentario {
     display: flex;
     flex: 0 0 38px;
@@ -267,11 +263,13 @@ h1 {
     font-weight: 700;
 }
 
+/* Organiza as informações do comentário. */
 .corpo-comentario {
     flex: 1;
     min-width: 0;
 }
 
+/* Alinha o nome do usuário e a data do comentário. */
 .cabecalho-comentario {
     display: flex;
     align-items: baseline;
@@ -279,17 +277,20 @@ h1 {
     gap: 4px 10px;
 }
 
+/* Destaca o nome de quem comentou. */
 .nome-comentario {
     font-size: 13.5px;
     font-weight: bold;
     color: #111;
 }
 
+/* Define a aparência da data do comentário. */
 .data-comentario {
     font-size: 11.5px;
     color: #777;
 }
 
+/* Formata o conteúdo do comentário. */
 .texto-comentario {
     font-size: 13px;
     line-height: 1.6;
@@ -298,12 +299,12 @@ h1 {
     margin: 6px 0 10px;
 }
 
-/* Botão para excluir comentários */
-
+/* Define o espaço do formulário de exclusão. */
 .form-excluir-comentario {
     margin: 8px 0 0;
 }
 
+/* Estiliza o botão de excluir comentário. */
 .btn-excluir-comentario {
     padding: 6px 12px;
     border: 1px solid #c83c3c;
@@ -315,12 +316,12 @@ h1 {
     cursor: pointer;
 }
 
+/* Altera a aparência do botão ao passar o cursor. */
 .btn-excluir-comentario:hover {
     background: #fff0f0;
 }
 
-/* Botões inferiores */
-
+/* Organiza os botões inferiores da página. */
 .acoes-historia {
     display: flex;
     justify-content: space-between;
@@ -331,6 +332,7 @@ h1 {
     width: 100%;
 }
 
+/* Define o estilo geral dos links de ação. */
 .acoes-historia a {
     display: inline-flex;
     align-items: center;
@@ -344,30 +346,32 @@ h1 {
     font-weight: 700;
 }
 
+/* Estiliza o botão secundário. */
 .btn-secundario {
     background: #fff;
     color: #465722;
 }
 
+/* Estiliza o botão principal. */
 .btn-primario {
     background: #465722;
     color: #fff;
 }
 
+/* Destaca links e botões ao receberem foco pelo teclado. */
 button:focus-visible,
 a:focus-visible {
     outline: 3px solid #2467c7;
     outline-offset: 3px;
 }
 
-/* Ajustes para telas menores */
-
+/* Ajusta o conteúdo para telas de até 900px. */
 @media (max-width: 900px) {
 
     .modal-historia {
         padding: 25px;
     }
-    
+
     .box-imagem {
         height: 320px;
     }
@@ -379,7 +383,9 @@ a:focus-visible {
     }
 }
 
+/* Ajusta o layout para celulares. */
 @media (max-width: 500px) {
+
     .conteudo {
         padding: 70px 25px 40px;
     }

@@ -1,16 +1,12 @@
+/* Define as configurações gerais dos elementos. */
 * {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-
-
+/* Define a altura mínima da página. */
 html {
     min-height: 100%;
 }
@@ -21,45 +17,37 @@ body {
     flex-direction: column;
 }
 
-
-body > main,
-body > .conteudo,
-body > .content,
-body > .pagina {
+/* Permite que o conteúdo ocupe o espaço disponível da página. */
+body>main,
+body>.conteudo,
+body>.content,
+body>.pagina {
     flex: 1 0 auto;
 }
 
-
-body > .container,
-body > .conteudo,
-body > .content,
-body > .pagina {
+/* Ajusta a altura dos elementos principais. */
+body>.container,
+body>.conteudo,
+body>.content,
+body>.pagina {
     min-height: 0 !important;
 }
 
-
-.footer {
-    margin-top: auto;
-    flex-shrink: 0;
-}
-
-
-
+/* Mantém o rodapé na parte inferior da página. */
 .footer {
     width: 100%;
+    margin-top: auto;
+    flex-shrink: 0;
+    padding: 25px 50px;
     background: #465722;
     color: white;
-
-    padding: 25px 50px;
-
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 30px;
 }
 
-
-
+/* Organiza os links do rodapé. */
 .footer-links {
     justify-self: start;
     text-align: left;
@@ -76,14 +64,14 @@ body > .pagina {
     text-align: center;
 }
 
+/* Define a aparência dos links. */
 .footer-links a {
     color: white;
     text-decoration: none;
     font-weight: 600;
 }
 
-
-
+/* Centraliza a logo do rodapé. */
 .footer-center {
     justify-self: center;
     display: flex;
@@ -91,6 +79,7 @@ body > .pagina {
     align-items: center;
 }
 
+/* Define o tamanho da logo. */
 .footer-logo {
     width: 260px;
     height: auto;
@@ -98,8 +87,7 @@ body > .pagina {
     display: block;
 }
 
-
-
+/* Organiza as informações de contato. */
 .footer-contact {
     justify-self: end;
     text-align: center;
@@ -109,11 +97,8 @@ body > .pagina {
     margin: 8px 0;
 }
 
-
-
-
+/* Ajusta o rodapé para telas muito grandes. */
 @media (min-width: 1600px) {
-
     .footer {
         padding: 30px 70px;
     }
@@ -123,11 +108,8 @@ body > .pagina {
     }
 }
 
-
-
-
+/* Ajusta o espaçamento para telas menores. */
 @media (max-width: 1366px) {
-
     .footer {
         padding: 25px 40px;
         gap: 25px;
@@ -138,13 +120,10 @@ body > .pagina {
     }
 }
 
-
-
-
+/* Ajusta o tamanho dos elementos para tablets. */
 @media (max-width: 1024px) {
-
     .footer {
-        padding: 35px 35px;
+        padding: 35px;
         gap: 20px;
     }
 
@@ -161,32 +140,23 @@ body > .pagina {
     }
 }
 
+/* Organiza os elementos do rodapé em coluna nos celulares. */
 @media (max-width: 600px) {
-
     .footer {
         width: 100%;
-
         display: grid !important;
         grid-template-columns: 1fr !important;
         grid-template-rows: auto auto auto;
-
         gap: 25px;
-
         padding: 30px 20px;
-
         text-align: center;
     }
 
-
-    
-
+    /* Posiciona os links na primeira linha. */
     .footer-links {
         width: 100%;
-
         justify-self: center !important;
-
         text-align: center;
-
         grid-column: 1 !important;
         grid-row: 1 !important;
     }
@@ -201,65 +171,44 @@ body > .pagina {
         font-weight: 600;
     }
 
-
-    
-
+    /* Posiciona a logo na segunda linha. */
     .footer-center {
         width: 100%;
-
         display: flex !important;
-
         justify-content: center !important;
         align-items: center;
-
         justify-self: center !important;
-
         grid-column: 1 !important;
         grid-row: 2 !important;
     }
 
     .footer-logo {
         display: block !important;
-
         width: 240px;
-
         height: auto;
-
         max-width: 75vw;
-
         margin: 0 auto;
     }
 
-
-    
-
+    /* Posiciona as informações de contato na terceira linha. */
     .footer-contact {
         width: 100%;
-
         justify-self: center !important;
-
         text-align: center;
-
         grid-column: 1 !important;
         grid-row: 3 !important;
     }
 
     .footer-contact p {
         margin: 8px 0;
-
         font-size: 16px;
-
         line-height: 1.5;
-
         overflow-wrap: anywhere;
     }
 }
 
-
-
-
+/* Reduz os espaçamentos em celulares menores. */
 @media (max-width: 480px) {
-
     .footer {
         padding: 28px 16px;
         gap: 23px;
@@ -279,11 +228,8 @@ body > .pagina {
     }
 }
 
-
-
-
+/* Ajusta os tamanhos para celulares com telas menores. */
 @media (max-width: 390px) {
-
     .footer {
         padding: 26px 14px;
         gap: 21px;
@@ -303,11 +249,8 @@ body > .pagina {
     }
 }
 
-
-
-
+/* Ajusta o rodapé para celulares muito pequenos. */
 @media (max-width: 320px) {
-
     .footer {
         padding: 24px 10px;
         gap: 19px;

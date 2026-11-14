@@ -1,8 +1,4 @@
-
-/* ==========================================
-   CONFIGURAÇÕES GERAIS
-========================================== */
-
+/* Define as configurações gerais dos elementos. */
 * {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -10,6 +6,7 @@
     box-sizing: border-box;
 }
 
+/* Define as cores utilizadas na página. */
 :root {
     --surface: #ffffff;
     --border: #e6f4ef;
@@ -20,38 +17,33 @@
     --button-hover: #b88b11;
 }
 
+/* Define o tamanho mínimo da página. */
 html,
 body {
     width: 100%;
     min-height: 100%;
 }
 
+/* Define o fundo, a cor e o espaçamento entre as linhas. */
 body {
     background: #eef6f2;
     color: var(--text);
     line-height: 1.5;
 }
 
+/* Remove a decoração dos links. */
 a {
     color: inherit;
     text-decoration: none;
 }
 
-
-/* ==========================================
-   CONTEÚDO PRINCIPAL
-========================================== */
-
+/* Define o espaçamento do conteúdo principal. */
 .content {
     width: 100%;
     padding: 120px 80px 80px;
 }
 
-
-/* ==========================================
-   TÍTULO E SUBTÍTULO
-========================================== */
-
+/* Organiza o título e o subtítulo da página. */
 .page-header {
     width: 100%;
     display: flex;
@@ -61,16 +53,19 @@ a {
     margin-bottom: 24px;
 }
 
+/* Evita que o conteúdo do título ultrapasse o espaço disponível. */
 .title-group {
     min-width: 0;
 }
 
+/* Alinha o título com a marca lateral. */
 .title-row {
     display: flex;
     align-items: center;
     gap: 9px;
 }
 
+/* Define a aparência da marca lateral do título. */
 .title-mark {
     width: 5px;
     min-width: 5px;
@@ -80,6 +75,7 @@ a {
     background: var(--accent);
 }
 
+/* Define a aparência do título principal. */
 h1 {
     margin: 0;
     font-size: 28px;
@@ -88,217 +84,135 @@ h1 {
     color: var(--title);
 }
 
+/* Define a aparência do subtítulo. */
 .subtitle {
     margin-top: 8px;
     font-size: 16px;
     line-height: 1.4;
 }
 
-
-/* ==========================================
-   ÁREA DO CARD
-========================================== */
-
+/* Centraliza o cartão de detalhes da notificação. */
 .detail-panel {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
+/* Define o tamanho e a aparência do cartão. */
 .notification-detail-card {
     width: min(45%, 700px);
     min-height: 280px;
-
     display: flex;
     flex-direction: column;
-
     padding: 18px 20px;
-
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 15px;
-
     box-shadow: 0 15px 35px rgba(16, 38, 31, 0.08);
 }
 
-
-/* ==========================================
-   INFORMAÇÕES DA NOTIFICAÇÃO
-========================================== */
-
+/* Organiza as informações da notificação. */
 .message-info {
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 15px;
     padding-bottom: 10px;
-
     border-bottom: 1px solid #ddd;
 }
 
+/* Define a aparência do título da notificação. */
 .message-info h2 {
     min-width: 0;
     margin: 0;
-
     color: #2d2d2d;
     font-size: 21px;
     font-weight: 700;
     line-height: 1.2;
-
     overflow-wrap: break-word;
 }
 
+/* Define a aparência da data da notificação. */
 .message-date {
     flex-shrink: 0;
     font-size: 20px;
     font-weight: 600;
 }
 
-
-/* ==========================================
-   TEXTO DA NOTIFICAÇÃO
-========================================== */
-
+/* Define a aparência do texto da notificação. */
 .message-content {
     padding-top: 14px;
-
     font-size: 15px;
     line-height: 1.6;
-
     word-break: break-word;
     overflow-wrap: anywhere;
 }
 
+/* Remove a margem dos parágrafos da notificação. */
 .message-content p {
     margin: 0;
 }
 
-
-/* ==========================================
-   BOTÕES
-========================================== */
-
+/* Organiza os botões de ação. */
 .detail-actions {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-
     gap: 12px;
     margin-top: auto;
     padding-top: 18px;
 }
 
+/* Define a aparência padrão dos botões. */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 9px 17px;
-
     border: none;
     border-radius: 8px;
-
     font-size: 13px;
     font-weight: 700;
-
     cursor: pointer;
-
     transition:
         background 0.2s ease,
         transform 0.2s ease;
 }
 
+/* Define a aparência do botão principal. */
 .btn-primary {
     background: var(--button);
     color: #ffffff;
     font-size: 16px;
 }
 
+/* Altera a aparência do botão principal ao passar o mouse. */
 .btn-primary:hover {
     background: var(--button-hover);
     transform: translateY(-1px);
 }
 
+/* Define a aparência do botão secundário. */
 .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 9px 17px;
-
     background: #ffffff;
     color: var(--accent);
-
     border: 1px solid var(--accent);
-    border-radius: 8px;
-
     font-size: 16px;
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
 }
 
+/* Altera a aparência do botão secundário ao passar o mouse. */
 .btn-secondary:hover {
     background: #eef6f2;
     transform: translateY(-1px);
 }
 
-
-/* ==========================================
-   TELAS GRANDES - ACIMA DE 1600px
-========================================== */
-
-@media (min-width: 1600px) {
-
-    .content {
-        padding: 40px 60px 90px;
-    }
-
-    .page-header {
-        margin-bottom: 28px;
-    }
-
-    h1 {
-        font-size: 25px;
-    }
-
-    .notification-detail-card {
-        width: 50%;
-        max-width: 850px;
-        min-height: 300px;
-        padding: 20px 22px;
-    }
-
-    .message-info h2 {
-        font-size: 22px;
-    }
-
-    .message-date {
-        font-size: 15px;
-    }
-
-    .message-content {
-        font-size: 16px;
-    }
-}
-
-
-/* ==========================================
-   DESKTOP - 1367px ATÉ 1599px
-========================================== */
-
+/* Ajusta o layout para telas entre 1367px e 1599px. */
 @media (max-width: 1599px) and (min-width: 1367px) {
 
     .content {
-        padding: 30px 40px 80px;
+        padding: 30px 55px 80px;
     }
 
     .notification-detail-card {
@@ -307,19 +221,19 @@ h1 {
     }
 }
 
-
-/* ==========================================
-   DESKTOP - 1101px ATÉ 1366px
-========================================== */
-
+/* Ajusta o layout para telas entre 1101px e 1366px. */
 @media (max-width: 1366px) and (min-width: 1101px) {
 
     .content {
-        padding: 28px 32px 75px;
+        padding: 28px 55px 75px;
     }
 
     .page-header {
         margin-bottom: 22px;
+    }
+
+    .title-group {
+        max-width: 90%;
     }
 
     .notification-detail-card {
@@ -344,21 +258,21 @@ h1 {
     }
 }
 
-
-/* ==========================================
-   TABLET MAIOR - 993px ATÉ 1100px
-========================================== */
-
+/* Ajusta o layout para telas entre 993px e 1100px. */
 @media (max-width: 1100px) and (min-width: 993px) {
 
     .content {
-        padding: 26px 28px 70px;
+        padding: 26px 55px 70px;
     }
 
-    .notification-detail-card {
-        width: 72%;
-        max-width: 760px;
-        margin: 40px;
+    .page-header {
+        justify-content: flex-start;
+        margin-bottom: 22px;
+    }
+
+    .title-group {
+        width: 100%;
+        max-width: 90%;
     }
 
     h1 {
@@ -366,276 +280,24 @@ h1 {
     }
 
     .subtitle {
-        font-size: 24px;
-    }
-
-    .message-info h2 {
-        font-size: 24px;
-    }
-
-    .message-content {
-        font-size: 15px;
-    }
-}
-
-
-/* ==========================================
-   TABLET - 769px ATÉ 992px
-========================================== */
-
-@media (max-width: 992px) and (min-width: 769px) {
-
-    .content {
-        padding: 24px 25px 70px;
-    }
-
-    .page-header {
-        margin-bottom: 20px;
-    }
-
-    .subtitle {
-        font-size: 24px;
-    }
-
-    .detail-panel {
-        align-items: flex-start;
-    }
-
-    .notification-detail-card {
-        width: 82%;
-        max-width: 700px;
-        min-height: 270px;
-        padding: 17px 19px;
-
-        margin: 115px auto 35px;
-    }
-
-    .message-info h2 {
-        font-size: 24px;
-    }
-
-    .message-date {
-        font-size: 20px;
-    }
-
-    .message-content {
-        font-size: 15px;
-        line-height: 1.55;
-    }
-
-    .btn {
-        padding: 9px 16px;
-    }
-}
-
-
-/* ==========================================
-   TABLET MENOR - 577px ATÉ 768px
-========================================== */
-
-@media (max-width: 768px) and (min-width: 577px) {
-
-    .content {
-        padding: 30px 20px 60px;
-    }
-
-    .page-header {
-        margin-bottom: 20px;
-    }
-
-    .notification-detail-card {
-        width: 92%;
-        max-width: 600px;
-        min-height: 260px;
-
-        padding: 17px;
-        margin: 115px auto 35px;
-    }
-
-    .message-info {
-        gap: 10px;
-    }
-
-    .message-info h2 {
-        font-size: 20px;
-    }
-
-    .message-date {
-        font-size: 16px;
-    }
-
-    .message-content {
-        padding-top: 13px;
-        font-size: 15px;
-        line-height: 1.55;
-    }
-
-    .detail-actions {
-        padding-top: 16px;
-    }
-
-    .btn,
-    .btn-secondary {
-        padding: 9px 16px;
-        font-size: 13px;
-    }
-}
-
-
-/* ==========================================
-   CELULAR - ATÉ 576px
-========================================== */
-
-@media (max-width: 576px) {
-
-    /* Conteúdo */
-
-    .content {
-        padding: 18px 12px 45px;
-    }
-
-    /* Título */
-
-    .page-header {
-        margin-bottom: 0;
-    }
-
-    .title-row {
-        gap: 8px;
-    }
-
-    .title-mark {
-        width: 4px;
-        min-width: 4px;
-        height: 25px;
-    }
-
-    h1 {
-        font-size: 19px;
-        line-height: 25px;
-    }
-
-    .subtitle {
-        margin-top: 6px;
-        font-size: 14px;
-        line-height: 1.4;
-    }
-
-    /* Card */
-
-    .detail-panel {
-        justify-content: center;
-        align-items: flex-start;
-    }
-
-    .notification-detail-card {
-        width: 94%;
-        max-width: 450px;
-        min-height: 185px;
-
-        margin: 32px auto 42px;
-        padding: 16px 15px 22px;
-
-        border-radius: 12px;
-    }
-
-    /* Informações */
-
-    .message-info {
-        flex-direction: column;
-        align-items: flex-start;
-
-        gap: 5px;
-        padding-bottom: 9px;
-    }
-
-    .message-info h2 {
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    .message-date {
-        font-size: 11px;
-        line-height: 17px;
-    }
-
-    /* Descrição */
-
-    .message-content {
-        padding-top: 13px;
-        font-size: 13px;
-        line-height: 1.5;
-    }
-
-    /* Botões lado a lado */
-
-    .detail-actions {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        flex-wrap: nowrap;
-        gap: 10px;
-
-        padding: 20px 0 0;
-    }
-
-    .detail-actions .btn {
-        flex: 0 1 auto;
-        width: auto;
-        min-width: 0;
-
-        padding: 8px 10px;
-
-        font-size: 10px;
-        line-height: 15px;
-
-        white-space: nowrap;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-        font-size: 10px;
-    }
-}
-
-
-/* ==========================================
-   CELULARES MENORES - ATÉ 390px
-========================================== */
-
-@media (max-width: 390px) {
-
-    .content {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    h1 {
         font-size: 18px;
-        line-height: 24px;
     }
 
     .notification-detail-card {
-        width: 95%;
-        min-height: 180px;
-        padding: 15px 12px 21px;
+        width: 75%;
+        max-width: 760px;
+        margin: 40px auto;
     }
 
     .message-info h2 {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .message-date {
-        font-size: 11px;
+        font-size: 14px;
     }
 
-    .detail-actions {
-        gap: 98px;
-    }
-
-    .detail-actions .btn {
-        padding: 8px;
-        font-size: 10px;
+    .message-content {
+        font-size: 15px;
     }
 }

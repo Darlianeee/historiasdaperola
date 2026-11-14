@@ -1,8 +1,4 @@
-
-/* ==========================================
-   CONFIGURAÇÕES GERAIS
-========================================== */
-
+/* Configurações gerais da página. */
 * {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -21,11 +17,7 @@ body {
     color: #111111;
 }
 
-
-/* ==========================================
-   CONTEÚDO PRINCIPAL
-========================================== */
-
+/* Define a largura e o espaçamento do conteúdo principal. */
 .container {
     width: 82%;
     max-width: 1050px;
@@ -34,11 +26,7 @@ body {
     padding-bottom: 0;
 }
 
-
-/* ==========================================
-   CABEÇALHO
-========================================== */
-
+/* Estiliza o título e a descrição da página. */
 .cabecalho {
     margin-left: -100px;
     margin-bottom: 32px;
@@ -62,11 +50,7 @@ body {
     line-height: 1.4;
 }
 
-
-/* ==========================================
-   FILTROS E PESQUISA
-========================================== */
-
+/* Organiza os filtros e os campos de pesquisa. */
 .topo {
     display: flex;
     align-items: center;
@@ -92,6 +76,7 @@ body {
     color: #FFFFFF;
 }
 
+/* Estiliza o campo de pesquisa e o ícone da lupa. */
 .buscar {
     width: 280px;
     height: 42px;
@@ -123,6 +108,7 @@ body {
     color: #777777;
 }
 
+/* Define a aparência do campo de data. */
 .data {
     width: 150px;
     height: 42px;
@@ -135,11 +121,7 @@ body {
     outline: none;
 }
 
-
-/* ==========================================
-   LISTA DE NOTIFICAÇÕES
-========================================== */
-
+/* Organiza a lista e os cartões de notificações. */
 .lista-notificacoes {
     width: 100%;
 }
@@ -157,11 +139,7 @@ body {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
 }
 
-
-/* ==========================================
-   ÍCONES
-========================================== */
-
+/* Define o formato, o tamanho e as cores dos ícones. */
 .icone {
     width: 52px;
     height: 52px;
@@ -210,11 +188,7 @@ body {
     object-fit: contain;
 }
 
-
-/* ==========================================
-   TEXTOS DAS NOTIFICAÇÕES
-========================================== */
-
+/* Organiza os títulos, as mensagens e as datas das notificações. */
 .texto {
     flex: 1;
     min-width: 0;
@@ -242,17 +216,14 @@ body {
     font-weight: bold;
 }
 
-
-/* ==========================================
-   MENU DE AÇÕES
-========================================== */
-
+/* Posiciona o menu de ações de cada notificação. */
 .notification-action {
     position: relative;
     margin-left: auto;
     flex-shrink: 0;
 }
 
+/* Oculta visualmente o controle de seleção do menu. */
 .notification-action .menu-toggle {
     position: absolute;
     width: 1px;
@@ -268,6 +239,7 @@ body {
     -webkit-appearance: none;
 }
 
+/* Estiliza o botão dos três pontos. */
 .menu-dots {
     width: 34px;
     height: 34px;
@@ -288,23 +260,26 @@ body {
     object-fit: contain;
 }
 
+/* Controla o comportamento de abertura do menu. */
 .notification-menu {
     position: relative;
 }
 
-.notification-menu > summary {
+.notification-menu>summary {
     list-style: none;
     cursor: pointer;
 }
 
-.notification-menu > summary::-webkit-details-marker {
+.notification-menu>summary::-webkit-details-marker {
     display: none;
 }
 
-.notification-menu[open] .dropdown-menu {
+.notification-menu[open] .dropdown-menu,
+.menu-toggle:checked~.dropdown-menu {
     display: block;
 }
 
+/* Define a aparência das opções do menu suspenso. */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -316,10 +291,6 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
     z-index: 9999;
-}
-
-.menu-toggle:checked ~ .dropdown-menu {
-    display: block;
 }
 
 .dropdown-menu a {
@@ -338,6 +309,7 @@ body {
     background: #EEEEEE;
 }
 
+/* Destaca a opção de excluir uma notificação. */
 .dropdown-menu .delete-btn {
     color: #D11A2A;
 }
@@ -347,12 +319,7 @@ body {
     color: #B00000;
 }
 
-
-/* ==========================================
-   TABLETS E TELAS INTERMEDIÁRIAS
-   835px ATÉ 1100px
-========================================== */
-
+/* Ajusta a organização da página para telas intermediárias. */
 @media screen and (max-width: 1100px) {
 
     .container {
@@ -423,19 +390,14 @@ body {
         margin: 0;
     }
 
-    .texto > span {
+    .texto>span {
         font-size: 11px;
         line-height: 14px;
         margin-top: 2px;
     }
 }
 
-
-/* ==========================================
-   TABLETS MENORES
-   601px ATÉ 834px
-========================================== */
-
+/* Ajusta os elementos para tablets menores. */
 @media screen and (min-width: 601px) and (max-width: 834px) {
 
     .container {
@@ -533,12 +495,7 @@ body {
     }
 }
 
-
-/* ==========================================
-   CELULARES
-   ATÉ 600px
-========================================== */
-
+/* Organiza os elementos para telas de celulares. */
 @media screen and (max-width: 600px) {
 
     .container {

@@ -1,25 +1,20 @@
-
+/* Define a fonte e as configurações gerais dos elementos. */
 * {
     font-family: Arial, Helvetica, sans-serif;
+    background: transparent;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-* {
-    background: transparent;
-}
-
+/* Define o tamanho da página. */
 html,
 body {
     width: 100%;
     height: 100%;
 }
 
-/* ==========================================
-   ESTRUTURA PRINCIPAL
-========================================== */
-
+/* Organiza a área principal do conteúdo. */
 .conteudo {
     position: relative;
     width: 100%;
@@ -27,12 +22,14 @@ body {
     padding: 110px 49px 60px;
 }
 
+/* Posiciona o título da página. */
 .titulo {
     position: absolute;
     top: 110px;
     left: 34px;
 }
 
+/* Estiliza o título principal. */
 .titulo h1 {
     padding-left: 9px;
     font-size: 28px;
@@ -42,6 +39,7 @@ body {
     color: #111;
 }
 
+/* Posiciona e estiliza a descrição da página. */
 .descricao {
     position: absolute;
     top: 145px;
@@ -52,10 +50,7 @@ body {
     color: #222;
 }
 
-/* ==========================================
-   MODAL DE CONFIRMAÇÃO
-========================================== */
-
+/* Organiza a área da janela de confirmação. */
 .overlay {
     position: relative;
     width: 100%;
@@ -67,25 +62,24 @@ body {
     pointer-events: none;
 }
 
+/* Define a aparência da janela de confirmação. */
 .modal {
     width: 440px;
     max-width: 100%;
     min-height: 230px;
     margin: 0 auto;
     padding: 40px 40px 30px;
-
     background: #ffffff;
     border: 1px solid #d2d2d2;
     border-radius: 5px;
-
     box-shadow:
         0 3px 5px rgba(0, 0, 0, 0.35),
         0 1px 2px rgba(0, 0, 0, 0.15);
-
     text-align: center;
     pointer-events: auto;
 }
 
+/* Estiliza o título da janela. */
 .modal h2 {
     margin-bottom: 22px;
     font-size: 24px;
@@ -94,30 +88,29 @@ body {
     color: #111;
 }
 
+/* Estiliza a mensagem da janela. */
 .modal p {
     font-size: 14px;
     line-height: 20px;
     color: #222;
 }
 
-/* ==========================================
-   BOTÕES
-========================================== */
-
+/* Organiza os botões da janela de confirmação. */
 .botoes {
     width: 100%;
     margin-top: 38px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* Remove a decoração dos links dos botões. */
 .botoes a {
     text-decoration: none;
     color: inherit;
 }
 
+/* Define as configurações compartilhadas dos botões. */
 .cancelar,
 .excluir {
     width: 80px;
@@ -130,32 +123,33 @@ body {
     transition: 0.2s ease;
 }
 
+/* Estiliza o botão de cancelar. */
 .cancelar {
     background: #ffffff;
     color: #c79b21;
     font-size: 12px;
 }
 
+/* Altera a aparência do botão de cancelar ao passar o cursor. */
 .cancelar:hover {
     background: #f5f5f5;
     color: #c79b21;
 }
 
+/* Estiliza o botão de excluir. */
 .excluir {
     background: #c79b21;
     color: #ffffff;
     font-size: 14px;
 }
 
+/* Escurece o botão de excluir ao passar o cursor. */
 .excluir:hover {
     background: #b88b11;
     color: #ffffff;
 }
 
-/* ==========================================
-   TABLET
-========================================== */
-
+/* Ajusta o conteúdo para tablets. */
 @media (min-width: 481px) and (max-width: 768px) {
 
     .conteudo {
@@ -207,10 +201,7 @@ body {
     }
 }
 
-/* ==========================================
-   CELULAR
-========================================== */
-
+/* Ajusta a janela para celulares. */
 @media (max-width: 480px) {
 
     .titulo {
@@ -260,13 +251,9 @@ body {
     .botoes {
         margin-top: 22px;
     }
-
 }
 
-/* ==========================================
-   CELULARES MENORES
-========================================== */
-
+/* Ajusta os elementos para celulares menores. */
 @media (max-width: 390px) {
 
     .conteudo {
@@ -292,10 +279,7 @@ body {
     }
 
     .overlay {
-        padding-top: 85px;
-        padding-bottom: 50px;
-        padding-left: 12px;
-        padding-right: 12px;
+        padding: 85px 12px 50px;
     }
 
     .modal {
@@ -327,10 +311,7 @@ body {
     }
 }
 
-/* ==========================================
-   CELULARES MUITO PEQUENOS
-========================================== */
-
+/* Ajusta os elementos para celulares muito pequenos. */
 @media (max-width: 320px) {
 
     .conteudo {
@@ -390,10 +371,7 @@ body {
     }
 }
 
-/* ==========================================
-   TELAS GRANDES
-========================================== */
-
+/* Ajusta os espaçamentos em telas grandes. */
 @media (min-width: 1200px) {
 
     .conteudo {
@@ -401,15 +379,13 @@ body {
         padding-right: 60px;
     }
 
-    .titulo {
-        left: 45px;
-    }
-
+    .titulo,
     .descricao {
         left: 45px;
     }
 }
 
+/* Aumenta os espaçamentos em telas muito grandes. */
 @media (min-width: 1600px) {
 
     .conteudo {
@@ -417,10 +393,7 @@ body {
         padding-right: 80px;
     }
 
-    .titulo {
-        left: 60px;
-    }
-
+    .titulo,
     .descricao {
         left: 60px;
     }

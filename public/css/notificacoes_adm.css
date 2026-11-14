@@ -1,8 +1,4 @@
-
-/* ==========================================
-   CONFIGURAÇÕES GERAIS
-========================================== */
-
+/* Configurações gerais da página. */
 * {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -21,11 +17,7 @@ body {
     color: #111111;
 }
 
-
-/* ==========================================
-   CONTEÚDO PRINCIPAL
-========================================== */
-
+/* Define o espaço e a largura do conteúdo principal. */
 .container {
     width: 82%;
     max-width: 1050px;
@@ -34,11 +26,7 @@ body {
     padding-bottom: 0;
 }
 
-
-/* ==========================================
-   CABEÇALHO
-========================================== */
-
+/* Estiliza o título e a descrição da página. */
 .cabecalho {
     margin-left: -100px;
     margin-bottom: 32px;
@@ -62,11 +50,7 @@ body {
     line-height: 1.4;
 }
 
-
-/* ==========================================
-   FILTROS E PESQUISA
-========================================== */
-
+/* Organiza os filtros, os botões e a pesquisa. */
 .topo {
     display: flex;
     align-items: center;
@@ -92,6 +76,7 @@ body {
     color: #FFFFFF;
 }
 
+/* Estiliza o campo de pesquisa e seu ícone. */
 .buscar {
     width: 280px;
     height: 42px;
@@ -123,6 +108,7 @@ body {
     color: #777777;
 }
 
+/* Define a aparência do campo de data. */
 .data {
     width: 150px;
     height: 42px;
@@ -135,11 +121,24 @@ body {
     outline: none;
 }
 
+/* Estiliza os botões de filtro e os formulários da área superior. */
+.topo a.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
 
-/* ==========================================
-   LISTA DE NOTIFICAÇÕES
-========================================== */
+.topo .botao.ativo {
+    background: #BE9628;
+    color: #FFFFFF;
+}
 
+.topo form {
+    display: contents;
+}
+
+/* Organiza a lista e os cartões de notificações. */
 .lista-notificacoes {
     width: 100%;
 }
@@ -157,11 +156,30 @@ body {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
 }
 
+/* Destaca as notificações que ainda não foram lidas. */
+.notificacao.nao-lida {
+    border-left: 5px solid #BE9628;
+}
 
-/* ==========================================
-   ÍCONES
-========================================== */
+.notificacao.nao-lida .texto h3::after {
+    content: "Nova";
+    margin-left: 8px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: #BE9628;
+    color: #fff;
+    font-size: 11px;
+    vertical-align: middle;
+}
 
+/* Estiliza a mensagem exibida quando não existem notificações. */
+.sem-notificacoes {
+    padding: 24px;
+    text-align: center;
+    color: #666;
+}
+
+/* Define o tamanho e as cores dos ícones de cada notificação. */
 .icone {
     width: 52px;
     height: 52px;
@@ -210,11 +228,7 @@ body {
     object-fit: contain;
 }
 
-
-/* ==========================================
-   TEXTOS DAS NOTIFICAÇÕES
-========================================== */
-
+/* Organiza os textos e as informações de cada notificação. */
 .texto {
     flex: 1;
     min-width: 0;
@@ -234,6 +248,7 @@ body {
     color: #555555;
     font-size: 14px;
     line-height: 19px;
+    white-space: pre-line;
 }
 
 .texto span {
@@ -242,17 +257,14 @@ body {
     font-weight: bold;
 }
 
-
-/* ==========================================
-   MENU DE AÇÕES
-========================================== */
-
+/* Posiciona o menu de ações de cada notificação. */
 .notification-action {
     position: relative;
     margin-left: auto;
     flex-shrink: 0;
 }
 
+/* Oculta o controle de seleção sem removê-lo da acessibilidade. */
 .notification-action .menu-toggle {
     position: absolute;
     width: 1px;
@@ -268,6 +280,7 @@ body {
     -webkit-appearance: none;
 }
 
+/* Estiliza o botão dos três pontos. */
 .menu-dots {
     width: 34px;
     height: 34px;
@@ -288,23 +301,26 @@ body {
     object-fit: contain;
 }
 
+/* Controla a abertura do menu de opções. */
 .notification-menu {
     position: relative;
 }
 
-.notification-menu > summary {
+.notification-menu>summary {
     list-style: none;
     cursor: pointer;
 }
 
-.notification-menu > summary::-webkit-details-marker {
+.notification-menu>summary::-webkit-details-marker {
     display: none;
 }
 
-.notification-menu[open] .dropdown-menu {
+.notification-menu[open] .dropdown-menu,
+.menu-toggle:checked~.dropdown-menu {
     display: block;
 }
 
+/* Define a aparência das opções do menu. */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -316,10 +332,6 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
     z-index: 9999;
-}
-
-.menu-toggle:checked ~ .dropdown-menu {
-    display: block;
 }
 
 .dropdown-menu a {
@@ -338,6 +350,7 @@ body {
     background: #EEEEEE;
 }
 
+/* Destaca a opção de excluir uma notificação. */
 .dropdown-menu .delete-btn {
     color: #D11A2A;
 }
@@ -347,12 +360,7 @@ body {
     color: #B00000;
 }
 
-
-/* ==========================================
-   TABLETS E TELAS INTERMEDIÁRIAS
-   835px ATÉ 1100px
-========================================== */
-
+/* Ajusta o layout para tablets e telas intermediárias. */
 @media screen and (max-width: 1100px) {
 
     .container {
@@ -423,19 +431,14 @@ body {
         margin: 0;
     }
 
-    .texto > span {
+    .texto>span {
         font-size: 11px;
         line-height: 14px;
         margin-top: 2px;
     }
 }
 
-
-/* ==========================================
-   TABLETS MENORES
-   601px ATÉ 834px
-========================================== */
-
+/* Ajusta os elementos para tablets menores. */
 @media screen and (min-width: 601px) and (max-width: 834px) {
 
     .container {
@@ -533,12 +536,7 @@ body {
     }
 }
 
-
-/* ==========================================
-   CELULARES
-   ATÉ 600px
-========================================== */
-
+/* Organiza a página para celulares. */
 @media screen and (max-width: 600px) {
 
     .container {

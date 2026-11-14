@@ -1,169 +1,152 @@
+/* Configurações gerais dos elementos. */
 * {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Área principal do conteúdo. */
 .content {
     width: 100%;
     max-width: 100%;
     min-width: 0;
-
     padding: 110px 49px 80px;
-
     background: #f7fbf9;
 }
 
+/* Cabeçalho da página. */
 .page-header {
     width: 100%;
     min-width: 0;
-
     margin-bottom: 36px;
 }
 
+/* Organiza o título e o subtítulo. */
 .title-group {
     width: 100%;
     min-width: 0;
-
     display: flex;
     flex-direction: column;
 }
 
+/* Organiza o título e a marca lateral. */
 .title-row {
     width: 100%;
     min-width: 0;
-
     display: flex;
     align-items: center;
     gap: 9px;
 }
 
-.title-mark {    width: 5px;
+/* Marca lateral do título. */
+.title-mark {
+    width: 5px;
     height: 31px;
-
     flex: 0 0 6px;
-
     background: #465722;
-    min-width: 5px;}
+    min-width: 5px;
+}
 
-.title-row h1 {    margin: 0;
+/* Título principal. */
+.title-row h1 {
+    margin: 0;
     font-size: 28px;
     font-weight: 700;
     color: #13231d;
-    line-height: 31px;}
+    line-height: 31px;
+}
 
-.subtitle {    margin-top: 8px;
+/* Texto complementar do cabeçalho. */
+.subtitle {
+    margin-top: 8px;
     font-size: 16px;
     line-height: 1.4;
-
     color: #1f1f1f;
 }
 
+/* Cartão principal do perfil. */
 .profile-card {
     width: min(100%, 1000px);
     max-width: 100%;
-
     margin: 50px auto 0;
-
     background: #ffffff;
-
     border-radius: 10px;
-
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
-
     overflow: hidden;
 }
 
+/* Título interno do cartão. */
 .profile-card h2 {
     width: 100%;
-
     border-bottom: 1px solid #e3e3e3;
-
     font-size: 22px;
     line-height: 1.3;
-
     font-weight: 700;
-
     color: #1f1f1f;
 }
 
+/* Organiza a imagem e as informações do perfil. */
 .profile-grid {
     width: 100%;
     min-width: 0;
-
     display: flex;
     align-items: center;
-
     gap: 60px;
-
     padding: 40px;
 }
 
+/* Área da imagem e dos botões. */
 .profile-aside {
     width: 220px;
     min-width: 0;
-
     flex: 0 1 220px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Centraliza a imagem do perfil. */
 .avatar-frame {
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Imagem de perfil. */
 .avatar-frame img {
     display: block;
-
     width: 130px;
     height: 130px;
-
     max-width: 100%;
-
     border-radius: 50%;
-
     object-fit: cover;
-
     margin-bottom: 25px;
 }
 
+/* Organiza os botões do perfil. */
 .profile-actions {
     width: 100%;
-
     display: flex;
     flex-direction: column;
-
     gap: 12px;
 }
 
+/* Estilo geral dos botões. */
 .profile-btn {
     width: 100%;
-
     display: block;
-
     padding: 10px;
-
     border-radius: 10px;
-
     text-decoration: none;
     text-align: center;
-
     font-size: 15px;
     line-height: 1.3;
-
     transition: 0.3s;
 }
 
+/* Botão principal. */
 .profile-btn-primary {
     background: #c99b1d;
     color: #ffffff;
@@ -173,11 +156,10 @@
     background: #b88b11;
 }
 
+/* Botão secundário. */
 .profile-btn-secondary {
     background: #ffffff;
-
     color: #c99b1d;
-
     border: 1px solid #d5d5d5;
 }
 
@@ -185,107 +167,98 @@
     background: #f4f4f4;
 }
 
+/* Organiza as informações em duas colunas. */
 .info-grid {
     width: 100%;
     min-width: 0;
-
     flex: 1 1 auto;
-
     display: grid;
-
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
     gap: 35px 60px;
 }
 
+/* Organiza cada informação com seu ícone. */
 .info-item {
     width: 100%;
     min-width: 0;
-
     display: flex;
     align-items: flex-start;
-
     gap: 15px;
 }
 
+/* Define o tamanho e a posição dos ícones. */
 .info-icon {
     width: 40px;
     min-width: 40px;
-
     flex: 0 0 40px;
-
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
+/* Imagens dos ícones. */
 .info-icon img {
     display: block;
-
     width: 40px;
     height: 40px;
-
     object-fit: contain;
-
     margin-top: 2px;
 }
 
+/* Organiza o nome e o valor das informações. */
 .info-content {
     width: 0;
     min-width: 0;
-
     flex: 1 1 auto;
-
     display: flex;
     flex-direction: column;
 }
 
+/* Nome de cada informação. */
 .info-label {
     width: 100%;
     max-width: 100%;
     min-width: 0;
-
     margin-bottom: 5px;
-
     font-size: 14px;
     line-height: 1.3;
-
     color: #6c6c6c;
-
     overflow-wrap: anywhere;
     word-break: break-word;
 }
 
+/* Valor apresentado no perfil. */
 .info-value {
     width: 100%;
     max-width: 100%;
     min-width: 0;
-
     font-size: 17px;
     line-height: 1.4;
-
     color: #1f1f1f;
-
     font-weight: 500;
-
     overflow-wrap: anywhere;
     word-break: break-word;
 }
 
+/* Ajustes para telas grandes. */
 @media (min-width: 1600px) {
 
     .content {
         padding: 45px;
     }
 
-    .title-row h1 {    font-size: 28px;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0;}
+    .title-row h1 {
+        font-size: 28px;
+        line-height: 31px;
+        font-weight: 700;
+        margin: 0;
+    }
 
-    .subtitle {    font-size: 16px;
-    margin-top: 8px;
-    line-height: 1.4;}
+    .subtitle {
+        font-size: 16px;
+        margin-top: 8px;
+        line-height: 1.4;
+    }
 
     .profile-card {
         width: min(100%, 1100px);
@@ -293,7 +266,6 @@
 
     .profile-grid {
         padding: 45px;
-
         gap: 70px;
     }
 
@@ -312,20 +284,25 @@
     }
 }
 
+/* Ajustes para notebooks e telas menores. */
 @media (max-width: 1366px) {
 
     .content {
         padding: 32px;
     }
 
-    .title-row h1 {    font-size: 28px;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0;}
+    .title-row h1 {
+        font-size: 28px;
+        line-height: 31px;
+        font-weight: 700;
+        margin: 0;
+    }
 
-    .subtitle {    font-size: 16px;
-    margin-top: 8px;
-    line-height: 1.4;}
+    .subtitle {
+        font-size: 16px;
+        margin-top: 8px;
+        line-height: 1.4;
+    }
 
     .profile-card {
         width: min(100%, 950px);
@@ -333,7 +310,6 @@
 
     .profile-grid {
         gap: 40px;
-
         padding: 35px;
     }
 
@@ -347,6 +323,7 @@
     }
 }
 
+/* Ajustes para tablets e telas médias. */
 @media (max-width: 1024px) {
 
     .content {
@@ -357,24 +334,26 @@
         margin-bottom: 30px;
     }
 
-    .title-row h1 {    font-size: 28px;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0;}
+    .title-row h1 {
+        font-size: 28px;
+        line-height: 31px;
+        font-weight: 700;
+        margin: 0;
+    }
 
-    .subtitle {    font-size: 16px;
-    margin-top: 8px;
-    line-height: 1.4;}
+    .subtitle {
+        font-size: 16px;
+        margin-top: 8px;
+        line-height: 1.4;
+    }
 
     .profile-card {
         width: 100%;
-
         margin-top: 100px;
     }
 
     .profile-grid {
         gap: 30px;
-
         padding: 30px;
     }
 
@@ -412,15 +391,15 @@
     }
 }
 
+/* Ajustes para telas com até 800px. */
 @media (max-width: 800px) {
 
     .content {
-        padding: 24px;
+        padding: 35px;
     }
 
     .profile-grid {
         gap: 25px;
-
         padding: 25px;
     }
 
@@ -438,12 +417,12 @@
     }
 }
 
+/* Adapta o perfil para telas menores. */
 @media (max-width: 700px) {
 
     .content {
         width: 100%;
         min-width: 0;
-
         padding: 22px 18px 30px;
     }
 
@@ -451,78 +430,63 @@
         margin-bottom: 25px;
     }
 
-    .title-row {    gap: 9px;
+    .title-row {
+        gap: 9px;
     }
 
-    .title-mark {    width: 5px;
-    height: 31px;
-
+    .title-mark {
+        width: 5px;
+        height: 31px;
         flex-basis: 5px;
-    min-width: 5px;}
-
-    .title-row h1 {    font-size: 28px;
-
-        overflow-wrap: anywhere;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0;}
-
-    .subtitle {    margin-top: 8px;
-    font-size: 16px;
-    line-height: 1.4;
+        min-width: 5px;
     }
 
+    .title-row h1 {
+        font-size: 28px;
+        overflow-wrap: anywhere;
+        line-height: 31px;
+        font-weight: 700;
+        margin: 0;
+    }
 
-    
+    .subtitle {
+        margin-top: 8px;
+        font-size: 16px;
+        line-height: 1.4;
+    }
 
     .profile-card {
         width: 100%;
         max-width: 100%;
-
         margin: 25px 0 0;
-
         border-radius: 10px;
     }
 
     .profile-card h2 {
         padding: 17px 20px;
-
         font-size: 21px;
     }
-
-
-    
 
     .profile-grid {
         width: 100%;
         min-width: 0;
-
         display: flex;
         flex-direction: column;
-
         align-items: stretch;
-
         gap: 35px;
-
         padding: 30px 22px;
     }
-
-
-    
 
     .profile-aside {
         width: 100%;
         min-width: 0;
-
         flex: none;
-
         align-items: center;
     }
 
     .avatar-frame img {
         width: 135px;
         height: 135px;
-
         margin-bottom: 22px;
     }
 
@@ -532,36 +496,24 @@
 
     .profile-btn {
         padding: 12px 10px;
-
         font-size: 16px;
     }
-
-
-    
 
     .info-grid {
         width: 100%;
         min-width: 0;
-
         display: grid;
-
         grid-template-columns: minmax(0, 1fr);
-
         gap: 25px;
     }
 
     .info-item {
         width: 100%;
         min-width: 0;
-
         display: flex;
         align-items: flex-start;
-
         gap: 13px;
     }
-
-
-    
 
     .info-icon {
         width: 40px;
@@ -574,13 +526,9 @@
         height: 40px;
     }
 
-
-    
-
     .info-content {
         width: 0;
         min-width: 0;
-
         flex: 1 1 auto;
     }
 
@@ -589,7 +537,6 @@
         width: 100%;
         max-width: 100%;
         min-width: 0;
-
         overflow-wrap: anywhere;
         word-break: break-word;
     }
@@ -603,32 +550,36 @@
     }
 }
 
+/* Ajustes para celulares menores. */
 @media (max-width: 480px) {
 
     .content {
         padding: 20px 14px 28px;
     }
 
-    .title-row {    gap: 9px;
+    .title-row {
+        gap: 9px;
     }
 
-    .title-mark {    width: 5px;
-    height: 31px;
-
+    .title-mark {
+        width: 5px;
+        height: 31px;
         flex-basis: 5px;
-    min-width: 5px;}
+        min-width: 5px;
+    }
 
-    .title-row h1 {    font-size: 28px;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0;}
+    .title-row h1 {
+        font-size: 28px;
+        line-height: 31px;
+        font-weight: 700;
+        margin: 0;
+    }
 
-    .subtitle {    font-size: 16px;
-    margin-top: 8px;
-    line-height: 1.4;}
-
-
-    
+    .subtitle {
+        font-size: 16px;
+        margin-top: 8px;
+        line-height: 1.4;
+    }
 
     .profile-card {
         margin-top: 22px;
@@ -636,29 +587,18 @@
 
     .profile-card h2 {
         padding: 16px 18px;
-
         font-size: 20px;
     }
 
-
-    
-
     .profile-grid {
         padding: 26px 18px 30px;
-
         gap: 32px;
     }
-
-
-    
 
     .avatar-frame img {
         width: 125px;
         height: 125px;
     }
-
-
-    
 
     .profile-actions {
         width: 100%;
@@ -667,12 +607,8 @@
 
     .profile-btn {
         font-size: 15px;
-
         padding: 11px 10px;
     }
-
-
-    
 
     .info-grid {
         gap: 23px;
@@ -698,54 +634,43 @@
     }
 }
 
+/* Ajustes para celulares com até 390px. */
 @media (max-width: 390px) {
 
     .content {
-        padding: 18px 12px 25px;
+        padding: 18px 35px 25px;
     }
 
-    .title-row h1 {    font-size: 28px;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0;}
+    .title-row h1 {
+        font-size: 28px;
+        line-height: 31px;
+        font-weight: 700;
+        margin: 0;
+    }
 
-    .subtitle {    font-size: 16px;
-    margin-top: 8px;
-    line-height: 1.4;}
-
-
-    
+    .subtitle {
+        font-size: 16px;
+        margin-top: 8px;
+        line-height: 1.4;
+    }
 
     .profile-card h2 {
         padding: 15px 16px;
-
         font-size: 19px;
     }
-
-
-    
 
     .profile-grid {
         padding: 24px 15px 27px;
     }
-
-
-    
 
     .avatar-frame img {
         width: 115px;
         height: 115px;
     }
 
-
-    
-
     .profile-actions {
         max-width: 260px;
     }
-
-
-    
 
     .info-item {
         gap: 10px;
@@ -771,44 +696,39 @@
     }
 }
 
+/* Ajustes para celulares muito pequenos. */
 @media (max-width: 320px) {
 
     .content {
         padding: 16px 10px 22px;
     }
 
-    .title-row h1 {    font-size: 28px;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0;}
+    .title-row h1 {
+        font-size: 28px;
+        line-height: 31px;
+        font-weight: 700;
+        margin: 0;
+    }
 
-    .subtitle {    font-size: 16px;
-    margin-top: 8px;
-    line-height: 1.4;}
+    .subtitle {
+        font-size: 16px;
+        margin-top: 8px;
+        line-height: 1.4;
+    }
 
     .profile-card h2 {
         padding: 14px;
-
         font-size: 18px;
     }
-
-
-    
 
     .profile-grid {
         padding: 22px 13px 25px;
     }
 
-
-    
-
     .avatar-frame img {
         width: 105px;
         height: 105px;
     }
-
-
-    
 
     .profile-actions {
         max-width: 240px;
@@ -817,9 +737,6 @@
     .profile-btn {
         font-size: 14px;
     }
-
-
-    
 
     .info-grid {
         gap: 20px;
@@ -849,6 +766,7 @@
     }
 }
 
+/* Garante que a página ocupe toda a altura da tela. */
 html,
 body {
     min-height: 100%;

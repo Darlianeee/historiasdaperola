@@ -1,8 +1,4 @@
-
-/* ==========================================
-   CONFIGURAÇÕES GERAIS
-========================================== */
-
+/* Define as configurações gerais dos elementos. */
 * {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -10,6 +6,7 @@
     box-sizing: border-box;
 }
 
+/* Define as cores utilizadas na página. */
 :root {
     --surface: #ffffff;
     --border: #e6f4ef;
@@ -20,38 +17,33 @@
     --button-hover: #b88b11;
 }
 
+/* Define o tamanho mínimo da página. */
 html,
 body {
     width: 100%;
     min-height: 100%;
 }
 
+/* Define o fundo e a aparência geral da página. */
 body {
     background: #eef6f2;
     color: var(--text);
     line-height: 1.5;
 }
 
+/* Remove a decoração dos links. */
 a {
     color: inherit;
     text-decoration: none;
 }
 
-
-/* ==========================================
-   CONTEÚDO PRINCIPAL
-========================================== */
-
+/* Define o espaçamento do conteúdo principal. */
 .content {
     width: 100%;
     padding: 120px 80px 80px;
 }
 
-
-/* ==========================================
-   TÍTULO E SUBTÍTULO
-========================================== */
-
+/* Organiza o título e o subtítulo. */
 .page-header {
     width: 100%;
     display: flex;
@@ -71,6 +63,7 @@ a {
     gap: 9px;
 }
 
+/* Define a marca lateral do título. */
 .title-mark {
     width: 5px;
     min-width: 5px;
@@ -80,6 +73,7 @@ a {
     background: var(--accent);
 }
 
+/* Define a aparência do título principal. */
 h1 {
     margin: 0;
     font-size: 28px;
@@ -88,86 +82,67 @@ h1 {
     color: var(--title);
 }
 
+/* Define a aparência do subtítulo. */
 .subtitle {
     margin-top: 8px;
     font-size: 16px;
     line-height: 1.4;
 }
 
-
-/* ==========================================
-   ÁREA DO CARD
-========================================== */
-
+/* Centraliza o cartão de detalhes. */
 .detail-panel {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
+/* Define o tamanho e a aparência do cartão. */
 .notification-detail-card {
     width: min(45%, 700px);
     min-height: 280px;
-
     display: flex;
     flex-direction: column;
-
     padding: 18px 20px;
-
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 15px;
-
     box-shadow: 0 15px 35px rgba(16, 38, 31, 0.08);
 }
 
-
-/* ==========================================
-   INFORMAÇÕES DA NOTIFICAÇÃO
-========================================== */
-
+/* Organiza as informações da notificação. */
 .message-info {
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 15px;
     padding-bottom: 10px;
-
     border-bottom: 1px solid #ddd;
 }
 
+/* Define a aparência do título da notificação. */
 .message-info h2 {
     min-width: 0;
     margin: 0;
-
     color: #2d2d2d;
     font-size: 21px;
     font-weight: 700;
     line-height: 1.2;
-
     overflow-wrap: break-word;
 }
 
+/* Define a aparência da data. */
 .message-date {
     flex-shrink: 0;
     font-size: 20px;
     font-weight: 600;
 }
 
-
-/* ==========================================
-   TEXTO DA NOTIFICAÇÃO
-========================================== */
-
+/* Define a aparência do texto da notificação. */
 .message-content {
     padding-top: 14px;
-
     font-size: 15px;
     line-height: 1.6;
-
     word-break: break-word;
     overflow-wrap: anywhere;
 }
@@ -176,42 +151,34 @@ h1 {
     margin: 0;
 }
 
-
-/* ==========================================
-   BOTÕES
-========================================== */
-
+/* Organiza os botões de ação. */
 .detail-actions {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-
     gap: 12px;
     margin-top: auto;
     padding-top: 18px;
 }
 
+/* Define a aparência padrão dos botões. */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 9px 17px;
-
     border: none;
     border-radius: 8px;
-
     font-size: 13px;
     font-weight: 700;
-
     cursor: pointer;
-
     transition:
         background 0.2s ease,
         transform 0.2s ease;
 }
 
+/* Define a aparência do botão principal. */
 .btn-primary {
     background: var(--button);
     color: #ffffff;
@@ -223,27 +190,12 @@ h1 {
     transform: translateY(-1px);
 }
 
+/* Define a aparência do botão secundário. */
 .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 9px 17px;
-
     background: #ffffff;
     color: var(--accent);
-
     border: 1px solid var(--accent);
-    border-radius: 8px;
-
     font-size: 16px;
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
 }
 
 .btn-secondary:hover {
@@ -251,11 +203,7 @@ h1 {
     transform: translateY(-1px);
 }
 
-
-/* ==========================================
-   TELAS GRANDES - ACIMA DE 1600px
-========================================== */
-
+/* Ajusta telas grandes. */
 @media (min-width: 1600px) {
 
     .content {
@@ -290,11 +238,7 @@ h1 {
     }
 }
 
-
-/* ==========================================
-   DESKTOP - 1367px ATÉ 1599px
-========================================== */
-
+/* Ajusta computadores entre 1367px e 1599px. */
 @media (max-width: 1599px) and (min-width: 1367px) {
 
     .content {
@@ -307,28 +251,30 @@ h1 {
     }
 }
 
-
-/* ==========================================
-   DESKTOP - 1101px ATÉ 1366px
-========================================== */
-
+/* Ajusta computadores entre 1101px e 1366px. */
 @media (max-width: 1366px) and (min-width: 1101px) {
 
     .content {
-        padding: 28px 32px 75px;
+        padding: 28px 30px 75px;
     }
 
     .page-header {
+        justify-content: flex-start;
         margin-bottom: 22px;
+    }
+
+    .title-group {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 25px;
     }
 
     .notification-detail-card {
         width: 65%;
         max-width: 780px;
-    }
-
-    h1 {
-        font-size: 25px;
     }
 
     .message-info h2 {
@@ -344,21 +290,21 @@ h1 {
     }
 }
 
-
-/* ==========================================
-   TABLET MAIOR - 993px ATÉ 1100px
-========================================== */
-
+/* Ajusta computadores menores entre 993px e 1100px. */
 @media (max-width: 1100px) and (min-width: 993px) {
 
     .content {
-        padding: 26px 28px 70px;
+        padding: 26px 24px 70px;
     }
 
-    .notification-detail-card {
-        width: 72%;
-        max-width: 760px;
-        margin: 40px;
+    .page-header {
+        justify-content: flex-start;
+        margin-bottom: 22px;
+    }
+
+    .title-group {
+        width: 100%;
+        max-width: 100%;
     }
 
     h1 {
@@ -366,11 +312,21 @@ h1 {
     }
 
     .subtitle {
-        font-size: 24px;
+        font-size: 16px;
+    }
+
+    .notification-detail-card {
+        width: 72%;
+        max-width: 760px;
+        margin: 40px auto;
     }
 
     .message-info h2 {
-        font-size: 24px;
+        font-size: 20px;
+    }
+
+    .message-date {
+        font-size: 14px;
     }
 
     .message-content {
@@ -378,11 +334,7 @@ h1 {
     }
 }
 
-
-/* ==========================================
-   TABLET - 769px ATÉ 992px
-========================================== */
-
+/* Ajusta tablets entre 769px e 992px. */
 @media (max-width: 992px) and (min-width: 769px) {
 
     .content {
@@ -390,6 +342,7 @@ h1 {
     }
 
     .page-header {
+        justify-content: flex-start;
         margin-bottom: 20px;
     }
 
@@ -406,7 +359,6 @@ h1 {
         max-width: 700px;
         min-height: 270px;
         padding: 17px 19px;
-
         margin: 115px auto 35px;
     }
 
@@ -428,11 +380,7 @@ h1 {
     }
 }
 
-
-/* ==========================================
-   TABLET MENOR - 577px ATÉ 768px
-========================================== */
-
+/* Ajusta tablets entre 577px e 768px. */
 @media (max-width: 768px) and (min-width: 577px) {
 
     .content {
@@ -440,6 +388,7 @@ h1 {
     }
 
     .page-header {
+        justify-content: flex-start;
         margin-bottom: 20px;
     }
 
@@ -447,7 +396,6 @@ h1 {
         width: 92%;
         max-width: 600px;
         min-height: 260px;
-
         padding: 17px;
         margin: 115px auto 35px;
     }
@@ -474,29 +422,21 @@ h1 {
         padding-top: 16px;
     }
 
-    .btn,
-    .btn-secondary {
+    .btn {
         padding: 9px 16px;
         font-size: 13px;
     }
 }
 
-
-/* ==========================================
-   CELULAR - ATÉ 576px
-========================================== */
-
+/* Ajusta celulares de até 576px. */
 @media (max-width: 576px) {
-
-    /* Conteúdo */
 
     .content {
         padding: 18px 12px 45px;
     }
 
-    /* Título */
-
     .page-header {
+        justify-content: flex-start;
         margin-bottom: 0;
     }
 
@@ -521,8 +461,6 @@ h1 {
         line-height: 1.4;
     }
 
-    /* Card */
-
     .detail-panel {
         justify-content: center;
         align-items: flex-start;
@@ -532,19 +470,14 @@ h1 {
         width: 94%;
         max-width: 450px;
         min-height: 185px;
-
         margin: 32px auto 42px;
         padding: 16px 15px 22px;
-
         border-radius: 12px;
     }
-
-    /* Informações */
 
     .message-info {
         flex-direction: column;
         align-items: flex-start;
-
         gap: 5px;
         padding-bottom: 9px;
     }
@@ -559,24 +492,18 @@ h1 {
         line-height: 17px;
     }
 
-    /* Descrição */
-
     .message-content {
         padding-top: 13px;
         font-size: 13px;
         line-height: 1.5;
     }
 
-    /* Botões lado a lado */
-
     .detail-actions {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-
         flex-wrap: nowrap;
         gap: 10px;
-
         padding: 20px 0 0;
     }
 
@@ -584,12 +511,9 @@ h1 {
         flex: 0 1 auto;
         width: auto;
         min-width: 0;
-
         padding: 8px 10px;
-
         font-size: 10px;
         line-height: 15px;
-
         white-space: nowrap;
     }
 
@@ -599,11 +523,7 @@ h1 {
     }
 }
 
-
-/* ==========================================
-   CELULARES MENORES - ATÉ 390px
-========================================== */
-
+/* Ajusta celulares menores de até 390px. */
 @media (max-width: 390px) {
 
     .content {
@@ -631,7 +551,7 @@ h1 {
     }
 
     .detail-actions {
-        gap: 98px;
+        gap: 10px;
     }
 
     .detail-actions .btn {

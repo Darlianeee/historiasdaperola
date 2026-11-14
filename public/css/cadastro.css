@@ -1,16 +1,15 @@
+/* Importa a fonte utilizada no título decorativo. */
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
+/* Define a fonte padrão e remove os espaçamentos iniciais dos elementos. */
 * {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-
-* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Centraliza o conteúdo na tela e define o fundo da página. */
 body {
     background: #eef6eb;
     display: flex;
@@ -20,7 +19,7 @@ body {
     padding: 15px;
 }
 
-
+/* Define o tamanho e a aparência do cartão principal. */
 .container {
     width: 100%;
     max-width: 450px;
@@ -32,7 +31,7 @@ body {
     flex-direction: column;
 }
 
-
+/* Organiza a área da imagem e das informações do projeto. */
 .lado-direito {
     width: 100%;
     background: #4c6123;
@@ -44,6 +43,7 @@ body {
     text-align: center;
 }
 
+/* Define o tamanho da imagem e o espaço abaixo dela. */
 .lado-direito img {
     width: 200px;
     height: auto;
@@ -51,6 +51,7 @@ body {
     flex-shrink: 0;
 }
 
+/* Define a aparência do título decorativo. */
 .lado-direito h2 {
     font-family: 'Kaushan Script', cursive;
     color: #dba437;
@@ -58,20 +59,19 @@ body {
     font-style: italic;
     letter-spacing: 1px;
     margin-bottom: 5px;
-
     position: relative;
     top: -80px;
 }
 
+/* Define a aparência do texto abaixo do título. */
 .lado-direito p {
     font-size: 14px;
     color: #f1f1f1;
-
     position: relative;
     top: -80px;
 }
 
-
+/* Organiza a área que contém o formulário. */
 .formulario {
     width: 100%;
     padding: 30px 20px;
@@ -80,6 +80,7 @@ body {
     justify-content: center;
 }
 
+/* Define a aparência do título do formulário. */
 .formulario h1 {
     text-align: center;
     font-size: 32px;
@@ -87,6 +88,7 @@ body {
     color: #000;
 }
 
+/* Define a aparência do texto abaixo do título. */
 .formulario p {
     text-align: center;
     color: #666;
@@ -94,6 +96,7 @@ body {
     font-size: 15px;
 }
 
+/* Define a aparência dos rótulos dos campos. */
 label {
     display: block;
     margin-bottom: 6px;
@@ -102,6 +105,7 @@ label {
     color: #333;
 }
 
+/* Define o tamanho e a aparência dos campos de entrada. */
 input {
     width: 100%;
     height: 40px;
@@ -113,6 +117,7 @@ input {
     outline: none;
 }
 
+/* Define a aparência padrão do botão de envio. */
 button {
     width: 160px;
     height: 42px;
@@ -128,105 +133,56 @@ button {
     transition: 0.3s;
 }
 
+/* Altera a cor do botão quando o mouse passa sobre ele. */
 button:hover {
     background: #a57d17;
 }
 
+/* Define a aparência do texto e do link para acessar o login. */
 .login {
     margin-top: 15px;
     text-align: center;
     font-size: 14px;
 }
 
+/* Define a cor e o destaque do link de login. */
 .login a {
     color: #c99a22;
     text-decoration: none;
     font-weight: bold;
 }
 
-.erro-campo {
-    display: block;
-    color: #ff0000 !important;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.4;
-    text-align: left;
-    margin: 4px 0 10px;
-    padding: 0;
-}
-
-.erro-campo:empty {
-    display: none;
-}
-
-.campo-senha {
-    position: relative;
-    width: 100%;
-}
-
-.campo-senha input {
-    width: 100%;
-    padding-right: 40px;
-}
-
-@media screen and (min-width: 769px) {
-    .container {
-        width: 900px;
-        height: 599px;
-        flex-direction: row;
-        max-width: none;
-    }
-
-
-    .formulario {
-        width: 58%;
-        padding: 40px 70px;
-        order: 1;
-    }
-
-    .formulario h1 {
-        font-size: 40px;
-    }
-
-    label {
-        font-size: 20px;
-    }
-
-
-    .lado-direito {
-        width: 42%;
-        order: 2;
-    }
-
-    .lado-direito img {
-        width: 300px;
-        margin-bottom: 15px;
-    }
-}
-
+/* Define a aparência das mensagens de erro dos campos. */
 .erro-campo {
     display: block;
     color: #d93025;
     font-size: 12px;
-    margin-top: 5px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: left;
+    margin: 5px 0 10px;
+    padding: 0;
 }
 
+/* Esconde a mensagem de erro quando não existe conteúdo. */
 .erro-campo:empty {
     display: none;
 }
 
+/* Permite posicionar o botão de mostrar senha dentro do campo. */
 .campo-senha {
     position: relative;
     width: 100%;
 }
 
+/* Ajusta o campo de senha para deixar espaço para o botão do olho. */
 .campo-senha input {
     display: block;
     width: 100%;
-    box-sizing: border-box;
     padding-right: 45px;
 }
 
+/* Posiciona o botão de mostrar senha dentro do campo. */
 .campo-senha button#mostrar-senha {
     position: absolute;
     top: 0;
@@ -245,12 +201,50 @@ button:hover {
     cursor: pointer;
 }
 
+/* Define o tamanho do ícone dentro do botão de mostrar senha. */
 .campo-senha button#mostrar-senha svg {
     display: block;
     width: 25px;
     height: 25px;
 }
 
+/* Esconde o ícone padrão de mostrar senha do navegador Edge. */
 .campo-senha input::-ms-reveal {
     display: none;
+}
+
+/* Ajusta o layout para telas maiores, como computadores. */
+@media screen and (min-width: 769px) {
+
+    .container {
+        width: 900px;
+        height: 599px;
+        flex-direction: row;
+        max-width: none;
+    }
+
+    .formulario {
+        width: 58%;
+        padding: 40px 70px;
+        order: 1;
+    }
+
+    .formulario h1 {
+        font-size: 40px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    .lado-direito {
+        width: 42%;
+        order: 2;
+    }
+
+    .lado-direito img {
+        width: 300px;
+        margin-bottom: 15px;
+    }
+
 }

@@ -6,7 +6,6 @@
     box-sizing: border-box;
 }
 
-
 /* Área do fundo da tela. */
 body {
     width: 100%;
@@ -15,10 +14,6 @@ body {
     color: #111;
 }
 
-
-
-
-
 /* Área principal da página de saída. */
 .conteudo {
     position: relative;
@@ -26,16 +21,14 @@ body {
     padding: 110px 49px 80px;
 }
 
-
-
-
-
+/* Posicionamento do título da página. */
 .titulo {
     position: absolute;
     top: 110px;
     left: 34px;
 }
 
+/* Estilo do título principal. */
 .titulo h1 {
     padding-left: 9px;
     font-size: 28px;
@@ -46,6 +39,7 @@ body {
     margin: 0;
 }
 
+/* Texto descritivo abaixo do título. */
 .descricao {
     position: absolute;
     top: 148px;
@@ -56,8 +50,7 @@ body {
     margin-left: 14px;
 }
 
-
-
+/* Área que posiciona o cartão de confirmação. */
 .overlay {
     position: relative;
     width: 100%;
@@ -69,7 +62,7 @@ body {
     pointer-events: none;
 }
 
-
+/* Cartão de confirmação de saída. */
 .modal {
     width: 440px;
     max-width: 100%;
@@ -87,61 +80,44 @@ body {
     transform: none;
 }
 
+/* Círculo que envolve o ícone de saída. */
 .icone-saida {
     width: 85px;
     height: 85px;
-
     margin: 0 auto 14px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     background: #dff5f3;
-
     border-radius: 50%;
-
-    box-shadow:
-        0 2px 3px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.18);
 }
 
-
-
-
+/* Imagem do ícone de saída. */
 .icon-saida {
     width: 150px;
     height: 150px;
-
     object-fit: contain;
 }
 
-
-
-
+/* Título dentro do cartão. */
 .modal h2 {
     margin: 0 0 18px;
-
     font-size: 20px;
     font-weight: 700;
-
     line-height: 24px;
-
     color: #111;
 }
 
-
-
-
+/* Texto de confirmação dentro do cartão. */
 .modal p {
     margin: 0;
-
     font-size: 14px;
     line-height: 18px;
-
     color: #222;
 }
 
+/* Organiza os botões de confirmação. */
 .botoes {
     display: flex;
     align-items: center;
@@ -151,6 +127,7 @@ body {
     margin-top: 34px;
 }
 
+/* Estilo geral dos botões. */
 .cancelar,
 .Sair {
     display: inline-flex;
@@ -174,6 +151,7 @@ body {
     transition: background-color 0.2s ease;
 }
 
+/* Botão para cancelar a saída. */
 .cancelar {
     background: #ffffff;
     color: #c79b21;
@@ -183,6 +161,7 @@ body {
     background: #f5f5f5;
 }
 
+/* Botão para confirmar a saída. */
 .Sair {
     background: #c79b21;
     color: #ffffff;
@@ -192,35 +171,23 @@ body {
     background: #b38b1d;
 }
 
-
-
-
-
+/* Mantém o rodapé sem encolher. */
 footer {
     flex-shrink: 0;
 }
-
-
-
 
 /* Ajustes responsivos para tablets. */
 @media (min-width: 481px) and (max-width: 1100px) {
 
     .conteudo {
         position: relative;
-
         padding: 90px 40px 60px;
     }
 
-
-
-
     .titulo {
         position: relative;
-
         top: auto;
         left: auto;
-
         margin-bottom: 8px;
     }
 
@@ -232,9 +199,6 @@ footer {
         border-left: 6px solid #465722;
         margin: 0;
     }
-
-
-
 
     .descricao {
         position: relative;
@@ -249,9 +213,7 @@ footer {
         position: relative;
         width: 100%;
         height: auto;
-
         padding: 65px 0 45px;
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -270,7 +232,6 @@ footer {
     .icone-saida {
         width: 125px;
         height: 125px;
-
         margin: 0 auto 22px;
     }
 
@@ -279,30 +240,19 @@ footer {
         height: 185px;
     }
 
-
-
-
     .modal h2 {
         margin-bottom: 22px;
-
         font-size: 25px;
         line-height: 30px;
     }
-
-
-
 
     .modal p {
         font-size: 19px;
         line-height: 24px;
     }
 
-
-
-
     .botoes {
         margin-top: 45px;
-
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -312,16 +262,11 @@ footer {
     .Sair {
         width: 100px;
         height: 50px;
-
         font-size: 18px;
     }
 }
 
-
-/* ==========================================
-   RESPONSIVIDADE - CELULAR
-========================================== */
-
+/* Ajustes responsivos para celulares. */
 @media (max-width: 480px) {
 
     .conteudo {
@@ -329,8 +274,7 @@ footer {
         padding: 80px 16px 45px;
     }
 
-    /* Título */
-
+    /* Título da página. */
     .titulo {
         position: relative;
         top: auto;
@@ -347,8 +291,7 @@ footer {
         margin: 0;
     }
 
-    /* Descrição */
-
+    /* Descrição da página. */
     .descricao {
         position: relative;
         top: auto;
@@ -358,35 +301,27 @@ footer {
         line-height: 18px;
     }
 
-    /* Posicionamento do card */
-
+    /* Posicionamento do cartão. */
     .overlay {
         position: relative;
         width: 100%;
         height: auto;
-
         padding: 25px 0 30px;
-
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    /* Card */
-
+    /* Cartão de confirmação. */
     .modal {
         width: 100%;
         max-width: 300px;
-
         min-height: 0;
-
         padding: 22px 18px 20px;
-
         border-radius: 7px;
     }
 
-    /* Ícone de saída */
-
+    /* Ícone de saída. */
     .icone-saida {
         width: 60px;
         height: 60px;
@@ -399,23 +334,20 @@ footer {
         object-fit: contain;
     }
 
-    /* Título do card */
-
+    /* Título do cartão. */
     .modal h2 {
         margin-bottom: 10px;
         font-size: 16px;
         line-height: 20px;
     }
 
-    /* Texto do card */
-
+    /* Texto do cartão. */
     .modal p {
         font-size: 12px;
         line-height: 16px;
     }
 
-    /* Botões */
-
+    /* Botões de confirmação. */
     .botoes {
         margin-top: 25px;
         gap: 9px;

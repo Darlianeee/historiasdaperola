@@ -1,22 +1,20 @@
+/* Define a fonte e as configurações gerais dos elementos. */
 * {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-
-
-* {
     background: transparent;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Define o tamanho da página. */
 html,
 body {
     width: 100%;
     height: 100%;
 }
 
+/* Organiza a área principal do conteúdo. */
 .conteudo {
     position: relative;
     width: 100%;
@@ -24,12 +22,14 @@ body {
     padding: 140px 49px 60px;
 }
 
+/* Posiciona o título da página. */
 .titulo {
     position: absolute;
     top: 110px;
     left: 34px;
 }
 
+/* Estiliza o título principal. */
 .titulo h1 {
     padding-left: 9px;
     font-size: 28px;
@@ -37,9 +37,9 @@ body {
     line-height: 31px;
     border-left: 5px solid #465722;
     color: #111;
-    margin: 0;
 }
 
+/* Posiciona e estiliza a descrição da página. */
 .descricao {
     position: absolute;
     top: 145px;
@@ -47,10 +47,10 @@ body {
     font-size: 16px;
     line-height: 1.4;
     color: #222;
-    margin-top: 8px;
-    margin-left: 14px;
+    margin: 8px 0 0 14px;
 }
 
+/* Organiza a área que envolve a janela de confirmação. */
 .overlay {
     position: relative;
     width: 100%;
@@ -62,6 +62,7 @@ body {
     pointer-events: none;
 }
 
+/* Define a aparência da janela de confirmação. */
 .modal {
     width: 440px;
     max-width: 100%;
@@ -79,97 +80,81 @@ body {
     margin: 0 auto;
 }
 
+/* Estiliza o título da janela. */
 .modal h2 {
     margin: 0 0 22px;
-
     font-size: 24px;
     font-weight: 700;
-
     line-height: 28px;
-
     color: #111;
 }
 
-
-
-
+/* Estiliza a mensagem da janela. */
 .modal p {
     margin: 0;
-
     font-size: 14px;
     line-height: 20px;
-
     color: #222;
 }
 
-
-
-
+/* Organiza os botões da janela de confirmação. */
 .botoes {
     width: 100%;
-
     margin-top: 38px;
-
     display: flex;
-
     align-items: center;
     justify-content: space-between;
 }
 
-
-
-
+/* Remove a decoração dos links dos botões. */
 .botoes a {
     text-decoration: none;
-
     color: inherit;
 }
 
+/* Define a aparência do botão de cancelar. */
 .cancelar {
     width: 80px;
     height: 32px;
     padding: 0;
     border: none;
     border-radius: 3px;
-    background-color: white;
     background: #ffffff;
     color: #c79b21;
     font-size: 14px;
     cursor: pointer;
-    box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
     transition: 0.2s ease;
 }
 
+/* Altera a aparência do botão ao passar o cursor. */
 .cancelar:hover {
-
     background: #f5f5f5;
     color: #c79b21;
 }
 
+/* Define a aparência do botão de excluir. */
 .excluir {
-
     width: 80px;
     height: 32px;
     padding: 0;
     border: none;
     border-radius: 3px;
-    background-color: #c79b21;
+    background: #c79b21;
     color: #ffffff;
     font-size: 14px;
     cursor: pointer;
-    box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
     transition: 0.2s ease;
 }
 
+/* Escurece o botão ao passar o cursor. */
 .excluir:hover {
-
     background: #b88b11;
     color: white;
 }
 
-
+/* Ajusta o conteúdo para telas de tablets. */
 @media (min-width: 481px) and (max-width: 768px) {
 
     .conteudo {
@@ -181,26 +166,12 @@ body {
         left: 35px;
     }
 
-    .titulo h1 {
-        font-size: 28px;
-        line-height: 31px;
-        padding-left: 9px;
-        font-weight: 700;
-        border-left: 5px solid #465722;
-        margin: 0;
-    }
-
     .descricao {
         top: 115px;
         left: 35px;
-        font-size: 16px;
-        line-height: 1.4;
-        margin-top: 8px;
-        margin-left: 14px;
     }
 
     .overlay {
-        position: relative;
         padding: 25px 25px 40px;
     }
 
@@ -208,15 +179,12 @@ body {
         width: 650px;
         max-width: 90%;
         min-height: 320px;
-
         padding: 42px 48px 35px;
-
         border-radius: 6px;
     }
 
     .modal h2 {
         margin-bottom: 24px;
-
         font-size: 28px;
         line-height: 35px;
     }
@@ -234,14 +202,11 @@ body {
     .excluir {
         width: 100px;
         height: 45px;
-
         font-size: 18px;
     }
 }
 
-
-
-
+/* Ajusta os elementos para celulares. */
 @media (max-width: 480px) {
 
     .titulo {
@@ -250,30 +215,11 @@ body {
         z-index: 3;
     }
 
-    .titulo h1 {
-        font-size: 28px;
-        padding-left: 9px;
-        line-height: 31px;
-        font-weight: 700;
-        border-left: 5px solid #465722;
-        margin: 0;
-    }
-
     .descricao {
-        position: absolute;
         top: 125px;
         left: 20px;
         right: 20px;
         z-index: 3;
-        font-size: 16px;
-        line-height: 1.4;
-        margin-top: 8px;
-        margin-left: 14px;
-    }
-
-    .overlay {
-        z-index: 1;
-        padding: 100px 15px 20px;
     }
 
     .overlay {
@@ -283,9 +229,7 @@ body {
     }
 }
 
-
-
-
+/* Ajusta o conteúdo para celulares menores. */
 @media (max-width: 390px) {
 
     .conteudo {
@@ -302,20 +246,12 @@ body {
     .titulo h1 {
         font-size: 24px;
         line-height: 25px;
-        padding-left: 9px;
-        font-weight: 700;
-        border-left: 5px solid #465722;
-        margin: 0;
     }
 
     .descricao {
         left: 16px;
         right: 16px;
         top: 95px;
-        font-size: 16px;
-        line-height: 1.4;
-        margin-top: 8px;
-        margin-left: 14px;
     }
 
     .overlay {
@@ -325,16 +261,13 @@ body {
 
     .modal {
         max-width: 290px;
-
         min-height: 170px;
-
         padding: 19px 17px 16px;
     }
 
     .modal h2 {
         font-size: 17px;
         line-height: 20px;
-
         margin-bottom: 10px;
     }
 
@@ -351,14 +284,11 @@ body {
     .excluir {
         width: 62px;
         height: 26px;
-
         font-size: 9px;
     }
 }
 
-
-
-
+/* Ajusta os elementos para telas ainda menores. */
 @media (max-width: 320px) {
 
     .conteudo {
@@ -375,20 +305,12 @@ body {
     .titulo h1 {
         font-size: 28px;
         line-height: 31px;
-        padding-left: 9px;
-        font-weight: 700;
-        border-left: 5px solid #465722;
-        margin: 0;
     }
 
     .descricao {
         left: 12px;
         right: 12px;
         top: 104px;
-        font-size: 16px;
-        line-height: 1.4;
-        margin-top: 8px;
-        margin-left: 14px;
     }
 
     .overlay {
@@ -398,16 +320,13 @@ body {
 
     .modal {
         max-width: 270px;
-
         min-height: 160px;
-
         padding: 17px 14px 14px;
     }
 
     .modal h2 {
         font-size: 16px;
         line-height: 19px;
-
         margin-bottom: 9px;
     }
 
@@ -424,14 +343,11 @@ body {
     .excluir {
         width: 60px;
         height: 25px;
-
         font-size: 9px;
     }
 }
 
-
-
-
+/* Ajusta os espaçamentos em telas maiores. */
 @media (min-width: 1200px) {
 
     .conteudo {
@@ -439,22 +355,13 @@ body {
         padding-right: 60px;
     }
 
-    .titulo {
-        left: 45px;
-    }
-
+    .titulo,
     .descricao {
         left: 45px;
-        margin-top: 8px;
-        margin-left: 14px;
-        font-size: 16px;
-        line-height: 1.4;
     }
 }
 
-
-
-
+/* Aumenta os espaçamentos em telas muito grandes. */
 @media (min-width: 1600px) {
 
     .conteudo {
@@ -462,15 +369,8 @@ body {
         padding-right: 80px;
     }
 
-    .titulo {
-        left: 60px;
-    }
-
+    .titulo,
     .descricao {
         left: 60px;
-        margin-top: 8px;
-        margin-left: 14px;
-        font-size: 16px;
-        line-height: 1.4;
     }
 }

@@ -1,8 +1,4 @@
-
-/* ==============================
-   RESET
-============================== */
-
+/* Define as configurações gerais dos elementos. */
 * {
     margin: 0;
     padding: 0;
@@ -10,126 +6,97 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Define o tamanho mínimo da página. */
 html,
 body {
     width: 100%;
     min-height: 100%;
 }
 
+/* Define a aparência geral do fundo e do texto. */
 body {
     background-color: #edf5e9;
     color: #111;
     overflow-x: hidden;
 }
 
-/* ==============================
-   CONTEÚDO PRINCIPAL
-============================== */
-
+/* Organiza o conteúdo principal da página. */
 .conteudo {
     width: 100%;
     padding: 110px 49px 80px;
 }
 
-/* ==============================
-   CABEÇALHO DA PÁGINA
-============================== */
-
-main.conteudo > header.cabecalho-inicio {
+/* Organiza o cabeçalho da página inicial. */
+main.conteudo>header.cabecalho-inicio {
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
     justify-content: flex-start !important;
     gap: 8px !important;
-
     width: 100%;
     height: auto !important;
     min-height: 0 !important;
-
     margin: 0 0 18px !important;
     padding: 0 !important;
-
     position: static !important;
     transform: none !important;
 }
 
-/* Título e traço verde */
-
-main.conteudo > header.cabecalho-inicio > .titulo {
+/* Organiza o título e o traço verde do cabeçalho. */
+main.conteudo>header.cabecalho-inicio>.titulo {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-start !important;
-
     position: static !important;
     transform: none !important;
-
     width: fit-content !important;
     height: auto !important;
     min-height: 31px !important;
-
     margin: 0 !important;
     padding: 0 0 0 10px !important;
-
     border: none !important;
     border-left: 5px solid #465722 !important;
 }
 
-/* Texto "Início" */
-
-main.conteudo > header.cabecalho-inicio > .titulo > h1 {
+/* Define a aparência do título "Início". */
+main.conteudo>header.cabecalho-inicio>.titulo>h1 {
     display: block !important;
-
     position: static !important;
     transform: none !important;
-
     width: auto !important;
     height: auto !important;
     min-height: 0 !important;
-
     margin: 0 !important;
     padding: 0 !important;
-
     border: none !important;
-
     color: #111;
     font-size: 28px !important;
     font-weight: 700;
     line-height: 31px !important;
 }
 
-/* Saudação abaixo do título */
-
-main.conteudo > header.cabecalho-inicio > p.boas-vindas {
+/* Formata a mensagem de boas-vindas abaixo do título. */
+main.conteudo>header.cabecalho-inicio>p.boas-vindas {
     display: block !important;
-
     position: static !important;
     transform: none !important;
-
     width: auto !important;
     max-width: 100%;
     height: auto !important;
     min-height: 0 !important;
-
     align-self: flex-start !important;
-
     margin: 0 !important;
     padding: 0 !important;
-
     border: none !important;
-
     color: #111;
     font-size: 16px !important;
     line-height: 1.4 !important;
-
     text-align: left !important;
 }
 
-/* ==============================
-   TÍTULO PRINCIPAL
-============================== */
-
-.conteudo > h2 {
+/* Define a aparência do título principal da página. */
+.conteudo>h2 {
     margin: 25px auto 35px;
     text-align: center;
     color: #26361c;
@@ -138,184 +105,151 @@ main.conteudo > header.cabecalho-inicio > p.boas-vindas {
     line-height: 1.4;
 }
 
-/* ==============================
-   ÁREA DOS CARTÕES
-============================== */
-
+/* Organiza os cartões em duas colunas. */
 .cards-inicio {
     width: min(1150px, 100%);
     margin: 0 auto;
-
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
     gap: 28px;
     align-items: stretch;
 }
 
-/* ==============================
-   CARTÕES
-============================== */
-
+/* Define a aparência geral dos cartões. */
 .card {
     width: 100%;
     min-width: 0;
     min-height: 300px;
-
     padding: 28px 38px 30px;
-
     background-color: #f8fbf5;
     border: 1px solid #d9e4d1;
     border-radius: 10px;
-
     box-shadow: 0 4px 12px rgba(48, 70, 19, 0.10);
-
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
         border-color 0.25s ease;
 }
 
+/* Adiciona um efeito ao passar o cursor sobre o cartão. */
 .card:hover {
     transform: translateY(-4px);
     border-color: #b9cba9;
-
     box-shadow: 0 8px 20px rgba(48, 70, 19, 0.16);
 }
 
+/* Formata os títulos dos cartões. */
 .card h3 {
     width: 100%;
     margin-bottom: 28px;
-
     text-align: center;
-
     font-size: 19px;
     line-height: 1.35;
     font-weight: 700;
 }
 
-/* ==============================
-   CARTÃO DE MITOS E LENDAS
-============================== */
-
+/* Define a cor do título do cartão de mitos e lendas. */
 .card-mito h3 {
     color: #3e5919;
 }
 
+/* Organiza o conteúdo textual do cartão. */
 .texto-card {
     width: 100%;
 }
 
+/* Formata os parágrafos do cartão de mitos e lendas. */
 .texto-card p {
     width: 100%;
     margin: 0;
-
     color: #30382d;
-
     font-size: 15px;
     font-weight: 700;
     line-height: 21px;
-
     text-align: justify;
 }
 
-.texto-card p + p {
+/* Adiciona espaço entre os parágrafos. */
+.texto-card p+p {
     margin-top: 10px;
 }
 
-/* ==============================
-   CARTÃO DE GERENCIAMENTO
-============================== */
-
+/* Organiza o cartão de gerenciamento de histórias. */
 .card-gerenciar {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-
     padding: 55px 38px 30px;
-
     text-align: center;
 }
 
+/* Formata o título do cartão de gerenciamento. */
 .card-gerenciar h3 {
     margin: 0 0 15px;
     color: #3e5919;
 }
 
-.card-gerenciar > p {
+/* Formata o texto explicativo do cartão de gerenciamento. */
+.card-gerenciar>p {
     max-width: 420px;
     margin: 8px 0 30px;
-
     color: #30382d;
-
     font-size: 16px;
     font-weight: 700;
     line-height: 1.6;
 }
 
-/* ==============================
-   BOTÃO GERENCIAR HISTÓRIAS
-============================== */
-
+/* Estiliza o botão de gerenciamento de histórias. */
 .btn-historias {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     min-height: 42px;
     padding: 10px 22px;
-
     background-color: #3e5919;
     color: #fff;
-
     text-decoration: none;
     border-radius: 5px;
-
     font-size: 15px;
     font-weight: 700;
-
     transition: 0.25s ease;
 }
 
+/* Altera a aparência do botão ao passar o cursor. */
 .btn-historias:hover {
     background-color: #304613;
     transform: translateY(-2px);
-
     box-shadow: 0 4px 8px rgba(62, 89, 25, 0.25);
 }
 
+/* Define o efeito do botão ao ser pressionado. */
 .btn-historias:active {
     transform: translateY(0);
 }
 
-/* ==============================
-   MENSAGENS DE ERRO
-============================== */
-
+/* Formata as mensagens de erro dos campos. */
 .erro-campo {
     display: block;
     margin: 5px 0 10px;
-
     color: #d93025 !important;
     font-size: 13px;
     font-weight: 500;
 }
 
+/* Oculta as mensagens de erro quando estão vazias. */
 .erro-campo:empty {
     display: none;
 }
 
-/* ==============================
-   TELAS GRANDES
-============================== */
-
+/* Ajusta o conteúdo para telas grandes. */
 @media (min-width: 1600px) {
+
     .conteudo {
         padding: 110px 70px 90px;
     }
 
-    .conteudo > h2 {
+    .conteudo>h2 {
         margin-top: 35px;
         margin-bottom: 38px;
         font-size: 24px;
@@ -335,11 +269,9 @@ main.conteudo > header.cabecalho-inicio > p.boas-vindas {
     }
 }
 
-/* ==============================
-   COMPUTADORES E NOTEBOOKS
-============================== */
-
+/* Ajusta o layout para computadores e notebooks. */
 @media (max-width: 1366px) {
+
     .conteudo {
         padding: 110px 45px 75px;
     }
@@ -355,25 +287,23 @@ main.conteudo > header.cabecalho-inicio > p.boas-vindas {
     }
 }
 
-/* ==============================
-   TABLETS NA HORIZONTAL
-============================== */
-
+/* Ajusta o layout para tablets na horizontal. */
 @media (max-width: 1024px) {
+
     .conteudo {
         padding: 75px 30px 70px;
     }
 
-    main.conteudo > header.cabecalho-inicio > .titulo > h1 {
+    main.conteudo>header.cabecalho-inicio>.titulo>h1 {
         font-size: 28px !important;
         line-height: 31px !important;
     }
 
-    main.conteudo > header.cabecalho-inicio > p.boas-vindas {
+    main.conteudo>header.cabecalho-inicio>p.boas-vindas {
         font-size: 17px !important;
     }
 
-    .conteudo > h2 {
+    .conteudo>h2 {
         margin-top: 27px;
         margin-bottom: 28px;
         font-size: 18px;
@@ -394,7 +324,7 @@ main.conteudo > header.cabecalho-inicio > p.boas-vindas {
     }
 
     .texto-card p,
-    .card-gerenciar > p {
+    .card-gerenciar>p {
         font-size: 14px;
         line-height: 20px;
     }
@@ -404,31 +334,29 @@ main.conteudo > header.cabecalho-inicio > p.boas-vindas {
     }
 }
 
-/* ==============================
-   TABLETS E TELAS MENORES
-============================== */
-
+/* Ajusta o layout para tablets e telas menores. */
 @media (max-width: 768px) {
+
     .conteudo {
-        padding: 72px 22px 65px;
+        padding: 80px 22px 65px;
     }
 
-    main.conteudo > header.cabecalho-inicio > .titulo {
+    main.conteudo>header.cabecalho-inicio>.titulo {
         min-height: 31px !important;
         padding-left: 9px !important;
         border-left-width: 5px !important;
     }
 
-    main.conteudo > header.cabecalho-inicio > .titulo > h1 {
+    main.conteudo>header.cabecalho-inicio>.titulo>h1 {
         font-size: 24px !important;
         line-height: 29px !important;
     }
 
-    main.conteudo > header.cabecalho-inicio > p.boas-vindas {
+    main.conteudo>header.cabecalho-inicio>p.boas-vindas {
         font-size: 15px !important;
     }
 
-    .conteudo > h2 {
+    .conteudo>h2 {
         margin-top: 25px;
         margin-bottom: 25px;
         font-size: 17px;
@@ -450,7 +378,7 @@ main.conteudo > header.cabecalho-inicio > p.boas-vindas {
     }
 
     .texto-card p,
-    .card-gerenciar > p {
+    .card-gerenciar>p {
         font-size: 15px;
         line-height: 20px;
     }
@@ -461,22 +389,20 @@ main.conteudo > header.cabecalho-inicio > p.boas-vindas {
     }
 }
 
-/* ==============================
-   CELULARES
-============================== */
-
+/* Ajusta o layout para celulares. */
 @media (max-width: 576px) {
+
     .conteudo {
         padding: 68px 16px 60px;
     }
 
-    main.conteudo > header.cabecalho-inicio > .titulo {
+    main.conteudo>header.cabecalho-inicio>.titulo {
         min-height: 31px !important;
         padding-left: 9px !important;
         border-left-width: 4px !important;
     }
 
-    .conteudo > h2 {
+    .conteudo>h2 {
         margin-top: 23px;
         margin-bottom: 22px;
         font-size: 15px;
@@ -498,7 +424,7 @@ main.conteudo > header.cabecalho-inicio > p.boas-vindas {
     }
 
     .texto-card p,
-    .card-gerenciar > p {
+    .card-gerenciar>p {
         font-size: 14px;
         line-height: 20px;
     }
@@ -515,16 +441,14 @@ main.conteudo > header.cabecalho-inicio > p.boas-vindas {
     }
 }
 
-/* ==============================
-   CELULARES PEQUENOS
-============================== */
-
+/* Ajusta os elementos para celulares pequenos. */
 @media (max-width: 480px) {
+
     .conteudo {
         padding: 65px 13px 55px;
     }
 
-    .conteudo > h2 {
+    .conteudo>h2 {
         margin-top: 22px;
         margin-bottom: 20px;
         font-size: 15px;
@@ -544,7 +468,7 @@ main.conteudo > header.cabecalho-inicio > p.boas-vindas {
     }
 
     .texto-card p,
-    .card-gerenciar > p {
+    .card-gerenciar>p {
         font-size: 14px;
         line-height: 19px;
     }
@@ -559,16 +483,14 @@ main.conteudo > header.cabecalho-inicio > p.boas-vindas {
     }
 }
 
-/* ==============================
-   CELULARES MUITO PEQUENOS
-============================== */
-
+/* Ajusta os elementos para celulares muito pequenos. */
 @media (max-width: 390px) {
+
     .conteudo {
-        padding: 62px 11px 52px;
+        padding: 70px 11px 52px;
     }
 
-    .conteudo > h2 {
+    .conteudo>h2 {
         margin-top: 20px;
         margin-bottom: 18px;
         font-size: 14px;
@@ -588,7 +510,7 @@ main.conteudo > header.cabecalho-inicio > p.boas-vindas {
     }
 
     .texto-card p,
-    .card-gerenciar > p {
+    .card-gerenciar>p {
         font-size: 13.5px;
         line-height: 19px;
     }

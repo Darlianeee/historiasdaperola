@@ -1,12 +1,15 @@
 <?php
-class Html{
+class Html
+{
     // Escapa texto para exibir com segurança no HTML.
-    public static function e($valor){
+    public static function e($valor)
+    {
         return htmlspecialchars((string) $valor, ENT_QUOTES, 'UTF-8');
     }
 
     // Converte uma imagem guardada no banco (BLOB) em data URI para usar no <img src>.
-    public static function imagem($binario){
+    public static function imagem($binario)
+    {
         if (empty($binario)) {
             return '';
         }
@@ -21,17 +24,20 @@ class Html{
     }
 
     // Foto de perfil da pessoa ou a imagem padrão.
-    public static function fotoPerfil($binario){
+    public static function fotoPerfil($binario)
+    {
         $foto = self::imagem($binario);
         return $foto !== '' ? $foto : URL . '/public/img/foto_perfil.png';
     }
 
-    public static function data($data, $formato = 'd/m/Y'){
+    public static function data($data, $formato = 'd/m/Y')
+    {
         return $data ? date($formato, strtotime($data)) : '';
     }
 
     // "Agora mesmo", "Há 5 minutos", "Há 3 dias"...
-    public static function tempoRelativo($data){
+    public static function tempoRelativo($data)
+    {
         $segundos = time() - strtotime($data);
 
         if ($segundos < 60) return 'Agora mesmo';
@@ -52,7 +58,8 @@ class Html{
     }
 
     // Valida um arquivo de imagem enviado. Retorna [conteudo, erro].
-    public static function lerImagemEnviada($campo, $tamanhoMaximoMb = 5){
+    public static function lerImagemEnviada($campo, $tamanhoMaximoMb = 5)
+    {
         if (!isset($_FILES[$campo]) || $_FILES[$campo]['error'] === UPLOAD_ERR_NO_FILE) {
             return [null, null];
         }

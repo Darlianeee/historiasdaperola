@@ -1,10 +1,14 @@
+
 <?php
-// Exibe o menu correspondente ao perfil conectado.
+// Verifica o perfil conectado e exibe o menu correspondente.
 if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
+    // Exibe o menu do administrador.
     include APP . '/Views/administrador/menu_adm.php';
 } elseif (Sessao::estaLogado()) {
+    // Exibe o menu do usuário.
     include APP . '/Views/usuarios/menu_user.php';
 } else {
+    // Exibe o cabeçalho público para visitantes que não estão logados.
     include APP . '/Views/paginas/cabecalho_publico.php';
 }
 ?>
@@ -13,21 +17,24 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
 <html lang="pt-BR">
 
 <head>
+    <!-- Define a codificação de caracteres e a adaptação da página para diferentes telas. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sobre Nós</title>
 
-        <link rel="stylesheet" href="<?= URL ?>/public/css/Configuracoes.css">
-<link rel="stylesheet" href="<?=URL?>/public/css/sobre_nos.css">
+    <!-- Define o título exibido na aba do navegador. -->
+    <title>Sobre Nós</title>
+
+    <!-- Importa os arquivos CSS responsáveis pelas configurações e pela aparência da página. -->
+    <link rel="stylesheet" href="<?= URL ?>/public/css/Configuracoes.css">
+    <link rel="stylesheet" href="<?=URL?>/public/css/sobre_nos.css">
 </head>
 
 <body>
 
-
+<!-- Área principal que reúne as informações sobre o projeto e sua equipe. -->
 <main class="conteudo">
 
-    
-
+    <!-- Cabeçalho com o título e a apresentação da página. -->
     <section class="cabecalho-pagina">
 
         <h1>Sobre Nós</h1>
@@ -38,14 +45,12 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
 
     </section>
 
-
-
-    
-
+    <!-- Seção que apresenta os motivos que levaram ao desenvolvimento do sistema. -->
     <section class="motivo">
 
         <h2>Motivo para o desenvolvimento do sistema</h2>
 
+        <!-- Apresenta a importância da preservação do patrimônio cultural da região. -->
         <p>
             O desenvolvimento deste site surgiu da necessidade de preservar,
             valorizar e divulgar o patrimônio cultural imaterial da região
@@ -54,6 +59,7 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
             interação social característica de uma região de fronteira.
         </p>
 
+        <!-- Explica a proposta do projeto e as línguas disponíveis no acervo. -->
         <p>
             Nosso projeto busca contribuir para a valorização dessas histórias,
             memórias e manifestações culturais, tornando esse conhecimento
@@ -64,12 +70,10 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
 
     </section>
 
-
-
-    
-
+    <!-- Seção responsável por apresentar os integrantes da equipe e suas funções. -->
     <section class="secao-equipe">
 
+        <!-- Título e descrição da seção da equipe. -->
         <div class="titulo-equipe">
 
             <h2>Nossa equipe</h2>
@@ -80,14 +84,13 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
 
         </div>
 
-
+        <!-- Área que organiza os cartões com as informações dos integrantes. -->
         <div class="equipe">
 
-
-            
-
+            <!-- Cartão com a foto, o nome e a função da primeira integrante. -->
             <div class="integrante">
 
+                <!-- Área destinada à fotografia da integrante. -->
                 <div class="foto-integrante">
 
                     <img
@@ -96,6 +99,7 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
 
                 </div>
 
+                <!-- Área que apresenta o nome e as responsabilidades da integrante. -->
                 <div class="informacoes-integrante">
 
                     <h3>
@@ -112,12 +116,10 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
 
             </div>
 
-
-
-            
-
+            <!-- Cartão com a foto, o nome e a função do segundo integrante. -->
             <div class="integrante">
 
+                <!-- Área destinada à fotografia do integrante. -->
                 <div class="foto-integrante">
 
                     <img
@@ -126,6 +128,7 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
 
                 </div>
 
+                <!-- Área que apresenta o nome e as responsabilidades do integrante. -->
                 <div class="informacoes-integrante">
 
                     <h3>
@@ -142,11 +145,10 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
 
             </div>
 
-
-            
-
+            <!-- Cartão com a foto, o nome e a função da terceira integrante. -->
             <div class="integrante">
 
+                <!-- Área destinada à fotografia da integrante. -->
                 <div class="foto-integrante">
 
                     <img
@@ -154,6 +156,7 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
                         alt="Kalondra Avaroma Vieira é uma menina de 17 anos, tem a pele branca, o cabelo castanho com mechas loiras, levemente ondulado e repartido ao meio com uma franja lateral. Suas sobrancelhas são castanhas e arredondadas e seus olhos são castanhos.">
                 </div>
 
+                <!-- Área que apresenta o nome e as responsabilidades da integrante. -->
                 <div class="informacoes-integrante">
 
                     <h3>
@@ -170,12 +173,10 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
 
             </div>
 
-
-
-            
-
+            <!-- Cartão com a foto, o nome e a função da quarta integrante. -->
             <div class="integrante">
 
+                <!-- Área destinada à fotografia da integrante. -->
                 <div class="foto-integrante">
 
                     <img
@@ -184,6 +185,7 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
 
                 </div>
 
+                <!-- Área que apresenta o nome e as responsabilidades da integrante. -->
                 <div class="informacoes-integrante">
 
                     <h3>
@@ -200,12 +202,10 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
 
             </div>
 
-
-
-            
-
+            <!-- Cartão com a foto, o nome e a função do quinto integrante. -->
             <div class="integrante">
 
+                <!-- Área destinada à fotografia do integrante. -->
                 <div class="foto-integrante">
 
                     <img
@@ -214,6 +214,7 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
 
                 </div>
 
+                <!-- Área que apresenta o nome e as responsabilidades do integrante. -->
                 <div class="informacoes-integrante">
 
                     <h3>
@@ -230,12 +231,10 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
 
             </div>
 
-
-
-            
-
+            <!-- Cartão com a foto, o nome e a função da sexta integrante. -->
             <div class="integrante">
 
+                <!-- Área destinada à fotografia da integrante. -->
                 <div class="foto-integrante">
 
                     <img
@@ -244,6 +243,7 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
 
                 </div>
 
+                <!-- Área que apresenta o nome e as responsabilidades da integrante. -->
                 <div class="informacoes-integrante">
 
                     <h3>
@@ -260,17 +260,17 @@ if (Sessao::estaLogado() && Sessao::ehAdministrador()) {
 
             </div>
 
-
         </div>
 
     </section>
 
 </main>
 
-
+<!-- Inclui o rodapé compartilhado entre as páginas do sistema. -->
 <?php include APP . '/Views/paginas/footer.php'; ?>
 
+<!-- Importa o JavaScript responsável pelas funcionalidades das configurações de acessibilidade. -->
+<script src="<?= URL ?>/public/js/Configuracoes.js"></script>
 
-    <script src="<?= URL ?>/public/js/Configuracoes.js"></script>
 </body>
 </html>

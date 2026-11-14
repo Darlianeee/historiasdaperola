@@ -1,173 +1,121 @@
+/* Define a fonte e as configurações gerais da página. */
 * {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-
-
-* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-
-
-
+/* Define as cores e a organização principal da página. */
 body {
     background: #edf5e9;
     color: #111;
     display: flex;
     flex-direction: column;
-
 }
 
-.conteudo {    
+/* Organiza o conteúdo principal. */
+.conteudo {
     padding: 110px 25px 80px;
-
 }
 
-
-
+/* Define a aparência do título principal. */
 h1 {
     font-size: 26px;
     border-left: 5px solid #465625;
     padding-left: 10px;
     margin-bottom: 6px;
     color: #111;
-    
 }
 
-
-.subtitulo {    
+/* Estiliza o texto abaixo do título. */
+.subtitulo {
     font-size: 16px;
     color: #333;
-    margin-left: 14px;
-    margin-bottom: 25px;
+    margin: 8px 0 25px 14px;
     line-height: 1.4;
-    margin-top: 8px;
 }
 
-
-
+/* Define o espaço e a largura da área de busca. */
 .busca-container {
     margin-bottom: 25px;
     max-width: 360px;
-    
 }
 
-
+/* Organiza o campo de pesquisa e seu ícone. */
 .busca-box {
     height: 38px;
-
     display: flex;
     align-items: center;
-
     background: white;
-
     border-radius: 6px;
-
     padding: 0 12px;
-
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-
     border: 1px solid #ddd;
 }
 
-
-
-
+/* Ajusta o posicionamento do ícone de busca. */
 .icone-busca {
     width: 16px;
     height: 16px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin-right: 8px;
-
     flex-shrink: 0;
 }
 
-
+/* Define o tamanho e o ajuste da imagem do ícone. */
 .icone-busca img {
     width: 25px;
     height: 25px;
-
     object-fit: contain;
-
     display: block;
 }
 
-
-
-
+/* Estiliza o campo de texto da pesquisa. */
 .busca-box input {
     border: none;
-
     outline: none;
-
     width: 100%;
-
     font-size: 13px;
-
     color: #333;
-
     background: transparent;
 }
 
-
+/* Define a cor do texto de orientação da pesquisa. */
 .busca-box input::placeholder {
     color: #777;
 }
 
-
-
-
+/* Organiza os cartões de histórias em colunas. */
 .grid-historias {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 35px 18px;
 }
 
-
-
-
+/* Define a aparência e a organização de cada cartão. */
 .card-item {
     background: white;
-
     border-radius: 8px;
-
     overflow: hidden;
-
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-
     display: flex;
-
     flex-direction: column;
-
     min-width: 0;
 }
 
-
-
-
+/* Define o espaço reservado para a imagem do cartão. */
 .card-imagem {
     width: 100%;
-
     height: 158px;
-
     background-color: #dcdcdc;
-
     position: relative;
-
     overflow: hidden;
 }
 
-
+/* Ajusta a imagem dentro do cartão. */
 .card-imagem img {
     width: 100%;
     height: 100%;
@@ -177,117 +125,95 @@ h1 {
     display: block;
 }
 
-
-
-
+/* Organiza as informações e o botão do cartão. */
 .card-info {
     min-height: 82px;
-
     padding: 12px 11px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     gap: 12px;
 }
 
-
-
-
+/* Define o espaço ocupado pelas informações do cartão. */
 .card-texto {
     min-width: 0;
-
     flex: 1;
 }
 
-
+/* Estiliza o título da história. */
 .card-titulo {
     font-size: 14px;
-
     font-weight: bold;
-
     color: #111;
-
     margin-bottom: 6px;
-
     white-space: nowrap;
-
     overflow: hidden;
-
     text-overflow: ellipsis;
 }
 
-
+/* Define a aparência da categoria da história. */
 .card-categoria {
     font-size: 12px;
-
     color: #555;
 }
 
-
-
-
+/* Estiliza o botão para acessar a história. */
 .btn-ler {
     flex-shrink: 0;
-
     background: #c99720;
-
     color: white;
-
     text-decoration: none;
-
     font-size: 12px;
-
     font-weight: bold;
-
     padding: 9px 12px;
-
     border-radius: 5px;
-
     transition: 0.2s ease;
 }
 
-
+/* Altera a aparência do botão ao passar o cursor. */
 .btn-ler:hover {
     background: #b48718;
-
     transform: translateY(-1px);
 }
 
-
-
-
-@media (max-width: 1024px) {
-
-    .grid-historias {
-        grid-template-columns: repeat(3, 1fr);
-
-        gap: 25px 18px;
-    }
-
+/* Ajusta o cabeçalho e o posicionamento da logo. */
+.cabecalho-publico {
+    position: relative;
 }
 
+.cabecalho-publico .logo {
+    margin-left: 24px;
+}
 
+/* Organiza a mensagem exibida quando não há histórias. */
+.sem-historias {
+    text-align: center;
+    padding: 24px;
+}
+
+/* Ajusta a quantidade de cartões em telas menores. */
+@media (max-width: 1024px) {
+    .grid-historias {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px 18px;
+    }
+}
+
+/* Ajusta o conteúdo e os cartões para tablets. */
 @media (max-width: 768px) {
-
     .conteudo {
         padding: 100px 20px 70px;
     }
 
     .grid-historias {
         grid-template-columns: repeat(2, 1fr);
-
         gap: 20px;
     }
-
 }
 
-
+/* Ajusta a página para telas de celular. */
 @media (max-width: 480px) {
-
     .conteudo {
         padding: 95px 15px 60px;
     }
@@ -299,5 +225,4 @@ h1 {
     .busca-container {
         max-width: 100%;
     }
-
 }

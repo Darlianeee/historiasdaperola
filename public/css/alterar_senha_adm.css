@@ -1,37 +1,33 @@
-
+/* Define a fonte padrão e ajusta o cálculo dos tamanhos dos elementos. */
 * {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
+/* Define as cores padrão da página no modo claro. */
 :root {
     color-scheme: light;
     background: #eef6f2;
     color: #14221f;
 }
 
+/* Remove a margem padrão e define o fundo da página. */
 body {
     margin: 0;
-    background: #eef6f2;
 }
 
+/* Remove o sublinhado dos links e mantém a cor herdada. */
 a {
     text-decoration: none;
     color: inherit;
 }
 
-/* ==========================================
-   CONTEÚDO PRINCIPAL
-========================================== */
-
+/* Define o espaçamento da área principal. */
 .content {
     padding: 30px 40px 40px;
 }
 
-/* ==========================================
-   CABEÇALHO E TÍTULO
-========================================== */
-
+/* Organiza os elementos do cabeçalho. */
 .page-header {
     justify-content: space-between;
     align-items: center;
@@ -39,17 +35,20 @@ a {
     margin-bottom: 30px;
 }
 
+/* Alinha a marca vertical e o título lado a lado. */
 .title-row {
     display: flex;
     align-items: center;
     gap: 9px;
 }
 
+/* Organiza o título e o subtítulo na vertical. */
 .title-group {
     display: flex;
     flex-direction: column;
 }
 
+/* Cria a marca vertical ao lado do título. */
 .title-mark {
     width: 5px;
     height: 31px;
@@ -57,6 +56,7 @@ a {
     background: #465722;
 }
 
+/* Define a aparência do título principal. */
 h1 {
     margin: 0;
     font-size: 28px;
@@ -65,185 +65,156 @@ h1 {
     line-height: 31px;
 }
 
+/* Define a aparência do texto abaixo do título. */
 .subtitle {
     margin-top: 8px;
     font-size: 16px;
     line-height: 1.4;
 }
 
-/* ==========================================
-   CARD ALTERAR SENHA
-========================================== */
-
+/* Define o tamanho e a aparência do cartão de alteração de senha. */
 .password-card {
     width: 100%;
     max-width: 700px;
-
     margin: 40px auto;
     padding: 32px;
-
     background: #ffffff;
     border-radius: 22px;
-
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
 }
 
-/* Título interno */
-
+/* Organiza o título interno e a linha decorativa. */
 .card-heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 18px;
-
     margin-bottom: 28px;
 }
 
+/* Define a aparência do título dentro do cartão. */
 .card-heading h2 {
     margin: 0;
     font-size: 22px;
     font-weight: 700;
 }
 
+/* Cria a linha horizontal ao lado do título. */
 .section-line {
     flex: 1;
     height: 1px;
     background: #dbe4e2;
 }
 
-/* ==========================================
-   FORMULÁRIO
-========================================== */
-
+/* Organiza os campos do formulário na vertical. */
 .password-form {
     display: flex;
     flex-direction: column;
     gap: 28px;
 }
 
+/* Organiza cada campo e seu respectivo rótulo. */
 .password-group {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+/* Define a aparência dos rótulos dos campos. */
 .password-group label {
     font-size: 16px;
     font-weight: 600;
     color: #14221f;
 }
 
-/* Campos de senha */
-
+/* Permite posicionar o botão de mostrar senha dentro do campo. */
 .password-input-wrapper {
     position: relative;
     display: flex;
     align-items: center;
 }
 
+/* Define a aparência dos campos de senha. */
 .password-input {
     width: 100%;
-
     border: 2px solid #d9d9d9;
     border-radius: 10px;
-
     padding: 14px 45px 14px 16px;
-
     font-size: 16px;
     color: #14221f;
-
     background: #ffffff;
-
     transition: border-color 0.25s ease;
 }
 
+/* Altera a cor da borda quando o campo recebe o foco. */
 .password-input:focus {
     outline: none;
     border-color: #BE9628;
 }
 
-/* ==========================================
-   BOTÃO MOSTRAR / OCULTAR SENHA
-========================================== */
-
+/* Posiciona o botão de mostrar ou ocultar a senha. */
 .password-toggle {
     position: absolute;
-
     right: -30px;
     top: 85%;
-
     transform: translateY(-50%);
-
     background: none;
     border: none;
     cursor: pointer;
-
     padding: 4px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     transition: opacity 0.2s ease;
 }
 
+/* Diminui a opacidade do botão quando o mouse passa sobre ele. */
 .password-toggle:hover {
     opacity: 0.8;
 }
 
+/* Define o tamanho e a exibição do ícone de olho. */
 .eye-icon {
     width: 120px;
     height: 120px;
     display: block;
 }
-/* ==========================================
-   BOTÕES DO FORMULÁRIO
-========================================== */
 
+/* Organiza os botões do formulário. */
 .form-actions {
     display: flex;
     gap: 14px;
-
     margin-top: 8px;
-
     justify-content: flex-end;
 }
 
+/* Define a aparência padrão dos botões. */
 .password-btn {
     border: none;
     border-radius: 12px;
-
     padding: 14px 28px;
-
     font-size: 16px;
     font-weight: 700;
-
     cursor: pointer;
 }
 
+/* Define as cores do botão principal. */
 .password-btn-primary {
     background: #BE9628;
     color: #ffffff;
 }
 
-/* ==========================================
-   MODO CLARO
-========================================== */
-
+/* Mantém os campos brancos e com texto escuro no modo claro. */
 html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-input,
 html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-input:hover,
 html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-input:focus,
 html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-input:active {
     background: #FFFFFF !important;
-    background-color: #FFFFFF !important;
     color: #14221f !important;
     box-shadow: none !important;
 }
 
-/* ==========================================
-   RESPONSIVIDADE - TABLET
-========================================== */
-
+/* Ajusta os elementos da página para telas de tablet. */
 @media (max-width: 992px) and (min-width: 601px) {
 
     .content {
@@ -266,19 +237,8 @@ html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-i
 
 }
 
-/* ==========================================
-   RESPONSIVIDADE - CELULAR
-========================================== */
-
+/* Ajusta os elementos da página para telas de celular. */
 @media (max-width: 600px) {
-
-    /* Conteúdo principal */
-
-    .content {
-        padding: 18px 16px 35px;
-    }
-
-    /* Cabeçalho */
 
     .page-header {
         margin-bottom: 0;
@@ -302,25 +262,15 @@ html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-i
     .subtitle {
         font-size: 14px;
         margin-top: 5px;
-        line-height: 1.4;
     }
-
-    /* Card */
 
     .password-card {
-        width: 100%;
         max-width: 420px;
-
         margin: 25px auto 20px;
-
         padding: 24px 20px;
-
         border-radius: 17px;
-
         box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
     }
-
-    /* Título interno */
 
     .card-heading {
         margin-bottom: 22px;
@@ -336,8 +286,6 @@ html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-i
         display: none;
     }
 
-    /* Formulário */
-
     .password-form {
         gap: 20px;
     }
@@ -350,33 +298,21 @@ html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-i
         font-size: 14px;
     }
 
-    /* Campos */
-
     .password-input {
-        width: 100%;
-
         padding: 12px 42px 12px 13px;
-
         font-size: 15px;
-
         border: 1.5px solid #d9d9d9;
         border-radius: 9px;
     }
 
-    /* Olhinhos */
+    .password-toggle {
+        right: -45px;
+    }
 
-.password-toggle {
-    right: -45px;
-    top: 85%;
-    transform: translateY(-50%);
-}
-
-.eye-icon {
-    width: 100px;
-    height: 100px;
-}
-
-    /* Botão */
+    .eye-icon {
+        width: 100px;
+        height: 100px;
+    }
 
     .form-actions {
         margin-top: 5px;
@@ -385,15 +321,14 @@ html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-i
 
     .password-btn {
         width: 100%;
-
         padding: 12px 18px;
-
         font-size: 14px;
-
         border-radius: 9px;
     }
 
 }
+
+/* Define a aparência das mensagens de erro dos campos de senha. */
 .erro-senha {
     margin: 0;
     font-size: 13px;
@@ -402,6 +337,7 @@ html:not(.acessibilidade-escuro):not(.acessibilidade-alto-contraste) .password-i
     color: inherit;
 }
 
+/* Esconde a mensagem de erro quando não existe conteúdo. */
 .erro-senha:empty {
     display: none;
 }

@@ -1,312 +1,198 @@
+/* Define a fonte e as configurações gerais da página. */
 * {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-
-
-* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-
-
+/* Define as cores de fundo e do texto. */
 body {
-
     background-color: #EAF3E6;
-
     color: #10261f;
 }
 
-
-
-
+/* Define o espaço ocupado pelo conteúdo principal. */
 .conteudo {
     width: 100%;
-
     min-height: 800px;
-
     padding: 60px 20px 80px;
 }
 
-
-
-
+/* Define o espaçamento abaixo do cabeçalho. */
 .cabecalho-pagina {
     margin-bottom: 45px;
 }
 
-
+/* Estiliza o título principal da página. */
 .cabecalho-pagina h1 {
     position: relative;
-
     display: inline-block;
     font-size: 28px;
     font-weight: 700;
-
     color: #10261f;
     padding-left: 9px;
-
+    margin: 0;
     margin-bottom: 7px;
     line-height: 31px;
-    margin: 0;}
-
-
-
-
-.cabecalho-pagina h1::before {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: 3px;
-
-    width: 5px;
-    height: 33px;
-
-    background-color: #465722;
-
 }
 
+/* Adiciona a barra verde ao lado do título. */
+.cabecalho-pagina h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 5px;
+    height: 33px;
+    background-color: #465722;
+}
 
-
-
+/* Estiliza a descrição abaixo do título. */
 .cabecalho-pagina p {
     margin-left: 15px;
-
     font-size: 17px;
-
     font-weight: 400;
-
     color: #4d5a52;
 }
 
-
-
-
+/* Organiza o cartão com o motivo da criação do projeto. */
 .motivo {
     width: 82%;
     max-width: 1000px;
-
     margin: 0 auto 65px;
-
     padding: 28px 35px;
-
     background-color: #ffffff;
-
     border: 1px solid #dce8d8;
-
     border-radius: 14px;
-
     box-shadow: 0 5px 18px rgba(42, 65, 45, 0.07);
 }
 
-
-
-
+/* Estiliza o título do cartão. */
 .motivo h2 {
     font-size: 20px;
-
     font-weight: 600;
-
     color: #172c23;
-
     margin-bottom: 18px;
-
     text-align: center;
 }
 
-
-
-
+/* Estiliza os parágrafos do cartão. */
 .motivo p {
     font-size: 15px;
-
     line-height: 1.7;
-
     font-weight: 400;
-
     color: #394840;
-
     text-align: justify;
-
     margin-bottom: 12px;
 }
 
-
+/* Remove a margem inferior do último parágrafo. */
 .motivo p:last-child {
     margin-bottom: 0;
 }
 
-
-
+/* Define a largura e o posicionamento da seção da equipe. */
 .secao-equipe {
     width: 92%;
-
     max-width: 1200px;
-
     margin: 0 auto;
 }
 
-
-
-
+/* Centraliza o título e a descrição da equipe. */
 .titulo-equipe {
     text-align: center;
-
     margin-bottom: 30px;
 }
 
-
+/* Estiliza o título da seção da equipe. */
 .titulo-equipe h2 {
     font-size: 23px;
-
     font-weight: 600;
-
     color: #172c23;
-
     margin-bottom: 6px;
 }
 
-
+/* Estiliza a descrição da seção da equipe. */
 .titulo-equipe p {
     font-size: 14px;
-
     font-weight: 400;
-
     color: #68766e;
 }
 
-
-
-
-
+/* Organiza os integrantes em uma grade com seis colunas. */
 .equipe {
     display: grid;
-
     grid-template-columns: repeat(6, 1fr);
-
     gap: 18px;
-
     width: 100%;
 }
 
-
-
-
-
+/* Define a aparência dos cartões dos integrantes. */
 .integrante {
     min-height: 270px;
-
     padding: 25px 12px 20px;
-
     background-color: #ffffff;
-
     border: 1px solid #dce8d8;
-
     border-radius: 14px;
-
     text-align: center;
-
     box-shadow: 0 5px 16px rgba(42, 65, 45, 0.06);
-
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
 
-
-
-
+/* Aplica um efeito ao passar o mouse sobre os cartões. */
 .integrante:hover {
     transform: translateY(-4px);
-
     box-shadow: 0 9px 22px rgba(42, 65, 45, 0.12);
 }
 
-
-
-
-
+/* Define o formato e o tamanho da área da foto. */
 .foto-integrante {
     width: 110px;
-
     height: 110px;
-
     margin: 0 auto 17px;
-
     padding: 4px;
-
     border-radius: 50%;
-
     background-color: #eef4eb;
-
     border: 1px solid #d5e1d1;
-
     overflow: hidden;
 }
 
-
+/* Ajusta a imagem para preencher o espaço circular. */
 .foto-integrante img {
     width: 100%;
-
     height: 100%;
-
     object-fit: cover;
-
     display: block;
-
     border-radius: 50%;
 }
 
-
-
-
-
+/* Estiliza o nome de cada integrante. */
 .informacoes-integrante h3 {
     font-size: 14px;
-
     line-height: 1.35;
-
     font-weight: 600;
-
     color: #172c23;
-
     margin-bottom: 12px;
 }
 
-
-
-
-
+/* Estiliza a função de cada integrante. */
 .funcao {
     display: block;
-
     max-width: 150px;
-
     margin: 0 auto;
-
     font-size: 12px;
-
     line-height: 1.4;
-
     font-weight: 400;
-
     color: #68766e;
 }
 
-
-
-
-
+/* Ajusta a quantidade de colunas em telas menores. */
 @media (max-width: 1100px) {
-
     .equipe {
         grid-template-columns: repeat(3, 1fr);
-
         gap: 20px;
     }
 
@@ -315,130 +201,80 @@ body {
     }
 }
 
-
-
-
-
+/* Ajusta os elementos para telas de até 750px. */
 @media (max-width: 750px) {
-
-    .conteudo {
-        padding: 80px 4% 70px;
-    }
-
 
     .cabecalho-pagina {
         margin-bottom: 35px;
     }
 
+    .cabecalho-pagina h1::before {
+        height: 31px;
+        width: 5px;
+        top: 0;
+    }
 
-    .cabecalho-pagina h1 {    font-size: 28px;
-    padding-left: 9px;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0;}
-
-
-    .cabecalho-pagina h1::before {    height: 31px;
-    width: 5px;
-    top: 0px;
-    background-color: #465722;}
-
-
-    .cabecalho-pagina p {    font-size: 16px;
-    margin-top: 8px;
-    margin-left: 14px;
-    line-height: 1.4;}
-
+    .cabecalho-pagina p {
+        font-size: 16px;
+        margin-top: 8px;
+        margin-left: 14px;
+        line-height: 1.4;
+    }
 
     .motivo {
         width: 100%;
-
         padding: 24px 22px;
-
         margin-bottom: 50px;
     }
-
 
     .motivo h2 {
         font-size: 18px;
     }
 
-
     .motivo p {
         font-size: 14px;
-
         line-height: 1.6;
-
         text-align: left;
     }
 
-
     .equipe {
         grid-template-columns: repeat(2, 1fr);
-
         gap: 16px;
     }
 }
 
-
-
-
-
+/* Ajusta os cartões e textos para celulares. */
 @media (max-width: 480px) {
-
-    .cabecalho-pagina h1 {    font-size: 28px;
-    padding-left: 9px;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0;}
-
-
-    .cabecalho-pagina p {    font-size: 16px;
-    margin-left: 14px;
-    margin-top: 8px;
-    line-height: 1.4;}
-
-
     .motivo {
         padding: 20px 17px;
     }
-
 
     .motivo h2 {
         font-size: 17px;
     }
 
-
     .motivo p {
         font-size: 13px;
     }
 
-
     .equipe {
         grid-template-columns: 1fr 1fr;
-
         gap: 12px;
     }
 
-
     .integrante {
         min-height: 245px;
-
         padding: 20px 7px 15px;
     }
 
-
     .foto-integrante {
         width: 90px;
-
         height: 90px;
     }
-
 
     .informacoes-integrante h3 {
         font-size: 13px;
     }
-
 
     .funcao {
         font-size: 11px;

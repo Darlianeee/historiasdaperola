@@ -1,10 +1,6 @@
+/* Configurações gerais da página. */
 * {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-
-
-* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,22 +14,18 @@ body {
 }
 
 body {
-
     background-color: #edf5e9;
-
     color: #111;
     overflow-x: hidden;
 }
 
-
-
-
-.conteudo {    
+/* Conteúdo principal. */
+.conteudo {
     width: 100%;
-
     padding: 110px 49px 80px;
 }
 
+/* Cabeçalho da página inicial. */
 .cabecalho-inicio {
     display: flex;
     flex-direction: column;
@@ -77,7 +69,8 @@ body {
     line-height: 1.5;
 }
 
-.conteudo > h2 {
+/* Título da seção de conteúdo. */
+.conteudo>h2 {
     margin: 25px auto 35px;
     text-align: center;
     color: #26361c;
@@ -86,108 +79,67 @@ body {
     line-height: 1.4;
 }
 
-
-
-
 /* Área dos cartões apresentados na página inicial. */
 .cards-inicio {
     width: min(1150px, 100%);
-
     margin: 0 auto;
-
     display: grid;
-
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
     gap: 28px;
-
     align-items: stretch;
 }
 
-
-
-
+/* Cartões de conteúdo. */
 .card {
     width: 100%;
-
     min-height: 300px;
-
     padding: 28px 38px 30px;
-
     background-color: white;
-
     border: 1px solid #d9e4d1;
-
     border-radius: 10px;
-
     box-shadow: 0 4px 12px rgba(48, 70, 19, 0.10);
-
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
         border-color 0.25s ease;
 }
 
-
-
-
 .card:hover {
     transform: translateY(-4px);
-
     border-color: #b9cba9;
-
-    box-shadow:
-        0 8px 20px rgba(48, 70, 19, 0.16);
+    box-shadow: 0 8px 20px rgba(48, 70, 19, 0.16);
 }
-
-
 
 .card h3 {
     width: 100%;
-
     text-align: center;
-
     font-size: 19px;
-
     line-height: 1.35;
-
     font-weight: bold;
-
     color: #26361c;
-
     margin-bottom: 28px;
 }
 
-
-
-
+/* Textos apresentados dentro dos cartões. */
 .texto-card {
     width: 100%;
 }
 
 .texto-card p {
     width: 100%;
-
     margin: 0;
-
     font-size: 15px;
-
     font-weight: bold;
-
     line-height: 21px;
-
     color: #30382d;
-
     text-align: justify;
 }
 
-.texto-card p + p {
+.texto-card p+p {
     margin-top: 10px;
 }
 
-
-
-
+/* Cartão de acesso à área de histórias. */
 .card-explorar {
     display: flex;
     flex-direction: column;
@@ -203,7 +155,7 @@ body {
     margin: 25px 0 10px;
 }
 
-.card-explorar > p {
+.card-explorar>p {
     margin: 8px 0 30px;
     color: #30382d;
     font-size: 16px;
@@ -212,7 +164,7 @@ body {
     max-width: 420px;
 }
 
-/* Área do botão para acessar as histórias. */
+/* Botão para acessar as histórias. */
 .btn-historias {
     display: inline-flex;
     align-items: center;
@@ -238,27 +190,22 @@ body {
     transform: translateY(0);
 }
 
-
-
 /* Ajustes para telas grandes. */
 @media (min-width: 1600px) {
-
     .conteudo {
         padding-left: 70px;
         padding-right: 70px;
         padding-bottom: 90px;
     }
 
-    .conteudo > h2 {
+    .conteudo>h2 {
         font-size: 24px;
-
         margin-top: 35px;
         margin-bottom: 38px;
     }
 
     .cards-inicio {
         max-width: 1250px;
-
         gap: 35px;
     }
 
@@ -271,11 +218,8 @@ body {
     }
 }
 
-
-
-
+/* Ajustes para telas de até 1366px. */
 @media (max-width: 1366px) {
-
     .conteudo {
         padding-left: 45px;
         padding-right: 45px;
@@ -284,7 +228,6 @@ body {
 
     .cards-inicio {
         width: min(1050px, 100%);
-
         gap: 25px;
     }
 
@@ -294,27 +237,27 @@ body {
     }
 }
 
-
-
-
+/* Ajustes para telas de até 1024px. */
 @media (max-width: 1024px) {
-
     .conteudo {
         padding: 75px 30px 70px;
     }
 
-    .titulo h1 {    font-size: 28px;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0;}
+    .titulo h1 {
+        font-size: 28px;
+        line-height: 31px;
+        font-weight: 700;
+        margin: 0;
+    }
 
-    .boas-vindas {    font-size: 16px;
-    line-height: 1.4;}
+    .boas-vindas {
+        font-size: 16px;
+        line-height: 1.4;
+    }
 
-    .conteudo > h2 {
+    .conteudo>h2 {
         margin-top: 27px;
         margin-bottom: 28px;
-
         font-size: 18px;
     }
 
@@ -324,20 +267,17 @@ body {
 
     .card {
         min-height: 290px;
-
         padding: 25px 25px 28px;
     }
 
     .card h3 {
         font-size: 18px;
-
         margin-bottom: 23px;
     }
 
     .texto-card p,
-    .card-gerenciar > p {
+    .card-gerenciar>p {
         font-size: 14px;
-
         line-height: 20px;
     }
 
@@ -346,58 +286,54 @@ body {
     }
 }
 
-
-
 /* Ajustes para tablets e telas menores. */
 @media (max-width: 768px) {
-
     .conteudo {
         padding: 90px 22px 65px;
     }
 
-    .titulo {    min-height: 31px;
-    border-left: 5px solid #465722;
-    padding-left: 9px;}
+    .titulo {
+        min-height: 31px;
+        border-left: 5px solid #465722;
+        padding-left: 9px;
+    }
 
-    .titulo h1 {    font-size: 28px;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0;}
+    .titulo h1 {
+        font-size: 28px;
+        line-height: 31px;
+        font-weight: 700;
+        margin: 0;
+    }
 
-    .boas-vindas {    font-size: 16px;
-    line-height: 1.4;}
+    .boas-vindas {
+        font-size: 16px;
+        line-height: 1.4;
+    }
 
-    .conteudo > h2 {
+    .conteudo>h2 {
         margin-top: 25px;
         margin-bottom: 25px;
-
         font-size: 17px;
     }
 
-    
-
     .cards-inicio {
         grid-template-columns: 1fr;
-
         gap: 22px;
     }
 
     .card {
         min-height: 0;
-
         padding: 25px 28px 28px;
     }
 
     .card h3 {
         font-size: 18px;
-
         margin-bottom: 25px;
     }
 
     .texto-card p,
-    .card-gerenciar > p {
+    .card-gerenciar>p {
         font-size: 15px;
-
         line-height: 20px;
     }
 
@@ -407,36 +343,35 @@ body {
     }
 }
 
-
-
-
 /* Ajustes para celulares. */
 @media (max-width: 576px) {
-
     .conteudo {
         padding: 68px 16px 60px;
     }
 
     .titulo {
         border-left-width: 4px;
-    min-height: 31px;
-    padding-left: 9px;
-    border-left: 5px solid #465722;}
+        min-height: 31px;
+        padding-left: 9px;
+        border-left: 5px solid #465722;
+    }
 
-    .titulo h1 {    font-size: 28px;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0;}
+    .titulo h1 {
+        font-size: 28px;
+        line-height: 31px;
+        font-weight: 700;
+        margin: 0;
+    }
 
-    .boas-vindas {    font-size: 16px;
-    line-height: 1.4;}
+    .boas-vindas {
+        font-size: 16px;
+        line-height: 1.4;
+    }
 
-    .conteudo > h2 {
+    .conteudo>h2 {
         margin-top: 23px;
         margin-bottom: 22px;
-
         font-size: 15px;
-
         line-height: 1.45;
     }
 
@@ -446,20 +381,17 @@ body {
 
     .card {
         padding: 23px 22px 26px;
-
         border-radius: 9px;
     }
 
     .card h3 {
         font-size: 17px;
-
         margin-bottom: 23px;
     }
 
     .texto-card p,
-    .card-gerenciar > p {
+    .card-gerenciar>p {
         font-size: 14px;
-
         line-height: 20px;
     }
 
@@ -470,33 +402,31 @@ body {
 
     .btn-historias {
         min-height: 42px;
-
         padding: 10px 20px;
-
         font-size: 14px;
     }
 }
 
-
-
-
+/* Ajustes para celulares menores. */
 @media (max-width: 480px) {
-
     .conteudo {
         padding: 65px 13px 55px;
     }
 
-    .titulo h1 {    font-size: 28px;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0;}
+    .titulo h1 {
+        font-size: 28px;
+        line-height: 31px;
+        font-weight: 700;
+        margin: 0;
+    }
 
-    .boas-vindas {    font-size: 16px;
-    line-height: 1.4;}
+    .boas-vindas {
+        font-size: 16px;
+        line-height: 1.4;
+    }
 
-    .conteudo > h2 {
+    .conteudo>h2 {
         font-size: 15px;
-
         margin-top: 22px;
         margin-bottom: 20px;
     }
@@ -511,14 +441,12 @@ body {
 
     .card h3 {
         font-size: 16px;
-
         margin-bottom: 21px;
     }
 
     .texto-card p,
-    .card-gerenciar > p {
+    .card-gerenciar>p {
         font-size: 14px;
-
         line-height: 19px;
     }
 
@@ -528,31 +456,30 @@ body {
 
     .btn-historias {
         width: 100%;
-
         max-width: 230px;
     }
 }
 
-
-
-
+/* Ajustes para celulares com largura reduzida. */
 @media (max-width: 390px) {
-
     .conteudo {
         padding: 80px 15px 52px;
     }
 
-    .titulo h1 {    font-size: 28px;
-    line-height: 31px;
-    font-weight: 700;
-    margin: 0;}
+    .titulo h1 {
+        font-size: 28px;
+        line-height: 31px;
+        font-weight: 700;
+        margin: 0;
+    }
 
-    .boas-vindas {    font-size: 16px;
-    line-height: 1.4;}
+    .boas-vindas {
+        font-size: 16px;
+        line-height: 1.4;
+    }
 
-    .conteudo > h2 {
+    .conteudo>h2 {
         font-size: 14px;
-
         margin-top: 20px;
         margin-bottom: 18px;
     }
@@ -567,14 +494,12 @@ body {
 
     .card h3 {
         font-size: 16px;
-
         margin-bottom: 20px;
     }
 
     .texto-card p,
-    .card-gerenciar > p {
+    .card-gerenciar>p {
         font-size: 13.5px;
-
         line-height: 19px;
     }
 
@@ -584,14 +509,11 @@ body {
 
     .btn-historias {
         max-width: 220px;
-
         font-size: 13.5px;
     }
 }
 
-
-
-
+/* Ajustes adicionais para o título e as boas-vindas. */
 @media (max-width: 1024px) {
     .titulo h1 {
         font-size: 28px;
@@ -601,7 +523,6 @@ body {
         font-size: 17px;
     }
 }
-
 
 @media (max-width: 768px) {
     .titulo h1 {
@@ -614,27 +535,14 @@ body {
     }
 }
 
-.erro-campo {
-    display: block;
-    color: #ff0000 !important;
-    font-size: 13px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    font-weight: 500;
-}
-
-.erro-campo:empty {
-    display: none;
-}
-
-/* Mensagens de erro dos campos */
+/* Mensagens de erro dos campos. */
 .erro-campo {
     display: block;
     color: #ff0000 !important;
     font-size: 13px;
     font-weight: 500;
     line-height: 1.4;
-    margin: 4px 0 12px 0;
+    margin: 4px 0 12px;
     padding: 0;
     text-align: left;
 }
@@ -643,8 +551,7 @@ body {
     display: none;
 }
 
-
-/* Cabeçalho inicial: mantém um único traço verde e separa título e boas-vindas. */
+/* Regras finais do cabeçalho, mantidas após as media queries para preservar a cascata original. */
 .cabecalho-inicio {
     display: flex;
     flex-direction: column;
@@ -675,4 +582,3 @@ body {
     line-height: 1.5;
     font-size: 16px;
 }
-

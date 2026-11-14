@@ -1,18 +1,24 @@
+
 <?php
+
 // Consultas e operações relacionadas às pessoas e seus perfis.
-
-
-class Pessoa {
+class Pessoa
+{
+    // Códigos utilizados para identificar os tipos de perfil.
     const PERFIL_ADMINISTRADOR = 1;
     const PERFIL_USUARIO = 2;
 
     private $db;
 
-    public function __construct() {
+    // Cria a conexão com o banco de dados.
+    public function __construct()
+    {
         $this->db = new Database();
     }
 
-    private function selectBase() {
+    // Reúne os dados da pessoa, seu perfil e seu e-mail em uma consulta.
+    private function selectBase()
+    {
         return "SELECT
                     p.pess_id,
                     p.pess_nome,
@@ -27,19 +33,26 @@ class Pessoa {
                 LEFT JOIN email e ON e.pess_id = p.pess_id";
     }
 
-    public function buscarPorEmail($email) {
+    // Busca uma pessoa pelo endereço de e-mail.
+    public function buscarPorEmail($email)
+    {
         $this->db->query($this->selectBase() . " WHERE e.emai_nome = :email LIMIT 1");
         $this->db->bind(':email', $email);
         return $this->db->resultado();
     }
 
-    public function buscarPorId($id) {
+    // Busca uma pessoa pelo seu código.
+    public function buscarPorId($id)
+    {
         $this->db->query($this->selectBase() . " WHERE p.pess_id = :id LIMIT 1");
         $this->db->bind(':id', (int) $id, PDO::PARAM_INT);
         return $this->db->resultado();
     }
 
-    public function emailExiste($email, $ignorarPessoaId = 0) {
+    // Verifica se o e-mail já está cadastrado para outra pessoa.
+    // Permite ignorar o código da pessoa que está sendo editada.
+    public function emailExiste($email, $ignorarPessoaId = 0)
+    {
         $this->db->query(
             "SELECT emai_id FROM email WHERE emai_nome = :email AND pess_id <> :pessoa LIMIT 1"
         );
@@ -48,9 +61,11 @@ class Pessoa {
         return (bool) $this->db->resultado();
     }
 
-    // Cria a pessoa e o e-mail dela. Retorna o id criado ou false.
-    public function cadastrar($nome, $email, $senha, $perfil = self::PERFIL_USUARIO) {
+    // Cadastra uma pessoa e seu e-mail. Retorna o código criado ou false.
+    public function cadastrar($nome, $email, $senha, $perfil = self::PERFIL_USUARIO)
+    {
         try {
+            // Inicia uma transação para salvar os dados juntos.
             $this->db->iniciarTransacao();
 
             $this->db->query(
@@ -58,36 +73,46 @@ class Pessoa {
                  VALUES (:nome, :senha, 'Ativo', :perfil)"
             );
             $this->db->bind(':nome', $nome);
+
+            // Criptografa a senha antes de armazená-la no banco.
             $this->db->bind(':senha', password_hash($senha, PASSWORD_DEFAULT));
             $this->db->bind(':perfil', (int) $perfil, PDO::PARAM_INT);
             $this->db->executa();
 
+            // Recupera o código da pessoa recém-cadastrada.
             $pessoaId = (int) $this->db->ultimoIdInserido();
 
+            // Cadastra o e-mail e relaciona com a pessoa.
             $this->db->query("INSERT INTO email (emai_nome, pess_id) VALUES (:email, :pessoa)");
             $this->db->bind(':email', $email);
             $this->db->bind(':pessoa', $pessoaId, PDO::PARAM_INT);
             $this->db->executa();
 
+            // Confirma o cadastro quando todas as informações são salvas.
             $this->db->confirmarTransacao();
 
             return $pessoaId;
         } catch (Throwable $erro) {
+            // Desfaz as alterações caso aconteça algum erro no cadastro.
             $this->db->cancelarTransacao();
             error_log('Erro ao cadastrar pessoa: ' . $erro->getMessage());
             return false;
         }
     }
 
-    // Atualiza somente o nome e, opcionalmente, a foto. O e-mail é imutável no perfil.
-    public function atualizarDados($id, $nome, $foto = null) {
+    // Atualiza o nome e, se uma nova foto for enviada, também atualiza a foto do perfil.
+    // O e-mail não é alterado por esse método.
+    public function atualizarDados($id, $nome, $foto = null)
+    {
         try {
+            // Atualiza o nome e a foto quando uma nova imagem é informada.
             if ($foto !== null) {
                 $this->db->query(
                     "UPDATE pessoa SET pess_nome = :nome, pess_foto_perfil = :foto WHERE pess_id = :id"
                 );
                 $this->db->bind(':foto', $foto, PDO::PARAM_LOB);
             } else {
+                // Se nenhuma foto for enviada, atualiza somente o nome.
                 $this->db->query("UPDATE pessoa SET pess_nome = :nome WHERE pess_id = :id");
             }
             $this->db->bind(':nome', $nome);
@@ -99,15 +124,18 @@ class Pessoa {
         }
     }
 
-    public function atualizarSenha($id, $novaSenha) {
+    // Atualiza a senha da pessoa, armazenando seu hash no banco de dados.
+    public function atualizarSenha($id, $novaSenha)
+    {
         $this->db->query("UPDATE pessoa SET pess_senha = :senha WHERE pess_id = :id");
         $this->db->bind(':senha', password_hash($novaSenha, PASSWORD_DEFAULT));
         $this->db->bind(':id', (int) $id, PDO::PARAM_INT);
         return $this->db->executa();
     }
 
-    // Lista para a tela "Gerenciar Perfis".
-    public function listarTodas() {
+    // Lista as pessoas cadastradas para a tela "Gerenciar Perfis".
+    public function listarTodas()
+    {
         // Consulta as tabelas diretamente para não depender de uma view desatualizada.
         $this->db->query(
             "SELECT p.pess_id, p.pess_nome, e.emai_nome,
@@ -120,12 +148,16 @@ class Pessoa {
         return $this->db->resultados();
     }
 
-    public function listarPerfis() {
+    // Lista os perfis disponíveis no sistema.
+    public function listarPerfis()
+    {
         $this->db->query("SELECT perf_id, perf_nome FROM perfil ORDER BY perf_id");
         return $this->db->resultados();
     }
 
-    public function atualizarPerfilEStatus($id, $perfilId, $status) {
+    // Atualiza o perfil e o status de uma pessoa.
+    public function atualizarPerfilEStatus($id, $perfilId, $status)
+    {
         $this->db->query(
             "UPDATE pessoa SET perf_id = :perfil, pess_status = :status WHERE pess_id = :id"
         );
@@ -135,13 +167,17 @@ class Pessoa {
         return $this->db->executa();
     }
 
-    public function totalHistoriasCadastradas($id) {
+    // Conta quantas histórias foram cadastradas por uma pessoa.
+    public function totalHistoriasCadastradas($id)
+    {
         $this->db->query("SELECT COUNT(*) AS total FROM historia WHERE pess_id = :id");
         $this->db->bind(':id', (int) $id, PDO::PARAM_INT);
         return (int) $this->db->resultado()->total;
     }
 
-    public function totalAdministradoresAtivos() {
+    // Conta quantos administradores estão ativos no sistema.
+    public function totalAdministradoresAtivos()
+    {
         $this->db->query(
             "SELECT COUNT(*) AS total FROM pessoa
              WHERE perf_id = :perfil AND pess_status = 'Ativo'"
@@ -150,12 +186,14 @@ class Pessoa {
         return (int) $this->db->resultado()->total;
     }
 
-    // Exclui a pessoa e seus registros dependentes em uma única transação.
-    // O controlador já impede a exclusão de pessoas que cadastraram histórias
+    // Exclui uma pessoa e seus registros relacionados em uma única transação.
+    // O controlador impede a exclusão de pessoas que cadastraram histórias
     // e da própria conta do administrador.
-    public function excluir($id) {
+    public function excluir($id)
+    {
         $id = (int) $id;
 
+        // Impede a exclusão caso o código informado seja inválido.
         if ($id < 1) {
             return false;
         }
@@ -163,37 +201,43 @@ class Pessoa {
         try {
             $this->db->iniciarTransacao();
 
-            // Remove os vínculos da pessoa antes da conta, inclusive em bancos
-            // que ainda não tenham todas as chaves estrangeiras com CASCADE.
+            // Remove os vínculos da pessoa antes de excluir sua conta.
             $this->db->query("DELETE FROM pessoa_notificacao WHERE pess_id = :id");
             $this->db->bind(':id', $id, PDO::PARAM_INT);
             $this->db->executa();
 
+            // Exclui os comentários feitos pela pessoa.
             $this->db->query("DELETE FROM comentario WHERE pess_id = :id");
             $this->db->bind(':id', $id, PDO::PARAM_INT);
             $this->db->executa();
 
+            // Exclui as avaliações feitas pela pessoa.
             $this->db->query("DELETE FROM avaliacao WHERE pess_id = :id");
             $this->db->bind(':id', $id, PDO::PARAM_INT);
             $this->db->executa();
 
+            // Remove o e-mail relacionado à conta.
             $this->db->query("DELETE FROM email WHERE pess_id = :id");
             $this->db->bind(':id', $id, PDO::PARAM_INT);
             $this->db->executa();
 
+            // Exclui o registro principal da pessoa.
             $this->db->query("DELETE FROM pessoa WHERE pess_id = :id");
             $this->db->bind(':id', $id, PDO::PARAM_INT);
             $this->db->executa();
             $excluiu = $this->db->totalResultados() > 0;
 
+            // Cancela a operação caso nenhum registro tenha sido excluído.
             if (!$excluiu) {
                 $this->db->cancelarTransacao();
                 return false;
             }
 
+            // Confirma a exclusão de todos os registros.
             $this->db->confirmarTransacao();
             return true;
         } catch (Throwable $erro) {
+            // Desfaz as alterações caso aconteça algum erro durante a exclusão.
             $this->db->cancelarTransacao();
             error_log('Erro ao excluir pessoa ID ' . $id . ': ' . $erro->getMessage());
             return false;
