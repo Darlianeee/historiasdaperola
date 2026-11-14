@@ -49,10 +49,21 @@ if ($administrador) {
         <img src="<?= URL ?>/public/img/footer_logo.png" alt="Logo IFRO" class="footer-logo">
     </div>
 
-    <!-- Área que apresenta as informações de contato. -->
     <div class="footer-contact">
         <p>Contatos:</p>
-        <p>Telefone: (99) 99999-9999</p>
-        <p>E-mail: algumacoisa@ifro.edu.br</p>
+
+        <p>
+            Telefone:
+            <a href="https://wa.me/5569992770181" target="_blank">
+                (69) 99277-0181
+            </a>
+        </p>
+
+        <p>
+            E-mail:
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=darlianearza27@gmail.com" target="_blank">
+                darlianearza27@gmail.com
+            </a>
+        </p>
     </div>
 </footer>
